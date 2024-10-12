@@ -1,0 +1,106 @@
+version: "3"
+name: neuracraft
+
+services:
+  # Production: $ docker compose --profile prod up -d --build --force-recreate
+  nextjs:
+    profiles: [ prod ]
+    build: ./neuracraft
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      database:
+        condition: service_healthy
+  recommender:
+    profiles: [ prod ]
+    build:
+      context: .
+      dockerfile: ./recommender/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - ./neuracraft/.env
+  nginx:
+    profiles: [ prod ]
+    image: jonasal/nginx-certbot:4.3.0
+    restart: unless-stopped
+    ports:
+      # Use 80:80 and 443:443 if no conflict,
+      # otherwise need to map 8080 and 8443 back to 80 (http) and 443 (https) on the host
+      - 8080:80
+      - 8443:443
+    environment:
+      - CERTBOT_EMAIL=contact.neuracraft@gmail.com
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/user_conf.d/default.conf
+      - nginx_secrets:/etc/letsencrypt
+
+  # Development: $ docker compose --profile dev up --build --force-recreate
+  nextjs-dev:
+    profiles: [ dev ]
+    build:
+      context: ./neuracraft
+      target: base
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - RECOMMENDER_URL=http://recommender-dev:8000
+      - NEXTAUTH_URL=http://localhost
+      # If developing on the NAS
+      # - NEXTAUTH_URL=http://eefyp.synology.me
+    env_file:
+      - ./neuracraft/.env
+    volumes:
+      - ./neuracraft:/app
+      - /app/node_modules
+      - /app/.next
+    command:
+      - /bin/sh
+      - -c
+      - |
+        yarn global add pnpm@8.15.5
+        pnpm install
+        pnpm dev
+    depends_on:
+      database:
+        condition: service_healthy
+  recommender-dev:
+    profiles: [ dev ]
+    build:
+      context: .
+      dockerfile: ./recommender/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - ./neuracraft/.env
+    volumes:
+      - ./recommender:/app
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8000 --root-path /recommender
+  nginx-dev:
+    profiles: [ dev ]
+    image: nginx:1.25.1-alpine
+    restart: unless-stopped
+    ports:
+      # Use 80:80 if no conflict, otherwise need to map 8080 back to 80 (http) on the host
+      - 8080:80
+    volumes:
+      - ./nginx/default.dev.conf:/etc/nginx/conf.d/default.conf
+    command: sh -c 'nginx -g "daemon off;"'
+
+  # Common
+  database:
+    image: mysql:latest
+    restart: always
+    env_file:
+      - ./neuracraft/.env
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping" ]
+      start_period: 5s
+      interval: 5s
+      retries: 10
+
+volumes:
+  mysql_data:
+  nginx_secrets:
