@@ -1,0 +1,286 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// NEXT AUTH
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model User {
+  id                     String                  @id @default(cuid())
+  username               String                  @unique @default(cuid())
+  email                  String                  @unique
+  emailVerified          DateTime?
+  isNewUser              Boolean                 @default(true)
+  image                  String?
+  role                   Role                    @default(USER)
+  name                   String?
+  nusnetId               String?
+  consentDate            DateTime?
+  lastActive             DateTime                @default(now())
+  loginStreak            Int                     @default(1)
+  points                 Int                     @default(1)
+  emailFrequency         Frequency               @default(Daily)
+  accounts               Account[]
+  sessions               Session[]
+  questionsWithAddedTime QuestionWithAddedTime[]
+  attempts               Attempt[]
+  masteries              Mastery[]
+  posts                  Post[]
+  comments               Comment[]
+  postLikes              PostLikes[]
+}
+
+enum Role {
+  SUPERUSER
+  ADMIN
+  USER
+}
+
+enum Frequency {
+  Daily
+  Weekly
+  Fortnightly
+  Monthly
+  Never
+}
+
+model Waitlist {
+  email        String   @id
+  subscribed   Boolean? @default(true)
+  subscribedAt DateTime @default(now())
+}
+
+model Attempt {
+  attemptId             String                @id @default(cuid())
+  qatId                 String
+  userId                String
+  courseSlug            String
+  attemptedKeys         Json // {key}[N]
+  isCorrect             Boolean
+  submittedAt           DateTime              @default(now())
+  attemptSeconds        Int? // KIV
+  user                  User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionWithAddedTime QuestionWithAddedTime @relation(fields: [qatId], references: [qatId], onDelete: Cascade)
+  course                Course                @relation(fields: [courseSlug], references: [courseSlug], onDelete: Cascade)
+
+  @@unique([userId, qatId, submittedAt])
+  @@index([userId])
+  @@index([courseSlug])
+  @@index([qatId])
+}
+
+// QUESTION BANK
+enum Level {
+  Foundational
+  Intermediate
+  Advanced
+}
+
+// TODO: Add video, audio down the line
+enum CourseType {
+  Content
+  Quiz
+}
+
+model Course {
+  courseSlug             String                  @id
+  courseName             String                  @unique
+  courseDescription      String                  @db.Text
+  courseImage            String
+  courseLevel            Level
+  type                   CourseType
+  moduleCode             String
+  moduleTitle            String
+  week                   Int?
+  studio                 Int?
+  video                  String?                 @db.Text
+  markdown               String?                 @db.Text
+  topics                 Topic[]
+  posts                  Post[]
+  attempts               Attempt[]
+  courseMedia            CourseMedia[]
+  questionsWithAddedTime QuestionWithAddedTime[]
+}
+
+model CourseMedia {
+  publicId       String @id
+  courseSlug     String
+  courseMediaURL String @db.VarChar(500)
+  mediaName      String
+  course         Course @relation(fields: [courseSlug], references: [courseSlug], onDelete: Cascade)
+
+  @@index([courseSlug])
+}
+
+model Mastery {
+  userId                  String
+  topicSlug               String
+  masteryLevel            Float     @default(0)
+  topicPing               Boolean   @default(false)
+  lastFlagged             DateTime?
+  errorMeter              Int       @default(0)
+  weeklyMasteryLevel      Float     @default(0)
+  fortnightlyMasteryLevel Float     @default(0)
+  user                    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  topic                   Topic     @relation(fields: [topicSlug], references: [topicSlug], onDelete: Cascade)
+
+  @@id([userId, topicSlug])
+  @@index([topicSlug])
+  @@index([userId])
+}
+
+model Topic {
+  topicSlug  String     @id
+  topicName  String     @unique
+  topicLevel Level
+  topicPrior Float      @default(0.25)
+  questions  Question[]
+  mastery    Mastery[]
+  courses    Course[]
+  posts      Post[]
+
+  @@index([topicLevel])
+}
+
+model Question {
+  // Generic question, either dynamic or static, no user-specific information
+  questionId             Int                     @default(autoincrement())
+  variationId            Int                     @default(1)
+  topicSlug              String
+  questionTitle          String                  @unique
+  questionDifficulty     QuestionDifficulty
+  questionContent        String                  @db.Text
+  questionData           Json?
+  lastModified           DateTime                @updatedAt
+  topic                  Topic                   @relation(fields: [topicSlug], references: [topicSlug])
+  questionsWithAddedTime QuestionWithAddedTime[]
+
+  @@id([questionId, variationId])
+  @@index([questionDifficulty])
+  @@index([topicSlug])
+}
+
+enum QuestionDifficulty {
+  Easy
+  Medium
+  Hard
+}
+
+model QuestionWithAddedTime {
+  // Question tagged to a user, and if dynamic, with options generated at runtime
+  qatId       String    @id @default(cuid())
+  questionId  Int
+  variationId Int
+  userId      String
+  courseSlug  String
+  variables   Json? // QuestionDataType["variables"]
+  answers     Json // QuestionDataType["answers"]
+  addedTime   DateTime  @default(now())
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course      Course    @relation(fields: [courseSlug], references: [courseSlug], onDelete: Cascade)
+  question    Question  @relation(fields: [questionId, variationId], references: [questionId, variationId], onDelete: Cascade)
+  attempts    Attempt[]
+
+  @@unique([questionId, variationId, userId, courseSlug, addedTime])
+  @@index([userId])
+  @@index([courseSlug])
+  @@index([questionId, variationId])
+}
+
+// DISCUSSION POSTS
+model Post {
+  postId     String      @id @default(cuid())
+  userId     String
+  title      String
+  message    String      @db.Text
+  likes      Int         @default(0)
+  courseName String
+  topicName  String? // KIV: Requires dynamic loading to be implemented
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  user       User        @relation(fields: [userId], references: [id])
+  course     Course      @relation(fields: [courseName], references: [courseName], onDelete: Cascade)
+  topic      Topic?      @relation(fields: [topicName], references: [topicName])
+  comment    Comment[]
+  postLikes  PostLikes[]
+  postType   PostType
+
+  @@index([userId])
+  @@index([topicName])
+  @@index([courseName])
+}
+
+enum PostType {
+  Content
+  Quiz
+  Misc
+}
+
+model PostLikes {
+  postId String
+  userId String
+  likes  Int    @default(0)
+  post   Post   @relation(fields: [postId], references: [postId], onDelete: Cascade)
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([postId, userId])
+  @@index([postId])
+  @@index([userId])
+}
+
+model Comment {
+  commentId String   @id @default(cuid())
+  postId    String
+  userId    String
+  message   String   @db.Text
+  likes     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reply     String?
+  post      Post     @relation(fields: [postId], references: [postId], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([postId])
+  @@index([userId])
+}
