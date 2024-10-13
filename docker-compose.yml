@@ -46,6 +46,7 @@ services:
       - NODE_ENV=development
       - RECOMMENDER_URL=http://recommender-dev:8000
       - NEXTAUTH_URL=http://localhost
+      # - DATABASE_URL=mysql://neuracraft:neuracraft@database:3306/neuracraft
       # If developing on the NAS
       # - NEXTAUTH_URL=http://eefyp.synology.me
     env_file:
@@ -92,13 +93,15 @@ services:
     restart: always
     env_file:
       - ./neuracraft/.env
+    # ports:
+    #   - "3306:3306"
     volumes:
       - ./db:/docker-entrypoint-initdb.d/
       - mysql_data:/var/lib/mysql
     healthcheck:
       test: [ "CMD", "mysqladmin", "ping" ]
-      start_period: 5s
-      interval: 5s
+      start_period: 10s
+      interval: 10s
       retries: 10
 
 volumes:
