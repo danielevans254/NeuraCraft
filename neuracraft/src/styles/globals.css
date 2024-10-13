@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Re-add most disabled Tailwind preflight styles due to Mantine clash */
+  a {
+    @apply no-underline;
+    @apply text-slate-800 dark:text-slate-200;
+  }
+
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+    margin: 0;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: block;
+    vertical-align: middle;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Custom styles for Raw HTML content */
+  .rawhtml img {
+    @apply h-auto;
+    @apply rounded-md;
+    @apply my-4;
+  }
+  @screen sm {
+    .rawhtml img {
+      @apply max-w-xs;
+    }
+  }
+  @screen md {
+    .rawhtml img {
+      @apply max-w-sm;
+    }
+  }
+  @screen lg {
+    .rawhtml img {
+      @apply max-w-lg;
+    }
+  }
+
+  .ql-video iframe {
+    @apply min-w-full;
+    @apply aspect-video;
+  }
+}
