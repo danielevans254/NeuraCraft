@@ -27,15 +27,16 @@ async def get_api_key(
             detail="Invalid or missing API Key",
         )
 
-
 # Firebase persistent storage configurations
 config = {
-    "apiKey": "AIzaSyADucIvsdCF0VNw8aTJoZySzpm22c7_f78",
-    "authDomain": "neuracraft-1df48.firebaseapp.com",
-    "projectId": "neuracraft-1df48",
-    "storageBucket": "neuracraft-1df48.appspot.com",
-    "serviceAccount": "serviceAccountKey.json",
-    "databaseURL": "https://neuracraft-1df48-default-rtdb.firebaseio.com/",
+  "apiKey": "AIzaSyADucIvsdCF0VNw8aTJoZySzpm22c7_f78",
+  "authDomain": "neuracraft-1df48.firebaseapp.com",
+  "databaseURL": "https://neuracraft-1df48-default-rtdb.firebaseio.com",
+  "projectId": "neuracraft-1df48",
+  "storageBucket": "neuracraft-1df48.appspot.com",
+  "messagingSenderId": "476418799575",
+  "appId": "1:476418799575:web:2749b1f6deffac80f5bd92",
+  "measurementId": "G-68PLPZQPHM"
 }
 
 firebase_storage = pyrebase.initialize_app(config)
@@ -55,24 +56,24 @@ def get_model() -> Model:
     return model
 
 
-def get_roster_model() -> Roster:
-    """
-    Loads the latest roster file in the persistent storage.
-    Updates the roster with the latest training model on startup.
-    """
+# def get_roster_model() -> Roster:
+#     """
+#     Loads the latest roster file in the persistent storage.
+#     Updates the roster with the latest training model on startup.
+#     """
 
-    storage.download("roster.pkl", "roster.pkl")
-    with open("roster.pkl", "rb") as handle:
-        roster: Roster = pickle.load(handle)
-    try:
-        # Prevent API from crashing in case the training model doesn't fit the roster model
-        roster.set_model(app.state.model)
-    except Exception as e:
-        print(
-            f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
-        )
-    finally:
-        return roster
+#     # storage.download("roster.pkl", "roster.pkl")
+#     with open("roster.pkl", "rb") as handle:
+#         roster: Roster = pickle.load(handle)
+#     try:
+#         # Prevent API from crashing in case the training model doesn't fit the roster model
+#         roster.set_model(app.state.model)
+#     except Exception as e:
+#         print(
+#             f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
+#         )
+#     finally:
+#         return roster
 
 
 def get_all_topics() -> list[str]:
@@ -105,7 +106,7 @@ async def startup_event() -> None:
     """
 
     app.state.model = get_model()
-    app.state.roster = get_roster_model()
+    # app.state.roster = get_roster_model()
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
