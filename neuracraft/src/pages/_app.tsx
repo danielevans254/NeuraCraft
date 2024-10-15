@@ -32,7 +32,7 @@ import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 // Main App
-const LeetNode: AppType<{
+const NeuraCraft: AppType<{
   session: Session | null;
   dehydratedState: DehydratedState;
 }> = ({ Component, pageProps: { session, dehydratedState, ...pageProps } }) => {
@@ -73,10 +73,10 @@ const LeetNode: AppType<{
               });
             }
 
-            // Fallback to dismiss all toasts after 10 seconds
+            // Fallback to dismiss all toasts after 5 seconds
             setTimeout(() => {
               toast.dismiss();
-            }, 10000);
+            }, 5000);
           },
           onError: (error) => {
             console.error("[GLOBAL ERROR]", error);
@@ -134,4 +134,4 @@ const LeetNode: AppType<{
   );
 };
 
-export default LeetNode;
+export default NeuraCraft;
