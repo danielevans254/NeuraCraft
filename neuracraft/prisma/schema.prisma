@@ -55,7 +55,7 @@ model User {
   image                  String?
   role                   Role                    @default(USER)
   name                   String?
-  nusnetId               String?
+  ceuId                  String?
   consentDate            DateTime?
   lastActive             DateTime                @default(now())
   loginStreak            Int                     @default(1)
