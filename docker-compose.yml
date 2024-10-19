@@ -47,8 +47,6 @@ services:
       - RECOMMENDER_URL=http://recommender-dev:8000
       - NEXTAUTH_URL=http://localhost
       # - DATABASE_URL=mysql://neuracraft:neuracraft@database:3306/neuracraft
-      # If developing on the NAS
-      # - NEXTAUTH_URL=http://eefyp.synology.me
     env_file:
       - ./neuracraft/.env
     volumes:
