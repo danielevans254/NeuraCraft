@@ -110,10 +110,6 @@ export default function Navbar({
           errorMessage =
             "Unfortunately you are not authorized to access NeuraCraft without a valid invite. \n\nIn the meantime, you may join our waitlist or if you think this is a mistake, please contact support.";
           break;
-        case "Verification":
-          errorMessage =
-            "Your invite link has been used before or has expired. Please contact support to get a new invite.";
-          break;
         case "OAuthAccountNotLinked":
           errorMessage = "Please use the same login method as before.";
           break;
