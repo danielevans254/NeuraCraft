@@ -46,8 +46,7 @@ services:
       - NODE_ENV=development
       - RECOMMENDER_URL=http://recommender-dev:8000
       - NEXTAUTH_URL=http://localhost
-      # If developing on the NAS
-      # - NEXTAUTH_URL=http://eefyp.synology.me
+      # - DATABASE_URL=mysql://neuracraft:neuracraft@database:3306/neuracraft
     env_file:
       - ./neuracraft/.env
     volumes:
