@@ -59,7 +59,18 @@ export default function QuestionViewer() {
   const [debouncedQuery] = useDebouncedValue(query, 200);
 
   useEffect(() => {
-    if (!questions) return;
+    if (!questions) {
+      console.log("questions is undefined");
+      return;
+    }
+
+    console.log("questions:", questions);
+    console.log("questions.data:", questions.data);
+
+    if (!Array.isArray(questions.data)) {
+      console.error("questions.data is not an array:", questions.data);
+      return;
+    }
 
     const filteredRecords = questions.data.filter((record) => {
       if (
@@ -82,9 +93,9 @@ export default function QuestionViewer() {
       } else if (sortStatus.columnAccessor === "questionDifficulty") {
         return sortStatus.direction === "asc"
           ? QuestionDifficultyEnum[a.questionDifficulty] -
-              QuestionDifficultyEnum[b.questionDifficulty]
+          QuestionDifficultyEnum[b.questionDifficulty]
           : QuestionDifficultyEnum[b.questionDifficulty] -
-              QuestionDifficultyEnum[a.questionDifficulty];
+          QuestionDifficultyEnum[a.questionDifficulty];
       } else if (sortStatus.columnAccessor === "questionTitle") {
         return sortStatus.direction === "asc"
           ? a.questionTitle.localeCompare(b.questionTitle)
@@ -167,10 +178,9 @@ export default function QuestionViewer() {
             title: "Variant",
             visibleMediaQuery: `(min-width: ${theme.breakpoints.xs}px)`,
             render: (record) =>
-              `${
-                record.variationId === 0
-                  ? "0 (Dynamic)"
-                  : record.variationId === 1
+              `${record.variationId === 0
+                ? "0 (Dynamic)"
+                : record.variationId === 1
                   ? "1 (Static; Base)"
                   : `${record.variationId} (Static)`
               }`,
@@ -360,13 +370,13 @@ export default function QuestionViewer() {
           />
           {(currentQuestion.current.questionData as QuestionDataType)
             .variables && (
-            <VariablesBox
-              variables={
-                (currentQuestion.current.questionData as QuestionDataType)
-                  .variables
-              }
-            />
-          )}
+              <VariablesBox
+                variables={
+                  (currentQuestion.current.questionData as QuestionDataType)
+                    .variables
+                }
+              />
+            )}
         </Modal>
       )}
 
@@ -404,9 +414,8 @@ export default function QuestionViewer() {
 
 const useStyles = createStyles((theme) => ({
   modalHeader: {
-    borderBottom: `1px solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
-    }`,
+    borderBottom: `1px solid ${theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
+      }`,
     marginBottom: theme.spacing.md,
   },
   modalTitle: {
