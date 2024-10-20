@@ -1,6 +1,7 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 import { env } from "@/env/server.mjs";
 import { prisma } from "@/server/db/client";
@@ -10,7 +11,6 @@ import { CustomSendVerificationRequest } from "./signInEmail";
 
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    // Include id and role in session and jwt tokens
     async session({ session, token, user }) {
       if (session.user && token.sub) {
         session.user.id = token.sub;
@@ -28,12 +28,10 @@ export const authOptions: NextAuthOptions = {
     },
 
     async signIn(request) {
-      // Callback runs before and after email sign in (verification and after magic link)
       if (!request.user.email) {
         return false;
       }
 
-      // Check if allowed to sign in based on whitelist
       const allowedUsers = await prisma.user.findMany({
         select: {
           email: true,
@@ -47,7 +45,6 @@ export const authOptions: NextAuthOptions = {
         return false;
       }
 
-      // Initialize other info only for non-email sign in methods
       const user = allowedUsers.find(
         (user) => user.email === request.user.email
       );
@@ -70,7 +67,6 @@ export const authOptions: NextAuthOptions = {
         });
       }
 
-      // Successful login
       return true;
     },
   },
@@ -83,18 +79,47 @@ export const authOptions: NextAuthOptions = {
     EmailProvider({
       server: env.EMAIL_SERVER,
       from: env.EMAIL_FROM,
-      maxAge: 24 * 60 * 60 * 30, // 30d (Email magic links' valid duration, default 24h)
+      maxAge: 24 * 60 * 60 * 30,
       sendVerificationRequest({ identifier, url, provider }) {
         CustomSendVerificationRequest({ identifier, url, provider });
       },
     }),
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email) {
+          throw new Error("Email is required");
+        }
+
+        const allowedUsers = await prisma.user.findMany({
+          select: {
+            id: true,
+            email: true,
+            role: true,
+            username: true,
+            image: true,
+          },
+        });
+
+        const user = allowedUsers.find(
+          (user) => user.email === credentials.email
+        );
+
+        if (!user) {
+          throw new Error("No user found with this email");
+        }
+
+        return user;
+      },
+    }),
   ],
   pages: {
-    // Custom redirect all auth to homepage and send notifications instead
     signIn: "/",
     error: "/",
     verifyRequest: "/",
-    // New user redirect doesn't work for email provider as we add whitelisted emails into the User table, causing the new users to not be counted as new users
     newUser: "/consent",
   },
   session: {
