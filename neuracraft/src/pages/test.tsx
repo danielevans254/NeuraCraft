@@ -243,6 +243,7 @@ $$`}</Latex>
   );
 }
 
+// TODO: Replace
 const slide =
   "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007594/NeuraCraft/slides/w1s1-fundamentals-of-electricity.pdf";
 
@@ -250,7 +251,7 @@ const markdown_with_video = `# This is header 1
 
 And this is a paragraph. By default, Tailwind removes all styles. We can override that in globals.css.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hmIDKROT9Eg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zZMg9ryeWOw?si=95GVFC2l1byetX76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 
