@@ -12,7 +12,7 @@ export default async function handler(
   try {
     const session = await getServerSession(req, res, authOptions);
 
-    const courseSlug = z.string().nonempty().parse(req.query.course);
+    const courseSlug = z.string().min(1).parse(req.query.course);
 
     const attempts = await prisma.attempt.findMany({
       where: {
