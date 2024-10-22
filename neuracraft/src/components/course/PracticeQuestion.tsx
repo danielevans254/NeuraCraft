@@ -99,9 +99,8 @@ export default function PracticeQuestion() {
           )}%`,
           {
             icon: data.isCorrect ? "🎉" : "💪",
-            className: `border border-solid ${
-              data.isCorrect ? "border-green-500" : "border-red-500"
-            }`,
+            className: `border border-solid ${data.isCorrect ? "border-green-500" : "border-red-500"
+              }`,
             position: "top-right",
             duration: 5000,
           }
@@ -191,11 +190,12 @@ export default function PracticeQuestion() {
     );
   }
 
-  const answerOptions = UCQAT.data.answers as QuestionDataType["answers"];
+  const answerOptions = UCQAT?.data?.answers as QuestionDataType["answers"] | undefined;
 
   const correctKeys = answerOptions
-    .filter((item) => item.isCorrect)
-    .map((item) => item.key);
+    ? answerOptions.filter((item) => item.isCorrect).map((item) => item.key)
+    : []; // Return an empty array if answerOptions is undefined or null
+
 
   return (
     <Paper p="xl" radius="md" withBorder>
@@ -249,7 +249,7 @@ export default function PracticeQuestion() {
             value={selectedKeys[0]}
             onChange={(value) => {
               console.log(
-                value === answerOptions.find((item) => item.isCorrect)?.key
+                value === answerOptions?.find((item) => item.isCorrect)?.key
               );
               setSelectedKeys([value]);
             }}
@@ -257,7 +257,7 @@ export default function PracticeQuestion() {
             description="Select only one option"
             required
           >
-            {answerOptions.map((item) => (
+            {answerOptions?.map((item) => (
               <Radio
                 key={item.key}
                 value={item.key}
@@ -268,11 +268,10 @@ export default function PracticeQuestion() {
                     <Text>{item.answerContent}</Text>
                   )
                 }
-                className={`flex items-center justify-start rounded-md border border-solid ${
-                  theme.colorScheme === "dark"
-                    ? "border-zinc-600 bg-zinc-700"
-                    : "border-gray-200 bg-gray-100"
-                } p-2`}
+                className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                  ? "border-zinc-600 bg-zinc-700"
+                  : "border-gray-200 bg-gray-100"
+                  } p-2`}
               />
             ))}
           </Radio.Group>
@@ -283,7 +282,7 @@ export default function PracticeQuestion() {
             onChange={(values) => {
               console.log(
                 values.length === correctKeys.length &&
-                  values.every((item) => correctKeys.includes(item))
+                values.every((item) => correctKeys.includes(item))
               );
               setSelectedKeys(values);
             }}
@@ -291,7 +290,7 @@ export default function PracticeQuestion() {
             description="Select all correct options"
             required
           >
-            {answerOptions.map((item) => (
+            {answerOptions?.map((item) => (
               <Checkbox
                 key={item.key}
                 value={item.key}
@@ -302,11 +301,10 @@ export default function PracticeQuestion() {
                     <Text>{item.answerContent}</Text>
                   )
                 }
-                className={`flex items-center justify-start rounded-md border border-solid ${
-                  theme.colorScheme === "dark"
-                    ? "border-zinc-600 bg-zinc-700"
-                    : "border-gray-200 bg-gray-100"
-                } p-2`}
+                className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                  ? "border-zinc-600 bg-zinc-700"
+                  : "border-gray-200 bg-gray-100"
+                  } p-2`}
               />
             ))}
           </Checkbox.Group>
