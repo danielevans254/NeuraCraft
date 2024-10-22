@@ -203,7 +203,6 @@ export default function PracticeQuestion() {
   console.log('Is Array:', Array.isArray(answerOptions));
   console.log(correctKeys);
 
-
   return (
     <Paper p="xl" radius="md" withBorder>
       <form
