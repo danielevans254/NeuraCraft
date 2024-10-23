@@ -190,11 +190,18 @@ export default function PracticeQuestion() {
     );
   }
 
-  const answerOptions = UCQAT?.data?.answers as QuestionDataType["answers"] | undefined;
+  const answerOptions = UCQAT?.data.answers as UCQATAnswersType;
 
-  const correctKeys = answerOptions
+  // For the correctKeys calculation
+  const correctKeys = Array.isArray(answerOptions)
     ? answerOptions.filter((item) => item.isCorrect).map((item) => item.key)
-    : []; // Return an empty array if answerOptions is undefined or null
+    : [];
+
+  console.log('Raw answers:', UCQAT?.data?.answers);
+  console.log('typeof answers:', typeof answerOptions);
+  console.log('Parsed answers:', answerOptions);
+  console.log('Is Array:', Array.isArray(answerOptions));
+  console.log(correctKeys);
 
 
   return (
@@ -276,6 +283,7 @@ export default function PracticeQuestion() {
             ))}
           </Radio.Group>
         ) : (
+          // FIXME: Apparently the radio button option is working, when mapping the answer options but for the checkbox option, it is not working, as expected
           <Checkbox.Group
             mt="xl"
             value={selectedKeys}
@@ -290,24 +298,30 @@ export default function PracticeQuestion() {
             description="Select all correct options"
             required
           >
-            {answerOptions?.map((item) => (
-              <Checkbox
-                key={item.key}
-                value={item.key}
-                label={
-                  item.isLatex ? (
-                    <Latex>{item.answerContent}</Latex>
-                  ) : (
-                    <Text>{item.answerContent}</Text>
-                  )
-                }
-                className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
-                  ? "border-zinc-600 bg-zinc-700"
-                  : "border-gray-200 bg-gray-100"
-                  } p-2`}
-              />
-            ))}
+            {/* FIXME: Temporary fix need to actually map the object better, but it works */}
+            {UCQAT?.data?.question?.questionData.answers ? (
+              UCQAT.data.question.questionData.answers.map((item) => (
+                <Checkbox
+                  key={item.key}
+                  value={item.key}
+                  label={
+                    item.isLatex ? (
+                      <Latex>{item.answerContent}</Latex>
+                    ) : (
+                      <Text>{item.answerContent}</Text>
+                    )
+                  }
+                  className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                    ? "border-zinc-600 bg-zinc-700"
+                    : "border-gray-200 bg-gray-100"
+                    } p-2`}
+                />
+              ))
+            ) : (
+              <Text>No answer options available.</Text>
+            )}
           </Checkbox.Group>
+
         )}
         <Flex mt="xl" align="center" gap="md">
           <Button
