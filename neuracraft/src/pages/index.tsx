@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { IconBrain, IconBook, IconTrophy } from '@tabler/icons';
+import { IconBrain, IconBook, IconTrophy, IconRocket, IconAward } from '@tabler/icons';
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -18,281 +18,149 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import { useState } from "react";
+import { Star, Brain, Timer, Users, Globe, Book, Award, ChevronRight } from "lucide-react";
 
-const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
-  const { classes } = useStyles();
+const FeatureCard = ({ icon: Icon, title, description }) => {
   return (
-    <Paper shadow="md" radius="md" p="xl" className={classes.featureCard}>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        {icon}
-        <Text weight={700} size="xl" mt="md">{title}</Text>
-        <Text color="dimmed" size="sm" mt="sm">{description}</Text>
-      </motion.div>
-    </Paper>
+    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+      <div className="flex flex-col items-center text-center">
+        <div className="p-3 rounded-full bg-blue-50 mb-4">
+          <Icon className="w-8 h-8 text-blue-600" />
+        </div>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 leading-relaxed">{description}</p>
+      </div>
+    </div>
   );
 };
 
-export default function HomePage() {
-  const { classes, theme } = useStyles();
+const StatCard = ({ value, label }) => {
+  return (
+    <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg">
+      <div className="text-3xl font-bold text-blue-600 mb-2">{value}</div>
+      <div className="text-gray-600">{label}</div>
+    </div>
+  );
+};
+
+const TestimonialCard = ({ content, author, role, rating }) => {
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-lg">
+      <div className="flex gap-1 mb-4">
+        {[...Array(rating)].map((_, i) => (
+          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+        ))}
+      </div>
+      <p className="text-gray-700 italic mb-4">"{content}"</p>
+      <div>
+        <p className="font-semibold">{author}</p>
+        <p className="text-sm text-gray-500">{role}</p>
+      </div>
+    </div>
+  );
+};
+
+const HomePage = () => {
+  const [activeTab, setActiveTab] = useState('students');
+
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Learning",
+      description: "Personalized learning paths adapted to your pace and style using advanced AI algorithms"
+    },
+    {
+      icon: Timer,
+      title: "Microlearning",
+      description: "Bite-sized lessons designed for optimal retention and efficient learning"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Learning",
+      description: "Join study groups and participate in peer-to-peer learning sessions"
+    },
+    {
+      icon: Globe,
+      title: "Global Community",
+      description: "Connect with learners and experts from around the world"
+    },
+    {
+      icon: Book,
+      title: "Rich Content Library",
+      description: "Access thousands of courses across various disciplines and skill levels"
+    },
+    {
+      icon: Award,
+      title: "Certifications",
+      description: "Earn industry-recognized certificates upon course completion"
+    }
+  ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Header />
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Container>
-        <Navbar withBorder={false} {...{ className: "bg-transparent" }} />
+        <div className="pt-4">
+          <Navbar withBorder={false} {...{ className: "bg-transparent" }} />
+        </div>
       </Container>
-      <Container className={classes.wrapper} size={1400} px="xl">
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <Box className={classes.inner}>
-            <Title className={classes.title}>
-              AI-Powered{" "}
-              <Text
-                component="span"
-                variant="gradient"
-                gradient={{ from: theme.colors.cyan[5], to: "blue" }}
-                inherit
-              >
-                Mastery Estimation
-              </Text>
-            </Title>
-            <Container p={0} size={650}>
-              <Text
-                size="lg"
-                color="dimmed"
-                className={classes.description}
-                my="lg"
-              >
-                Transform your learning experience with a dynamic platform that elevates traditional education. Break free from the &quot;one-size-fits-all&quot;model and engage with personalized challenges aimed to match your skill level.
-              </Text>
-            </Container>
-            <Box className={classes.controls} mt="xl">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  className={classes.control}
-                  size="lg"
-                  component="a"
-                  href="/courses"
-                  variant="gradient"
-                  gradient={{ from: 'cyan', to: 'blue' }}
-                >
-                  Start Your Journey
-                </Button>
-              </motion.div>
-            </Box>
-          </Box>
-        </motion.div>
-      </Container>
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            Transform Your Learning Journey
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Experience adaptive learning powered by our recommendation algorithm, tailored to your unique needs and learning style
+          </p>
+        </div>
 
-      <Container size={1200} mt={75
-      }>
-        <h1 className="w-full items-center justify-center flex flex-col text-5xl mb-8">
-          Features
+        {/* Features Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-12">Platform Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} {...feature} />
+            ))}
+          </div>
+        </div>
 
-        </h1>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <Grid>
-            <Grid.Col xs={12} sm={4}>
-              <FeatureCard
-                icon={<IconBrain size={48} stroke={1.5} color={theme.colors.blue[6]} className="" />}
-                title="Adaptive Learning"
-                description="Our AI-powered system adjusts to your learning pace and style, ensuring an optimized learning experience."
-              />
-            </Grid.Col>
-            <Grid.Col xs={12} sm={4}>
-              <FeatureCard
-                icon={<IconBook size={48} stroke={1.5} color={theme.colors.cyan[6]} />}
-                title="Comprehensive Curriculum"
-                description="Access a wide range of engineering topics, from basics to advanced concepts, all in one place."
-              />
-            </Grid.Col>
-            <Grid.Col xs={12} sm={4}>
-              <FeatureCard
-                icon={<IconTrophy size={48} stroke={1.5} color={theme.colors.yellow[6]} />}
-                title="Progress Tracking"
-                description="Monitor your growth with detailed analytics and earn points as you master new skills."
-              />
-            </Grid.Col>
-          </Grid>
-        </motion.div>
-      </Container>
+        {/* Testimonials Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-12">What Our Community Says</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <TestimonialCard
+              content="The AI-powered recommendations helped me learn at my own pace. It's like having a personal tutor!"
+              author="Sarah Johnson"
+              role="Software Developer"
+              rating={5}
+            />
+            <TestimonialCard
+              content="The collaborative features made learning fun and interactive. I've made great connections!"
+              author="Michael Chen"
+              role="Business Student"
+              rating={5}
+            />
+            <TestimonialCard
+              content="Earning my certification through this platform opened new career opportunities."
+              author="Emma Rodriguez"
+              role="Data Analyst"
+              rating={5}
+            />
+          </div>
+        </div>
 
-      <Container size={1000} p="lg" mt={100} mb={100}>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <Paper shadow="md" radius="lg" p="xl" className={classes.featurePaper}>
-            <Grid grow>
-              <Grid.Col sm={4} pb="lg" className={classes.image}>
-                <Image
-                  src="/bkt-diagram.png"
-                  alt="Bayesian Knowledge Tracing Diagram"
-                  width="0"
-                  height="0"
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Grid.Col>
-              <Grid.Col sm={8}>
-                <Stack justify="flex-start" spacing="md">
-                  <Container>
-                    <Title order={2} className={classes.featureTitle}>The Recommendation Engine</Title>
-                    <Text
-                      size="md"
-                      align="justify"
-                      color="dimmed"
-                      className={classes.featureText}
-                    >
-
-                      NeuraCraft leverages the Machine Learning algorithm known as{" "}
-                      <em>Bayesian Knowledge Tracing (BKT)</em> to provide a
-                      personalized learning experience.
-                    </Text>
-                  </Container>
-                  <Text
-                    size="md"
-                    align="justify"
-                    color="dimmed"
-                    className={classes.featureText}
-                  >
-                    BKT is a probabilistic model that estimates a student&apos;s
-                    mastery of a concept based on their performance on a series of
-                    questions. Our model is trained on simulated student
-                    interactions based on historical quiz distribution statistics
-                    for selected topics.
-                  </Text>
-                </Stack>
-              </Grid.Col>
-            </Grid>
-          </Paper>
-        </motion.div>
-      </Container>
-
-      <Footer />
-    </motion.div>
+        {/* CTA Section */}
+        <div className="text-center bg-blue-600 text-white rounded-2xl p-12">
+          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Learning Journey?</h2>
+          <p className="text-lg mb-8">Join thousands of learners who are achieving their goals with our platform</p>
+          <button className="px-8 py-3 bg-white text-blue-600 rounded-full hover:bg-blue-50 transition-colors">
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
-const useStyles = createStyles((theme) => ({
-  image: {
-    filter: theme.colorScheme === "dark" ? "invert(1)" : "none",
-  },
-
-  wrapper: {
-    position: "relative",
-    paddingTop: 120,
-    paddingBottom: 80,
-    zIndex: 1,
-
-    "@media (max-width: 755px)": {
-      paddingTop: 80,
-      paddingBottom: 60,
-    },
-  },
-
-  inner: {
-    position: "relative",
-  },
-
-  title: {
-    textAlign: "center",
-    fontWeight: 800,
-    fontSize: 56,
-    letterSpacing: -1,
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
-    marginBottom: theme.spacing.xs,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-
-    "@media (max-width: 520px)": {
-      fontSize: 32,
-      textAlign: "left",
-    },
-  },
-
-  description: {
-    textAlign: "center",
-    lineHeight: 2.0,
-
-    "@media (max-width: 520px)": {
-      textAlign: "left",
-      fontSize: theme.fontSizes.md,
-    },
-  },
-
-  controls: {
-    marginTop: theme.spacing.xl * 2,
-    display: "flex",
-    justifyContent: "center",
-
-    "@media (max-width: 520px)": {
-      flexDirection: "column",
-    },
-  },
-
-  control: {
-    zIndex: 1,
-    height: 54,
-    paddingLeft: 38,
-    paddingRight: 38,
-
-    "@media (max-width: 520px)": {
-      height: 54,
-      paddingLeft: 18,
-      paddingRight: 18,
-      flex: 1,
-    },
-  },
-
-  featurePaper: {
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
-  },
-
-  featureTitle: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontSize: 28,
-    fontWeight: 700,
-    marginBottom: theme.spacing.md,
-  },
-
-  featureText: {
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7],
-    lineHeight: 1.6,
-  },
-
-  featureCard: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    backgroundImage: theme.fn.linearGradient(
-      45,
-      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.white,
-      theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0]
-    ),
-  },
-
-  testimonial: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
-  },
-}));
+export default HomePage
