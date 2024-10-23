@@ -74,7 +74,7 @@ export const RecommendQuestion = async (
   )[0] as Question;
 
   if (!recommendedQuestion) {
-    throw new Error("No relevant questions found");
+    throw new Error("No relevant questions found, refresh the page or try again later");
   }
 
   return {
