@@ -205,11 +205,13 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
             }
           />
           {attempt.questionWithAddedTime.answers ? (
-            (attempt.questionWithAddedTime.answers as UCQATAnswersType).map((ans) => (
+            Object.entries(attempt.questionWithAddedTime.answers).map(([key, ans]) => (
               <Flex
                 gap="sm"
-                key={ans.answerContent}
-                className={`my-2 ${classes.options} ${(attempt.attemptedKeys as string[]).includes(ans.key) ? classes.selected : ""
+                key={key}
+                className={`my-2 ${classes.options} ${Array.isArray(attempt.attemptedKeys) && attempt.attemptedKeys.includes(ans.key)
+                  ? classes.selected
+                  : ""
                   }`}
               >
                 {ans.isCorrect === true ? (
