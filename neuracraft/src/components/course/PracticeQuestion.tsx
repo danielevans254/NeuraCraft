@@ -196,6 +196,15 @@ export default function PracticeQuestion() {
   const correctKeys = Array.isArray(answerOptions)
     ? answerOptions.filter((item) => item.isCorrect).map((item) => item.key)
     : [];
+<<<<<<< HEAD
+=======
+
+  console.log('Raw answers:', UCQAT?.data?.answers);
+  console.log('typeof answers:', typeof answerOptions);
+  console.log('Parsed answers:', answerOptions);
+  console.log('Is Array:', Array.isArray(answerOptions));
+  console.log(correctKeys);
+>>>>>>> 991305e (Refactor PracticeQuestion component to handle answer options correctly)
 
   console.log('Raw answers:', UCQAT?.data?.answers);
   console.log('typeof answers:', typeof answerOptions);
