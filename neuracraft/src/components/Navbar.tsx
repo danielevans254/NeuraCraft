@@ -195,7 +195,7 @@ export default function Navbar({
           <FullLogo />
         )}
 
-        {session.status === "loading" && (
+        {/* {session.status === "loading" && (
           <Center>
             <ActionIcon radius="xl" mr="xl" onClick={handleColorSchemeChange}>
               {colorScheme === "dark" ? (
@@ -206,17 +206,17 @@ export default function Navbar({
             </ActionIcon>
             <Loader />
           </Center>
-        )}
+        )} */}
 
         {session.status === "unauthenticated" && (
           <Center>
-            <ActionIcon radius="xl" mr="xl" onClick={handleColorSchemeChange}>
+            {/* <ActionIcon radius="xl" mr="xl" onClick={handleColorSchemeChange}>
               {colorScheme === "dark" ? (
                 <IconSun size={18} stroke={1.5} />
               ) : (
                 <IconMoon size={18} stroke={1.5} />
               )}
-            </ActionIcon>
+            </ActionIcon> */}
             <Menu
               shadow="xl"
               width={320}
