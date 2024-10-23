@@ -5,6 +5,7 @@ from pyBKT.models import Model, Roster
 from pydantic import BaseModel
 from typing import Literal
 
+from pathlib import Path
 import numpy as np
 import multiprocessing, os, pickle, re, time
 import pyrebase
@@ -55,40 +56,69 @@ def get_model() -> Model:
     model.load("model.pkl")
     return model
 
-
-# def get_roster_model() -> Roster:
-#     """
-#     Loads the latest roster file in the persistent storage.
-#     Updates the roster with the latest training model on startup.
-#     """
-
-#     # storage.download("roster.pkl", "roster.pkl")
-#     with open("roster.pkl", "rb") as handle:
-#         roster: Roster = pickle.load(handle)
-#     try:
-#         # Prevent API from crashing in case the training model doesn't fit the roster model
-#         roster.set_model(app.state.model)
-#     except Exception as e:
-#         print(
-#             f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
-#         )
-#     finally:
-#         return roster
+# FIXME: This mf doesn't download the roster model correctly
+def get_roster_model() -> Roster:
+    """
+    Loads the roster file from the /models directory.
+    Updates the roster with the latest training model on startup.
+    """
+    roster_path = os.path.join("models", "model.pkl")
+    
+    with open(roster_path, "rb") as handle:
+        roster: Roster = pickle.load(handle)
+    try:
+        # Prevent API from crashing in case the training model doesn't fit the roster model
+        roster.set_model(app.state.model)
+    except Exception as e:
+        print(
+            f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
+        )
+    finally:
+        return roster
 
 
 def get_all_topics() -> list[str]:
     """
     Returns list of topics by parsing the topicSlugs in the seed_data.ts file.
+    
+    seed_data.ts is in NeuraCraft/neuracraft/prisma/seed_data.ts
     """
-
-    with open(os.path.dirname(__file__) + "/seed_data.ts", "r") as f:
-        text = f.read()
-        topics = re.findall(r"topicSlug: .*", text)
-        topics = set(topics)  # Remove duplicates
-        topics = [
-            topic.replace('topicSlug: "', "").rstrip('",') for topic in topics
-        ]  # Clean up
-    return topics
+    current_dir = Path(os.path.dirname(__file__))
+    
+    # Navigate up to NeuraCraft root and then to seed_data.ts
+    seed_file_path = current_dir.parent / 'neuracraft' / 'prisma' / 'seed_data.ts'
+    
+    if not seed_file_path.exists():
+        raise FileNotFoundError(
+            f"seed_data.ts not found at expected path: {seed_file_path}\n"
+            f"Current directory is: {current_dir}"
+        )
+    
+    try:
+        with open(seed_file_path, "r", encoding='utf-8') as f:
+            text = f.read()
+            topics = re.findall(r"topicSlug: .*", text)
+            topics = set(topics)
+            topics = [
+                topic.replace('topicSlug: "', "").rstrip('",') for topic in topics
+            ]
+        return topics
+    except UnicodeDecodeError:
+        # If UTF-8 fails, try with UTF-8-SIG (for files with BOM)
+        try:
+            with open(seed_file_path, "r", encoding='utf-8-sig') as f:
+                text = f.read()
+                topics = re.findall(r"topicSlug: .*", text)
+                topics = set(topics)
+                topics = [
+                    topic.replace('topicSlug: "', "").rstrip('",') for topic in topics
+                ]
+            return topics
+        except UnicodeDecodeError as e:
+            raise UnicodeDecodeError(
+                f"Unable to read seed_data.ts with UTF-8 or UTF-8-SIG encoding. "
+                f"Original error: {str(e)}"
+            )
 
 
 class Topics(BaseModel):
@@ -104,9 +134,11 @@ async def startup_event() -> None:
     """
     Updates state variables with the latest model in persistent storage during startup.
     """
-
+    # Initialize model first
     app.state.model = get_model()
-    # app.state.roster = get_roster_model()
+    # Initialize roster with the model
+    app.state.roster = get_roster_model(app.state.model)
+    print("[STARTUP] Model and Roster initialized successfully")
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
@@ -323,7 +355,7 @@ def update_state_of_student(
         elif (
             student_id not in app.state.roster.skill_rosters[topic].students
         ):  # Add student if doesn't exist in the Roster
-            app.state.roster.add_students(topic, student_id)
+            app.state.roster.add_students(topic, [student_id])
 
         app.state.roster.update_state(
             topic, student_id, np.array([int(i) for i in correct])
@@ -359,7 +391,7 @@ def update_multiple_states_of_student(
             elif (
                 student_id not in app.state.roster.skill_rosters[topic].students
             ):  # Add student if doesn't exist in the Roster
-                app.state.roster.add_students(topic, student_id)
+                app.state.roster.add_students(topic, [student_id])  # Fixed: Wrapped in list
 
             app.state.roster.update_state(
                 topic, student_id, np.array([int(i) for i in topics.topics[topic]])
