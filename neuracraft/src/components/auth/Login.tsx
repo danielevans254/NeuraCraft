@@ -2,6 +2,8 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import { Dispatch, SetStateAction, useState } from "react";
 import toast from "react-hot-toast";
+import { motion } from 'framer-motion';
+import { Mail, LogIn, Loader2 } from 'lucide-react';
 import {
   ActionIcon, Button, Container, Group, LoadingOverlay, Stack, Text, TextInput,
   Title, useMantineTheme,
@@ -9,21 +11,27 @@ import {
 import { IconBrandGoogle, IconLogin, IconSpeakerphone } from "@tabler/icons";
 import { useMutation } from "@tanstack/react-query";
 
-export default function Login({
-  setLoginMenuOpened,
-}: {
+interface LoginProps {
   setLoginMenuOpened: Dispatch<SetStateAction<boolean>>;
-}) {
-  const theme = useMantineTheme();
+}
 
+export default function Login({ setLoginMenuOpened }: LoginProps) {
   const [email, setEmail] = useState("");
   const [emailLoginIsLoading, setEmailLoginIsLoading] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.trim();
+    setEmail(value);
+    setIsEmailValid(value.length === 0 || /^(.+)@(.+)$/.test(value));
+  };
 
   const emailSignIn = async () => {
     const res = await signIn("credentials", {
       email,
       redirect: false,
     });
+
     if (res?.error) {
       toast.error(`${res.error}\n\nPlease contact support if this persists.`);
     } else if (res?.ok) {
@@ -58,77 +66,103 @@ export default function Login({
     },
   });
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setEmailLoginIsLoading(true);
+    handleEmailLogin();
+  };
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setEmailLoginIsLoading(true);
-        handleEmailLogin();
-      }}
-    >
-      <LoadingOverlay
-        visible={emailLoginIsLoading}
-        overlayBlur={1}
-        radius="md"
-      />
-      <Container p="sm">
-        <Stack spacing="sm">
-          <Title order={3}>
-            Welcome to{" "}
-            <Text
-              component="span"
-              variant="gradient"
-              gradient={{ from: theme.colors.cyan[5], to: "blue" }}
+    <div className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="w-full max-w-md"
+      >
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+          <motion.form
+            onSubmit={handleSubmit}
+            className="space-y-6"
+            initial={false}
+          >
+            {/* Header */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-center"
             >
-              NeuraCraft
-            </Text>
-            !
-          </Title>
-          <TextInput
-            required
-            radius="md"
-            name="email"
-            type="email"
-            placeholder="Invite Email"
-            disabled={emailLoginIsLoading}
-            value={email}
-            onChange={(e) => setEmail(e.currentTarget.value.trim())}
-            error={email.length > 0 && !/^(.+)@(.+)$/.test(email)}
-            styles={{
-              input: {
-                backgroundColor:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[9]
-                    : theme.colors.gray[0],
-              },
-            }}
-          />
-          <Text size="xs" color="dimmed">
-            Enter the email address from your invite
-          </Text>
-          <Group position="apart">
-            <Button
-              type="submit"
-              size="xs"
-              variant="outline"
-              color="gray"
-              radius="xl"
-              leftIcon={<IconLogin size={18} stroke={1.5} />}
+              <h2 className="text-3xl font-bold">
+                Welcome to{' '}
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                  NeuraCraft
+                </span>
+              </h2>
+            </motion.div>
+
+            {/* Email Input */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="space-y-2"
             >
-              Login
-            </Button>
-            <ActionIcon
-              size="md"
-              variant="outline"
-              color="gray"
-              radius="xl"
-              onClick={() => signIn("google")}
+              <div className="relative">
+                <motion.div
+                  whileTap={{ scale: 0.97 }}
+                  className="relative"
+                >
+                  <input
+                    type="email"
+                    required
+                    disabled={emailLoginIsLoading}
+                    value={email}
+                    onChange={handleEmailChange}
+                    className={`w-full px-4 py-3 rounded-lg border ${isEmailValid
+                      ? 'border-gray-200 dark:border-gray-700'
+                      : 'border-red-500'
+                      } bg-gray-50 dark:bg-gray-900 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all`}
+                    placeholder="Enter your invite email"
+                  />
+                  <Mail className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
+                </motion.div>
+                {!isEmailValid && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-500 text-sm mt-1"
+                  >
+                    Please enter a valid email address
+                  </motion.p>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex justify-between items-center"
             >
-              <IconBrandGoogle size={18} />
-            </ActionIcon>
-          </Group>
-        </Stack>
-      </Container>
-    </form>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                disabled={emailLoginIsLoading}
+                className="flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium hover:shadow-lg transition-all disabled:opacity-50"
+              >
+                {emailLoginIsLoading ? (
+                  <Loader2 className="h-5 w-5 animate-spin mr-2" />
+                ) : (
+                  <LogIn className="h-5 w-5 mr-2" />
+                )}
+                Sign In
+              </motion.button>
+            </motion.div>
+          </motion.form>
+        </div>
+      </motion.div>
+    </div>
   );
 }
