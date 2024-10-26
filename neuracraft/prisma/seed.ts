@@ -102,10 +102,19 @@ async function main() {
     // Create sample attempts
     for (const course of Courses.slice(0, 2)) {
       const question = Questions[0];
+
+      // Generate random attempted answers based on the question type
+      const generateRandomAttempt = () => {
+        // For the first question which has {x: 2} as the answer
+        return {
+          x: Math.floor(Math.random() * 10) - 3 // Random number between -3 and 6
+        };
+      };
+
       await prisma.questionWithAddedTime.create({
         data: {
-          questionId: question?.questionId || 0, // Assign a default value of 0 if questionId is undefined
-          variationId: question?.variationId || 0, // Assign a default value of 0 if variationId is undefined
+          questionId: question?.questionId || 0,
+          variationId: question?.variationId || 0,
           userId: user.id,
           courseSlug: course.courseSlug,
           variables: {},
@@ -114,7 +123,7 @@ async function main() {
             create: {
               userId: user.id,
               courseSlug: course.courseSlug,
-              attemptedKeys: {},
+              attemptedKeys: generateRandomAttempt(),
               isCorrect: Math.random() > 0.5,
               attemptSeconds: Math.floor(Math.random() * 300),
             },
@@ -139,7 +148,7 @@ async function main() {
   //   }
   // }
 
-  console.log("Sample posts and comments created");
+  // console.log("Sample posts and comments created");
 }
 
 main()
