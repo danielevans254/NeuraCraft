@@ -409,13 +409,13 @@ export default function Accounts() {
                       )}
                     </FileButton>
                   </Flex>
-                  <Checkbox
+                  {/* <Checkbox
                     fz="sm"
                     label="Auto-send recruitment emails, likely to their junk mail"
                     {...addUsersForm.getInputProps("toSendRecruitmentEmails", {
                       type: "checkbox",
                     })}
-                  />
+                  /> */}
                   <Flex gap="sm" align="center">
                     <Button
                       fullWidth
@@ -544,17 +544,17 @@ export default function Accounts() {
                 ),
               sortable: true,
             },
-            {
-              accessor: "consentDate",
-              title: "Consented",
-              render: (record) =>
-                record.consentDate ? (
-                  <IconCheck color="green" />
-                ) : (
-                  <IconX color="red" />
-                ),
-              sortable: true,
-            },
+            // {
+            //   accessor: "consentDate",
+            //   title: "Consented",
+            //   render: (record) =>
+            //     record.consentDate ? (
+            //       <IconCheck color="green" />
+            //     ) : (
+            //       <IconX color="red" />
+            //     ),
+            //   sortable: true,
+            // },
             {
               accessor: "points",
               sortable: true,
@@ -564,7 +564,7 @@ export default function Accounts() {
               title: "",
               render: (record) => (
                 <Flex wrap="nowrap">
-                  <Tooltip label="Resend Recruitment Email" withArrow>
+                  {/* <Tooltip label="Resend Recruitment Email" withArrow>
                     <ActionIcon
                       onClick={(e) => {
                         e.stopPropagation();
@@ -573,7 +573,7 @@ export default function Accounts() {
                     >
                       <IconMail size={16} />
                     </ActionIcon>
-                  </Tooltip>
+                  </Tooltip> */}
                   {record.role === Role.USER && (
                     <Tooltip label="Delete User" withArrow>
                       <ActionIcon
@@ -698,13 +698,13 @@ export default function Accounts() {
               type="number"
               {...editUserForm.getInputProps("points")}
             />
-            <Checkbox
+            {/* <Checkbox
               label="Revoke Consent"
               disabled={currentUser.current?.consentDate === null}
               {...editUserForm.getInputProps("revokeConsent", {
                 type: "checkbox",
               })}
-            />
+            /> */}
             <Button
               type="submit"
               loading={editUserStatus === "loading"}
