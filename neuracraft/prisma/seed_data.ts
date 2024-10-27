@@ -19,7 +19,7 @@ export const users: Prisma.UserCreateInput[] = [
     emailVerified: new Date("2023-01-01"),
     isNewUser: false,
     name: "Admin User",
-    ceuId: "A0000000A",
+    ceuId: "2021-04721",
     consentDate: new Date("2023-01-01"),
     points: 1000,
     emailFrequency: Frequency.Weekly,
@@ -100,12 +100,6 @@ export const Topics: Topic[] = [
     topicPrior: 0.388,
   },
   {
-    topicSlug: "networking",
-    topicName: "Networking Fundamentals",
-    topicLevel: Level.Foundational,
-    topicPrior: 0.375,
-  },
-  {
     topicSlug: "database-systems",
     topicName: "Database Systems",
     topicLevel: Level.Foundational,
@@ -132,7 +126,7 @@ export const Topics: Topic[] = [
   {
     topicSlug: "machine-learning",
     topicName: "Introduction to Machine Learning",
-    topicLevel: Level.Intermediate,
+    topicLevel: Level.Foundational,
     topicPrior: 0.295,
   },
   {
@@ -146,12 +140,6 @@ export const Topics: Topic[] = [
     topicName: "Cybersecurity Fundamentals",
     topicLevel: Level.Intermediate,
     topicPrior: 0.325,
-  },
-  {
-    topicSlug: "mobile-development",
-    topicName: "Mobile App Development",
-    topicLevel: Level.Intermediate,
-    topicPrior: 0.380,
   },
   {
     topicSlug: "data-analytics",
@@ -198,14 +186,8 @@ export const Topics: Topic[] = [
   {
     topicSlug: "artificial-intelligence",
     topicName: "Artificial Intelligence Concepts",
-    topicLevel: Level.Advanced,
+    topicLevel: Level.Intermediate,
     topicPrior: 0.340,
-  },
-  {
-    topicSlug: "network-security",
-    topicName: "Network Security Principles",
-    topicLevel: Level.Advanced,
-    topicPrior: 0.330,
   },
   {
     topicSlug: "blockchain",
@@ -218,12 +200,6 @@ export const Topics: Topic[] = [
     topicName: "User Experience Design",
     topicLevel: Level.Advanced,
     topicPrior: 0.310,
-  },
-  {
-    topicSlug: "ethical-hacking",
-    topicName: "Ethical Hacking Techniques",
-    topicLevel: Level.Advanced,
-    topicPrior: 0.300,
   },
   {
     topicSlug: "software-architecture",
@@ -243,12 +219,6 @@ export const Topics: Topic[] = [
     topicLevel: Level.Intermediate,
     topicPrior: 0.325,
   },
-  {
-    topicSlug: "mobile-security",
-    topicName: "Mobile Security Best Practices",
-    topicLevel: Level.Intermediate,
-    topicPrior: 0.305,
-  },
 ];
 
 export const Courses: {
@@ -266,311 +236,116 @@ export const Courses: {
   topics: Topic["topicSlug"][];
   courseMedia: CourseMedia[];
 }[] = [
-    // Foundational Level Courses
     {
-      moduleCode: "CS1010",
-      moduleTitle: "Introduction to Programming",
+      moduleCode: "CS1101",
+      moduleTitle: "Introduction to Computer Science",
+      courseSlug: "programming-foundations",
+      courseName: "Programming Foundations Assessment",
+      courseDescription:
+        "Welcome to CS1101! Take this assessment to help us understand your programming background and customize your learning path.",
+      courseImage: "courses/programming-foundations.jpg",
+      courseLevel: Level.Foundational,
+      type: CourseType.Quiz,
+      topics: [
+        "data-structures",
+        "algorithms",
+        "object-oriented-programming",
+        "software-engineering"
+      ],
+      courseMedia: [],
+    },
+    {
+      moduleCode: "CS1101",
+      moduleTitle: "Introduction to Computer Science",
       week: 1,
       studio: 1,
-      courseSlug: "basic-syntax",
-      courseName: "Basic Syntax and Semantics",
+      courseSlug: "intro-to-algorithms",
+      courseName: "Introduction to Algorithms and Data Structures",
       courseDescription:
-        "Learn the basic syntax and semantics of programming languages, focusing on variables, data types, and control structures.",
-      courseImage: "courses/basic-syntax.jpg",
+        "Learn the fundamental concepts of algorithms and data structures, including complexity analysis, basic data structures, and algorithm design techniques.",
+      courseImage: "courses/algorithms-intro.jpg",
       courseLevel: Level.Foundational,
       type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/XYv9ZtE2z2E?showinfo=0"></iframe>',
-      topics: ["software-engineering"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w1s1-basic-syntax",
-          courseSlug: "basic-syntax",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007595/neuracraft/course_slides_media/w1s1-basic-syntax.pdf",
-          mediaName: "Basic Syntax and Semantics",
-        },
-      ],
-    },
-    {
-      moduleCode: "CS1011",
-      moduleTitle: "Introduction to Programming",
-      week: 1,
-      studio: 2,
-      courseSlug: "control-structures",
-      courseName: "Control Structures in Programming",
-      courseDescription:
-        "Explore control structures such as loops and conditional statements, which are essential for decision-making in programming.",
-      courseImage: "courses/control-structures.jpg",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/DfC2hC6T8_U?showinfo=0"></iframe>',
-      topics: ["software-engineering", "algorithms", "data-structures"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w1s2-control-structures",
-          courseSlug: "control-structures",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007594/neuracraft/course_slides_media/w1s2-control-structures.pdf",
-          mediaName: "Control Structures in Programming",
-        },
-      ],
-    },
-    {
-      moduleCode: "CS1012",
-      moduleTitle: "Introduction to Programming",
-      week: 1,
-      studio: 3,
-      courseSlug: "error-handling",
-      courseName: "Error Handling Techniques",
-      courseDescription:
-        "Learn about error handling techniques to manage exceptions and create robust applications.",
-      courseImage: "courses/error-handling.jpg",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/6DgOrqI6z8s?showinfo=0"></iframe>',
-      topics: ["software-engineering"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w1s3-error-handling",
-          courseSlug: "error-handling",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007593/neuracraft/course_slides_media/w1s3-error-handling.pdf",
-          mediaName: "Error Handling Techniques",
-        },
-      ],
-    },
-    {
-      moduleCode: "CS1013",
-      moduleTitle: "Introduction to Programming",
-      week: 1,
-      studio: 4,
-      courseSlug: "data-structures-introduction",
-      courseName: "Introduction to Data Structures",
-      courseDescription:
-        "Get introduced to basic data structures such as arrays, lists, and dictionaries, and their applications.",
-      courseImage: "courses/data-structures-introduction.jpg",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/NL0HQmHMx5E?showinfo=0"></iframe>',
-      topics: ["data-structures"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w1s4-data-structures-introduction",
-          courseSlug: "data-structures-introduction",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007592/neuracraft/course_slides_media/w1s4-data-structures-introduction.pdf",
-          mediaName: "Introduction to Data Structures",
-        },
-      ],
-    },
-
-    // Intermediate Level Courses
-    {
-      moduleCode: "CS1020",
-      moduleTitle: "Data Structures and Algorithms",
-      week: 2,
-      studio: 1,
-      courseSlug: "searching-sorting-algorithms",
-      courseName: "Searching and Sorting Algorithms",
-      courseDescription:
-        "Explore various searching and sorting algorithms and their time and space complexity.",
-      courseImage: "courses/searching-sorting.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/qwY7qGWAJQ4?showinfo=0"></iframe>',
+      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/example1"></iframe>',
       topics: ["algorithms", "data-structures"],
       courseMedia: [
         {
-          publicId: "neuracraft/course_slides_media/w2s1-searching-sorting-algorithms",
-          courseSlug: "searching-sorting-algorithms",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007591/neuracraft/course_slides_media/w2s1-searching-sorting-algorithms.pdf",
-          mediaName: "Searching and Sorting Algorithms",
+          publicId: "CS/course_materials/w1-algorithms-intro",
+          courseSlug: "intro-to-algorithms",
+          courseMediaURL: "https://example.com/materials/algorithms-intro.pdf",
+          mediaName: "Introduction to Algorithms",
         },
       ],
     },
     {
-      moduleCode: "CS1021",
-      moduleTitle: "Data Structures and Algorithms",
-      week: 2,
-      studio: 2,
-      courseSlug: "advanced-data-structures",
-      courseName: "Advanced Data Structures",
-      courseDescription:
-        "Dive deeper into advanced data structures like trees, graphs, and hash tables, and their applications.",
-      courseImage: "courses/advanced-data-structures.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/Ovm6WLY_UcY?showinfo=0"></iframe>',
-      topics: ["data-structures", "algorithms", "software-engineering"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w2s2-advanced-data-structures",
-          courseSlug: "advanced-data-structures",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007590/neuracraft/course_slides_media/w2s2-advanced-data-structures.pdf",
-          mediaName: "Advanced Data Structures",
-        },
-      ],
-    },
-    {
-      moduleCode: "CS1022",
-      moduleTitle: "Data Structures and Algorithms",
-      week: 2,
-      studio: 3,
-      courseSlug: "algorithm-analysis",
-      courseName: "Algorithm Analysis Techniques",
-      courseDescription:
-        "Learn various techniques for analyzing algorithms, including Big O notation and performance measurement.",
-      courseImage: "courses/algorithm-analysis.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/ZC8ErM4VPTU?showinfo=0"></iframe>',
-      topics: ["algorithms", "data-structures"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w2s3-algorithm-analysis",
-          courseSlug: "algorithm-analysis",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007589/neuracraft/course_slides_media/w2s3-algorithm-analysis.pdf",
-          mediaName: "Algorithm Analysis Techniques",
-        },
-      ],
-    },
-    {
-      moduleCode: "CS1023",
-      moduleTitle: "Data Structures and Algorithms",
-      week: 2,
-      studio: 4,
-      courseSlug: "dynamic-programming",
-      courseName: "Dynamic Programming",
-      courseDescription:
-        "Explore dynamic programming concepts, techniques, and how they can optimize recursive algorithms.",
-      courseImage: "courses/dynamic-programming.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/oBt53YbR9Kk?showinfo=0"></iframe>',
-      topics: ["algorithms", "data-structures"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w2s4-dynamic-programming",
-          courseSlug: "dynamic-programming",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007588/neuracraft/course_slides_media/w2s4-dynamic-programming.pdf",
-          mediaName: "Dynamic Programming",
-        },
-      ],
-    },
-
-    // Advanced Level Courses
-    {
-      moduleCode: "CS2010",
-      moduleTitle: "Web Development",
-      week: 3,
+      moduleCode: "CS2102",
+      moduleTitle: "Database Systems",
+      week: 1,
       studio: 1,
-      courseSlug: "html-css",
-      courseName: "HTML and CSS Basics",
+      courseSlug: "database-fundamentals",
+      courseName: "Database Management Systems Fundamentals",
       courseDescription:
-        "Understand the basics of HTML and CSS for web development, including structure and styling.",
-      courseImage: "courses/html-css.jpg",
+        "Explore the core concepts of database management systems, including relational models, SQL, and database design principles.",
+      courseImage: "courses/database-basics.jpg",
       courseLevel: Level.Foundational,
       type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/UB1O30fR-EE?showinfo=0"></iframe>',
-      topics: ["web-development", "software-engineering"],
+      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/example2"></iframe>',
+      topics: ["database-systems", "software-engineering"],
       courseMedia: [
         {
-          publicId: "neuracraft/course_slides_media/w3s1-html-css",
-          courseSlug: "html-css",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007587/neuracraft/course_slides_media/w3s1-html-css.pdf",
-          mediaName: "HTML and CSS Basics",
+          publicId: "CS/course_materials/w1-database-fundamentals",
+          courseSlug: "database-fundamentals",
+          courseMediaURL: "https://example.com/materials/database-basics.pdf",
+          mediaName: "Database Systems Fundamentals",
         },
       ],
     },
     {
-      moduleCode: "CS2011",
-      moduleTitle: "Web Development",
-      week: 3,
-      studio: 2,
-      courseSlug: "javascript-introduction",
-      courseName: "Introduction to JavaScript",
+      moduleCode: "CS3103",
+      moduleTitle: "Advanced Software Development",
+      week: 1,
+      studio: 1,
+      courseSlug: "advanced-software-patterns",
+      courseName: "Advanced Software Design Patterns",
       courseDescription:
-        "Get introduced to JavaScript, covering its syntax, data types, and basic programming concepts.",
-      courseImage: "courses/javascript-introduction.jpg",
-      courseLevel: Level.Foundational,
+        "Master advanced software development concepts including design patterns, architecture principles, and best practices for large-scale applications.",
+      courseImage: "courses/design-patterns.jpg",
+      courseLevel: Level.Advanced,
       type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/W6NZfCO5SIk?showinfo=0"></iframe>',
-      topics: ["web-development", "software-engineering"],
+      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/example3"></iframe>',
+      topics: ["design-patterns", "software-architecture", "software-engineering"],
       courseMedia: [
         {
-          publicId: "neuracraft/course_slides_media/w3s2-javascript-introduction",
-          courseSlug: "javascript-introduction",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007586/neuracraft/course_slides_media/w3s2-javascript-introduction.pdf",
-          mediaName: "Introduction to JavaScript",
+          publicId: "CS/course_materials/w1-design-patterns",
+          courseSlug: "advanced-software-patterns",
+          courseMediaURL: "https://example.com/materials/design-patterns.pdf",
+          mediaName: "Software Design Patterns",
         },
       ],
     },
     {
-      moduleCode: "CS2012",
-      moduleTitle: "Web Development",
-      week: 3,
-      studio: 3,
-      courseSlug: "web-development-frameworks",
-      courseName: "Popular Web Development Frameworks",
+      moduleCode: "CS4201",
+      moduleTitle: "Artificial Intelligence and Machine Learning",
+      week: 1,
+      studio: 1,
+      courseSlug: "ai-ml-foundations",
+      courseName: "AI and Machine Learning Foundations",
       courseDescription:
-        "Explore popular web development frameworks such as React, Angular, and Vue.js.",
-      courseImage: "courses/web-development-frameworks.jpg",
+        "Introduction to artificial intelligence and machine learning concepts, including supervised learning, neural networks, and AI applications.",
+      courseImage: "courses/ai-ml-intro.jpg",
       courseLevel: Level.Intermediate,
       type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/Jn3A4G0F1c8?showinfo=0"></iframe>',
-      topics: ["web-development", "software-engineering"],
+      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/example4"></iframe>',
+      topics: ["machine-learning", "artificial-intelligence"],
       courseMedia: [
         {
-          publicId: "neuracraft/course_slides_media/w3s3-web-development-frameworks",
-          courseSlug: "web-development-frameworks",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007585/neuracraft/course_slides_media/w3s3-web-development-frameworks.pdf",
-          mediaName: "Popular Web Development Frameworks",
+          publicId: "CS/course_materials/w1-ai-ml-foundations",
+          courseSlug: "ai-ml-foundations",
+          courseMediaURL: "https://example.com/materials/ai-ml-basics.pdf",
+          mediaName: "AI and ML Foundations",
         },
       ],
-    },
-    {
-      moduleCode: "CS2013",
-      moduleTitle: "Web Development",
-      week: 3,
-      studio: 4,
-      courseSlug: "backend-development",
-      courseName: "Backend Development Basics",
-      courseDescription:
-        "Understand the basics of backend development, including server, database, and API integration.",
-      courseImage: "courses/backend-development.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
-      video:
-        '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/0sWQfEv_EqU?showinfo=0"></iframe>',
-      topics: ["web-development", "software-engineering"],
-      courseMedia: [
-        {
-          publicId: "neuracraft/course_slides_media/w3s4-backend-development",
-          courseSlug: "backend-development",
-          courseMediaURL:
-            "https://res.cloudinary.com/dy2tqc45y/image/upload/v1666007584/neuracraft/course_slides_media/w3s4-backend-development.pdf",
-          mediaName: "Backend Development Basics",
-        },
-      ],
-    },
+    }
   ];
 
 export const Questions: {
@@ -585,34 +360,41 @@ export const Questions: {
     {
       questionId: 1,
       variationId: 1,
-      topicSlug: "data-structures",
-      questionTitle: "AY2122-CS-Q1-V1",
-      questionContent:
-        '<p>What is the Big O notation for an algorithm that performs a linear search in an array?</p>',
-      questionDifficulty: QuestionDifficulty.Easy,
+      topicSlug: "algorithms",
+      questionTitle: "Algorithm Time Complexity Analysis",
+      questionContent: `<p>Consider the following code snippet:</p>
+      <pre>
+for(int i = 0; i < n; i++) {
+    for(int j = i; j < n; j++) {
+        sum += arr[j];
+    }
+}
+      </pre>
+      <p>What is the time complexity of this algorithm?</p>`,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         answers: [
           {
-            key: "mantine-qchybm2w9",
-            answerContent: "O(n)",
+            key: "mantine-alg1",
+            answerContent: "O(n²)",
             isCorrect: true,
             isLatex: false,
           },
           {
-            key: "mantine-raaste6zq",
-            answerContent: "O(1)",
+            key: "mantine-alg2",
+            answerContent: "O(n)",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-0gvacclf1",
-            answerContent: "O(n^2)",
+            key: "mantine-alg3",
+            answerContent: "O(n log n)",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-naqloqvqx",
-            answerContent: "O(log n)",
+            key: "mantine-alg4",
+            answerContent: "O(2n)",
             isCorrect: false,
             isLatex: false,
           },
@@ -623,33 +405,34 @@ export const Questions: {
       questionId: 2,
       variationId: 1,
       topicSlug: "data-structures",
-      questionTitle: "AY2122-CS-Q2-V2",
-      questionContent:
-        '<p>Which of the following data structures is best suited for implementing a LIFO (Last In First Out) mechanism?</p>',
+      questionTitle: "Binary Search Tree Operations",
+      questionContent: `<p>Given the following Binary Search Tree:</p>
+      <p><img src="/api/placeholder/400/300" alt="Binary Search Tree with root 10, left child 5, right child 15"></p>
+      <p>What will be the result of an in-order traversal?</p>`,
       questionDifficulty: QuestionDifficulty.Easy,
       questionData: {
         answers: [
           {
-            key: "mantine-qchybm2w9",
-            answerContent: "Stack",
+            key: "mantine-bst1",
+            answerContent: "5, 10, 15",
             isCorrect: true,
             isLatex: false,
           },
           {
-            key: "mantine-raaste6zq",
-            answerContent: "Queue",
+            key: "mantine-bst2",
+            answerContent: "10, 5, 15",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-0gvacclf1",
-            answerContent: "Array",
+            key: "mantine-bst3",
+            answerContent: "15, 10, 5",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-naqloqvqx",
-            answerContent: "Linked List",
+            key: "mantine-bst4",
+            answerContent: "5, 15, 10",
             isCorrect: false,
             isLatex: false,
           },
@@ -659,34 +442,41 @@ export const Questions: {
     {
       questionId: 3,
       variationId: 1,
-      topicSlug: "algorithms",
-      questionTitle: "AY2122-CS-Q3-V3",
-      questionContent:
-        '<p>What is the average case time complexity of the QuickSort algorithm?</p>',
+      topicSlug: "database-systems",
+      questionTitle: "SQL Query Optimization",
+      questionContent: `<p>Consider the following SQL query:</p>
+      <pre>
+SELECT * 
+FROM Orders o 
+JOIN Customers c ON o.customer_id = c.id 
+WHERE o.order_date > '2024-01-01' 
+AND c.country = 'USA';
+      </pre>
+      <p>Which index would be most beneficial for optimizing this query?</p>`,
       questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         answers: [
           {
-            key: "mantine-qchybm2w9",
-            answerContent: "O(n log n)",
+            key: "mantine-sql1",
+            answerContent: "Composite index on (customer_id, order_date)",
             isCorrect: true,
             isLatex: false,
           },
           {
-            key: "mantine-raaste6zq",
-            answerContent: "O(n^2)",
+            key: "mantine-sql2",
+            answerContent: "Single index on country",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-0gvacclf1",
-            answerContent: "O(n)",
+            key: "mantine-sql3",
+            answerContent: "Single index on customer_id",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-naqloqvqx",
-            answerContent: "O(log n)",
+            key: "mantine-sql4",
+            answerContent: "Single index on order_date",
             isCorrect: false,
             isLatex: false,
           },
@@ -696,34 +486,33 @@ export const Questions: {
     {
       questionId: 4,
       variationId: 1,
-      topicSlug: "object-oriented-programming",
-      questionTitle: "AY2122-CS-Q4-V4",
-      questionContent:
-        '<p>In object-oriented programming, what does encapsulation refer to?</p>',
-      questionDifficulty: QuestionDifficulty.Medium,
+      topicSlug: "design-patterns",
+      questionTitle: "Software Design Patterns",
+      questionContent: `<p>In a system where multiple objects need to be notified when a data source changes, which design pattern would be most appropriate to implement?</p>`,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         answers: [
           {
-            key: "mantine-qchybm2w9",
-            answerContent: "Bundling data and methods that operate on that data within one unit",
+            key: "mantine-dp1",
+            answerContent: "Observer Pattern",
             isCorrect: true,
             isLatex: false,
           },
           {
-            key: "mantine-raaste6zq",
-            answerContent: "Sharing code across different classes",
+            key: "mantine-dp2",
+            answerContent: "Singleton Pattern",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-0gvacclf1",
-            answerContent: "Creating instances of classes",
+            key: "mantine-dp3",
+            answerContent: "Factory Pattern",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-naqloqvqx",
-            answerContent: "Modifying existing methods in subclasses",
+            key: "mantine-dp4",
+            answerContent: "Decorator Pattern",
             isCorrect: false,
             isLatex: false,
           },
@@ -733,598 +522,37 @@ export const Questions: {
     {
       questionId: 5,
       variationId: 1,
-      topicSlug: "operating-systems",
-      questionTitle: "AY2122-CS-Q5-V5",
-      questionContent:
-        '<p>What is the primary function of the ALU (Arithmetic Logic Unit) in a CPU?</p>',
+      topicSlug: "machine-learning",
+      questionTitle: "Machine Learning Fundamentals",
+      questionContent: `<p>In a binary classification problem using logistic regression, which loss function is commonly used during training?</p>`,
       questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         answers: [
           {
-            key: "mantine-qchybm2w9",
-            answerContent: "Perform arithmetic and logical operations",
+            key: "mantine-ml1",
+            answerContent: "Cross-entropy loss",
             isCorrect: true,
             isLatex: false,
           },
           {
-            key: "mantine-raaste6zq",
-            answerContent: "Store data and instructions",
+            key: "mantine-ml2",
+            answerContent: "Mean squared error",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-0gvacclf1",
-            answerContent: "Manage input and output operations",
+            key: "mantine-ml3",
+            answerContent: "Hinge loss",
             isCorrect: false,
             isLatex: false,
           },
           {
-            key: "mantine-naqloqvqx",
-            answerContent: "Control the flow of data",
+            key: "mantine-ml4",
+            answerContent: "Manhattan distance",
             isCorrect: false,
             isLatex: false,
           },
         ],
       },
-    },
-    // {
-    //   questionId: 6,
-    //   variationId: 1,
-    //   topicSlug: "web-development",
-    //   questionTitle: "AY2122-CS-Q6-V6",
-    //   questionContent: '<p>What does HTML stand for?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "HyperText Markup Language", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "HighText Machine Language", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Hyperlink and Text Markup Language", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "HyperText Multi Language", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 7,
-    //   variationId: 1,
-    //   topicSlug: "css",
-    //   questionTitle: "AY2122-CS-Q7-V7",
-    //   questionContent: '<p>Which of the following is a valid CSS selector?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: ".class", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "#class", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "class", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "class{}", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 8,
-    //   variationId: 1,
-    //   topicSlug: "javascript",
-    //   questionTitle: "AY2122-CS-Q8-V8",
-    //   questionContent: '<p>Which symbol is used for comments in JavaScript?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "//", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "#", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "<!--", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "/*", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 9,
-    //   variationId: 1,
-    //   topicSlug: "javascript",
-    //   questionTitle: "AY2122-CS-Q9-V9",
-    //   questionContent: '<p>What will the following code output? <code>console.log(typeof NaN);</code></p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "number", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "NaN", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "undefined", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "object", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 10,
-    //   variationId: 1,
-    //   topicSlug: "react",
-    //   questionTitle: "AY2122-CS-Q10-V10",
-    //   questionContent: '<p>What is the primary purpose of React?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Building user interfaces", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Managing databases", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Server-side scripting", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Styling web pages", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 11,
-    //   variationId: 1,
-    //   topicSlug: "react",
-    //   questionTitle: "AY2122-CS-Q11-V11",
-    //   questionContent: '<p>In React, what is a component?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "A reusable piece of UI", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "A state management tool", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "A type of database", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "A CSS file", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 12,
-    //   variationId: 1,
-    //   topicSlug: "vue",
-    //   questionTitle: "AY2122-CS-Q12-V12",
-    //   questionContent: '<p>What is the main feature of Vue.js?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Reactive data binding", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Server-side rendering", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Type safety", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Global state management", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 13,
-    //   variationId: 1,
-    //   topicSlug: "angular",
-    //   questionTitle: "AY2122-CS-Q13-V13",
-    //   questionContent: '<p>What is Angular primarily used for?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Building single-page applications", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Creating databases", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Handling server requests", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Data visualization", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 14,
-    //   variationId: 1,
-    //   topicSlug: "backend",
-    //   questionTitle: "AY2122-CS-Q14-V14",
-    //   questionContent: '<p>Which of the following is NOT a backend language?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "JavaScript", isCorrect: false, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Python", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Ruby", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "HTML", isCorrect: true, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 15,
-    //   variationId: 1,
-    //   topicSlug: "api",
-    //   questionTitle: "AY2122-CS-Q15-V15",
-    //   questionContent: '<p>What does REST stand for in RESTful APIs?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Representational State Transfer", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Resource State Transfer", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Representational State Transaction", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Resource State Transaction", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 16,
-    //   variationId: 1,
-    //   topicSlug: "api",
-    //   questionTitle: "AY2122-CS-Q16-V16",
-    //   questionContent: '<p>Which HTTP method is used to update a resource in a RESTful API?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "PUT", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "POST", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "GET", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "DELETE", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 17,
-    //   variationId: 1,
-    //   topicSlug: "database",
-    //   questionTitle: "AY2122-CS-Q17-V17",
-    //   questionContent: '<p>Which of the following is a NoSQL database?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "MongoDB", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "MySQL", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "PostgreSQL", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "SQLite", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 18,
-    //   variationId: 1,
-    //   topicSlug: "database",
-    //   questionTitle: "AY2122-CS-Q18-V18",
-    //   questionContent: '<p>What is the primary purpose of indexing in databases?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To speed up query performance", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To store data more efficiently", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To enforce data integrity", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To create backups", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 19,
-    //   variationId: 1,
-    //   topicSlug: "devops",
-    //   questionTitle: "AY2122-CS-Q19-V19",
-    //   questionContent: '<p>What does CI/CD stand for?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Continuous Integration / Continuous Deployment", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Constant Integration / Constant Delivery", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Continuous Improvement / Continuous Development", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Constant Improvement / Constant Deployment", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 20,
-    //   variationId: 1,
-    //   topicSlug: "devops",
-    //   questionTitle: "AY2122-CS-Q20-V20",
-    //   questionContent: '<p>Which of the following tools is commonly used for continuous integration?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Jenkins", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Docker", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Kubernetes", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Git", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 21,
-    //   variationId: 1,
-    //   topicSlug: "ai",
-    //   questionTitle: "AY2122-CS-Q21-V21",
-    //   questionContent: '<p>What is the main purpose of artificial intelligence?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To simulate human intelligence", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To enhance hardware performance", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To reduce programming time", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To create better graphics", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 22,
-    //   variationId: 1,
-    //   topicSlug: "ai",
-    //   questionTitle: "AY2122-CS-Q22-V22",
-    //   questionContent: '<p>Which of the following is a common application of AI?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Image recognition", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Writing code", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Managing databases", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Designing websites", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 23,
-    //   variationId: 1,
-    //   topicSlug: "data_science",
-    //   questionTitle: "AY2122-CS-Q23-V23",
-    //   questionContent: '<p>What is the purpose of data cleaning in data science?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To improve data quality", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To enhance data visualization", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To store data efficiently", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To reduce data size", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 24,
-    //   variationId: 1,
-    //   topicSlug: "data_science",
-    //   questionTitle: "AY2122-CS-Q24-V24",
-    //   questionContent: '<p>Which of the following is a key concept in machine learning?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Training data", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Data visualization", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Data storage", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Data backup", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 25,
-    //   variationId: 1,
-    //   topicSlug: "ux_design",
-    //   questionTitle: "AY2122-CS-Q25-V25",
-    //   questionContent: '<p>What is the main goal of UX design?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To improve user satisfaction", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To create more features", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To enhance graphics", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To reduce costs", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 26,
-    //   variationId: 1,
-    //   topicSlug: "ux_design",
-    //   questionTitle: "AY2122-CS-Q26-V26",
-    //   questionContent: '<p>Which of the following is a method used in UX research?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Usability testing", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Data mining", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Code review", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Version control", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 27,
-    //   variationId: 1,
-    //   topicSlug: "web_development",
-    //   questionTitle: "AY2122-CS-Q27-V27",
-    //   questionContent: '<p>What does CSS stand for?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Cascading Style Sheets", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Computer Style Sheets", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Colorful Style Sheets", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Creative Style Sheets", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 28,
-    //   variationId: 1,
-    //   topicSlug: "web_development",
-    //   questionTitle: "AY2122-CS-Q28-V28",
-    //   questionContent: '<p>Which HTML tag is used to define an internal style sheet?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "<style>", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "<script>", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "<css>", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "<link>", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 29,
-    //   variationId: 1,
-    //   topicSlug: "web_development",
-    //   questionTitle: "AY2122-CS-Q29-V29",
-    //   questionContent: '<p>Which of the following is a JavaScript framework?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "React", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Django", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Ruby on Rails", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Flask", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 30,
-    //   variationId: 1,
-    //   topicSlug: "web_development",
-    //   questionTitle: "AY2122-CS-Q30-V30",
-    //   questionContent: '<p>Which of the following is used to style web pages?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "CSS", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "HTML", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "JavaScript", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "XML", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 31,
-    //   variationId: 1,
-    //   topicSlug: "networking",
-    //   questionTitle: "AY2122-CS-Q31-V31",
-    //   questionContent: '<p>What does IP stand for?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Internet Protocol", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Interconnected Protocol", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Internal Protocol", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Integrated Protocol", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 32,
-    //   variationId: 1,
-    //   topicSlug: "networking",
-    //   questionTitle: "AY2122-CS-Q32-V32",
-    //   questionContent: '<p>Which protocol is used to send email messages?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "SMTP", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "FTP", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "HTTP", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "DNS", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 33,
-    //   variationId: 1,
-    //   topicSlug: "networking",
-    //   questionTitle: "AY2122-CS-Q33-V33",
-    //   questionContent: '<p>What is the function of a router?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To route data between networks", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To amplify signals", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To connect devices within a network", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To encrypt data", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 34,
-    //   variationId: 1,
-    //   topicSlug: "networking",
-    //   questionTitle: "AY2122-CS-Q34-V34",
-    //   questionContent: '<p>What type of address is an IP address?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Logical address", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Physical address", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Permanent address", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Fixed address", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 35,
-    //   variationId: 1,
-    //   topicSlug: "networking",
-    //   questionTitle: "AY2122-CS-Q35-V35",
-    //   questionContent: '<p>What is the primary purpose of DNS?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To translate domain names to IP addresses", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To manage network traffic", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To establish secure connections", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To provide web hosting", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 36,
-    //   variationId: 1,
-    //   topicSlug: "cloud_computing",
-    //   questionTitle: "AY2122-CS-Q36-V36",
-    //   questionContent: '<p>What is cloud computing?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Delivering computing services over the internet", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Storing data on local servers", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Using a personal computer for computations", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "Connecting to a VPN", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 37,
-    //   variationId: 1,
-    //   topicSlug: "cloud_computing",
-    //   questionTitle: "AY2122-CS-Q37-V37",
-    //   questionContent: '<p>Which of the following is a benefit of cloud computing?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "Scalability", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "Higher costs", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "Limited access", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "More hardware requirements", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 38,
-    //   variationId: 1,
-    //   topicSlug: "cloud_computing",
-    //   questionTitle: "AY2122-CS-Q38-V38",
-    //   questionContent: '<p>What is a cloud service model?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "A way to categorize cloud services", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "A physical cloud infrastructure", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "A software application", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "A cloud management tool", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 39,
-    //   variationId: 1,
-    //   topicSlug: "cloud_computing",
-    //   questionTitle: "AY2122-CS-Q39-V39",
-    //   questionContent: '<p>Which of the following is NOT a cloud service model?</p>',
-    //   questionDifficulty: QuestionDifficulty.Medium,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "IaaS", isCorrect: false, isLatex: false },
-    //       { key: "mantine-2", answerContent: "PaaS", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "SaaS", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "AaaS", isCorrect: true, isLatex: false },
-    //     ],
-    //   },
-    // },
-    // {
-    //   questionId: 40,
-    //   variationId: 1,
-    //   topicSlug: "cloud_computing",
-    //   questionTitle: "AY2122-CS-Q40-V40",
-    //   questionContent: '<p>What is the primary purpose of SaaS?</p>',
-    //   questionDifficulty: QuestionDifficulty.Easy,
-    //   questionData: {
-    //     answers: [
-    //       { key: "mantine-1", answerContent: "To provide software applications over the internet", isCorrect: true, isLatex: false },
-    //       { key: "mantine-2", answerContent: "To provide infrastructure resources", isCorrect: false, isLatex: false },
-    //       { key: "mantine-3", answerContent: "To manage network services", isCorrect: false, isLatex: false },
-    //       { key: "mantine-4", answerContent: "To offer platform services", isCorrect: false, isLatex: false },
-    //     ],
-    //   },
-    // },
-  ]
+    }
+  ];
