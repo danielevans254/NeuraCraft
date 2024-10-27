@@ -62,19 +62,40 @@ def get_roster_model() -> Roster:
     Loads the roster file from the /models directory.
     Updates the roster with the latest training model on startup.
     """
-    roster_path = os.path.join("models", "model.pkl")
-    
-    with open(roster_path, "rb") as handle:
-        roster: Roster = pickle.load(handle)
     try:
-        # Prevent API from crashing in case the training model doesn't fit the roster model
-        roster.set_model(app.state.model)
-    except Exception as e:
-        print(
-            f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
-        )
-    finally:
+        # First try to load from local file
+        roster_path = os.path.join("models", "model.pkl")
+        if os.path.exists(roster_path):
+            with open(roster_path, "rb") as handle:
+                roster: Roster = pickle.load(handle)
+        else:
+            # If local file doesn't exist, try to download from Firebase
+            print("[INFO] Local roster model not found, downloading from Firebase...")
+            storage.child("roster.pkl").download("roster.pkl")
+            with open("roster.pkl", "rb") as handle:
+                roster: Roster = pickle.load(handle)
+        
+        # Initialize empty roster if loading fails
+        if not hasattr(roster, 'skill_rosters'):
+            print("[WARNING] Loaded roster missing skill_rosters, initializing new roster")
+            topics = get_all_topics()
+            roster = Roster(students=[], skills=topics, model=app.state.model)
+            
+        try:
+            # Prevent API from crashing in case the training model doesn't fit the roster model
+            roster.set_model(app.state.model)
+        except Exception as e:
+            print(
+                f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
+            )
         return roster
+            
+    except Exception as e:
+        print(f"[ERROR] Failed to load roster model: {e}")
+        print("[INFO] Initializing new empty roster")
+        topics = get_all_topics()
+        return Roster(students=[], skills=topics, model=app.state.model)
+
 
 
 def get_all_topics() -> list[str]:
@@ -134,11 +155,24 @@ async def startup_event() -> None:
     """
     Updates state variables with the latest model in persistent storage during startup.
     """
-    # Initialize model first
-    app.state.model = get_model()
-    # Initialize roster with the model
-    app.state.roster = get_roster_model(app.state.model)
-    print("[STARTUP] Model and Roster initialized successfully")
+    try:
+        # Initialize model first
+        app.state.model = get_model()
+        # Initialize roster with the model
+        app.state.roster = get_roster_model()
+        
+        # Verify roster was initialized correctly
+        if not hasattr(app.state.roster, 'skill_rosters'):
+            raise AttributeError("Roster initialization failed - missing skill_rosters")
+            
+        print("[STARTUP] Model and Roster initialized successfully")
+        
+    except Exception as e:
+        print(f"[STARTUP ERROR] Failed to initialize: {e}")
+        # Initialize empty roster as fallback
+        topics = get_all_topics()
+        app.state.roster = Roster(students=[], skills=topics, model=app.state.model)
+        print("[STARTUP] Initialized empty roster as fallback")
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
@@ -340,13 +374,13 @@ def update_state_of_student(
 ) -> dict[str, bool]:
     """
     Updates state of a particular student for a topic given one response.
-
-    Notes:
-        Update 1 student at a time.
-        Update 1 topic at a time.
     """
-
     with lock:
+        # Verify roster state
+        if not hasattr(app.state, "roster") or not hasattr(app.state.roster, "skill_rosters"):
+            print("[ERROR] Roster not properly initialized, reinitializing...")
+            app.state.roster = get_roster_model()
+            
         if topic not in app.state.roster.skill_rosters:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -354,7 +388,7 @@ def update_state_of_student(
             )
         elif (
             student_id not in app.state.roster.skill_rosters[topic].students
-        ):  # Add student if doesn't exist in the Roster
+        ):
             app.state.roster.add_students(topic, [student_id])
 
         app.state.roster.update_state(
