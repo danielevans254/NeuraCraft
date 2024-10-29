@@ -132,7 +132,7 @@ export default function Leaderboard() {
             textAlignment: "right",
             render: (record) => (
               <Text size="sm" weight={500}>
-                {record.points} 🔋
+                {record.points} 🪙
               </Text>
             ),
           },
@@ -145,10 +145,10 @@ export default function Leaderboard() {
           allUsers.indexOf(user) === 0
             ? { backgroundColor: "gold", color: "black" }
             : allUsers.indexOf(user) === 1
-            ? { backgroundColor: "silver", color: "black" }
-            : allUsers.indexOf(user) === 2
-            ? { backgroundColor: "#E67700", color: "black" }
-            : undefined
+              ? { backgroundColor: "silver", color: "black" }
+              : allUsers.indexOf(user) === 2
+                ? { backgroundColor: "#E67700", color: "black" }
+                : undefined
         }
       />
     </ScrollArea>
