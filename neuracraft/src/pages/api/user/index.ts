@@ -43,11 +43,8 @@ export default async function handler(
 
       attempts.map((attempt) => {
         const submittedAt = new Date(attempt.submittedAt);
-        if (submittedAt.toDateString() in attemptsPerDay) {
-          attemptsPerDay[submittedAt.toDateString()] += 1;
-        } else {
-          attemptsPerDay[submittedAt.toDateString()] = 1;
-        }
+        const dateString = submittedAt.toDateString();
+        attemptsPerDay[dateString] = (attemptsPerDay[dateString] ?? 0) + 1;
       });
 
       res.status(200).json({ ...userInfo, attempts: attemptsPerDay });
