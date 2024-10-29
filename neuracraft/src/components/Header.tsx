@@ -49,7 +49,7 @@ const Header = ({ title = "Personalized  Adaptive ELearning Platform" }) => {
           customIcon: "📅",
           message: (
             <>
-              Login Streak: {res?.data?.loginStreak} 🔋
+              Login Streak: {res?.data?.loginStreak} 🪙
               <span className="text-yellow-600">
                 +{res?.data?.loginStreak < 5 ? res?.data?.loginStreak : 5}
               </span>
