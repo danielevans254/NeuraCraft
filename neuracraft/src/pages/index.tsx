@@ -21,7 +21,7 @@ import {
 import { useState } from "react";
 import { Star, Brain, Timer, Users, Globe, Book, Award, ChevronRight } from "lucide-react";
 
-const FeatureCard = ({ icon: Icon, title, description }) => {
+const FeatureCard = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="flex flex-col items-center text-center">
@@ -35,7 +35,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => {
   );
 };
 
-const StatCard = ({ value, label }) => {
+const StatCard = ({ value, label }: { value: string, label: string }) => {
   return (
     <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg">
       <div className="text-3xl font-bold text-blue-600 mb-2">{value}</div>
@@ -44,7 +44,7 @@ const StatCard = ({ value, label }) => {
   );
 };
 
-const TestimonialCard = ({ content, author, role, rating }) => {
+const TestimonialCard = ({ content, author, role, rating }: { content: string, author: string, role: string, rating: number }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-lg">
       <div className="flex gap-1 mb-4">
@@ -77,24 +77,24 @@ const HomePage = () => {
     },
     {
       icon: Users,
-      title: "Collaborative Learning",
-      description: "Join study groups and participate in peer-to-peer learning sessions"
+      title: "Mastery Learning",
+      description: "Learn and practice until you master the concepts, with instant feedback and progress tracking"
     },
-    {
-      icon: Globe,
-      title: "Global Community",
-      description: "Connect with learners and experts from around the world"
-    },
-    {
-      icon: Book,
-      title: "Rich Content Library",
-      description: "Access thousands of courses across various disciplines and skill levels"
-    },
-    {
-      icon: Award,
-      title: "Certifications",
-      description: "Earn industry-recognized certificates upon course completion"
-    }
+    // {
+    //   icon: Globe,
+    //   title: "Global Community",
+    //   description: "Connect with learners and experts from around the world"
+    // },
+    // {
+    //   icon: Book,
+    //   title: "Rich Content Library",
+    //   description: "Access thousands of courses across various disciplines and skill levels"
+    // },
+    // {
+    //   icon: Award,
+    //   title: "Certifications",
+    //   description: "Earn industry-recognized certificates upon course completion"
+    // }
   ];
 
   return (
@@ -148,15 +148,6 @@ const HomePage = () => {
               rating={5}
             />
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-blue-600 text-white rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Learning Journey?</h2>
-          <p className="text-lg mb-8">Join thousands of learners who are achieving their goals with our platform</p>
-          <button className="px-8 py-3 bg-white text-blue-600 rounded-full hover:bg-blue-50 transition-colors">
-            Start Free Trial
-          </button>
         </div>
       </div>
     </div>
