@@ -119,7 +119,7 @@ const NeuraCraft: AppType<{
             toggleColorScheme={toggleColorScheme}
           >
             <MantineProvider
-              theme={{ colorScheme, primaryColor: "cyan", loader: "dots" }}
+              theme={{ colorScheme, primaryColor: "red", loader: "bars" }}
               withGlobalStyles
               withNormalizeCSS
             >
