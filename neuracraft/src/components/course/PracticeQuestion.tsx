@@ -150,7 +150,7 @@ export default function PracticeQuestion() {
           ...res,
           data: {
             ...res.data,
-            customIcon: "",
+            customIcon: "🎯",
             message: (
               <>
                 Question(s) attempted:{" "}
