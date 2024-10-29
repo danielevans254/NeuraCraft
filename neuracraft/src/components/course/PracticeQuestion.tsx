@@ -101,6 +101,8 @@ export default function PracticeQuestion() {
             icon: data.isCorrect ? "🎉" : "💪",
             className: `border border-solid ${data.isCorrect ? "border-green-500" : "border-red-500"
               }`,
+            className: `border border-solid ${data.isCorrect ? "border-green-500" : "border-red-500"
+              }`,
             position: "top-right",
             duration: 5000,
           }
@@ -257,6 +259,7 @@ export default function PracticeQuestion() {
             onChange={(value) => {
               console.log(
                 value === answerOptions?.find((item) => item.isCorrect)?.key
+                value === answerOptions?.find((item) => item.isCorrect)?.key
               );
               setSelectedKeys([value]);
             }}
@@ -265,24 +268,30 @@ export default function PracticeQuestion() {
             required
           >
             {answerOptions?.map((item) => (
-              <Radio
-                key={item.key}
-                value={item.key}
-                label={
-                  item.isLatex ? (
-                    <Latex>{`$$ ${item.answerContent} $$`}</Latex>
-                  ) : (
-                    <Text>{item.answerContent}</Text>
-                  )
-                }
-                className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
-                  ? "border-zinc-600 bg-zinc-700"
-                  : "border-gray-200 bg-gray-100"
-                  } p-2`}
-              />
-            ))}
+              { answerOptions?.map((item) => (
+                <Radio
+                  key={item.key}
+                  value={item.key}
+                  label={
+                    item.isLatex ? (
+                      <Latex>{`$$ ${item.answerContent} $$`}</Latex>
+                    ) : (
+                      <Text>{item.answerContent}</Text>
+                    )
+                  }
+                  className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                    ? "border-zinc-600 bg-zinc-700"
+                    : "border-gray-200 bg-gray-100"
+                    } p-2`}
+                  className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                    ? "border-zinc-600 bg-zinc-700"
+                    : "border-gray-200 bg-gray-100"
+                    } p-2`}
+                />
+              ))}
           </Radio.Group>
         ) : (
+          // FIXME: Apparently the radio button option is working, when mapping the answer options but for the checkbox option, it is not working, as expected
           // FIXME: Apparently the radio button option is working, when mapping the answer options but for the checkbox option, it is not working, as expected
           <Checkbox.Group
             mt="xl"
@@ -290,6 +299,7 @@ export default function PracticeQuestion() {
             onChange={(values) => {
               console.log(
                 values.length === correctKeys.length &&
+                values.every((item) => correctKeys.includes(item))
                 values.every((item) => correctKeys.includes(item))
               );
               setSelectedKeys(values);
@@ -312,15 +322,36 @@ export default function PracticeQuestion() {
                     )
                   }
                   className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
-                    ? "border-zinc-600 bg-zinc-700"
-                    : "border-gray-200 bg-gray-100"
+            {/* FIXME: Temporary fix need to actually map the object better, but it works */}
+                  {UCQAT?.data?.question?.questionData.answers ? (
+                    UCQAT.data.question.questionData.answers.map((item) => (
+                      <Checkbox
+                        key={item.key}
+                        value={item.key}
+                        label={
+                          item.isLatex ? (
+                            <Latex>{item.answerContent}</Latex>
+                          ) : (
+                            <Text>{item.answerContent}</Text>
+                          )
+                        }
+                        className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                          ? "border-zinc-600 bg-zinc-700"
+                          : "border-gray-200 bg-gray-100"
+                          } p-2`}
+                      />
+                    ))
+                  ) : (
+                    <Text>No answer options available.</Text>
+                  )}
                     } p-2`}
                 />
-              ))
+            ))
             ) : (
-              <Text>No answer options available.</Text>
+            <Text>No answer options available.</Text>
             )}
           </Checkbox.Group>
+
 
         )}
         <Flex mt="xl" align="center" gap="md">
