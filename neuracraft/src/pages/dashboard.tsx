@@ -30,6 +30,7 @@ import {
   IconTrophy,
 } from "@tabler/icons";
 import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
 
 const tabs = [
   { label: "Daily Streak", icon: IconTargetArrow },
@@ -95,75 +96,36 @@ export default function DashboardPage() {
   }
 
   return (
-    <AppShell
-      styles={{
-        main: {
-          background:
-            theme.colorScheme === "dark"
-              ? theme.colors.dark[8]
-              : theme.colors.gray[0],
-        },
-      }}
-      navbarOffsetBreakpoint="sm"
-      header={
-        <>
-          <Header title="My Dashboard" />
-          <TopNavBar
-            sidebarOpened={sidebarOpened}
-            setSidebarOpened={setSidebarOpened}
-          />
-        </>
-      }
-      navbar={
-        sidebarOpened ? (
-          <Navbar
-            height="100%"
-            width={{ sm: 200, lg: 300 }}
-            p="md"
-            className={classes.navbar}
+    <div className="flex min-h-screen bg-gray-100">
+      {sidebarOpened && (
+        <div className="bg-indigo-600 text-white w-64 p-6 flex flex-col justify-between">
+          <div>
+            <div className="flex flex-col items-center mb-6">
+              <Center>
+                <Avatar
+                  size={100}
+                  src={userInfo?.image}
+                  radius={100}
+                  className="mb-3"
+                />
+              </Center>
+              <span className="text-lg font-semibold">{userInfo?.username}</span>
+            </div>
+            <nav>{links}</nav>
+          </div>
+          <a
+            className="flex items-center p-2 rounded-md font-medium cursor-pointer hover:bg-red-500"
+            onClick={() => signOut({ callbackUrl: "/" })}
           >
-            <Navbar.Section>
-              <Box className={classes.header}>
-                <Center>
-                  <Avatar
-                    size={100}
-                    src={userInfo?.image}
-                    radius={100}
-                    className="mb-3"
-                  />
-                </Center>
-                <Center>
-                  <Text
-                    className="whitespace-pre-wrap"
-                    sx={{ lineHeight: 1, fontSize: "20px" }}
-                    weight={500}
-                    color="white"
-                  >
-                    {userInfo?.username}
-                  </Text>
-                </Center>
-              </Box>
-              {links}
-            </Navbar.Section>
-
-            <Navbar.Section className={classes.footer}>
-              <a
-                className={classes.link}
-                onClick={() => signOut({ callbackUrl: "/" })}
-              >
-                <IconLogout className={classes.linkIcon} stroke={1.5} />
-                <span>Logout</span>
-              </a>
-            </Navbar.Section>
-          </Navbar>
-        ) : (
-          <></>
-        )
-      }
-      footer={<Footer />}
-    >
-      <ScrollArea.Autosize maxHeight={"calc(100vh - 180px)"}>
-        <Container>
+            <IconLogout className="mr-2 text-white" stroke={1.5} />
+            <span>Logout</span>
+          </a>
+        </div>
+      )}
+      <div className="flex-grow flex flex-col">
+        <Header title="My Dashboard" />
+        <TopNavBar sidebarOpened={sidebarOpened} setSidebarOpened={setSidebarOpened} />
+        <div className="flex-grow p-6 overflow-auto">
           {active === "Daily Streak" ? (
             <Streak />
           ) : active === "Leaderboard" ? (
@@ -173,11 +135,12 @@ export default function DashboardPage() {
           ) : active === "Account" ? (
             <Account userInfo={userInfo} />
           ) : (
-            <Text>Error</Text>
+            <p className="text-center text-red-500">Error</p>
           )}
-        </Container>
-      </ScrollArea.Autosize>
-    </AppShell>
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 }
 
@@ -201,51 +164,24 @@ const useStyles = createStyles((theme, _params, getRef) => {
           }).background,
     },
 
-    header: {
-      paddingBottom: theme.spacing.md,
-      marginBottom: theme.spacing.md * 1.5,
-      borderBottom: `1px solid ${theme.fn.lighten(
-        theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .background ?? theme.primaryColor,
-        0.5
-      )}`,
-    },
-
-    footer: {
-      paddingTop: theme.spacing.md,
-      marginTop: theme.spacing.md,
-      borderTop: `1px solid ${theme.fn.lighten(
-        theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .background ?? theme.primaryColor,
-        0.5
-      )}`,
-    },
-
     link: {
-      ...theme.fn.focusStyles(),
       display: "flex",
       alignItems: "center",
       textDecoration: "none",
-      fontSize: theme.fontSizes.sm,
-      color: "white",
-      padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
-      borderRadius: theme.radius.sm,
-      fontWeight: 500,
+      fontSize: "0.875rem", // Tailwind's text-sm
+      color: "rgba(255, 255, 255, 0.9)",
+      padding: "0.5rem 1rem",
+      borderRadius: "0.375rem",
+      fontWeight: 600,
       cursor: "pointer",
+      transition: "background-color 0.3s, color 0.3s", // Smooth transition for hover effects
 
       "&:hover": {
-        backgroundColor:
-          theme.colorScheme === "dark"
-            ? theme.colors.dark[6]
-            : theme.fn.lighten(
-              theme.fn.variant({
-                variant: "filled",
-                color: theme.primaryColor,
-              }).background ?? theme.primaryColor,
-              0.1
-            ),
+        backgroundColor: "rgba(255, 255, 255, 0.1)", // Light transparent background on hover
+        color: "white", // Full white on hover for contrast
       },
     },
+
 
     linkIcon: {
       ref: icon,
