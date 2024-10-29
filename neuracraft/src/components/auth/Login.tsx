@@ -94,7 +94,7 @@ export default function Login({ setLoginMenuOpened }: LoginProps) {
             >
               <h2 className="text-3xl font-bold">
                 Welcome to{' '}
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
                   NeuraCraft
                 </span>
               </h2>
@@ -150,14 +150,14 @@ export default function Login({ setLoginMenuOpened }: LoginProps) {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={emailLoginIsLoading}
-                className="flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium hover:shadow-lg transition-all disabled:opacity-50"
+                className="flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium hover:shadow-lg transition-all disabled:opacity-50 w-full"
               >
-                {emailLoginIsLoading ? (
+                {emailLoginIsLoading && (
                   <Loader2 className="h-5 w-5 animate-spin mr-2" />
-                ) : (
-                  <LogIn className="h-5 w-5 mr-2" />
                 )}
-                Sign In
+                <p className="flex flex-col items-center justify-center mx-auto">
+                  Sign In
+                </p>
               </motion.button>
             </motion.div>
           </motion.form>
