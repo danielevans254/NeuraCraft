@@ -86,51 +86,7 @@ async function main() {
       },
     });
 
-    // Create sample masteries
-    for (const topic of Topics.slice(0, 3)) {
-      await prisma.mastery.create({
-        data: {
-          userId: user.id,
-          topicSlug: topic.topicSlug,
-          masteryLevel: Math.random(),
-          weeklyMasteryLevel: Math.random(),
-          fortnightlyMasteryLevel: Math.random(),
-        },
-      });
-    }
 
-    // Create sample attempts
-    for (const course of Courses.slice(0, 2)) {
-      const question = Questions[0];
-
-      // Generate random attempted answers based on the question type
-      const generateRandomAttempt = () => {
-        // For the first question which has {x: 2} as the answer
-        return {
-          x: Math.floor(Math.random() * 10) - 3 // Random number between -3 and 6
-        };
-      };
-
-      await prisma.questionWithAddedTime.create({
-        data: {
-          questionId: question?.questionId || 0,
-          variationId: question?.variationId || 0,
-          userId: user.id,
-          courseSlug: course.courseSlug,
-          variables: {},
-          answers: {},
-          attempts: {
-            create: {
-              userId: user.id,
-              courseSlug: course.courseSlug,
-              attemptedKeys: generateRandomAttempt(),
-              isCorrect: Math.random() > 0.5,
-              attemptSeconds: Math.floor(Math.random() * 300),
-            },
-          },
-        },
-      });
-    }
   }
 
   // // Create sample posts and comments
