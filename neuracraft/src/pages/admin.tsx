@@ -68,97 +68,82 @@ const tabs = [
 ];
 
 export default function AdminPage() {
-  const { theme, classes, cx } = useStyles();
   const session = useSession();
+  const [active, setActive] = useState("Overview");
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const [sidebarOpened, setSidebarOpened] = useState(!isMobile);
 
-  const [active, setActive] = useSessionStorage({
-    key: "adminActiveTab",
-    defaultValue: "Overview",
-  });
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
-  const [sidebarOpened, setSidebarOpened] = useState(false);
   useMemo(() => {
-    if (mobile !== undefined) {
-      setSidebarOpened(!mobile);
+    if (isMobile !== undefined) {
+      setSidebarOpened(!isMobile);
     }
-  }, [mobile]);
+  }, [isMobile]);
 
   return (
-    <>
-      <AppShell
-        className={classes.appshell}
-        navbarOffsetBreakpoint="sm"
-        header={
-          <>
-            <Header title="Admin Panel" />
-            <TopNavbar
-              sidebarOpened={sidebarOpened}
-              setSidebarOpened={setSidebarOpened}
-            />
-          </>
-        }
-        footer={<Footer />}
-        navbar={
-          sidebarOpened ? (
-            <Navbar
-              height={800}
-              width={{ sm: 200, lg: 300 }}
-              p="md"
-              className={classes.navbar}
-            >
-              <Navbar.Section className={classes.header}>
-                <Group position="apart">
-                  <Text size="xl" weight={500}>
-                    Admin
-                  </Text>
-                  <RoleBadge role={session?.data?.user?.role} />
-                </Group>
-              </Navbar.Section>
-              <Navbar.Section grow className={classes.navbarEntry}>
-                {tabs.map((item) => (
-                  <UnstyledButton
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Header title="Admin Panel" />
+      <TopNavbar
+        sidebarOpened={sidebarOpened}
+        setSidebarOpened={setSidebarOpened}
+      />
+
+      <div className="flex">
+        {sidebarOpened && (
+          <nav className="w-64 min-h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
+            <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-medium text-gray-800 dark:text-white">
+                  Admin
+                </h2>
+                <RoleBadge role={session?.data?.user?.role} />
+              </div>
+            </div>
+
+            <div className="py-4">
+              {tabs.map((item) => {
+                const isActive = item.label === active;
+                return (
+                  <button
                     key={item.label}
-                    className={cx(classes.control, {
-                      [classes.linkActive]: item.label === active,
-                    })}
-                    onClick={(event: { preventDefault: () => void }) => {
-                      event.preventDefault();
+                    onClick={() => {
                       setActive(item.label);
-                      mobile && setSidebarOpened(false);
+                      isMobile && setSidebarOpened(false);
                     }}
+                    className={`w-full px-4 py-2 flex items-center space-x-3 ${isActive
+                      ? "bg-blue-50 text-blue-600 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700"
+                      }`}
                   >
-                    <Box className={classes.controlBox}>
-                      <Group position="apart" spacing={0}>
-                        <ThemeIcon variant="light" size={30}>
-                          <item.icon
-                            className={classes.linkIcon}
-                            stroke={1.5}
-                          />
-                        </ThemeIcon>
-                        <Box ml="md">{item.label}</Box>
-                      </Group>
-                    </Box>
-                  </UnstyledButton>
-                ))}
-              </Navbar.Section>
-              <Navbar.Section className={classes.footer}>
-                <Link href="/courses" passHref>
-                  <Box className={classes.link}>
-                    <IconArrowBarLeft
-                      className={classes.linkIcon}
-                      stroke={1.5}
-                    />
-                    <span>Back to Courses</span>
-                  </Box>
-                </Link>
-              </Navbar.Section>
-            </Navbar>
-          ) : (
-            <></>
-          )
-        }
-      >
-        <>
+                    <div className={`p-2 rounded-lg ${isActive
+                      ? "bg-blue-100 dark:bg-blue-800"
+                      : "bg-gray-100 dark:bg-gray-700"
+                      }`}>
+                      <item.icon
+                        className={`w-5 h-5 ${isActive
+                          ? "text-blue-600 dark:text-blue-300"
+                          : "text-gray-500 dark:text-gray-400"
+                          }`}
+                      />
+                    </div>
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="absolute bottom-0 w-64 border-t border-gray-200 dark:border-gray-700">
+              <Link
+                href="/courses"
+                className="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700"
+              >
+                <IconArrowBarLeft className="w-5 h-5 mr-2" />
+                <span>Back to Courses</span>
+              </Link>
+            </div>
+          </nav>
+        )}
+
+        <main className="flex-1 p-6">
           {active === "Overview" ? (
             <Overview />
           ) : active === "Questions" ? (
@@ -171,129 +156,11 @@ export default function AdminPage() {
             <Users />
           ) : active === "Settings" ? (
             <Settings />
-          ) : (
-            <></>
-          )}
-        </>
-      </AppShell>
-    </>
+          ) : null}
+        </main>
+      </div>
+
+      <Footer />
+    </div>
   );
 }
-
-const useStyles = createStyles((theme, _params, getRef) => {
-  const icon = getRef("icon");
-
-  return {
-    navbar: {
-      backgroundColor:
-        theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
-      paddingBottom: 0,
-    },
-
-    link: {
-      ...theme.fn.focusStyles(),
-      display: "flex",
-      alignItems: "center",
-      textDecoration: "none",
-      fontSize: theme.fontSizes.sm,
-      color:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[1]
-          : theme.colors.gray[7],
-      padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
-      borderRadius: theme.radius.sm,
-      fontWeight: 500,
-      cursor: "pointer",
-
-      "&:hover": {
-        backgroundColor:
-          theme.colorScheme === "dark"
-            ? theme.colors.dark[6]
-            : theme.colors.gray[0],
-        color: theme.colorScheme === "dark" ? theme.white : theme.black,
-
-        [`& .${icon}`]: {
-          color: theme.colorScheme === "dark" ? theme.white : theme.black,
-        },
-      },
-    },
-
-    linkIcon: {
-      ref: icon,
-      color:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[2]
-          : theme.colors.gray[6],
-    },
-
-    linkActive: {
-      "&, &:hover": {
-        backgroundColor: theme.fn.variant({
-          variant: "light",
-          color: theme.primaryColor,
-        }).background,
-        color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-          .color,
-        [`& .${icon}`]: {
-          color: theme.fn.variant({
-            variant: "light",
-            color: theme.primaryColor,
-          }).color,
-        },
-      },
-    },
-
-    header: {
-      padding: theme.spacing.md,
-      paddingTop: 0,
-      color: theme.colorScheme === "dark" ? theme.white : theme.black,
-    },
-
-    navbarEntry: {
-      marginLeft: -theme.spacing.md,
-      marginRight: -theme.spacing.md,
-    },
-
-    control: {
-      fontWeight: 500,
-      display: "block",
-      width: "100%",
-      padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
-      color: theme.colorScheme === "dark" ? theme.colors.dark[0] : theme.black,
-      fontSize: theme.fontSizes.sm,
-
-      "&:hover": {
-        backgroundColor:
-          theme.colorScheme === "dark"
-            ? theme.colors.dark[7]
-            : theme.colors.gray[0],
-        color: theme.colorScheme === "dark" ? theme.white : theme.black,
-      },
-    },
-
-    controlBox: {
-      padding: theme.spacing.sm,
-      display: "flex",
-      alignItems: "center",
-    },
-
-    footer: {
-      marginLeft: `calc(${theme.spacing.md} * -1)`,
-      marginRight: `calc(${theme.spacing.md} * -1)`,
-      borderTop: `1px solid ${theme.colorScheme === "dark"
-          ? theme.colors.dark[4]
-          : theme.colors.gray[3]
-        }`,
-      paddingTop: theme.spacing.sm,
-    },
-
-    appshell: {
-      main: {
-        background:
-          theme.colorScheme === "dark"
-            ? theme.colors.dark[8]
-            : theme.colors.gray[0],
-      },
-    },
-  };
-});
