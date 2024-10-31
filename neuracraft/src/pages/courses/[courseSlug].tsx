@@ -161,18 +161,17 @@ export default function CourseMainPage({
     }
   });
 
+  const sidebarWidth = 200; // Replace 200 with the actual width value
 
   return (
     <AppShell
-      className={classes.appshell}
+      className="h-screen"
       navbarOffsetBreakpoint="sm"
       header={
         <>
           <TopHeader title={courseDetails.courseName} />
           <Header height={80}>
-            <Container
-              style={{ display: "flex", alignItems: "center", height: "100%" }}
-            >
+            <Container className="flex items-center h-full">
               <TopNavbar
                 sidebarOpened={sidebarOpened}
                 setSidebarOpened={setSidebarOpened}
@@ -187,7 +186,7 @@ export default function CourseMainPage({
           <Sidebar
             p="md"
             width={{ sm: 200, lg: 300 }}
-            className={classes.navbar}
+            className="bg-gray-100 shadow-md"
           >
             <Sidebar.Section>
               <Text weight={600} size="lg" align="center" mb="lg">
@@ -210,42 +209,35 @@ export default function CourseMainPage({
               {links}
               <Divider my="sm" variant="dotted" />
               <a
-                className={cx(classes.link, {
-                  [classes.linkActive]: "Course Discussion" === active,
-                })}
-                onClick={(event: { preventDefault: () => void }) => {
+                className={`block px-4 py-2 text-sm font-semibold text-gray-700 rounded-lg hover:bg-gray-200 ${"Course Discussion" === active ? "bg-blue-100" : ""
+                  }`}
+                onClick={(event) => {
                   event.preventDefault();
                   setActive("Course Discussion");
                   mobile && setSidebarOpened(false);
                 }}
               >
-                <IconMessages className={classes.linkIcon} stroke={1.5} />
+                <IconMessages className="mr-2 h-5 w-5" stroke={1.5} />
                 <span>Discussion</span>
               </a>
               <Link href="/courses" passHref>
-                <Box className={classes.link}>
-                  <IconArrowBarLeft className={classes.linkIcon} stroke={1.5} />
+                <Box className="block px-4 py-2 text-sm font-semibold text-gray-700 rounded-lg hover:bg-gray-200">
+                  <IconArrowBarLeft className="mr-2 h-5 w-5" stroke={1.5} />
                   <span>Back to Courses</span>
                 </Box>
               </Link>
             </Sidebar.Section>
           </Sidebar>
-        ) : (
-          <></>
-        )
+        ) : null
       }
     >
-      <ScrollArea>
+      <ScrollArea className="h-full">
         {active === "Overview" ? (
           <Container>
             <Title mb="lg">{courseDetails.courseName}</Title>
-            <TypographyStylesProvider
-              sx={(theme) => ({
-                fontSize: theme.fontSizes.xl,
-              })}
-            >
+            <TypographyStylesProvider className="text-xl">
               <div
-                style={{ width: "100%", height: "100%" }}
+                className="w-full h-full"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(courseDetails.courseDescription, {
                     ADD_TAGS: ["iframe"],
@@ -263,7 +255,7 @@ export default function CourseMainPage({
         ) : active === "Lecture Slides" ? (
           courseDetails.courseMedia.map((media) => (
             <Stack align="center" key={media.publicId}>
-              <Flex align="center" gap="md">
+              <div className="flex items-center gap-4">
                 <Title order={3}>{media.mediaName}</Title>
                 <Tooltip label="Download Slides" withArrow>
                   <ActionIcon
@@ -276,88 +268,42 @@ export default function CourseMainPage({
                     <IconDownload size={16} stroke={1.5} />
                   </ActionIcon>
                 </Tooltip>
-              </Flex>
+              </div>
               <Document
                 file={media.courseMediaURL}
                 onLoadSuccess={onDocumentLoadSuccess}
               >
-                <Page
-                  pageNumber={pageNumber}
-                  width={
-                    sidebarOpened
-                      ? width > theme.breakpoints.lg
-                        ? (width - 300) * 0.5
-                        : (width - 200) * 0.8
-                      : width * 0.9
-                  }
-                />
+                <Page pageNumber={pageNumber} width={sidebarWidth} />
               </Document>
-              <Flex gap={mobile ? "xs" : "md"}>
+              <div className="flex gap-4">
                 <Button
-                  onClick={() => {
-                    if (pageNumber > 1) {
-                      setPageNumber(pageNumber - 1);
-                    }
-                    setPageNumber(1);
-                  }}
+                  onClick={() => setPageNumber(Math.max(1, pageNumber - 1))}
                   variant="light"
-                  size={mobile ? "xs" : "md"}
+                  size="sm"
                 >
-                  <IconChevronsLeft size={mobile ? 16 : 20} stroke={1.5} />
+                  <IconChevronsLeft size={20} stroke={1.5} />
                 </Button>
-                <Button
-                  onClick={() => {
-                    if (pageNumber > 1) {
-                      setPageNumber(pageNumber - 1);
-                    }
-                  }}
-                  variant="light"
-                  size={mobile ? "xs" : "md"}
-                >
-                  <IconArrowLeft size={mobile ? 16 : 20} stroke={1.5} />
-                </Button>
-                <Tooltip label="Jump to Page 1" withArrow position="bottom">
-                  <Button
-                    variant="light"
-                    onClick={() => setPageNumber(1)}
-                    size={mobile ? "xs" : "md"}
-                    fz={mobile ? "xs" : "sm"}
-                  >
+                <Tooltip label="Jump to Page 1" withArrow>
+                  <Button variant="light" onClick={() => setPageNumber(1)} size="sm">
                     Page {pageNumber} of {numPages}
                   </Button>
                 </Tooltip>
                 <Button
-                  onClick={() => {
-                    if (pageNumber < numPages) {
-                      setPageNumber(pageNumber + 1);
-                    }
-                  }}
+                  onClick={() => setPageNumber(Math.min(numPages, pageNumber + 1))}
                   variant="light"
-                  size={mobile ? "xs" : "md"}
+                  size="sm"
                 >
-                  <IconArrowRight size={mobile ? 16 : 20} stroke={1.5} />
+                  <IconArrowRight size={20} stroke={1.5} />
                 </Button>
-                <Button
-                  onClick={() => {
-                    if (pageNumber < numPages) {
-                      setPageNumber(pageNumber + 1);
-                    }
-                    setPageNumber(numPages);
-                  }}
-                  variant="light"
-                  size={mobile ? "xs" : "md"}
-                >
-                  <IconChevronsRight size={mobile ? 16 : 20} stroke={1.5} />
-                </Button>
-              </Flex>
+              </div>
             </Stack>
           ))
         ) : active === "Lecture Videos" ? (
-          <Box className="h-[calc(100vh-180px)]" w="100%" h="100%">
+          <div className="h-[calc(100vh-180px)] w-full h-full">
             <div
-              style={{ width: "100%", height: "100%" }}
+              className="w-full h-full"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(modifiedVideo as string, {
+                __html: modifiedVideo ? DOMPurify.sanitize(modifiedVideo, {
                   ADD_TAGS: ["iframe"],
                   ADD_ATTR: [
                     "allow",
@@ -365,19 +311,19 @@ export default function CourseMainPage({
                     "frameborder",
                     "scrolling",
                   ],
-                }),
+                }) : '',
               }}
             />
-          </Box>
+          </div>
         ) : active === "Additional Resources" ? (
-          <Box className="h-[calc(100vh-180px)]" w="100%" h="100%">
+          <div className="w-full h-full">
             {output?.map((resource) =>
               resource.type === "video" ? (
                 <div
                   key={resource.string}
-                  style={{ width: "100%", height: "100%" }}
+                  className="w-full h-full"
                   dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(resource.string as string, {
+                    __html: DOMPurify.sanitize(resource.string, {
                       ADD_TAGS: ["iframe"],
                       ADD_ATTR: [
                         "allow",
@@ -389,15 +335,12 @@ export default function CourseMainPage({
                   }}
                 />
               ) : (
-                <Latex
-                  key={resource.string}
-                  style={{ width: "100%", height: "100%" }}
-                >
+                <Latex key={resource.string} className="w-full h-full">
                   {resource.string}
                 </Latex>
               )
             )}
-          </Box>
+          </div>
         ) : active === "Course Discussion" ? (
           <CourseDiscussion courseName={courseDetails.courseName} />
         ) : active === "Question" ? (
