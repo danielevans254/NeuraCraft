@@ -7,8 +7,6 @@ import { env } from "@/env/server.mjs";
 import { prisma } from "@/server/db/client";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
-import { CustomSendVerificationRequest } from "./signInEmail";
-
 export const authOptions: NextAuthOptions = {
   callbacks: {
     async session({ session, token, user }) {
