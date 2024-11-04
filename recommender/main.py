@@ -5,6 +5,7 @@ from pyBKT.models import Model, Roster
 from pydantic import BaseModel
 from typing import Literal
 
+import logging
 from pathlib import Path
 import numpy as np
 import multiprocessing, os, pickle, re, time
@@ -27,6 +28,8 @@ async def get_api_key(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Invalid or missing API Key",
         )
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Firebase persistent storage configurations
 config = {
@@ -53,72 +56,71 @@ def get_model() -> Model:
     """
 
     model = Model()
-    model.load("model.pkl")
+    model.load("computer_science_bktmodel.pkl")
+    print(model)
+    # Model(parallel=True, num_fits=1, seed=42, defaults={'skill_name': 'topicSlug', 'correct': 'isCorrect', 'user_id': 'studentId'})
     return model
-
+# FIXME: Fix the roster model
 # FIXME: This mf doesn't download the roster model correctly
 def get_roster_model() -> Roster:
     """
     Loads the roster file from the /models directory.
     Updates the roster with the latest training model on startup.
     """
-    roster_path = os.path.join("models", "model.pkl")
-    
-    with open(roster_path, "rb") as handle:
-        roster: Roster = pickle.load(handle)
     try:
-        # Prevent API from crashing in case the training model doesn't fit the roster model
+        roster_path = os.path.join("models", "computer_science_bktmodel.pkl")
+        if os.path.exists(roster_path):
+            logging.debug(f"Loading roster model from {roster_path}")
+            with open(roster_path, "rb") as handle:
+                roster: Roster = pickle.load(handle)
+        else:
+            logging.debug("[INFO] Local roster model not found, downloading from Firebase...")
+            storage.child("computer_science_bktmodel.pkl").download("computer_science_bktmodel.pkl")
+            with open("computer_science_bktmodel.pkl", "rb") as handle:
+                roster: Roster = pickle.load(handle)
+
+        if not hasattr(roster, 'skill_rosters'):
+            logging.warning("Loaded roster missing skill_rosters, initializing new roster")
+            topics = get_all_topics()
+            roster = Roster(students=[], skills=topics, model=app.state.model)
+
         roster.set_model(app.state.model)
-    except Exception as e:
-        print(
-            f"[ERROR] Training model did not fit the roster model, defaulting to model in storage.\n{e}"
-        )
-    finally:
+        logging.debug("Roster model set successfully")
+        print(roster)
+
+
         return roster
+
+    except Exception as e:
+        logging.error(f"Failed to load roster model: {e}")
+        logging.info("Initializing new empty roster")
+        topics = get_all_topics()
+        return Roster(students=[], skills=topics, model=app.state.model)
+
 
 
 def get_all_topics() -> list[str]:
-    """
-    Returns list of topics by parsing the topicSlugs in the seed_data.ts file.
-    
-    seed_data.ts is in NeuraCraft/neuracraft/prisma/seed_data.ts
-    """
     current_dir = Path(os.path.dirname(__file__))
-    
-    # Navigate up to NeuraCraft root and then to seed_data.ts
     seed_file_path = current_dir.parent / 'neuracraft' / 'prisma' / 'seed_data.ts'
-    
+
     if not seed_file_path.exists():
-        raise FileNotFoundError(
-            f"seed_data.ts not found at expected path: {seed_file_path}\n"
-            f"Current directory is: {current_dir}"
-        )
-    
+        logging.error(f"seed_data.ts not found at expected path: {seed_file_path}")
+        raise FileNotFoundError(f"seed_data.ts not found at expected path: {seed_file_path}")
+
+    logging.debug(f"Reading topics from {seed_file_path}")
     try:
         with open(seed_file_path, "r", encoding='utf-8') as f:
             text = f.read()
             topics = re.findall(r"topicSlug: .*", text)
-            topics = set(topics)
-            topics = [
-                topic.replace('topicSlug: "', "").rstrip('",') for topic in topics
-            ]
-        return topics
+            topics = {topic.replace('topicSlug: "', "").rstrip('",') for topic in topics}
+        return list(topics)
     except UnicodeDecodeError:
-        # If UTF-8 fails, try with UTF-8-SIG (for files with BOM)
-        try:
-            with open(seed_file_path, "r", encoding='utf-8-sig') as f:
-                text = f.read()
-                topics = re.findall(r"topicSlug: .*", text)
-                topics = set(topics)
-                topics = [
-                    topic.replace('topicSlug: "', "").rstrip('",') for topic in topics
-                ]
-            return topics
-        except UnicodeDecodeError as e:
-            raise UnicodeDecodeError(
-                f"Unable to read seed_data.ts with UTF-8 or UTF-8-SIG encoding. "
-                f"Original error: {str(e)}"
-            )
+        logging.warning("Attempting to read file with UTF-8-SIG encoding")
+        with open(seed_file_path, "r", encoding='utf-8-sig') as f:
+            text = f.read()
+            topics = re.findall(r"topicSlug: .*", text)
+            topics = {topic.replace('topicSlug: "', "").rstrip('",') for topic in topics}
+        return list(topics)
 
 
 class Topics(BaseModel):
@@ -134,11 +136,21 @@ async def startup_event() -> None:
     """
     Updates state variables with the latest model in persistent storage during startup.
     """
-    # Initialize model first
-    app.state.model = get_model()
-    # Initialize roster with the model
-    app.state.roster = get_roster_model(app.state.model)
-    print("[STARTUP] Model and Roster initialized successfully")
+    try:
+        app.state.model = get_model()
+        app.state.roster = get_roster_model()
+        
+        if not hasattr(app.state.roster, 'skill_rosters'):
+            raise AttributeError("Roster initialization failed - missing skill_rosters")
+            
+        print("[STARTUP] Model and Roster initialized successfully")
+        
+    except Exception as e:
+        print(f"[STARTUP ERROR] Failed to initialize: {e}")
+        # Initialize empty roster as fallback
+        topics = get_all_topics()
+        app.state.roster = Roster(students=[], skills=topics, model=app.state.model)
+        print("[STARTUP] Initialized empty roster as fallback")
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
@@ -287,7 +299,7 @@ def get_mastery_of_student(student_id: str, topic: str) -> dict[str, float]:
 
         mastery: float = app.state.roster.get_mastery_prob(topic, student_id)
         if mastery == -1:  # Not trained
-            mastery = 0  # Set default to 0
+            mastery = 0
 
         save_roster_model()
 
@@ -340,13 +352,13 @@ def update_state_of_student(
 ) -> dict[str, bool]:
     """
     Updates state of a particular student for a topic given one response.
-
-    Notes:
-        Update 1 student at a time.
-        Update 1 topic at a time.
     """
-
     with lock:
+        # Verify roster state
+        if not hasattr(app.state, "roster") or not hasattr(app.state.roster, "skill_rosters"):
+            print("[ERROR] Roster not properly initialized, reinitializing...")
+            app.state.roster = get_roster_model()
+
         if topic not in app.state.roster.skill_rosters:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -354,7 +366,7 @@ def update_state_of_student(
             )
         elif (
             student_id not in app.state.roster.skill_rosters[topic].students
-        ):  # Add student if doesn't exist in the Roster
+        ):
             app.state.roster.add_students(topic, [student_id])
 
         app.state.roster.update_state(
@@ -447,8 +459,8 @@ def save_roster_model() -> None:
     """
     Saves the Roster model to disk and persistent storage.
     """
-    with open("roster.pkl", "wb") as handle:
+    with open("computer_science_roster_model.pkl", "wb") as handle:
         pickle.dump(app.state.roster, handle, protocol=pickle.HIGHEST_PROTOCOL)
-    storage.child("roster.pkl").put("roster.pkl")
+    storage.child("computer_science_roster_model.pkl").put("computer_science_roster_model.pkl")
 
     print(f"[{time.strftime('%D %H:%M:%S')}] ROSTER MODEL SAVED")
