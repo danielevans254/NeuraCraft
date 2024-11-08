@@ -98,7 +98,7 @@ def get_roster_model() -> Roster:
         return Roster(students=[], skills=topics, model=app.state.model)
 
 
-
+# TODO: Fix the way topics are extracted from seed_data.ts
 def get_all_topics() -> list[str]:
     current_dir = Path(os.path.dirname(__file__))
     seed_file_path = current_dir.parent / 'neuracraft' / 'prisma' / 'seed_data.ts'
@@ -111,17 +111,14 @@ def get_all_topics() -> list[str]:
     try:
         with open(seed_file_path, "r", encoding='utf-8') as f:
             text = f.read()
-            topics = re.findall(r"topicSlug: .*", text)
-            topics = {topic.replace('topicSlug: "', "").rstrip('",') for topic in topics}
-        return list(topics)
+            topics = re.findall(r'topicSlug: "(.*?)"', text)
+        return topics
     except UnicodeDecodeError:
         logging.warning("Attempting to read file with UTF-8-SIG encoding")
         with open(seed_file_path, "r", encoding='utf-8-sig') as f:
             text = f.read()
-            topics = re.findall(r"topicSlug: .*", text)
-            topics = {topic.replace('topicSlug: "', "").rstrip('",') for topic in topics}
-        return list(topics)
-
+            topics = re.findall(r'topicSlug: "(.*?)"', text)
+        return topics
 
 class Topics(BaseModel):
     student_id: str
@@ -139,12 +136,12 @@ async def startup_event() -> None:
     try:
         app.state.model = get_model()
         app.state.roster = get_roster_model()
-        
+
         if not hasattr(app.state.roster, 'skill_rosters'):
             raise AttributeError("Roster initialization failed - missing skill_rosters")
-            
+
         print("[STARTUP] Model and Roster initialized successfully")
-        
+
     except Exception as e:
         print(f"[STARTUP ERROR] Failed to initialize: {e}")
         # Initialize empty roster as fallback
