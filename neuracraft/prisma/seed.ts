@@ -29,6 +29,7 @@ async function clearDatabase() {
   // Re-enable foreign key checks
   await prisma.$executeRaw`SET FOREIGN_KEY_CHECKS = 1;`;
 }
+// TODO: Fix the topic slug parser
 
 async function main() {
   await clearDatabase();
@@ -86,42 +87,42 @@ async function main() {
       },
     });
 
-    // Create sample masteries
-    for (const topic of Topics.slice(0, 3)) {
-      await prisma.mastery.create({
-        data: {
-          userId: user.id,
-          topicSlug: topic.topicSlug,
-          masteryLevel: Math.random(),
-          weeklyMasteryLevel: Math.random(),
-          fortnightlyMasteryLevel: Math.random(),
-        },
-      });
-    }
+    // // Create sample masteries
+    // for (const topic of Topics.slice(0, 3)) {
+    //   await prisma.mastery.create({
+    //     data: {
+    //       userId: user.id,
+    //       topicSlug: topic.topicSlug,
+    //       masteryLevel: Math.random(),
+    //       weeklyMasteryLevel: Math.random(),
+    //       fortnightlyMasteryLevel: Math.random(),
+    //     },
+    //   });
+    // }
 
-    // Create sample attempts
-    for (const course of Courses.slice(0, 2)) {
-      const question = Questions[0];
-      await prisma.questionWithAddedTime.create({
-        data: {
-          questionId: question?.questionId || 0, // Assign a default value of 0 if questionId is undefined
-          variationId: question?.variationId || 0, // Assign a default value of 0 if variationId is undefined
-          userId: user.id,
-          courseSlug: course.courseSlug,
-          variables: {},
-          answers: {},
-          attempts: {
-            create: {
-              userId: user.id,
-              courseSlug: course.courseSlug,
-              attemptedKeys: {},
-              isCorrect: Math.random() > 0.5,
-              attemptSeconds: Math.floor(Math.random() * 300),
-            },
-          },
-        },
-      });
-    }
+    // // Create sample attempts
+    // for (const course of Courses.slice(0, 2)) {
+    //   const question = Questions[0];
+    //   await prisma.questionWithAddedTime.create({
+    //     data: {
+    //       questionId: question?.questionId || 0, // Assign a default value of 0 if questionId is undefined
+    //       variationId: question?.variationId || 0, // Assign a default value of 0 if variationId is undefined
+    //       userId: user.id,
+    //       courseSlug: course.courseSlug,
+    //       variables: {},
+    //       answers: {},
+    //       attempts: {
+    //         create: {
+    //           userId: user.id,
+    //           courseSlug: course.courseSlug,
+    //           attemptedKeys: {},
+    //           isCorrect: Math.random() > 0.5,
+    //           attemptSeconds: Math.floor(Math.random() * 300),
+    //         },
+    //       },
+    //     },
+    //   });
+    // }
   }
 
   // // Create sample posts and comments
@@ -139,7 +140,7 @@ async function main() {
   //   }
   // }
 
-  console.log("Sample posts and comments created");
+  // console.log("Sample posts and comments created");
 }
 
 main()
