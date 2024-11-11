@@ -111,7 +111,7 @@ export default function Streak() {
                 <IconFlame
                   size={24}
                   stroke={1.5}
-                  className="animate-bounce fill-amber-300 stroke-orange-500"
+                  className="fill-amber-300 stroke-orange-500"
                 />
               </Center>
             }
