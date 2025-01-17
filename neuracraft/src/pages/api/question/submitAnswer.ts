@@ -48,8 +48,7 @@ export default async function handler(
     const { data: pybktUpdate } = await axios.patch<{
       Updated: boolean;
     }>(
-      `${process.env.RECOMMENDER_URL}/update-state/${
-        session?.user?.id
+      `${process.env.RECOMMENDER_URL}/update-state/${session?.user?.id
       }/${topicSlug}/${isCorrect ? "1" : "0"}`,
       req,
       {
