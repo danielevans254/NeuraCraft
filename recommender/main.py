@@ -68,15 +68,15 @@ def get_roster_model() -> Roster:
     Updates the roster with the latest training model on startup.
     """
     try:
-        roster_path = os.path.join("models", "computer_science_roster_model.pkl")
+        roster_path = os.path.join("models", "computer_science_bktmodel.pkl")
         if os.path.exists(roster_path):
             logging.debug(f"Loading roster model from {roster_path}")
             with open(roster_path, "rb") as handle:
                 roster: Roster = pickle.load(handle)
         else:
             logging.debug("[INFO] Local roster model not found, downloading from Firebase...")
-            storage.child("computer_science_roster_model.pkl").download("computer_science_roster_model.pkl")
-            with open("computer_science_roster_model.pkl", "rb") as handle:
+            storage.child("computer_science_bktmodel.pkl").download("computer_science_bktmodel.pkl")
+            with open("computer_science_bktmodel.pkl", "rb") as handle:
                 roster: Roster = pickle.load(handle)
 
         if not hasattr(roster, 'skill_rosters'):
