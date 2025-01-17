@@ -1,32 +1,19 @@
 import { PrismaClient, Prisma } from "@prisma/client";
-import {
-  Courses,
-  Questions,
-  Topics,
-  users,
-  // samplePosts,
-  // sampleComments
-} from "./seed_data";
+import { Courses, Questions, Topics, users } from "./seed_data";
+import { v4 as uuidv4 } from 'uuid';
 
 const prisma = new PrismaClient();
 
 async function clearDatabase() {
-  // Disable foreign key checks
   await prisma.$executeRaw`SET FOREIGN_KEY_CHECKS = 0;`;
-
-  // Get all table names
   const tables = await prisma.$queryRaw<Array<{ TABLE_NAME: string }>>`
     SELECT TABLE_NAME
     FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME != '_prisma_migrations'
   `;
-
-  // Truncate all tables
   for (const { TABLE_NAME } of tables) {
     await prisma.$executeRawUnsafe(`TRUNCATE TABLE \`${TABLE_NAME}\``);
   }
-
-  // Re-enable foreign key checks
   await prisma.$executeRaw`SET FOREIGN_KEY_CHECKS = 1;`;
 }
 
@@ -37,15 +24,24 @@ async function main() {
   await prisma.topic.createMany({ data: Topics });
   console.log("Topics created");
 
-  await prisma.question.createMany({ data: Questions });
+  for (const questionData of Questions) {
+    const count = await prisma.question.count({
+      where: { topicSlug: questionData.topicSlug },
+    });
+    const uniqueTitle = `${questionData.topicSlug}-Q${count + 1}`;
+
+    await prisma.question.create({
+      data: {
+        ...questionData,
+        questionTitle: uniqueTitle,
+      },
+    });
+  }
   console.log("Questions created");
 
   for (const course of Courses) {
     const { topics, courseMedia, ...courseData } = course;
-
-    const createdCourse = await prisma.course.create({
-      data: courseData,
-    });
+    const createdCourse = await prisma.course.create({ data: courseData });
 
     if (topics && topics.length > 0) {
       await prisma.course.update({
@@ -72,7 +68,6 @@ async function main() {
   for (const userData of users) {
     const user = await prisma.user.create({ data: userData });
     console.log(`Created user: ${user.email}`);
-
     await prisma.account.create({
       data: {
         userId: user.id,
@@ -85,26 +80,7 @@ async function main() {
         scope: "openid profile email",
       },
     });
-
-
   }
-
-  // // Create sample posts and comments
-  // for (const postData of samplePosts) {
-  //   const post = await prisma.post.create({
-  //     data: postData,
-  //   });
-
-  //   // Create associated comments
-  //   const postComments = sampleComments.filter((comment: { postId: string; }) => comment.postId === post.postId);
-  //   if (postComments.length > 0) {
-  //     await prisma.comment.createMany({
-  //       data: postComments,
-  //     });
-  //   }
-  // }
-
-  // console.log("Sample posts and comments created");
 }
 
 main()
