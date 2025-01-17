@@ -77,6 +77,7 @@ export default async function handler(
       },
     };
   }
+  console.log(userCourseQuestionsWithAddedTime);
 
   res.status(200).json(userCourseQuestionsWithAddedTime);
 }

@@ -108,13 +108,13 @@ const Performance = () => {
   {
     sort === "Last Active (Newest)"
       ? students.sort((a, b) => {
-          return b.lastActive > a.lastActive ? 1 : -1;
-        })
+        return b.lastActive > a.lastActive ? 1 : -1;
+      })
       : sort === "Last Active (Oldest)"
-      ? students.sort((a, b) => {
+        ? students.sort((a, b) => {
           return a.lastActive > b.lastActive ? 1 : -1;
         })
-      : students.sort((a, b) => {
+        : students.sort((a, b) => {
           return a.username.localeCompare(b.username);
         });
   }
@@ -162,8 +162,7 @@ const Performance = () => {
   // Look into componentMount if this still has multiple renders in production
   if (numStudentsWithTopicPing > 0 && !notif) {
     toast(
-      `You have ${numStudentsWithTopicPing} student${
-        numStudentsWithTopicPing === 1 ? "" : "s"
+      `You have ${numStudentsWithTopicPing} student${numStudentsWithTopicPing === 1 ? "" : "s"
       } that require your help!`,
       { duration: 3000, icon: <IconExclamationMark /> }
     );
@@ -327,16 +326,16 @@ const Performance = () => {
                                 ).length /
                                   item.attempts.length) *
                                   100 >=
-                                70
+                                  70
                                   ? "green"
                                   : (item.attempts.filter(
-                                      (attempt) => attempt.isCorrect === true
-                                    ).length /
-                                      item.attempts.length) *
-                                      100 <=
+                                    (attempt) => attempt.isCorrect === true
+                                  ).length /
+                                    item.attempts.length) *
+                                    100 <=
                                     30
-                                  ? "red"
-                                  : "orange",
+                                    ? "red"
+                                    : "orange",
                             },
                           ]}
                           label={
@@ -346,13 +345,13 @@ const Performance = () => {
                               ).length /
                                 item.attempts.length) *
                                 100 >=
-                              70 ? (
+                                70 ? (
                                 <IconChevronsUp size={22} stroke={1.5} />
                               ) : (item.attempts.filter(
-                                  (attempt) => attempt.isCorrect === true
-                                ).length /
-                                  item.attempts.length) *
-                                  100 <=
+                                (attempt) => attempt.isCorrect === true
+                              ).length /
+                                item.attempts.length) *
+                                100 <=
                                 30 ? (
                                 <IconChevronsDown size={22} stroke={1.5} />
                               ) : (
@@ -373,12 +372,12 @@ const Performance = () => {
                           <Text weight={700} size="xl">
                             {item.attempts.length
                               ? (
-                                  (item.attempts.filter(
-                                    (attempt) => attempt.isCorrect === true
-                                  ).length /
-                                    item.attempts.length) *
-                                  100
-                                ).toFixed(2)
+                                (item.attempts.filter(
+                                  (attempt) => attempt.isCorrect === true
+                                ).length /
+                                  item.attempts.length) *
+                                100
+                              ).toFixed(2)
                               : 0}
                             %
                           </Text>
@@ -422,7 +421,7 @@ const Performance = () => {
                     </Paper>
                   </Group>
                 </Center>
-                <Box>
+                <Box className="p-6">
                   <Bar
                     datasetIdKey="id"
                     data={{
@@ -431,44 +430,42 @@ const Performance = () => {
                         {
                           label: "Mastery Level",
                           data: sortedData,
-                          backgroundColor: "rgba(0, 128, 128, 0.75)",
-                          borderColor: "rgba(0, 128, 128, 0.75)",
-                          borderWidth: 1,
-                          barPercentage: 0.8,
-                          categoryPercentage: 0.7,
+                          backgroundColor: "rgba(0, 128, 128, 0.85)",
+                          borderColor: "rgba(0, 128, 128, 0.85)",
+                          borderWidth: 1.5,
+                          barPercentage: 0.9,
+                          categoryPercentage: 0.8,
                         },
                       ],
                     }}
-                    options={{
-                      maintainAspectRatio: false,
-                      indexAxis: "y",
-                      scales: {
-                        y: {
-                          ticks: {
-                            autoSkip: false,
-                          },
-                          grid: {
-                            display: false,
-                          },
-                        },
-                        x: {
-                          max: 1,
-                          beginAtZero: true,
-                          ticks: {
-                            callback: function (value) {
-                              return value.toLocaleString(undefined, {
-                                style: "percent",
-                              });
-                            },
-                          },
-                        },
-                      },
-                      plugins: {
-                        legend: {
-                          display: false,
-                        },
-                      },
-                    }}
+                  // options={{
+                  //   maintainAspectRatio: false,
+                  //   indexAxis: "y",
+                  //   scales: {
+                  //     y: {
+                  //       ticks: {
+                  //         autoSkip: false,
+                  //       },
+                  //       grid: {
+                  //         display: false,
+                  //       },
+                  //     },
+                  //     x: {
+                  //       max: 1,
+                  //       beginAtZero: true,
+                  //       ticks: {
+                  //         callback: function (value) {
+                  //           return value.toLocaleString(undefined, { style: "percent" });
+                  //         },
+                  //       },
+                  //     },
+                  //   },
+                  //   plugins: {
+                  //     legend: {
+                  //       display: false,
+                  //     },
+                  //   },
+                  // }}
                   />
                 </Box>
                 <Paper withBorder radius="md" p="sm" mt={"md"}>
@@ -540,8 +537,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
     marginBottom: theme.spacing.lg,
 
-    border: `1px solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[3]
-    }`,
+    border: `1px solid ${theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[3]
+      }`,
   },
 }));

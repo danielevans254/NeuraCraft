@@ -113,13 +113,13 @@ export default function DashboardPage() {
             </div>
             <nav>{links}</nav>
           </div>
-          <a
+          {/* <a
             className="flex items-center p-2 rounded-md font-medium cursor-pointer hover:bg-red-500"
             onClick={() => signOut({ callbackUrl: "/" })}
           >
             <IconLogout className="mr-2 text-white" stroke={1.5} />
             <span>Logout</span>
-          </a>
+          </a> */}
         </div>
       )}
       <div className="flex-grow flex flex-col">

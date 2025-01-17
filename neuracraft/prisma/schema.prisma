@@ -69,6 +69,7 @@ model User {
   posts                  Post[]
   comments               Comment[]
   postLikes              PostLikes[]
+  UserProgress           UserProgress[]
 }
 
 enum Role {
@@ -123,11 +124,12 @@ enum CourseType {
   Quiz
 }
 
+// TODO: Add chapters
 model Course {
   courseSlug             String                  @id
   courseName             String                  @unique
   courseDescription      String                  @db.Text
-  courseImage            String
+  courseImage            String                  @db.Text
   courseLevel            Level
   type                   CourseType
   moduleCode             String
@@ -141,6 +143,40 @@ model Course {
   attempts               Attempt[]
   courseMedia            CourseMedia[]
   questionsWithAddedTime QuestionWithAddedTime[]
+  createdAt              DateTime                @default(now())
+  updatedAt              DateTime                @updatedAt
+
+  isPublished Boolean   @default(false)
+  chapters    Chapter[]
+}
+
+model Chapter {
+  chapterId          String  @id @default(cuid())
+  chapterName        String
+  chapterDescription String  @db.Text
+  chapterPosition    Int
+  isPublished        Boolean @default(false)
+  courseSlug         String
+  course             Course  @relation(fields: [courseSlug], references: [courseSlug], onDelete: Cascade)
+
+  userProgress UserProgress[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([courseSlug])
+}
+
+model UserProgress {
+  id          String  @id @default(cuid())
+  userId      String
+  chapterId   String
+  isCompleted Boolean @default(false)
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapter     Chapter @relation(fields: [chapterId], references: [chapterId], onDelete: Cascade)
+
+  @@unique([userId, chapterId])
+  @@index([chapterId])
 }
 
 model CourseMedia {

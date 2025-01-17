@@ -114,7 +114,7 @@ export default function CoursesPage() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-8">All Courses</h1>
         </div>
       </div>
-
+      {/* TODO: Create an initial quiz */}
       {[
         { title: "Quizzes", type: CourseType.Quiz },
         { title: "Foundational Courses", type: CourseType.Content, level: Level.Foundational },

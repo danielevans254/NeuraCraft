@@ -23,7 +23,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log("API request received");
   const courses = await getAllCoursesData();
   res.status(200).json(courses);
 }
