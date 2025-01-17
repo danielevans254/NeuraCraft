@@ -12,26 +12,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { RoleBadge } from "@/components/misc/Badges";
 import TopNavbar from "@/components/Navbar";
-import {
-  AppShell,
-  Box,
-  createStyles,
-  Group,
-  Navbar,
-  Text,
-  ThemeIcon,
-  UnstyledButton,
-} from "@mantine/core";
-import { useMediaQuery, useSessionStorage } from "@mantine/hooks";
-import {
-  Attempt,
-  Course,
-  Mastery,
-  Question,
-  QuestionWithAddedTime,
-  Topic,
-  User,
-} from "@prisma/client";
+import { useMediaQuery } from "@mantine/hooks";
 import {
   IconArrowBarLeft,
   IconBrain,
@@ -41,22 +22,6 @@ import {
   IconSettings,
   IconUsers,
 } from "@tabler/icons";
-
-export type UsersWithMasteriesAndAttemptsType = (User & {
-  attempts: Attempt[];
-  masteries: Mastery[];
-})[];
-
-export type AttemptsInfoType = (Attempt & {
-  user: User;
-  course: Course;
-  questionWithAddedTime: QuestionWithAddedTime & {
-    question: Question & {
-      topic: Topic;
-    };
-    attempts: Attempt[];
-  };
-})[];
 
 const tabs = [
   { label: "Overview", icon: IconChartDots },
@@ -80,21 +45,16 @@ export default function AdminPage() {
   }, [isMobile]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <Header title="Admin Panel" />
-      <TopNavbar
-        sidebarOpened={sidebarOpened}
-        setSidebarOpened={setSidebarOpened}
-      />
+      <TopNavbar sidebarOpened={sidebarOpened} setSidebarOpened={setSidebarOpened} />
 
       <div className="flex">
         {sidebarOpened && (
           <nav className="w-64 min-h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
             <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
               <div className="flex justify-between items-center">
-                <h2 className="text-xl font-medium text-gray-800 dark:text-white">
-                  Admin
-                </h2>
+                <h2 className="text-xl font-medium">Admin</h2>
                 <RoleBadge role={session?.data?.user?.role} />
               </div>
             </div>
@@ -109,19 +69,21 @@ export default function AdminPage() {
                       setActive(item.label);
                       isMobile && setSidebarOpened(false);
                     }}
-                    className={`w-full px-4 py-2 flex items-center space-x-3 ${isActive
-                      ? "bg-blue-50 text-blue-600 dark:bg-blue-900 dark:text-blue-200"
-                      : "text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700"
+                    className={`w-full px-4 py-3 flex items-center space-x-3 rounded-lg transition-all ${isActive
+                        ? "bg-blue-500 text-white dark:bg-blue-700 dark:text-blue-100"
+                        : "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-200"
                       }`}
                   >
-                    <div className={`p-2 rounded-lg ${isActive
-                      ? "bg-blue-100 dark:bg-blue-800"
-                      : "bg-gray-100 dark:bg-gray-700"
-                      }`}>
+                    <div
+                      className={`p-2 rounded-lg ${isActive
+                          ? "bg-blue-600 dark:bg-blue-800"
+                          : "bg-gray-100 dark:bg-gray-700"
+                        }`}
+                    >
                       <item.icon
                         className={`w-5 h-5 ${isActive
-                          ? "text-blue-600 dark:text-blue-300"
-                          : "text-gray-500 dark:text-gray-400"
+                            ? "text-white dark:text-blue-300"
+                            : "text-gray-500 dark:text-gray-400"
                           }`}
                       />
                     </div>
@@ -134,7 +96,7 @@ export default function AdminPage() {
             <div className="absolute bottom-0 w-64 border-t border-gray-200 dark:border-gray-700">
               <Link
                 href="/courses"
-                className="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700"
+                className="flex items-center px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-200"
               >
                 <IconArrowBarLeft className="w-5 h-5 mr-2" />
                 <span>Back to Courses</span>
