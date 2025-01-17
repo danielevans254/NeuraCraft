@@ -46,29 +46,35 @@ import { useQuery } from "@tanstack/react-query";
 const HEADER_HEIGHT = 80;
 
 const FullLogo = () => (
-  <Link href="/">
-    <Image
-      src="/logo.svg"
-      alt="NeuraCraft"
-      width="0"
-      height="0"
-      sizes="100vw"
-      className="h-auto max-h-12 w-full"
-    />
-  </Link>
+  <div className="flex items-center justify-center p-3">
+    <Link href="/">
+      <Image
+        src="/logo.svg"
+        alt="NeuraCraft"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="h-auto max-h-12 w-full"
+      />
+    </Link>
+    <span className="pl-2 font-semibold text-2xl">{process.env.NEXT_PUBLIC_APP_NAME}</span>
+  </div>
 );
 
 const SmallLogo = () => (
-  <Link href="/">
-    <Image
-      src="/logo.svg"
-      alt="NeuraCraft"
-      width="0"
-      height="0"
-      sizes="100vw"
-      className="h-6 w-full rounded-full"
-    />
-  </Link>
+  <div className="flex items-center justify-center p-3">
+    <Link href="/">
+      <Image
+        src="/logo.svg"
+        alt="NeuraCraft"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="h-6 w-full rounded-full"
+      />
+    </Link>
+    <span className="pl-2 font-semibold text-lg">{process.env.NEXT_PUBLIC_APP_NAME}</span>
+  </div>
 );
 
 export default function Navbar({
