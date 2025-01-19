@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Document, Page } from "react-pdf";
 
 import CourseDiscussion from "@/components/course/CourseDiscussion";
@@ -31,137 +31,229 @@ import {
   IconPresentation, IconReportSearch, IconTarget, IconVideo, IconZoomQuestion,
 } from "@tabler/icons";
 import { useQuery } from "@tanstack/react-query";
+import PaginatedPDFViewer from "@/components/course/PaginatedPDFViewer";
 
 export type CourseInfoType = {
   topics: (Topic & {
     mastery: Mastery[];
   })[];
 } | null;
-
 export type UserQuestionWithAttemptsType = {
   topics: (Topic & {
     mastery: Mastery[];
   })[];
 } | null;
-
 export default function CourseMainPage({
   courseDetails,
 }: {
   courseDetails: Course & { courseMedia: CourseMedia[] };
 }) {
   const { theme, classes, cx } = useStyles();
-  const { width } = useViewportSize();
+  const { sidebarWidth } = useViewportSize();
+  const router = useRouter();
+  const { courseSlug, tab, section = "learn" } = router.query;
 
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
-  const [sidebarOpened, setSidebarOpened] = useState(false);
-  useMemo(() => {
-    if (mobile !== undefined) {
-      setSidebarOpened(!mobile);
+  const [sidebarOpened, setSidebarOpened] = useState(true);
+  const [active, setActive] = useState("Overview");
+  const [currentSection, setCurrentSection] = useState(section as string);
+
+  // React Query configuration
+  const { data: courseData, isLoading, isError } = useQuery({
+    queryKey: ["course", courseSlug],
+    queryFn: async () => {
+      const response = await axios.get<CourseInfoType>(`/api/course/${courseSlug}`);
+      return response.data;
+    },
+    enabled: !!courseSlug, // Only run query when courseSlug is available
+    staleTime: 5 * 60 * 1000, // Consider data fresh for 5 minutes
+    cacheTime: 30 * 60 * 1000, // Keep data in cache for 30 minutes
+  });
+
+  useEffect(() => {
+    if (tab) {
+      const formattedTab = tab === "overview"
+        ? "Overview"
+        : tab === "lecture-slides"
+          ? "Lecture Slides"
+          : tab === "lecture-videos"
+            ? "Lecture Videos"
+            : tab === "resources"
+              ? "Additional Resources"
+              : tab === "discussion"
+                ? "Course Discussion"
+                : tab === "question"
+                  ? "Question"
+                  : tab === "attempts"
+                    ? "Attempts"
+                    : tab === "mastery"
+                      ? "Mastery"
+                      : "Overview";
+
+      setActive(formattedTab);
     }
-  }, [mobile]);
+  }, [tab]);
 
-  const [section, setSection] = useSessionStorage<"learn" | "practice">({
-    key: "courseSectionTab",
-    defaultValue: "learn",
-  });
-  const [active, setActive] = useSessionStorage({
-    key: "courseActiveTab",
-    defaultValue: "Overview",
-  });
+  const handleSectionChange = (value: "learn" | "practice") => {
+    setCurrentSection(value);
+    const defaultTab = value === "learn" ? "overview" : "question";
+    setActive(defaultTab);
+    router.push(
+      {
+        pathname: `/courses/${courseSlug}`,
+        query: { section: value, tab: defaultTab },
+      },
+      undefined,
+      { shallow: true }
+    );
+  };
 
-  const [numPages, setNumPages] = useState(1);
-  const [pageNumber, setPageNumber] = useState(1);
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
-    setNumPages(numPages);
-  }
+  const tabs = useMemo(() => ({
+    learn: [
+      { label: "Overview", icon: IconApps, route: "overview" },
+      courseDetails.courseMedia.length > 0 && {
+        label: "Lecture Slides",
+        icon: IconPresentation,
+        route: "lecture-slides"
+      },
+      courseDetails.video && {
+        label: "Lecture Videos",
+        icon: IconVideo,
+        route: "lecture-videos"
+      },
+      courseDetails.markdown && {
+        label: "Additional Resources",
+        icon: IconReportSearch,
+        route: "resources"
+      },
+    ].filter(Boolean),
+    practice: [
+      { label: "Question", icon: IconZoomQuestion, route: "question" },
+      { label: "Attempts", icon: IconChartLine, route: "attempts" },
+      { label: "Mastery", icon: IconTarget, route: "mastery" },
+    ],
+  }), [courseDetails]);
 
-  const router = useRouter();
-  const currentCourseSlug = router.query.courseSlug;
+  const handleNavigation = (route: string, label: string) => {
+    router.push({
+      pathname: `/courses/${courseSlug}`,
+      query: { section: currentSection, tab: route }
+    }, undefined, { shallow: true });
+    mobile && setSidebarOpened(false);
+  };
 
-  const { data: course } = useQuery({
-    queryKey: ["course", currentCourseSlug],
-    queryFn: () =>
-      axios.get<CourseInfoType>(`/api/course/${currentCourseSlug}`),
-  });
+  const links = useMemo(() => (
+    tabs[currentSection as keyof typeof tabs].map((item) => (
+      <a
+        className={cx(classes.link, {
+          [classes.linkActive]: item.route === tab,
+        })}
+        key={item.label}
+        onClick={(event) => {
+          event.preventDefault();
+          handleNavigation(item.route, item.label);
+        }}
+      >
+        <item.icon className={classes.linkIcon} stroke={1.5} />
+        <span>{item.label}</span>
+      </a>
+    ))
+  ), [tabs, currentSection, tab, courseSlug, mobile]);
 
-  if (!course) {
+  useEffect(() => {
+    if (courseSlug && !tab) {
+      // Push initial route with default tab
+      router.push({
+        pathname: `/courses/${courseSlug}`,
+        query: {
+          section: currentSection,
+          tab: "overview"
+        }
+      }, undefined, { shallow: true });
+    }
+  }, [courseSlug]); // Add this effect to handle initial routing
+
+  // Handle loading and error states
+  if (isLoading) {
     return (
-      <Center className="h-[calc(100vh-180px)]">
-        <Loader />
-      </Center>
+      <AppShell
+        className="h-screen"
+        navbarOffsetBreakpoint="sm"
+        header={
+          <>
+            <TopHeader title={courseDetails.courseName} />
+            <Header height={80}>
+              <Container className="flex items-center h-full">
+                <TopNavbar
+                  sidebarOpened={sidebarOpened}
+                  setSidebarOpened={setSidebarOpened}
+                />
+              </Container>
+            </Header>
+          </>
+        }
+      >
+        <Center className="h-[calc(100vh-180px)]">
+          <Loader size="xl" />
+        </Center>
+      </AppShell>
     );
   }
 
-  const tabs = {
-    learn: [
-      { label: "Overview", icon: IconApps },
-      courseDetails.courseMedia.length > 0
-        ? { label: "Lecture Slides", icon: IconPresentation }
-        : null,
-      courseDetails.video ? { label: "Lecture Videos", icon: IconVideo } : null,
-      courseDetails.markdown
-        ? { label: "Additional Resources", icon: IconReportSearch }
-        : null,
-    ],
-    practice: [
-      { label: "Question", icon: IconZoomQuestion },
-      { label: "Attempts", icon: IconChartLine },
-      { label: "Mastery", icon: IconTarget },
-    ],
-  };
+  if (isError) {
+    return (
+      <AppShell
+        className="h-screen"
+        navbarOffsetBreakpoint="sm"
+        header={
+          <>
+            <TopHeader title={courseDetails.courseName} />
+            <Header height={80}>
+              <Container className="flex items-center h-full">
+                <TopNavbar
+                  sidebarOpened={sidebarOpened}
+                  setSidebarOpened={setSidebarOpened}
+                />
+              </Container>
+            </Header>
+          </>
+        }
+      >
+        <Center className="h-[calc(100vh-180px)]">
+          <Stack align="center" spacing="md">
+            <Text size="xl" weight={500} color="red">
+              Failed to load course data
+            </Text>
+            <Button onClick={() => router.reload()}>
+              Retry
+            </Button>
+          </Stack>
+        </Center>
+      </AppShell>
+    );
+  }
 
-  const links = tabs[section].map(
-    (item) =>
-      item && (
-        <a
-          className={cx(classes.link, {
-            [classes.linkActive]: item.label === active,
-          })}
-          key={item.label}
-          onClick={(event: { preventDefault: () => void }) => {
-            event.preventDefault();
-            setActive(item.label);
-            mobile && setSidebarOpened(false);
-          }}
-        >
-          <item.icon className={classes.linkIcon} stroke={1.5} />
-          <span>{item.label}</span>
-        </a>
-      )
-  );
-
-  // Function to add width and height attributes to iframe tags
+  // Helper functions
   const addIframeAttributes = (htmlString: string, width = "100%", height = "100%") => {
-    // Check if the string contains an iframe tag
-    if (!htmlString.includes("<iframe")) return htmlString;
-
-    // Replace iframe tags with width and height attributes
+    if (!htmlString?.includes("<iframe")) return htmlString;
     return htmlString.replace(/<iframe(.*?)>/g, `<iframe$1 width="${width}" height="${height}">`);
   };
 
-  // Check if courseDetails.video contains an iframe tag
-  const hasIframeVideo = /<iframe.*?>/.test(courseDetails.video as string);
-
-  // If it does, add the width and height attributes to the iframe tag
+  const hasIframeVideo = courseDetails.video && /<iframe.*?>/.test(courseDetails.video);
   const modifiedVideo = hasIframeVideo
     ? addIframeAttributes(courseDetails.video as string)
     : courseDetails.video;
 
-  // Split the markdown by iframe tags
   const parts = courseDetails.markdown?.split(/(<iframe.*?>.*?<\/iframe>)/g);
-
   const output = parts?.map((part) => {
     if (part.includes("<iframe")) {
-      // Add width and height to the iframe
       const iframe = addIframeAttributes(part);
       return { type: "video", string: iframe };
-    } else {
-      // Return markdown part
-      return { type: "markdown", string: part };
     }
+    return { type: "markdown", string: part };
   });
 
-  const sidebarWidth = 200; // Replace 200 with the actual width value
+  // const sidebarWidth = 500;
 
   return (
     <AppShell
@@ -194,8 +286,8 @@ export default function CourseMainPage({
               </Text>
 
               <SegmentedControl
-                value={section}
-                onChange={(value: "learn" | "practice") => setSection(value)}
+                value={currentSection}
+                onChange={handleSectionChange}
                 transitionTimingFunction="ease"
                 fullWidth
                 data={[
@@ -214,6 +306,13 @@ export default function CourseMainPage({
                 onClick={(event) => {
                   event.preventDefault();
                   setActive("Course Discussion");
+                  router.push({
+                    pathname: `/courses/${courseSlug}`,
+                    query: {
+                      section: currentSection,
+                      tab: "discussion"
+                    }
+                  }, undefined, { shallow: true });
                   mobile && setSidebarOpened(false);
                 }}
               >
@@ -228,7 +327,7 @@ export default function CourseMainPage({
               </Link>
             </Sidebar.Section>
           </Sidebar>
-        ) : null
+        ) : undefined
       }
     >
       <ScrollArea className="h-full">
@@ -253,53 +352,12 @@ export default function CourseMainPage({
             </TypographyStylesProvider>
           </Container>
         ) : active === "Lecture Slides" ? (
-          courseDetails.courseMedia.map((media) => (
-            <Stack align="center" key={media.publicId}>
-              <div className="flex items-center gap-4">
-                <Title order={3}>{media.mediaName}</Title>
-                <Tooltip label="Download Slides" withArrow>
-                  <ActionIcon
-                    variant="default"
-                    className="rounded-full p-1"
-                    component="a"
-                    href={media.courseMediaURL}
-                    target="_blank"
-                  >
-                    <IconDownload size={16} stroke={1.5} />
-                  </ActionIcon>
-                </Tooltip>
-              </div>
-              <Document
-                file={media.courseMediaURL}
-                onLoadSuccess={onDocumentLoadSuccess}
-              >
-                <Page pageNumber={pageNumber} width={sidebarWidth} />
-              </Document>
-              <div className="flex gap-4">
-                <Button
-                  onClick={() => setPageNumber(Math.max(1, pageNumber - 1))}
-                  variant="light"
-                  size="sm"
-                >
-                  <IconChevronsLeft size={20} stroke={1.5} />
-                </Button>
-                <Tooltip label="Jump to Page 1" withArrow>
-                  <Button variant="light" onClick={() => setPageNumber(1)} size="sm">
-                    Page {pageNumber} of {numPages}
-                  </Button>
-                </Tooltip>
-                <Button
-                  onClick={() => setPageNumber(Math.min(numPages, pageNumber + 1))}
-                  variant="light"
-                  size="sm"
-                >
-                  <IconArrowRight size={20} stroke={1.5} />
-                </Button>
-              </div>
-            </Stack>
-          ))
+          <PaginatedPDFViewer
+            courseMedia={courseDetails.courseMedia}
+            sidebarWidth={sidebarWidth}
+          />
         ) : active === "Lecture Videos" ? (
-          <div className="h-[calc(100vh-180px)] w-full h-full">
+          <div className="h-[calc(100vh-180px)] w-full">
             <div
               className="w-full h-full"
               dangerouslySetInnerHTML={{
