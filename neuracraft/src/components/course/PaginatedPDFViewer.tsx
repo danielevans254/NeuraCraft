@@ -18,12 +18,12 @@ interface PaginatedPDFViewerProps {
 
 const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [], sidebarWidth }) => {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
   const [numPages, setNumPages] = useState(0);
-
-  // Get initial values from URL or default to 0 and 1
   const [currentPdfIndex, setCurrentPdfIndex] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
+  const [isDocumentLoading, setIsDocumentLoading] = useState(true);
+  const [isPageLoading, setIsPageLoading] = useState(true);
+  const [pdfDocument, setPdfDocument] = useState<any>(null);
 
   // Initialize state from URL when component mounts or URL changes
   useEffect(() => {
@@ -46,6 +46,11 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
     }
   }, [router.isReady, router.query, courseMedia.length]);
 
+  // Reset loading states when page number changes
+  useEffect(() => {
+    setIsPageLoading(true);
+  }, [pageNumber]);
+
   // Update URL when PDF or page changes
   const updateURL = (newPdfIndex: number, newPage: number) => {
     router.push(
@@ -62,26 +67,24 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
     );
   };
 
-  if (!courseMedia || courseMedia.length === 0) {
-    return (
-      <Paper className="w-full p-8 text-center">
-        <Text size="lg" color="dimmed">No PDF documents available</Text>
-      </Paper>
-    );
-  }
+  const handleDocumentLoadSuccess = ({ numPages: nextNumPages }: { numPages: number }) => {
+    setNumPages(nextNumPages);
+    setIsDocumentLoading(false);
+  };
 
-  const currentPdf = courseMedia[currentPdfIndex];
-
-  const handleDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-    setIsLoading(false);
+  const handlePageLoadSuccess = () => {
+    setIsPageLoading(false);
   };
 
   const handleDocumentLoadError = () => {
-    setIsLoading(false);
+    setIsDocumentLoading(false);
+    setIsPageLoading(false);
+    setPdfDocument(null);
   };
 
   const navigateToPage = (newPage: number) => {
+    if (isDocumentLoading) return;
+
     const validPage = Math.max(1, Math.min(newPage, numPages));
     setPageNumber(validPage);
     updateURL(currentPdfIndex, validPage);
@@ -92,7 +95,9 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
       const newIndex = currentPdfIndex + 1;
       setCurrentPdfIndex(newIndex);
       setPageNumber(1);
-      setIsLoading(true);
+      setIsDocumentLoading(true);
+      setIsPageLoading(true);
+      setPdfDocument(null);
       updateURL(newIndex, 1);
     }
   };
@@ -102,9 +107,41 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
       const newIndex = currentPdfIndex - 1;
       setCurrentPdfIndex(newIndex);
       setPageNumber(1);
-      setIsLoading(true);
+      setIsDocumentLoading(true);
+      setIsPageLoading(true);
+      setPdfDocument(null);
       updateURL(newIndex, 1);
     }
+  };
+
+  if (!courseMedia || courseMedia.length === 0) {
+    return (
+      <Paper className="w-full p-8 text-center">
+        <Text size="lg" color="dimmed">No PDF documents available</Text>
+      </Paper>
+    );
+  }
+
+  const currentPdf = courseMedia[currentPdfIndex];
+
+  const renderPage = () => {
+    return (
+      <Page
+        key={`page_${currentPdfIndex}_${pageNumber}`}
+        pageNumber={pageNumber}
+        width={sidebarWidth}
+        className="flex justify-center"
+        renderAnnotationLayer={false}
+        renderTextLayer={false}
+        loading={
+          <Stack align="center" spacing="xs" className="py-4">
+            <Loader size="sm" />
+          </Stack>
+        }
+        onLoadSuccess={handlePageLoadSuccess}
+        onRenderSuccess={handlePageLoadSuccess}
+      />
+    );
   };
 
   return (
@@ -115,10 +152,10 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
           <Text size="sm" color="dimmed" className="font-medium">
             Document {currentPdfIndex + 1} of {courseMedia.length}
           </Text>
-          {isLoading && <Loader size="sm" />}
+          {(isDocumentLoading || isPageLoading) && <Loader size="sm" />}
         </Group>
         <Title order={3} className="text-center text-lg font-semibold">
-          {currentPdf.mediaName}
+          {currentPdf?.mediaName}
         </Title>
         <Group spacing={8}>
           <Tooltip label="Download PDF" withArrow position="left">
@@ -127,11 +164,11 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
               color="blue"
               className="rounded-lg hover:bg-blue-50"
               component="a"
-              href={currentPdf.courseMediaURL}
+              href={currentPdf?.courseMediaURL}
               target="_blank"
               download
             >
-              <Download size={18} />
+              <Download size={40} />
             </ActionIcon>
           </Tooltip>
           <Tooltip label="Full Screen" withArrow position="left">
@@ -139,9 +176,9 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
               variant="light"
               color="blue"
               className="rounded-lg hover:bg-blue-50"
-              onClick={() => window.open(currentPdf.courseMediaURL, '_blank')}
+              onClick={() => window.open(currentPdf?.courseMediaURL, '_blank')}
             >
-              <Maximize2 size={18} />
+              <Maximize2 size={40} />
             </ActionIcon>
           </Tooltip>
         </Group>
@@ -150,7 +187,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
       {/* PDF Viewer */}
       <Paper shadow="xs" radius="md" className="mb-4 overflow-hidden">
         <Document
-          file={currentPdf.courseMediaURL}
+          file={currentPdf?.courseMediaURL}
           onLoadSuccess={handleDocumentLoadSuccess}
           onLoadError={handleDocumentLoadError}
           loading={
@@ -166,16 +203,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
             </Stack>
           }
         >
-          <Page
-            pageNumber={pageNumber}
-            width={sidebarWidth}
-            className="flex justify-center"
-            loading={
-              <Stack align="center" spacing="xs" className="py-4">
-                <Loader size="sm" />
-              </Stack>
-            }
-          />
+          {renderPage()}
         </Document>
       </Paper>
 
@@ -187,7 +215,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
             variant="light"
             size="sm"
             onClick={prevPdf}
-            disabled={currentPdfIndex === 0}
+            disabled={currentPdfIndex === 0 || isDocumentLoading}
             leftIcon={<ChevronLeft size={16} />}
             className="hover:bg-gray-50"
           >
@@ -197,7 +225,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
             variant="light"
             size="sm"
             onClick={nextPdf}
-            disabled={currentPdfIndex === courseMedia.length - 1}
+            disabled={currentPdfIndex === courseMedia.length - 1 || isDocumentLoading}
             rightIcon={<ChevronRight size={16} />}
             className="hover:bg-gray-50"
           >
@@ -212,7 +240,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
               variant="default"
               size="xs"
               onClick={() => navigateToPage(pageNumber - 1)}
-              disabled={pageNumber <= 1}
+              disabled={pageNumber <= 1 || isDocumentLoading}
               className="hover:bg-gray-50"
             >
               <ChevronLeft size={14} />
@@ -229,7 +257,7 @@ const PaginatedPDFViewer: React.FC<PaginatedPDFViewerProps> = ({ courseMedia = [
               variant="default"
               size="xs"
               onClick={() => navigateToPage(pageNumber + 1)}
-              disabled={pageNumber >= numPages}
+              disabled={pageNumber >= numPages || isDocumentLoading}
               className="hover:bg-gray-50"
             >
               <ChevronRight size={14} />
