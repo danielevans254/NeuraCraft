@@ -79,28 +79,65 @@ const Overview = () => {
   }
 
   // Students flagged for more assistance
-  const studentsWithTopicPing = users.data.filter((student) =>
-    student.masteries.some((mastery) => mastery.topicPing)
+  interface Student {
+    username: string;
+    masteries: Mastery[];
+  }
+
+  interface Mastery {
+    masteryLevel: number;
+    topicPing: boolean;
+  }
+
+  const studentsWithTopicPing: Student[] = users.data.filter((student: Student) =>
+    student.masteries.some((mastery: Mastery) => mastery.topicPing)
   );
   const numStudentsWithTopicPing = studentsWithTopicPing.length;
 
   // Best and worst students based on mastery average
-  const studentMasteryAverages = users.data
-    .map((student) => {
-      const masteryLevel = student.masteries.reduce(
-        (total, mastery) => total + mastery.masteryLevel,
+  interface StudentMasteryAverage {
+    name: string;
+    masteryAverage: number;
+  }
+
+  const studentMasteryAverages: StudentMasteryAverage[] = users.data
+    .map((student: Student) => {
+      const masteryLevel: number = student.masteries.reduce(
+        (total: number, mastery: Mastery) => total + mastery.masteryLevel,
         0
       );
-      const masteryAverage = masteryLevel / student.masteries.length || 0;
+      const masteryAverage: number = masteryLevel / student.masteries.length || 0;
       return { name: student.username, masteryAverage };
     })
-    .filter((student) => student.masteryAverage > 0)
-    .sort((a, b) => b.masteryAverage - a.masteryAverage);
+    .filter((student: StudentMasteryAverage) => student.masteryAverage > 0)
+    .sort((a: StudentMasteryAverage, b: StudentMasteryAverage) => b.masteryAverage - a.masteryAverage);
 
   // Sorted array of all topics based on all attempts by topic
-  const topicAttempts = attempts.data.reduce((counts, attempt) => {
-    const topicSlug = attempt.questionWithAddedTime.question.topicSlug;
-    const key = counts[topicSlug];
+  interface Attempt {
+    questionWithAddedTime: {
+      question: {
+        topicSlug: string;
+        topic: {
+          topicName: string;
+        };
+      };
+    };
+    isCorrect: boolean;
+  }
+
+  interface TopicAttempt {
+    topicName: string;
+    correctCount: number;
+    totalCount: number;
+  }
+
+  interface TopicAttempts {
+    [key: string]: TopicAttempt;
+  }
+
+  const topicAttempts: TopicAttempts = attempts.data.reduce((counts: TopicAttempts, attempt: Attempt) => {
+    const topicSlug: string = attempt.questionWithAddedTime.question.topicSlug;
+    const key: TopicAttempt | undefined = counts[topicSlug];
     if (key) {
       key.correctCount += attempt.isCorrect ? 1 : 0;
       key.totalCount++;
@@ -112,7 +149,7 @@ const Overview = () => {
       };
     }
     return counts;
-  }, {} as Record<string, { topicName: string; correctCount: number; totalCount: number }>);
+  }, {} as TopicAttempts);
 
   const topicAttemptsArray = Object.entries(topicAttempts).map(
     ([topicSlug, { topicName, correctCount, totalCount }]) => ({
@@ -208,7 +245,7 @@ const Overview = () => {
                   .sort(
                     (a, b) =>
                       b.correctCount / b.totalCount -
-                        a.correctCount / a.totalCount || 0
+                      a.correctCount / a.totalCount || 0
                   )
                   .map((topic) => topic.correctCount / topic.totalCount),
                 backgroundColor: theme.fn.rgba(theme.colors.green[4], 0.75),
