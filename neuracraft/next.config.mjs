@@ -26,6 +26,7 @@ export default defineNextConfig({
       "lh3.googleusercontent.com",
       "images.unsplash.com",
       "api.dicebear.com",
+      "firebasestorage.googleapis.com"
     ],
   },
   output: "standalone",
