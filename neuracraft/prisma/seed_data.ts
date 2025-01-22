@@ -48,6 +48,222 @@ export const users: Prisma.UserCreateInput[] = [
     points: 50,
     emailFrequency: Frequency.Monthly,
   },
+  {
+    email: "user3@example.com",
+    username: "user3",
+    role: Role.USER,
+    emailVerified: new Date("2023-04-20"),
+    isNewUser: false,
+    name: "Alice Johnson",
+    ceuId: "2021-03982",
+    consentDate: new Date("2023-04-20"),
+    points: 200,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user4@example.com",
+    username: "user4",
+    role: Role.USER,
+    emailVerified: new Date("2023-05-05"),
+    isNewUser: true,
+    name: "Bob Martin",
+    ceuId: "2019-09123",
+    consentDate: new Date("2023-05-05"),
+    points: 100,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user5@example.com",
+    username: "user5",
+    role: Role.USER,
+    emailVerified: new Date("2023-06-15"),
+    isNewUser: false,
+    name: "Charlie Brown",
+    ceuId: "2022-08321",
+    consentDate: new Date("2023-06-15"),
+    points: 250,
+    emailFrequency: Frequency.Monthly,
+  },
+  {
+    email: "user6@example.com",
+    username: "user6",
+    role: Role.USER,
+    emailVerified: new Date("2023-07-01"),
+    isNewUser: false,
+    name: "David Lee",
+    ceuId: "2020-06540",
+    consentDate: new Date("2023-07-01"),
+    points: 300,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user7@example.com",
+    username: "user7",
+    role: Role.USER,
+    emailVerified: new Date("2023-08-10"),
+    isNewUser: true,
+    name: "Eve Williams",
+    ceuId: "2021-01432",
+    consentDate: new Date("2023-08-10"),
+    points: 75,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user8@example.com",
+    username: "user8",
+    role: Role.USER,
+    emailVerified: new Date("2023-09-20"),
+    isNewUser: false,
+    name: "Franklin Adams",
+    ceuId: "2022-01765",
+    consentDate: new Date("2023-09-20"),
+    points: 180,
+    emailFrequency: Frequency.Monthly,
+  },
+  {
+    email: "user9@example.com",
+    username: "user9",
+    role: Role.USER,
+    emailVerified: new Date("2023-10-05"),
+    isNewUser: true,
+    name: "Grace Kelly",
+    ceuId: "2020-04589",
+    consentDate: new Date("2023-10-05"),
+    points: 95,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user10@example.com",
+    username: "user10",
+    role: Role.USER,
+    emailVerified: new Date("2023-11-15"),
+    isNewUser: false,
+    name: "Henry Morgan",
+    ceuId: "2021-09340",
+    consentDate: new Date("2023-11-15"),
+    points: 210,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user11@example.com",
+    username: "user11",
+    role: Role.USER,
+    emailVerified: new Date("2023-12-01"),
+    isNewUser: true,
+    name: "Ivy Thomas",
+    ceuId: "2022-06134",
+    consentDate: new Date("2023-12-01"),
+    points: 130,
+    emailFrequency: Frequency.Monthly,
+  },
+  {
+    email: "user12@example.com",
+    username: "user12",
+    role: Role.USER,
+    emailVerified: new Date("2023-01-10"),
+    isNewUser: false,
+    name: "Jack Wilson",
+    ceuId: "2020-08964",
+    consentDate: new Date("2023-01-10"),
+    points: 220,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user13@example.com",
+    username: "user13",
+    role: Role.USER,
+    emailVerified: new Date("2023-02-20"),
+    isNewUser: true,
+    name: "Kate Lee",
+    ceuId: "2021-07230",
+    consentDate: new Date("2023-02-20"),
+    points: 170,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user14@example.com",
+    username: "user14",
+    role: Role.USER,
+    emailVerified: new Date("2023-03-05"),
+    isNewUser: false,
+    name: "Laura Green",
+    ceuId: "2022-09574",
+    consentDate: new Date("2023-03-05"),
+    points: 290,
+    emailFrequency: Frequency.Monthly,
+  },
+  {
+    email: "user15@example.com",
+    username: "user15",
+    role: Role.USER,
+    emailVerified: new Date("2023-04-15"),
+    isNewUser: true,
+    name: "Mike Harris",
+    ceuId: "2020-01832",
+    consentDate: new Date("2023-04-15"),
+    points: 120,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user16@example.com",
+    username: "user16",
+    role: Role.USER,
+    emailVerified: new Date("2023-05-25"),
+    isNewUser: false,
+    name: "Nina Clark",
+    ceuId: "2021-09564",
+    consentDate: new Date("2023-05-25"),
+    points: 310,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user17@example.com",
+    username: "user17",
+    role: Role.USER,
+    emailVerified: new Date("2023-06-05"),
+    isNewUser: true,
+    name: "Oliver King",
+    ceuId: "2022-08562",
+    consentDate: new Date("2023-06-05"),
+    points: 95,
+    emailFrequency: Frequency.Monthly,
+  },
+  {
+    email: "user18@example.com",
+    username: "user18",
+    role: Role.USER,
+    emailVerified: new Date("2023-07-15"),
+    isNewUser: false,
+    name: "Paul Adams",
+    ceuId: "2020-05983",
+    consentDate: new Date("2023-07-15"),
+    points: 260,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
+    email: "user19@example.com",
+    username: "user19",
+    role: Role.USER,
+    emailVerified: new Date("2023-08-25"),
+    isNewUser: true,
+    name: "Quinn White",
+    ceuId: "2021-06374",
+    consentDate: new Date("2023-08-25"),
+    points: 105,
+    emailFrequency: Frequency.Daily,
+  },
+  {
+    email: "user20@example.com",
+    username: "user20",
+    role: Role.USER,
+    emailVerified: new Date("2023-09-05"),
+    isNewUser: false,
+    name: "Rose Davis",
+    ceuId: "2022-09112",
+    consentDate: new Date("2023-09-05"),
+    points: 220,
+    emailFrequency: Frequency.Monthly,
+  },
 ];
 
 export const samplePosts: Prisma.PostCreateInput[] = [
@@ -244,21 +460,22 @@ export const Topics: Topic[] = [
     topicPrior: 0.325,
   },
 ];
-
 export const Courses: {
   moduleCode: string;
   moduleTitle: string;
   courseSlug: string;
   courseName: string;
   courseDescription: string;
+  courseIntroduction: string;
   courseImage: string;
   courseLevel: Level;
   type: CourseType;
-  video?: string;
-  week?: number;
-  studio?: number;
+  video?: string | null;
+  week?: number | null;
+  studio?: number | null;
   topics: Topic["topicSlug"][];
-  courseMedia: CourseMedia[];
+  courseMedia: CourseMedia[] | null;
+  isPublished: boolean;
 }[] = [
     {
       moduleCode: "CS-WELCOME-QUIZ",
@@ -267,17 +484,14 @@ export const Courses: {
       studio: 0,
       courseSlug: "welcome-quiz-assessment",
       courseName: "Quiz Assessment",
-      courseDescription: "Get a quick assessment of your current level and mastery.",
+      courseDescription: "",
+      courseIntroduction: "Get a quick assessment of your current level and mastery.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fandrew-neel-o93echtXf84-unsplash.jpg?alt=media&token=bcec6125-fe81-4b83-b740-d035505d2810",
       courseLevel: Level.Foundational,
       type: CourseType.Quiz,
-      topics: ["data-structures", "algorithms", "operating-systems", "networking", "database-systems", "software-engineering", "web-development", "object-oriented-programming", "machine-learning", "cloud-computing", "cybersecurity", "mobile-development", "data-analytics", "software-testing", "devops", "design-patterns", "algorithms-optimization", "advanced-database-systems", "distributed-systems", "artificial-intelligence", "network-security", "blockchain", "user-experience-design", "ethical-hacking", "software-architecture", "quantum-computing", "big-data"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w1s1-data-structures11",
-        courseSlug: "data-structures-fundamentals",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/data-structures.pdf4",
-        mediaName: "Data Structures Fundamentals",
-      }],
+      topics: ["data-structures", "algorithms", "operating-systems", "networking", "database-systems", "software-engineering", "web-development", "object-oriented-programming", "machine-learning", "cloud-computing", "cybersecurity", "mobile-development", "data-analytics", "software-testing", "devops", "design-patterns", "algorithms-optimization", "advanced-database-systems", "distributed-systems"],
+      courseMedia: null,
+      isPublished: true,
     },
     {
       moduleCode: "CS1010",
@@ -286,18 +500,40 @@ export const Courses: {
       studio: 1,
       courseSlug: "data-structures-fundamentals",
       courseName: "Data Structures Fundamentals",
-      courseDescription: "Learn essential data structures including arrays, linked lists, stacks, and queues.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Data Structures Fundamentals</strong> course is designed to equip learners with a deep understanding of essential data structures such as <strong>arrays</strong>, <em>linked lists</em>, <u>stacks</u>, and <del>queues</del>. These fundamental concepts form the backbone of efficient software development and algorithm optimization.</p><p>In this course, you will gain hands-on experience in creating, managing, and applying various data structures to real-world problems. Whether you're developing software, optimizing code, or designing complex systems, mastering data structures is crucial for improving performance and scalability.</p><h2>Why should you learn Data Structures?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Enhance problem-solving skills by learning how to organize data effectively.</li><li>Improve algorithmic thinking and understand how to optimize solutions.</li><li>Prepare for more advanced computer science topics and career opportunities in software engineering.</li></ul><p>The course integrates practical examples, interactive exercises, and engaging resources to ensure a comprehensive learning experience. With dynamic visuals and step-by-step guidance, learners will build a strong foundation in data structures that they can apply to future projects and professional scenarios.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Ffundamental-of-the-data-structure6.png?alt=media&token=a94e3c90-899b-41e6-87cb-d791948d49f1' alt='Data Structures Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn essential data structures including arrays, linked lists, stacks, and queues.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Ffundamental-of-the-data-structure6.png?alt=media&token=a94e3c90-899b-41e6-87cb-d791948d49f1",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
-      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/placeholder"></iframe>',
+      courseLevel: "Foundational",
+      type: "Content",
+      video: '<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/8hly31xKli0"></iframe>',
       topics: ["data-structures"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w1s1-data-structures1",
-        courseSlug: "data-structures-fundamentals",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/data-structures.pdf4",
-        mediaName: "Data Structures Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w1s1-intro-data-structures",
+          courseSlug: "data-structures-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/data-structures/publication_2_27942_1456_debgbt.pdf",
+          mediaName: "Introduction to Data Structures",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s2-arrays",
+          courseSlug: "data-structures-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/data-structures/array_data_structure_v6fe71.pdf",
+          mediaName: "Arrays",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s3-linked-lists",
+          courseSlug: "data-structures-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/data-structures/linked_lists_algorithm_jfxwww.pdf",
+          mediaName: "Linked Lists",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s5-queues",
+          courseSlug: "data-structures-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/data-structures/dsa_queue_hfke95.pdf",
+          mediaName: "Queues",
+        },
+      ],
+      isPublished: true,
     },
     {
       moduleCode: "CS1011",
@@ -306,17 +542,46 @@ export const Courses: {
       studio: 2,
       courseSlug: "algorithms-fundamentals",
       courseName: "Algorithm Basics",
-      courseDescription: "Master fundamental algorithmic concepts and problem-solving strategies.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Algorithm Basics</strong> course is designed to introduce learners to essential algorithmic concepts and techniques for solving computational problems efficiently. This includes topics such as <strong>sorting algorithms</strong>, <em>search algorithms</em>, <u>graph algorithms</u>, and basic algorithm analysis.</p><p>In this course, learners will gain hands-on experience in implementing and applying various algorithms to real-world scenarios, helping them to understand how to optimize solutions and handle complex tasks.</p><h2>Why should you learn Algorithms?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Improve problem-solving and analytical skills essential for software development.</li><li>Develop a deeper understanding of algorithm efficiency and complexity.</li><li>Prepare for more advanced topics in computer science and enhance career opportunities in software engineering and data science.</li></ul><p>The course integrates practical examples, interactive exercises, and engaging resources to ensure a comprehensive learning experience. With dynamic visuals and step-by-step guidance, learners will build a solid foundation in algorithms that they can apply to future projects and professional challenges.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F62030dbbfc081971a604f1a7_Blank%20Flowchart%20Template.png?alt=media&token=31c01a2c-4275-4e3f-9c72-785a25e7fe5e' alt='Algorithm Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Master fundamental algorithmic concepts and problem-solving strategies.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F62030dbbfc081971a604f1a7_Blank%20Flowchart%20Template.png?alt=media&token=31c01a2c-4275-4e3f-9c72-785a25e7fe5e",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["algorithms"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w1s2-algorithms32",
-        courseSlug: "algorithms-fundamentals",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/algorithms.pdf",
-        mediaName: "Algorithm Basics",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w1s2-algorithms32",
+          courseSlug: "algorithms-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/algorithms/algorithms_basics_yre1qk.pdf",
+          mediaName: "Algorithm Basics",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s3-sorting",
+          courseSlug: "algorithms-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/NeuraCraft/pdf/algorithms/sorting_algorithms_ap4pti.pdf",
+          mediaName: "Sorting Algorithms",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s4-searching",
+          courseSlug: "algorithms-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358367/NeuraCraft/pdf/algorithms/binary_search_algorithm_osjdqk.pdf",
+          mediaName: "Searching Algorithms (Binary Search)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s5-searching",
+          courseSlug: "algorithms-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358368/NeuraCraft/pdf/algorithms/interpolation_search_algorithm_uqabs9.pdf",
+          mediaName: "Searching Algorithms (Interpolation Search)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s6-graph-algorithms",
+          courseSlug: "algorithms-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358432/NeuraCraft/pdf/algorithms/graph_algorithm_g7bi2s.pdf",
+          mediaName: "Graph Algorithms",
+        }
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS1012",
@@ -325,17 +590,40 @@ export const Courses: {
       studio: 3,
       courseSlug: "operating-systems-basics",
       courseName: "Operating Systems Fundamentals",
-      courseDescription: "Understanding core operating system concepts and principles.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Operating Systems Fundamentals</strong> course provides a comprehensive understanding of core concepts related to operating systems, including process management, memory management, file systems, and system security. Learners will explore how operating systems manage resources efficiently and how they provide a stable environment for software applications.</p><p>In this course, participants will engage in practical examples and exercises that highlight essential topics, helping them to apply theoretical knowledge to real-world scenarios.</p><h2>Why should you learn Operating Systems?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Gain insights into how modern computer systems operate at a foundational level.</li><li>Develop skills needed for managing system resources and solving complex computational challenges.</li><li>Prepare for more advanced computer science topics and enhance career opportunities in software engineering, system architecture, and cybersecurity.</li></ul><p>The course combines interactive lectures, hands-on activities, and visual resources to ensure a well-rounded learning experience. With step-by-step guidance, learners will build a solid understanding of operating systems concepts, fostering better problem-solving and analytical abilities.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages.png?alt=media&token=397d1efb-4e8c-4b56-8940-1e42e2fd9a15' alt='Operating Systems Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Understanding core operating system concepts and principles.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages.png?alt=media&token=397d1efb-4e8c-4b56-8940-1e42e2fd9a15",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["operating-systems"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w1s3-os",
-        courseSlug: "operating-systems-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/os.pdf",
-        mediaName: "Operating Systems Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w1s3-os",
+          courseSlug: "operating-systems-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358750/NeuraCraft/pdf/operating-systems/sl1_vnowdw.pdf",
+          mediaName: "Operating Systems Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s4-process-management",
+          courseSlug: "operating-systems-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358867/NeuraCraft/pdf/operating-systems/Process-Management_xcene0.pdf",
+          mediaName: "Process Management",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s5-memory-management",
+          courseSlug: "operating-systems-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358922/NeuraCraft/pdf/operating-systems/Memory-management-_iqwox6.pdf",
+          mediaName: "Memory Management",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s6-file-systems",
+          courseSlug: "operating-systems-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737358976/NeuraCraft/pdf/operating-systems/Section10-File_Systems_xcqjij.pdf",
+          mediaName: "File Systems",
+        }
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS1013",
@@ -344,19 +632,35 @@ export const Courses: {
       studio: 4,
       courseSlug: "networking-basics",
       courseName: "Networking Fundamentals",
-      courseDescription: "Introduction to computer networking concepts and protocols.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Networking Fundamentals</strong> course covers essential concepts and technologies that form the backbone of computer networking. Learners will explore topics such as <strong>network architectures</strong>, <em>protocols</em>, <u>network security</u>, and <del>network troubleshooting</del>. Understanding these fundamentals is crucial for designing, managing, and optimizing networked systems.</p><p>This course provides hands-on experience through interactive labs and practical exercises, enabling students to apply theoretical knowledge to real-world scenarios.</p><h2>Why should you learn Networking?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Build a solid foundation for careers in IT, system administration, and cybersecurity.</li><li>Understand how data flows within a network and how to optimize network performance.</li><li>Prepare for more advanced networking topics such as cloud networking and IoT integration.</li></ul><p>The course includes dynamic visual content, case studies, and interactive materials to facilitate an engaging learning experience. Through this course, learners will develop a comprehensive understanding of networking concepts and skills.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F3262097.jpg?alt=media&token=da8ab19e-bf5e-4db7-a806-93e6b68e129b' alt='Networking Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Introduction to computer networking concepts and protocols.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F3262097.jpg?alt=media&token=da8ab19e-bf5e-4db7-a806-93e6b68e129b",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["networking"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w1s4-networking53",
-        courseSlug: "networking-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/networking.pdf",
-        mediaName: "Networking Fundamentals",
-      }],
-    },
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w1s4-networking53",
+          courseSlug: "networking-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359102/NeuraCraft/pdf/networking/SMB_University_120307_Networking_Fundamentals_kk5vm8.pdf",
+          mediaName: "Networking Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s5-network-security",
+          courseSlug: "networking-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359378/NeuraCraft/pdf/networking/kb-network-security-101_jajodl.pdf",
+          mediaName: "Network Security",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w1s6-troubleshooting",
+          courseSlug: "networking-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359541/NeuraCraft/pdf/networking/Basic_Network_Troubleshooting_-_2015_gn6jxs.pdf",
+          mediaName: "Network Troubleshooting",
+        }
+      ],
+      isPublished: true
 
+    },
     // Week 2
     {
       moduleCode: "CS1014",
@@ -365,18 +669,36 @@ export const Courses: {
       studio: 1,
       courseSlug: "database-fundamentals",
       courseName: "Database Systems Basics",
-      courseDescription: "Learn fundamental concepts of database management systems.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Database Systems Basics</strong> course introduces fundamental concepts of database management systems, including <strong>relational databases</strong>, <em>SQL</em>, <u>data modeling</u>, and <del>database normalization</del>. Understanding these core principles is essential for managing, querying, and designing databases effectively.</p><p>This course provides a hands-on approach to learning database systems through practical exercises, allowing students to apply their knowledge to real-world database scenarios.</p><h2>Why should you learn Database Systems?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Enhance your skills for database administration and data management roles.</li><li>Understand database design and optimization techniques for performance improvement.</li><li>Prepare for advanced topics like database security, big data, and distributed databases.</li></ul><p>Through interactive lectures, real-world case studies, and dynamic learning resources, students will develop a comprehensive understanding of database systems.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F20945549.jpg?alt=media&token=c73c1796-5514-402d-a5aa-29e38a06977c' alt='Database Systems Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn fundamental concepts of database management systems.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F20945549.jpg?alt=media&token=c73c1796-5514-402d-a5aa-29e38a06977c",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["database-systems"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w2s1-database14",
-        courseSlug: "database-fundamentals",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/database.pdf",
-        mediaName: "Database Systems Basics",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w2s1-database14",
+          courseSlug: "database-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359766/NeuraCraft/pdf/database-systems/database-systems_ahq4yo.pdf",
+          mediaName: "Database Systems Basics",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s2-sql",
+          courseSlug: "database-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359834/NeuraCraft/pdf/database-systems/chpter_1_yiwdkt.pdf",
+          mediaName: "SQL Basics",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-data-modeling",
+          courseSlug: "database-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737359996/NeuraCraft/pdf/database-systems/DATA_Model1_12052016_wr9bnh.pdf",
+          mediaName: "Data Modeling",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS1015",
       moduleTitle: "Software Engineering",
@@ -384,18 +706,24 @@ export const Courses: {
       studio: 2,
       courseSlug: "software-engineering-basics",
       courseName: "Software Engineering Principles",
-      courseDescription: "Understanding core software engineering principles and practices.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Software Engineering Principles</strong> course provides an introduction to core concepts and best practices in software development. It covers key topics such as <strong>software design</strong>, <em>development methodologies</em>, <u>quality assurance</u>, and <del>code review processes</del>. Understanding these principles is essential for building reliable, maintainable, and scalable software systems.</p><p>This course focuses on a practical approach, incorporating case studies and real-world examples to help students apply theoretical concepts to practical scenarios.</p><h2>Why should you learn Software Engineering?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Gain foundational knowledge of software development lifecycles.</li><li>Enhance your ability to manage projects effectively using industry-standard practices.</li><li>Prepare for advanced software development topics like DevOps, microservices, and Agile methodologies.</li></ul><p>Through hands-on assignments and collaborative group projects, students will master essential software engineering concepts.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fchris-ried-ieic5Tq8YMk-unsplash-1500x1001.jpg?alt=media&token=2c9d3e99-519d-453d-8030-559604f3247e' alt='Software Engineering Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Understanding core software engineering principles and practices.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fchris-ried-ieic5Tq8YMk-unsplash-1500x1001.jpg?alt=media&token=2c9d3e99-519d-453d-8030-559604f3247e",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["software-engineering"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w2s2-software-eng63",
-        courseSlug: "software-engineering-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/software-eng.pdf",
-        mediaName: "Software Engineering Principles",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w2s2-software-eng63",
+          courseSlug: "software-engineering-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360348/NeuraCraft/pdf/software-engineering/lecture1428551142_hvvrv9.pdf",
+          mediaName: "Software Engineering Principles",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS1016",
       moduleTitle: "Web Development",
@@ -403,18 +731,48 @@ export const Courses: {
       studio: 3,
       courseSlug: "web-development-basics",
       courseName: "Web Development Fundamentals",
-      courseDescription: "Introduction to web development technologies and concepts.",
-      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(1).png?alt=media&token=e86bda27-2184-4579-83cd-04e98b5bf58e",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Web Development Fundamentals</strong> course covers the essential concepts and technologies used in creating modern web applications. Students will learn <strong>HTML</strong>, <em>CSS</em>, <u>JavaScript</u>, and basic front-end and back-end development practices.</p><p>This course is designed to provide a hands-on learning experience through projects and real-world scenarios.</p><h2>Why should you learn Web Development?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Build and design responsive websites.</li><li>Understand client-side and server-side interactions.</li><li>Prepare for advanced topics like React, Angular, and backend frameworks.</li></ul><p>Students will work on practical assignments and collaborative projects to solidify their understanding of web development concepts.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(1).png?alt=media&token=e86bda27-2184-4579-83cd-04e98b5bf58e' alt='Web Development Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Introduction to web development technologies and concepts.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Ftop11.png?alt=media&token=82e0b581-c2c9-46f6-8369-8c07e962c2d3",
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["web-development"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w2s3-web-dev136",
-        courseSlug: "web-development-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/web-dev.pdf",
-        mediaName: "Web Development Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-web-dev136",
+          courseSlug: "web-development-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360431/NeuraCraft/pdf/web-development/html_tutorial_v5xasx.pdf",
+          mediaName: "HTML Basics for Web Development",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-css-principles",
+          courseSlug: "web-development-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360569/NeuraCraft/pdf/web-development/FULLTEXT01-compressed_ezfwex.pdf",
+          mediaName: "CSS Principles for Web Design",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-javascript-basics",
+          courseSlug: "web-development-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360661/NeuraCraft/pdf/web-development/javascript_tutorial_gkfznv.pdf",
+          mediaName: "JavaScript Basics for Interactivity",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-frontend-frameworks",
+          courseSlug: "web-development-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360709/NeuraCraft/pdf/web-development/Kern_2022_BachelorThesis_WebFrontend_ymftzb.pdf",
+          mediaName: "Introduction to Front-End Frameworks",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s3-backend-integration",
+          courseSlug: "web-development-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360779/NeuraCraft/pdf/web-development/Lecture_13_-_Backend_Development_xvhjw7.pdf",
+          mediaName: "Back-End Integration Basics",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS1017",
       moduleTitle: "Object-Oriented Programming",
@@ -422,18 +780,48 @@ export const Courses: {
       studio: 4,
       courseSlug: "oop-basics",
       courseName: "OOP Fundamentals",
-      courseDescription: "Learn object-oriented programming concepts and principles.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Object-Oriented Programming Fundamentals</strong> course introduces core concepts of OOP, such as classes, objects, inheritance, polymorphism, encapsulation, and design patterns. Students will learn to create reusable and scalable software using object-oriented principles.</p><p>Key focus areas include practical applications and real-world examples to help solidify understanding.</p><h2>Why OOP?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Encapsulates data and behavior.</li><li>Promotes code reusability.</li><li>Facilitates easier maintenance and extension of software.</li></ul><p>Through hands-on exercises and projects, students will develop a strong grasp of object-oriented programming concepts.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fhttps___dev-to-uploads.s3.amazonaws.com_uploads_articles_jnjgfl10cn4tm9qlztv1.png?alt=media&token=842408f4-3e74-448d-9a07-dbaf20e9e4f2' alt='Object-Oriented Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn object-oriented programming concepts and principles.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fhttps___dev-to-uploads.s3.amazonaws.com_uploads_articles_jnjgfl10cn4tm9qlztv1.png?alt=media&token=842408f4-3e74-448d-9a07-dbaf20e9e4f2",
-      courseLevel: Level.Foundational,
-      type: CourseType.Content,
+      courseLevel: "Foundational",
+      type: "Content",
       topics: ["object-oriented-programming"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w2s4-oop63",
-        courseSlug: "oop-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/oop.pdf",
-        mediaName: "OOP Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w2s4-oop63",
+          courseSlug: "oop-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360876/NeuraCraft/pdf/object-oriented-programming/OOPConcepts_wkznbp.pdf",
+          mediaName: "OOP Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s4-inheritance-concepts",
+          courseSlug: "oop-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737360927/NeuraCraft/pdf/object-oriented-programming/OOP-Basics_qmsdc9.pdf",
+          mediaName: "Inheritance in OOP",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s4-polymorphism-concepts",
+          courseSlug: "oop-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737361000/NeuraCraft/pdf/object-oriented-programming/blg252e_mod08_dwzrqv.pdf",
+          mediaName: "Polymorphism in OOP",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s4-encapsulation-concepts",
+          courseSlug: "oop-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737361053/NeuraCraft/pdf/object-oriented-programming/OOP_Encapsulation_insgtc.pdf",
+          mediaName: "Encapsulation in OOP",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w2s4-design-patterns",
+          courseSlug: "oop-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737361123/NeuraCraft/pdf/object-oriented-programming/design-patterns-en-demo_hcdvez.pdf",
+          mediaName: "Design Patterns in OOP",
+        }
+      ],
+      isPublished: true
+
     },
+
 
     // Intermediate Level Courses - Week 3
     {
@@ -443,18 +831,48 @@ export const Courses: {
       studio: 1,
       courseSlug: "machine-learning-intro",
       courseName: "Introduction to Machine Learning",
-      courseDescription: "Learn basic concepts and applications of machine learning.",
-      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(2).png?alt=media&token=a3d99071-8a4a-41b6-b506-a9719ea9b14a",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Introduction to Machine Learning</strong> course covers fundamental concepts of machine learning, including supervised and unsupervised learning, model evaluation, and real-world applications.</p><p>Students will gain hands-on experience with machine learning algorithms, data preprocessing, and performance metrics.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Supervised Learning</li><li>Unsupervised Learning</li><li>Model Evaluation</li><li>Data Preprocessing</li></ul><p>Practical exercises and case studies will be provided to deepen understanding of machine learning concepts.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(2).png?alt=media&token=a3d99071-8a4a-41b6-b506-a9719ea9b14a' alt='Machine Learning Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn basic concepts and applications of machine learning.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fportada-9.jpg?alt=media&token=f566e5fb-0e79-4778-8b7f-719c84c95b10",
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["machine-learning"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w3s1-ml683",
-        courseSlug: "machine-learning-intro",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/ml.pdf",
-        mediaName: "Introduction to Machine Learning",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w3s1-ml683",
+          courseSlug: "machine-learning-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737434686/NeuraCraft/pdf/machine-learning/20200429021745449c4aea7c_eai7ap.pdf",
+          mediaName: "Introduction to Machine Learning",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s1-supervised-learning",
+          courseSlug: "machine-learning-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737434825/NeuraCraft/pdf/machine-learning/4IJAEMS-10320245-AnOverview_jf4kh5.pdf",
+          mediaName: "Supervised Learning",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s1-unsupervised-learning",
+          courseSlug: "machine-learning-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737435074/NeuraCraft/pdf/machine-learning/Unsupervised_Learning_Final_r3mr3a.pdf",
+          mediaName: "Unsupervised Learning",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s1-model-evaluation",
+          courseSlug: "machine-learning-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737435459/NeuraCraft/pdf/machine-learning/20210920085146-2021-09-20ebook085121_bbiez9.pdf",
+          mediaName: "Model Evaluation",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s1-data-preprocessing",
+          courseSlug: "machine-learning-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737435559/NeuraCraft/pdf/machine-learning/03_bglzft.pdf",
+          mediaName: "Data Preprocessing",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS2011",
       moduleTitle: "Cloud Computing",
@@ -462,18 +880,54 @@ export const Courses: {
       studio: 2,
       courseSlug: "cloud-computing-basics",
       courseName: "Cloud Computing Fundamentals",
-      courseDescription: "Introduction to cloud computing concepts and services.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Cloud Computing Fundamentals</strong> course covers essential concepts and services in cloud computing, including service models, deployment models, security, and key cloud providers.</p><p>Students will learn how to implement cloud solutions, manage resources, and optimize costs in a cloud environment.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Service Models (IaaS, PaaS, SaaS)</li><li>Deployment Models (Public, Private, Hybrid, Multi-cloud)</li><li>Security in Cloud Computing</li><li>Cloud Resource Management</li></ul><p>Practical examples and case studies will be used to illustrate real-world applications.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FCloud-Computing-Diagram.png?alt=media&token=bc20a16c-4c05-4bc2-847a-c06fe0169faf' alt='Cloud Computing Diagram' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Introduction to cloud computing concepts and services.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FCloud-Computing-Diagram.png?alt=media&token=bc20a16c-4c05-4bc2-847a-c06fe0169faf",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["cloud-computing"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w3s2-cloud07",
-        courseSlug: "cloud-computing-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/cloud.pdf",
-        mediaName: "Cloud Computing Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-cloud07",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443309/NeuraCraft/pdf/cloud-computing/Cloud-Computing-Fundamentals_ugndmn.pdf",
+          mediaName: "Cloud Computing Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-iaas",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443394/NeuraCraft/pdf/cloud-computing/F14_Cloud_Chapter4_IaaS_rbvtru.pdf",
+          mediaName: "IaaS (Infrastructure as a Service)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-paas",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443474/NeuraCraft/pdf/cloud-computing/CSCC-Practical-Guide-to-PaaS_kbbnan.pdf",
+          mediaName: "PaaS (Platform as a Service)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-saas",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443628/NeuraCraft/pdf/cloud-computing/ijcns_2023041414081955_wgi1xj.pdf",
+          mediaName: "Cloud Computing (Benefits and Challenges)"
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-deployment-models",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443728/NeuraCraft/pdf/cloud-computing/n5c652ce0ab745_u8ud0i.pdf",
+          mediaName: "Cloud Deployment Models",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s2-security-cloud",
+          courseSlug: "cloud-computing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737443856/NeuraCraft/pdf/cloud-computing/PROTECT_-_Cloud_Computing_Security_Considerations_October_2021_jaray7.pdf",
+          mediaName: "Security in Cloud Computing",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS2012",
       moduleTitle: "Cybersecurity",
@@ -481,18 +935,36 @@ export const Courses: {
       studio: 3,
       courseSlug: "cybersecurity-fundamentals",
       courseName: "Cybersecurity Basics",
-      courseDescription: "Learn fundamental concepts of cybersecurity and threat protection.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Cybersecurity Basics</strong> course covers essential concepts in cybersecurity, including threat protection, network security, data protection, and risk management. Students will gain an understanding of securing digital environments against potential attacks.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Network Security</li><li>Data Protection and Encryption</li><li>Threat Detection</li><li>Risk Management and Compliance</li></ul><p>Practical scenarios and real-world case studies will be used to enhance learning.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fcyber-security.jpeg?alt=media&token=4f2ab1fe-20ce-4f8a-809c-656d185984bf' alt='Cybersecurity Image' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn fundamental concepts of cybersecurity and threat protection.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fcyber-security.jpeg?alt=media&token=4f2ab1fe-20ce-4f8a-809c-656d185984bf",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["cybersecurity"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w3s3-security74",
-        courseSlug: "cybersecurity-fundamentals",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/security.pdf",
-        mediaName: "Cybersecurity Basics",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w3s3-security74",
+          courseSlug: "cybersecurity-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737445660/NeuraCraft/pdf/cybersecurity/cybersecuirty_sb_factsheets_all_ho6so5.pdf",
+          mediaName: "Cybersecurity Basics",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s3-network-security",
+          courseSlug: "cybersecurity-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737445661/NeuraCraft/pdf/cybersecurity/Network_Security_KA_webinar_-_slides_xe1cw8.pdf",
+          mediaName: "Network Security",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s3-risk-management",
+          courseSlug: "cybersecurity-fundamentals",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737445661/NeuraCraft/pdf/cybersecurity/risk_management_guide_2012_qseeau.pdf",
+          mediaName: "Risk Management and Compliance",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS2013",
       moduleTitle: "Mobile Development",
@@ -500,17 +972,46 @@ export const Courses: {
       studio: 4,
       courseSlug: "mobile-dev-basics",
       courseName: "Mobile Development Fundamentals",
-      courseDescription: "Introduction to mobile app development concepts and platforms.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Mobile Development Fundamentals</strong> course covers essential concepts and practices for developing mobile applications. It focuses on design, development, and deployment for various mobile platforms.</p><p>Topics include app architecture, UI/UX design, cross-platform development, and mobile testing.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>App Architecture</li><li>UI/UX Design</li><li>Cross-Platform Development</li><li>Mobile Testing</li></ul><p>This course provides hands-on learning through practical examples and project work.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FUntitled-1-1024x576.png?alt=media&token=dd604e2d-9f27-4342-9e89-309d19f18bf2' alt='Mobile Development' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Introduction to mobile app development concepts and platforms.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FUntitled-1-1024x576.png?alt=media&token=dd604e2d-9f27-4342-9e89-309d19f18bf2",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["mobile-development"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w3s4-mobile35",
-        courseSlug: "mobile-dev-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/mobile.pdf",
-        mediaName: "Mobile Development Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w3s4-mobile35",
+          courseSlug: "mobile-dev-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447068/NeuraCraft/pdf/mobile-development/MobileDevelopmentFundamentals_rhwl3t.pdf",
+          mediaName: "Mobile Development Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s4-app-architecture42",
+          courseSlug: "mobile-dev-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447067/NeuraCraft/pdf/mobile-development/2727_Slides6_ysvzgh.pdf",
+          mediaName: "App Architecture Overview",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s4-ui-design48",
+          courseSlug: "mobile-dev-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447069/NeuraCraft/pdf/mobile-development/principlesofsmartphonedesign05oct16-161005230428_wz5bjn.pdf",
+          mediaName: "UI/UX Design Principles",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s4-cross-platform44",
+          courseSlug: "mobile-dev-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447068/NeuraCraft/pdf/mobile-development/Khandozhenko_Roman_jgpt8o.pdf",
+          mediaName: "Cross-Platform Development",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w3s4-testing41",
+          courseSlug: "mobile-dev-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447066/NeuraCraft/pdf/mobile-development/sauce-labs-mobile-app-testing-ebook_gjlff9.pdf",
+          mediaName: "Mobile Testing Techniques",
+        }
+      ],
+      isPublished: true
+
     },
 
     // Week 4
@@ -521,17 +1022,34 @@ export const Courses: {
       studio: 1,
       courseSlug: "data-analytics-basics",
       courseName: "Data Analytics Fundamentals",
-      courseDescription: "Learn basic concepts and techniques in data analytics.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Data Analytics Fundamentals</strong> course introduces core concepts and techniques used in data analysis, including data processing, visualization, and statistical analysis.</p><p>Topics include data manipulation, data visualization, machine learning, and insights generation.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Data Manipulation</li><li>Data Visualization</li><li>Machine Learning</li><li>Insights Generation</li></ul><p>This course provides practical learning through hands-on examples and real-world applications.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FData-Analytics-Tutorial-1-900x558.jpg?alt=media&token=a3007c50-50f0-4a4d-8b6d-1ca005827cea' alt='Data Analytics' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn basic concepts and techniques in data analytics.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FData-Analytics-Tutorial-1-900x558.jpg?alt=media&token=a3007c50-50f0-4a4d-8b6d-1ca005827cea",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["data-analytics"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w4s1-analytics14",
-        courseSlug: "data-analytics-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/analytics.pdf",
-        mediaName: "Data Analytics Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w4s1-analytics14",
+          courseSlug: "data-analytics-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447561/NeuraCraft/pdf/data-analytics/eBook_Data_Analytics_yceh1i.pdf",
+          mediaName: "Data Analytics Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s1-data-processing18",
+          courseSlug: "data-analytics-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737447721/NeuraCraft/pdf/data-analytics/Unit-5_sp1hjw.pdf",
+          mediaName: "Data Processing Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s1-visualization16",
+          courseSlug: "data-analytics-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737448156/NeuraCraft/pdf/data-analytics/Data_Visualization-compressed_fq7wgl.pdf",
+          mediaName: "Data Visualization Methods",
+        },
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS2015",
@@ -540,18 +1058,48 @@ export const Courses: {
       studio: 2,
       courseSlug: "software-testing-basics",
       courseName: "Software Testing Fundamentals",
-      courseDescription: "Introduction to software testing methodologies and practices.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Software Testing Fundamentals</strong> course covers essential testing methodologies, techniques, and practices used to ensure software quality. This includes unit testing, integration testing, system testing, and acceptance testing.</p><p>Topics include test planning, automated testing, and debugging methods.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Unit Testing</li><li>Integration Testing</li><li>System Testing</li><li>Acceptance Testing</li><li>Automated Testing</li><li>Debugging Methods</li></ul><p>This course provides practical knowledge through real-world scenarios and testing strategies.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages.jpg?alt=media&token=18bbf887-1513-410f-8a56-6a6a138e40bd' alt='Software Testing' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Introduction to software testing methodologies and practices.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages.jpg?alt=media&token=18bbf887-1513-410f-8a56-6a6a138e40bd",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["software-testing"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w4s2-testing42",
-        courseSlug: "software-testing-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/testing.pdf",
-        mediaName: "Software Testing Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w4s2-testing42",
+          courseSlug: "software-testing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737448350/NeuraCraft/pdf/software-testing/Software_Testing_Fundamentals_-_Pragati_Demanna_cld3ft.pdf",
+          mediaName: "Software Testing Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s2-unit43",
+          courseSlug: "software-testing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737448839/NeuraCraft/pdf/software-testing/16_UnitTest_yqjtme.pdf",
+          mediaName: "Unit Testing Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s2-integration44",
+          courseSlug: "software-testing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737449048/NeuraCraft/pdf/software-testing/10_integration_d0z6hh.pdf",
+          mediaName: "Integration Testing Methods",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s2-system45",
+          courseSlug: "software-testing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737449337/NeuraCraft/pdf/software-testing/L16_SystemTesting_yyihun.pdf",
+          mediaName: "System Testing Approaches",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s2-acceptance46",
+          courseSlug: "software-testing-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737449469/NeuraCraft/pdf/software-testing/nbsspecialpublication500-136_ry9kg0.pdf",
+          mediaName: "Acceptance Testing Processes",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS2016",
       moduleTitle: "DevOps",
@@ -559,18 +1107,42 @@ export const Courses: {
       studio: 3,
       courseSlug: "devops-basics",
       courseName: "DevOps Fundamentals",
-      courseDescription: "Learn basic DevOps practices and principles.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>DevOps Fundamentals</strong> course provides a comprehensive understanding of DevOps practices, including continuous integration, continuous delivery, automation, and collaboration between development and operations teams.</p><p>Topics include CI/CD pipelines, infrastructure as code, monitoring, and security in DevOps.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Continuous Integration (CI)</li><li>Continuous Delivery (CD)</li><li>Infrastructure as Code (IaC)</li><li>Automated Testing</li><li>Monitoring and Logging</li><li>Security in DevOps</li></ul><p>This course includes practical exercises and case studies to reinforce understanding of DevOps principles.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F1_EBXc9eJ1YRFLtkNI_djaAw.png?alt=media&token=008927e8-e62c-45bd-9c03-6ecd8be59fe2' alt='DevOps Fundamentals' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn basic DevOps practices and principles.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2F1_EBXc9eJ1YRFLtkNI_djaAw.png?alt=media&token=008927e8-e62c-45bd-9c03-6ecd8be59fe2",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["devops"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w4s3-devops13",
-        courseSlug: "devops-basics",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/devops.pdf",
-        mediaName: "DevOps Fundamentals",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w4s3-devops13",
+          courseSlug: "devops-basics",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/devops.pdf",
+          mediaName: "DevOps Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s3-ci14",
+          courseSlug: "devops-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737453590/NeuraCraft/pdf/devops/ebook-klocwork-ci-cd-best-practices_1_ucyi7q.pdf",
+          mediaName: "Continuous Integration / Continuos Delivery (CI/CD)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s3-iac16",
+          courseSlug: "devops-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737453727/NeuraCraft/pdf/devops/Infrastructure-as-code_rnsyqe.pdf",
+          mediaName: "Infrastructure as Code (IaC)",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w4s3-monitor17",
+          courseSlug: "devops-basics",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737453783/NeuraCraft/pdf/devops/os_guide_to_devops_monitoring_tools_v2_rofyno.pdf",
+          mediaName: "Monitoring and Logging",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3010",
       moduleTitle: "Design Patterns",
@@ -578,18 +1150,48 @@ export const Courses: {
       studio: 1,
       courseSlug: "design-patterns-advanced",
       courseName: "Advanced Design Patterns",
-      courseDescription: "Study advanced software design patterns and their applications.",
-      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(1).jpg?alt=media&token=1bbb3008-0e77-4996-9ecc-2b3c0dc3d8dc",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Advanced Design Patterns</strong> course delves into complex software design patterns, focusing on their implementation and application in real-world scenarios.</p><p>Topics include creational, structural, and behavioral patterns, along with their practical uses in system architecture and problem-solving.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Creational Patterns</li><li>Structural Patterns</li><li>Behavioral Patterns</li><li>Architecture Patterns</li><li>Case Studies on Design Patterns</li></ul><p>This course includes hands-on examples and coding exercises to help grasp advanced design patterns.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(1).jpg?alt=media&token=1bbb3008-0e77-4996-9ecc-2b3c0dc3d8dc' alt='Advanced Design Patterns' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Study advanced software design patterns and their applications.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fstructure-en.png?alt=media&token=f6c6bfdb-21ce-4a9c-a7a3-0a8ab1e6dde8",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["design-patterns"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w5s1-design-patterns43",
-        courseSlug: "design-patterns-advanced",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/design-patterns.pdf",
-        mediaName: "Advanced Design Patterns",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w5s1-design-patterns43",
+          courseSlug: "design-patterns-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737454047/NeuraCraft/pdf/design-patterns/1.0.DesignPatterns-compressed_dnua7n.pdf",
+          mediaName: "Advanced Design Patterns",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s1-factory44",
+          courseSlug: "design-patterns-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737454066/NeuraCraft/pdf/design-patterns/factory_kopopu.pdf",
+          mediaName: "Factory Pattern",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s1-singleton45",
+          courseSlug: "design-patterns-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737454238/NeuraCraft/pdf/design-patterns/column2_ahiypl.pdf",
+          mediaName: "Singleton Pattern",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s1-observer46",
+          courseSlug: "design-patterns-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737454569/NeuraCraft/pdf/design-patterns/10-Patterns-Observer_hkyo6v.pdf",
+          mediaName: "Observer Pattern",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s1-strategy47",
+          courseSlug: "design-patterns-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737454683/NeuraCraft/pdf/design-patterns/_Chapter8_Strategy_zczkq4.pdf",
+          mediaName: "Strategy Pattern",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3011",
       moduleTitle: "Algorithm Optimization",
@@ -597,17 +1199,34 @@ export const Courses: {
       studio: 2,
       courseSlug: "algorithm-optimization",
       courseName: "Algorithm Optimization Techniques",
-      courseDescription: "Learn advanced techniques for optimizing algorithms.",
-      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(2).jpg?alt=media&token=a0f786b0-1f13-408d-9fb3-52eb130e7cf1",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Algorithm Optimization Techniques</strong> course focuses on advanced strategies for optimizing algorithms to improve efficiency and performance.</p><p>Topics covered include algorithmic analysis, time complexity reduction, space optimization, and practical examples of optimizing real-world algorithms.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Algorithmic Analysis</li><li>Complexity Reduction</li><li>Memory Optimization</li><li>Search and Sorting Techniques</li><li>Practical Applications</li></ul><p>This course includes hands-on exercises and case studies for in-depth understanding of advanced optimization techniques.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(2).jpg?alt=media&token=a0f786b0-1f13-408d-9fb3-52eb130e7cf1' alt='Algorithm Optimization Techniques' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn advanced techniques for optimizing algorithms.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2FFlowchart-of-arithmetic-optimization-algorithm.png?alt=media&token=8715109a-429e-4b2c-aea8-5ab2d8bf6577",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["algorithms-optimization"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w5s2-algo-opt134",
-        courseSlug: "algorithm-optimization",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/algo-opt.pdf",
-        mediaName: "Algorithm Optimization Techniques",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w5s2-algo-opt134",
+          courseSlug: "algorithm-optimization",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737455502/NeuraCraft/pdf/algorithms-optimization/aitoa-compressed_yyvub8.pdf",
+          mediaName: "Algorithm Optimization Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s2-dynamic-programming135",
+          courseSlug: "algorithm-optimization",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737455606/NeuraCraft/pdf/algorithms-optimization/AMP-Chapter-11_jxdntq.pdf",
+          mediaName: "Dynamic Programming Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s2-greedy-algo136",
+          courseSlug: "algorithm-optimization",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737455604/NeuraCraft/pdf/algorithms-optimization/Small13_vqlya1.pdf",
+          mediaName: "Greedy Algorithm Optimization",
+        }
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS3012",
@@ -616,18 +1235,36 @@ export const Courses: {
       studio: 3,
       courseSlug: "advanced-databases",
       courseName: "Advanced Database Systems",
-      courseDescription: "Explore advanced database concepts and technologies.",
-      courseImage: "courses/adv-db.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Advanced Database Systems</strong> course delves into complex database concepts and cutting-edge technologies.</p><p>Topics include database design, optimization, distributed databases, NoSQL databases, and advanced querying techniques.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Database Design & Modeling</li><li>Performance Tuning</li><li>Distributed Databases</li><li>NoSQL & NewSQL</li><li>Advanced Query Optimization</li></ul><p>This course includes hands-on projects and case studies to ensure a comprehensive understanding of advanced database systems.</p><img src='courses/adv-db.jpg' alt='Advanced Database Systems' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Explore advanced database concepts and technologies.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fdbms-components-291x300.png?alt=media&token=a20065b2-6771-42b1-92c2-a809d1acd1a7",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["advanced-database-systems"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w5s3-adv-db53",
-        courseSlug: "advanced-databases",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/adv-db.pdf",
-        mediaName: "Advanced Database Systems",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w5s3-adv-db53",
+          courseSlug: "advanced-databases",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456110/NeuraCraft/pdf/advanced-database-systems/01Introduction_pcfraw.pdf",
+          mediaName: "Advanced Database Systems",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s3-distributed-db54",
+          courseSlug: "advanced-databases",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456111/NeuraCraft/pdf/advanced-database-systems/lecture-1-ho_ud5xcv.pdf",
+          mediaName: "Distributed Databases",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s3-nosql-db55",
+          courseSlug: "advanced-databases",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456225/NeuraCraft/pdf/advanced-database-systems/NoSQL-and-NewSQL_xi9rt5.pdf",
+          mediaName: "NoSQL & NewSQL Databases",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3013",
       moduleTitle: "Distributed Systems",
@@ -635,18 +1272,36 @@ export const Courses: {
       studio: 4,
       courseSlug: "distributed-systems",
       courseName: "Distributed Systems Architecture",
-      courseDescription: "Study distributed systems principles and architectures.",
-      courseImage: "courses/distributed.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Distributed Systems Architecture</strong> course focuses on the principles and practices of designing and managing distributed systems.</p><p>Topics include consensus algorithms, fault tolerance, data consistency, and scalability in distributed environments.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Consensus Algorithms</li><li>Fault Tolerance</li><li>Data Consistency</li><li>Scalability</li><li>Microservices Architecture</li></ul><p>This course emphasizes real-world use-cases and practical implementation of distributed systems in complex architectures.</p><img src='courses/distributed.jpg' alt='Distributed Systems Architecture' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Study distributed systems principles and architectures.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fb145d610-0804-4a50-b74b-bf13cac6fb8f_1600x1005.png?alt=media&token=c3994b9b-0085-453d-bd18-39979d851361",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["distributed-systems"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w5s3-adv-db135",
-        courseSlug: "distributed-systems",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/adv-db.pdf",
-        mediaName: "Advanced Database Systems",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w5s3-adv-db135",
+          courseSlug: "distributed-systems",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456493/NeuraCraft/pdf/distributed-systems/google-intro_ei2s0q.pdf",
+          mediaName: "Distributed Systems Fundamentals",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s4-consensus136",
+          courseSlug: "distributed-systems",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456637/NeuraCraft/pdf/distributed-systems/consensus19_aj5yhp.pdf",
+          mediaName: "Consensus Algorithms",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w5s4-fault-tolerance137",
+          courseSlug: "distributed-systems",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737456635/NeuraCraft/pdf/distributed-systems/ch08-ts-tk-fault-tolerance-I_xua9e3.pdf",
+          mediaName: "Fault Tolerance Techniques",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3014",
       moduleTitle: "Artificial Intelligence",
@@ -654,18 +1309,36 @@ export const Courses: {
       studio: 1,
       courseSlug: "ai-concepts",
       courseName: "Artificial Intelligence Concepts",
-      courseDescription: "Study core concepts and applications of artificial intelligence.",
-      courseImage: "courses/ai.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Artificial Intelligence Concepts</strong> course focuses on foundational AI principles and practical applications of AI techniques.</p><p>Topics include machine learning, natural language processing, computer vision, and AI ethics.</p><h2>Key Topics</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Machine Learning</li><li>Natural Language Processing (NLP)</li><li>Computer Vision</li><li>AI Ethics</li><li>Reinforcement Learning</li></ul><p>This course aims to provide hands-on experience with AI tools and methodologies to solve real-world problems.</p><img src='courses/ai.jpg' alt='Artificial Intelligence Concepts' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Study core concepts and applications of artificial intelligence.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fsharma_bounding_box_deep_learning_future_video_annotation_1.jpg?alt=media&token=905e8a62-2864-4fd2-97c9-37d6c5be2957",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["artificial-intelligence"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w6s1-ai64",
-        courseSlug: "ai-concepts",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/ai.pdf",
-        mediaName: "Artificial Intelligence Concepts",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w6s1-ai64",
+          courseSlug: "ai-concepts",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737457717/NeuraCraft/pdf/artificial-intelligence/Student-Guide-Module-1-Fundamentals-of-AI_y13lhi.pdf",
+          mediaName: "Artificial Intelligence Concepts",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s2-nlp65",
+          courseSlug: "ai-concepts",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737457902/NeuraCraft/pdf/artificial-intelligence/Artificial-Intelligence-1_d7uwrp.pdf",
+          mediaName: "Natural Language Processing",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s2-vision66",
+          courseSlug: "ai-concepts",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737458572/NeuraCraft/pdf/artificial-intelligence/249-254_Tesma601_IJEAST_gcufgo.pdf",
+          mediaName: "Computer Vision Techniques",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3015",
       moduleTitle: "Network Security",
@@ -673,17 +1346,34 @@ export const Courses: {
       studio: 2,
       courseSlug: "network-security-advanced",
       courseName: "Advanced Network Security",
-      courseDescription: "Learn advanced network security principles and practices.",
-      courseImage: "courses/network-security.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Advanced Network Security</strong> course dives deep into complex network security topics, providing insights into defending systems from advanced threats.</p><p>Key areas include encryption techniques, threat detection, intrusion prevention, and secure network protocols.</p><h2>Topics Covered</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Encryption</li><li>Threat Detection</li><li>Intrusion Prevention</li><li>Secure Network Protocols</li><li>Penetration Testing</li></ul><p>Students will gain practical knowledge in securing complex network infrastructures.</p><img src='courses/network-security.jpg' alt='Network Security' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn advanced network security principles and practices.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fpngtree-creative-network-security-logo-png-image_1727280.jpg?alt=media&token=3f0e6cdc-6297-49cf-bb14-d9bbefa93116",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["network-security"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w6s2-network-security431",
-        courseSlug: "network-security-advanced",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/network-security.pdf",
-        mediaName: "Advanced Network Security",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w6s2-network-security431",
+          courseSlug: "network-security-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737460924/NeuraCraft/pdf/network-security/090907-advancedNS_rsgzrf.pdf",
+          mediaName: "Advanced Network Security",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s3-pen-testing432",
+          courseSlug: "network-security-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737460998/NeuraCraft/pdf/network-security/Penetration-Testing-Guidance-v1_1_pdy7pc.pdf",
+          mediaName: "Penetration Testing Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s3-encryption433",
+          courseSlug: "network-security-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461076/NeuraCraft/pdf/network-security/NIST.FIPS.197-upd1_zvrspz.pdf",
+          mediaName: "Advanced Encryption Methods",
+        }
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS3016",
@@ -692,17 +1382,34 @@ export const Courses: {
       studio: 3,
       courseSlug: "blockchain-technology",
       courseName: "Blockchain Technology",
-      courseDescription: "Explore blockchain concepts and applications.",
-      courseImage: "courses/blockchain.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Blockchain Technology</strong> course delves into the intricacies of blockchain systems and their real-world applications.</p><p>Topics include decentralized networks, smart contracts, consensus mechanisms, and security aspects.</p><h2>Topics Covered</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Decentralized Networks</li><li>Smart Contracts</li><li>Consensus Mechanisms</li><li>Security in Blockchain</li><li>Tokenomics</li></ul><p>Students will gain hands-on experience with building blockchain-based solutions and understanding its transformative potential.</p><img src='courses/blockchain.jpg' alt='Blockchain Technology' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Explore blockchain concepts and applications.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fblockchain-3277335_1280.png?alt=media&token=8d079b65-b75d-42f4-902f-cab283463d06",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["blockchain"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w6s3-blockchain531",
-        courseSlug: "blockchain-technology",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/blockchain.pdf",
-        mediaName: "Blockchain Technology",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w6s3-blockchain531",
+          courseSlug: "blockchain-technology",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461292/NeuraCraft/pdf/blockchain/Blockchain_Introduction_KR_oriaq0.pdf",
+          mediaName: "Blockchain Technology",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s4-smart-contracts532",
+          courseSlug: "blockchain-technology",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461306/NeuraCraft/pdf/blockchain/Building-Smart-Contracts_qnlsuf.pdf",
+          mediaName: "Smart Contracts",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s4-tokenomics533",
+          courseSlug: "blockchain-technology",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461302/NeuraCraft/pdf/blockchain/tokenomics-with-blockchain_c9vzvm.pdf",
+          mediaName: "Tokenomics",
+        }
+      ],
+      isPublished: true
+
     },
     {
       moduleCode: "CS3017",
@@ -711,18 +1418,36 @@ export const Courses: {
       studio: 4,
       courseSlug: "ux-design-advanced",
       courseName: "Advanced User Experience Design",
-      courseDescription: "Master advanced concepts in user experience design.",
-      courseImage: "courses/ux-design.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Advanced User Experience Design</strong> course focuses on in-depth concepts and practical applications for enhancing user-centric designs.</p><p>Topics include usability testing, accessibility, user research methodologies, and interface design best practices.</p><h2>Topics Covered</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Usability Testing</li><li>Accessibility</li><li>User Research Methodologies</li><li>Interface Design Best Practices</li><li>Interaction Design</li></ul><p>Students will engage in real-world design projects to hone their skills and create user-centered designs.</p><img src='https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(4).jpg?alt=media&token=a26e3d48-8458-4f86-baa7-280cb8025a37' alt='User Experience Design' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Master advanced concepts in user experience design.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(4).jpg?alt=media&token=a26e3d48-8458-4f86-baa7-280cb8025a37",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["user-experience-design"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w6s4-ux-design64",
-        courseSlug: "ux-design-advanced",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/ux-design.pdf",
-        mediaName: "Advanced User Experience Design",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w6s4-ux-design64",
+          courseSlug: "ux-design-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461500/NeuraCraft/pdf/user-experience-design/UX_Fundamentals_The_Concepts_Process_and_Proving_the_Value-min_ndqhx6.pdf",
+          mediaName: "Advanced User Experience Design",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s4-interaction-design65",
+          courseSlug: "ux-design-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461490/NeuraCraft/pdf/user-experience-design/interaction-design_p1ziwk.pdf",
+          mediaName: "Interaction Design",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w6s5-usability-testing66",
+          courseSlug: "ux-design-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737461495/NeuraCraft/pdf/user-experience-design/Usability_Testing_Workshop_March2020_rmqcle.pdf",
+          mediaName: "Usability Testing",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3018",
       moduleTitle: "Ethical Hacking",
@@ -730,18 +1455,30 @@ export const Courses: {
       studio: 1,
       courseSlug: "ethical-hacking-advanced",
       courseName: "Ethical Hacking Techniques",
-      courseDescription: "Learn advanced ethical hacking methodologies and security testing.",
-      courseImage: "courses/ethical-hacking.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Ethical Hacking Techniques</strong> course focuses on advanced methodologies for ethical hacking and security testing.</p><p>Topics include penetration testing, network security assessment, vulnerability scanning, and ethical hacking frameworks.</p><h2>Topics Covered</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Penetration Testing</li><li>Network Security Assessment</li><li>Vulnerability Scanning</li><li>Ethical Hacking Frameworks</li><li>Advanced Security Testing</li></ul><p>Students will engage in hands-on exercises to master the art of ethical hacking.</p><img src='courses/ethical-hacking.jpg' alt='Ethical Hacking' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn advanced ethical hacking methodologies and security testing.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fpng-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png?alt=media&token=62873be8-8664-4ec1-b602-95b123dbd0c5",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["ethical-hacking"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w7s1-ethical-hacking542",
-        courseSlug: "ethical-hacking-advanced",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/ethical-hacking.pdf",
-        mediaName: "Ethical Hacking Techniques",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w7s1-ethical-hacking542",
+          courseSlug: "ethical-hacking-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462092/NeuraCraft/pdf/ethical-hacking/1-introduction-to-ethical-hacking_jehem4.pdf",
+          mediaName: "Ethical Hacking Techniques",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w7s1-advanced-security-testing543",
+          courseSlug: "ethical-hacking-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462101/NeuraCraft/pdf/ethical-hacking/Advanced_Penetration_Testing_for_Highly_Secured_Environments-compressed_iktfsg.pdf",
+          mediaName: "Advanced Security Testing",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3019",
       moduleTitle: "Software Architecture",
@@ -749,18 +1486,30 @@ export const Courses: {
       studio: 2,
       courseSlug: "software-architecture-advanced",
       courseName: "Advanced Software Architecture",
-      courseDescription: "Study advanced software architecture patterns and practices.",
-      courseImage: "courses/software-architecture.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Advanced Software Architecture</strong> course explores in-depth concepts and practices for designing scalable and efficient software systems.</p><p>Topics include microservices, distributed systems, architecture design patterns, and best practices for software scalability.</p><h2>Topics Covered</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Microservices</li><li>Distributed Systems</li><li>Architecture Design Patterns</li><li>Scalable Systems Design</li><li>Best Practices for Software Architecture</li></ul><p>Students will engage in hands-on exercises to master advanced software architecture techniques.</p><img src='courses/software-architecture.jpg' alt='Software Architecture' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Study advanced software architecture patterns and practices.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fpngtree-system-software-architecture-png-image_5414656.jpg?alt=media&token=4f8623a3-7dd5-49df-9b73-d4664736d78b",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["software-architecture"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w7s2-software-architecture753",
-        courseSlug: "software-architecture-advanced",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/software-architecture.pdf",
-        mediaName: "Advanced Software Architecture",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w7s2-software-architecture753",
+          courseSlug: "software-architecture-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462333/NeuraCraft/pdf/software-architechture/t20190520arch_cjlyrz.pdf",
+          mediaName: "Advanced Software Architecture",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w7s2-microservices754",
+          courseSlug: "software-architecture-advanced",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462344/NeuraCraft/pdf/software-architechture/microservices2_ff3wtf.pdf",
+          mediaName: "Microservices Architecture",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3020",
       moduleTitle: "Quantum Computing",
@@ -768,18 +1517,30 @@ export const Courses: {
       studio: 3,
       courseSlug: "quantum-computing-intro",
       courseName: "Introduction to Quantum Computing",
-      courseDescription: "Explore fundamental concepts of quantum computing.",
-      courseImage: "courses/quantum-computing.jpg",
-      courseLevel: Level.Advanced,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Introduction to Quantum Computing</strong> course covers the foundational principles and technologies involved in quantum computing. Students will explore quantum algorithms, quantum gates, and quantum state manipulation.</p><p>Key topics include:</p><ul style='list-style-type: disc; margin-left: 20px;'><li>Quantum Mechanics</li><li>Quantum Gates</li><li>Quantum Algorithms</li><li>Quantum Simulations</li><li>Applications in Cryptography</li></ul><p>Students will engage in hands-on labs and projects involving quantum computing tools and platforms.</p><img src='courses/quantum-computing.jpg' alt='Quantum Computing' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Explore fundamental concepts of quantum computing.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fimages%20(3).png?alt=media&token=a4e00724-e54b-43b5-93ba-1ac5183d1bf8",
+      courseLevel: "Advanced",
+      type: "Content",
       topics: ["quantum-computing"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w7s3-quantum-computing356",
-        courseSlug: "quantum-computing-intro",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/quantum-computing.pdf",
-        mediaName: "Introduction to Quantum Computing",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w7s3-quantum-computing356",
+          courseSlug: "quantum-computing-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462669/NeuraCraft/pdf/quantum-computing/Introduction_to_Quantum_Computers_ivnojd.pdf",
+          mediaName: "Introduction to Quantum Computing",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w7s3-quantum-cryptography357",
+          courseSlug: "quantum-computing-intro",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737462666/NeuraCraft/pdf/quantum-computing/0808.1385v1_cuqt7c.pdf",
+          mediaName: "Quantum Cryptography",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS3021",
       moduleTitle: "Big Data Technologies",
@@ -787,18 +1548,30 @@ export const Courses: {
       studio: 4,
       courseSlug: "big-data-technologies",
       courseName: "Big Data Processing and Analytics",
-      courseDescription: "Learn advanced big data processing techniques and technologies.",
-      courseImage: "courses/big-data.jpg",
-      courseLevel: Level.Intermediate,
-      type: CourseType.Content,
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Big Data Technologies</strong> course covers advanced concepts and tools used for processing and analyzing large datasets efficiently. Students will delve into distributed data storage, data processing frameworks, and real-time analytics.</p><p>Key topics include:</p><ul style='list-style-type: disc; margin-left: 20px;'><li>Distributed Data Systems</li><li>Hadoop Ecosystem</li><li>Apache Spark</li><li>NoSQL Databases</li><li>Data Integration Techniques</li></ul><p>Hands-on projects will be a significant part of this course, utilizing real-world big data challenges.</p><img src='courses/big-data.jpg' alt='Big Data Technologies' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn advanced big data processing techniques and technologies.",
+      courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fpngtree-big-data-material-picture-png-image_1075260.jpg?alt=media&token=15cc8cd4-92fb-43d8-ba4a-afc4cdb96cc2",
+      courseLevel: "Intermediate",
+      type: "Content",
       topics: ["big-data"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w7s4-big-data542",
-        courseSlug: "big-data-technologies",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/big-data.pdf",
-        mediaName: "Big Data Processing and Analytics",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w7s4-big-data542",
+          courseSlug: "big-data-technologies",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737463150/NeuraCraft/pdf/big-data/Big_Data_Analytics_-_Unit_1_mspb3a.pdf",
+          mediaName: "Big Data Processing and Analytics",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w7s4-data-visualization543",
+          courseSlug: "big-data-technologies",
+          courseMediaURL: "https://res.cloudinary.com/dlyu3hozu/image/upload/v1737463153/NeuraCraft/pdf/big-data/unit-v-da-online.pptx_kd64rm.pdf",
+          mediaName: "Big Data Visualization Techniques",
+        }
+      ],
+      isPublished: true
+
     },
+
     {
       moduleCode: "CS4001",
       moduleTitle: "Full Stack Development",
@@ -806,18 +1579,29 @@ export const Courses: {
       studio: 1,
       courseSlug: "full-stack-development",
       courseName: "Modern Full Stack Development",
-      courseDescription: "Comprehensive course covering web development, databases, and cloud deployment. Learn to build complete applications from frontend to backend.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Full Stack Development</strong> course offers a comprehensive approach to web development, focusing on building end-to-end applications using the latest technologies. The course includes practical exposure to frontend, backend, database systems, and deployment to cloud environments.</p><p>Key topics include:</p><ul style='list-style-type: disc; margin-left: 20px;'><li>Frontend Frameworks (React, Angular, Vue)</li><li>Backend Development (Node.js, Express)</li><li>Database Management (SQL, NoSQL)</li><li>API Development</li><li>Cloud Deployment (AWS, Azure, GCP)</li></ul><p>Students will engage in hands-on projects throughout the course to apply theoretical concepts to real-world applications.</p><img src='courses/full-stack.jpg' alt='Full Stack Development' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Comprehensive course covering web development, databases, and cloud deployment. Learn to build complete applications from frontend to backend.",
       courseImage: "courses/full-stack.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["web-development", "database-systems", "cloud-computing", "software-engineering"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w8s1-full-stack63",
-        courseSlug: "full-stack-development",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/full-stack.pdf",
-        mediaName: "Modern Full Stack Development",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w8s1-full-stack",
+          courseSlug: "full-stack-development",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/full-stack.pdf",
+          mediaName: "Full Stack",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w8s1-devops64",
+          courseSlug: "full-stack-development",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/devops.pdf",
+          mediaName: "Full Stack with DevOps Integration",
+        }
+      ],
+      isPublished: false
     },
+
     {
       moduleCode: "CS4002",
       moduleTitle: "AI and Machine Learning Systems",
@@ -825,18 +1609,30 @@ export const Courses: {
       studio: 2,
       courseSlug: "ai-ml-systems",
       courseName: "AI and ML Systems Design",
-      courseDescription: "Learn to design and implement AI/ML systems, covering machine learning fundamentals, data processing, and deployment strategies.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>AI and Machine Learning Systems Design</strong> course focuses on the development and implementation of advanced AI/ML systems. It covers essential topics such as machine learning fundamentals, data preprocessing, model training, and deployment strategies in both cloud and on-premise environments.</p><p>Key areas include:</p><ul style='list-style-type: disc; margin-left: 20px;'><li>Machine Learning Algorithms</li><li>Data Engineering and Processing</li><li>Deployment and Optimization Techniques</li><li>Big Data Handling and Distributed Systems</li></ul><p>Students will engage in practical projects and case studies to apply their learning to real-world AI/ML challenges.</p><img src='courses/ai-ml-systems.jpg' alt='AI and ML Systems Design' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Learn to design and implement AI/ML systems, covering machine learning fundamentals, data processing, and deployment strategies.",
       courseImage: "courses/ai-ml-systems.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["artificial-intelligence", "machine-learning", "big-data", "algorithms-optimization"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w8s2-ai-ml-systems563",
-        courseSlug: "ai-ml-systems",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/ai-ml-systems.pdf",
-        mediaName: "AI and ML Systems Design",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w8s2-ai-ml-systems",
+          courseSlug: "ai-ml-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/ai-ml-systems.pdf",
+          mediaName: "AI and ML Systems",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w8s2-data-analytics64",
+          courseSlug: "ai-ml-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/data-analytics.pdf",
+          mediaName: "Data Analytics for AI/ML",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4003",
       moduleTitle: "Secure Software Engineering",
@@ -844,18 +1640,30 @@ export const Courses: {
       studio: 3,
       courseSlug: "secure-software-engineering",
       courseName: "Building Secure Software Systems",
-      courseDescription: "Comprehensive approach to developing secure software, combining security principles with software engineering practices.",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Secure Software Engineering</strong> course focuses on integrating security practices into software development. It covers key aspects of cybersecurity, secure coding, and testing techniques to ensure robust software systems.</p><p>Topics include:</p><ul style='list-style-type: disc; margin-left: 20px;'><li>Cybersecurity Principles</li><li>Secure Coding Standards</li><li>Software Security Testing</li><li>Network Security Best Practices</li></ul><p>Students will engage in hands-on projects that simulate real-world security challenges, ensuring they develop secure, resilient software systems.</p><img src='courses/secure-software.jpg' alt='Secure Software Engineering' style='max-width:100%; border-radius: 8px;'></div>",
+      courseIntroduction: "Comprehensive approach to developing secure software, combining security principles with software engineering practices.",
       courseImage: "courses/secure-software.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["cybersecurity", "software-engineering", "network-security", "software-testing"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w8s3-secure-software563",
-        courseSlug: "secure-software-engineering",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/secure-software.pdf",
-        mediaName: "Building Secure Software Systems",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w8s3-secure-software",
+          courseSlug: "secure-software-engineering",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/secure-software.pdf",
+          mediaName: "Secure Software Engineering",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w8s3-code-security64",
+          courseSlug: "secure-software-engineering",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/code-security.pdf",
+          mediaName: "Code Security Practices",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4004",
       moduleTitle: "Cloud Native Architecture",
@@ -863,18 +1671,30 @@ export const Courses: {
       studio: 4,
       courseSlug: "cloud-native-architecture",
       courseName: "Cloud Native Applications",
-      courseDescription: "Design and implement cloud-native applications using modern architectural patterns and DevOps practices.",
+      courseDescription: "",
+      courseIntroduction: "Design and implement cloud-native applications using modern architectural patterns and DevOps practices.",
       courseImage: "courses/cloud-native.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["cloud-computing", "devops", "distributed-systems", "software-architecture"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w8s4-cloud-native245",
-        courseSlug: "cloud-native-architecture",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/cloud-native.pdf",
-        mediaName: "Cloud Native Applications",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w8s4-cloud-native",
+          courseSlug: "cloud-native-architecture",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/cloud-native.pdf",
+          mediaName: "Cloud Native Applications",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w8s4-cloud-native-patterns246",
+          courseSlug: "cloud-native-architecture",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/cloud-native-patterns.pdf",
+          mediaName: "Cloud Native Patterns",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4005",
       moduleTitle: "Modern Mobile Development",
@@ -882,18 +1702,24 @@ export const Courses: {
       studio: 1,
       courseSlug: "modern-mobile-development",
       courseName: "Full Stack Mobile Development",
-      courseDescription: "Build modern mobile applications with focus on UX design, backend integration, and cloud services.",
+      courseDescription: "",
+      courseIntroduction: "Build modern mobile applications with focus on UX design, backend integration, and cloud services.",
       courseImage: "courses/modern-mobile.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["mobile-development", "user-experience-design", "cloud-computing", "software-engineering"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w9s1-modern-mobile642",
-        courseSlug: "modern-mobile-development",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/modern-mobile.pdf",
-        mediaName: "Full Stack Mobile Development",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w9s1-modern-mobile",
+          courseSlug: "modern-mobile-development",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/modern-mobile.pdf",
+          mediaName: "Full Stack Mobile Development",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4006",
       moduleTitle: "Data Engineering",
@@ -901,18 +1727,30 @@ export const Courses: {
       studio: 2,
       courseSlug: "data-engineering-systems",
       courseName: "Modern Data Engineering",
-      courseDescription: "Design and implement data processing systems using advanced database concepts and big data technologies.",
+      courseDescription: "",
+      courseIntroduction: "Design and implement data processing systems using advanced database concepts and big data technologies.",
       courseImage: "courses/data-engineering.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["advanced-database-systems", "big-data", "data-analytics", "distributed-systems"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w9s2-data-engineering245",
-        courseSlug: "data-engineering-systems",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/data-engineering.pdf",
-        mediaName: "Modern Data Engineering",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w9s2-data-engineering",
+          courseSlug: "data-engineering-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/data-engineering.pdf",
+          mediaName: "Modern Data Engineering",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w9s2-data-processing247",
+          courseSlug: "data-engineering-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/data-processing.pdf",
+          mediaName: "Data Processing Techniques",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4007",
       moduleTitle: "Advanced Software Design",
@@ -920,18 +1758,24 @@ export const Courses: {
       studio: 3,
       courseSlug: "advanced-software-design",
       courseName: "Advanced Software Design Patterns",
-      courseDescription: "Master advanced software design using design patterns, clean architecture, and modern development practices.",
+      courseDescription: "",
+      courseIntroduction: "Master advanced software design using design patterns, clean architecture, and modern development practices.",
       courseImage: "courses/advanced-design.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["design-patterns", "software-architecture", "object-oriented-programming", "software-engineering"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w9s3-advanced-design42",
-        courseSlug: "advanced-software-design",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/advanced-design.pdf",
-        mediaName: "Advanced Software Design Patterns",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w9s3-advanced-design",
+          courseSlug: "advanced-software-design",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/advanced-design.pdf",
+          mediaName: "Advanced Software Design Patterns",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4008",
       moduleTitle: "Blockchain and Distributed Systems",
@@ -939,18 +1783,30 @@ export const Courses: {
       studio: 4,
       courseSlug: "blockchain-distributed-systems",
       courseName: "Blockchain and Distributed Computing",
-      courseDescription: "Study advanced distributed systems concepts with focus on blockchain technology and decentralized applications.",
+      courseDescription: "",
+      courseIntroduction: "Study advanced distributed systems concepts with focus on blockchain technology and decentralized applications.",
       courseImage: "courses/blockchain-distributed.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["blockchain", "distributed-systems", "algorithms", "network-security"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w9s4-blockchain-distributed642",
-        courseSlug: "blockchain-distributed-systems",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/blockchain-distributed.pdf",
-        mediaName: "Blockchain and Distributed Computing",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w9s4-blockchain-distributed642",
+          courseSlug: "blockchain-distributed-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/blockchain-distributed.pdf",
+          mediaName: "Blockchain and Distributed Computing",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w9s4-blockchain-guide123",
+          courseSlug: "blockchain-distributed-systems",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/blockchain-guide.pdf",
+          mediaName: "Blockchain Concepts Guide",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4009",
       moduleTitle: "DevSecOps",
@@ -958,18 +1814,30 @@ export const Courses: {
       studio: 1,
       courseSlug: "devsecops-practices",
       courseName: "Modern DevSecOps Practices",
-      courseDescription: "Integrate security practices into DevOps workflows while maintaining development velocity and system reliability.",
+      courseDescription: "",
+      courseIntroduction: "Integrate security practices into DevOps workflows while maintaining development velocity and system reliability.",
       courseImage: "courses/devsecops.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["devops", "cybersecurity", "software-testing", "network-security"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w10s1-devsecops64",
-        courseSlug: "devsecops-practices",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/devsecops.pdf",
-        mediaName: "Modern DevSecOps Practices",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w10s1-devsecops64",
+          courseSlug: "devsecops-practices",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/devsecops.pdf",
+          mediaName: "Modern DevSecOps Practices",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w10s1-devsecops-cheatsheet789",
+          courseSlug: "devsecops-practices",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/devsecops-cheatsheet.pdf",
+          mediaName: "DevSecOps Cheatsheet",
+        }
+      ],
+      isPublished: false
+
     },
+
     {
       moduleCode: "CS4010",
       moduleTitle: "Quantum Computing and Algorithms",
@@ -977,18 +1845,30 @@ export const Courses: {
       studio: 2,
       courseSlug: "quantum-computing-algorithms",
       courseName: "Quantum Computing and Advanced Algorithms",
-      courseDescription: "Explore quantum computing principles and their impact on algorithmic problem-solving and optimization.",
+      courseDescription: "",
+      courseIntroduction: "Explore quantum computing principles and their impact on algorithmic problem-solving and optimization.",
       courseImage: "courses/quantum-algorithms.jpg",
       courseLevel: Level.Advanced,
       type: CourseType.Content,
       topics: ["quantum-computing", "algorithms-optimization", "artificial-intelligence", "data-structures"],
-      courseMedia: [{
-        publicId: "neuracraft/course_slides_media/w10s2-quantum-algorithms25",
-        courseSlug: "quantum-computing-algorithms",
-        courseMediaURL: "https://res.cloudinary.com/placeholder/quantum-algorithms.pdf",
-        mediaName: "Quantum Computing and Advanced Algorithms",
-      }],
+      courseMedia: [
+        {
+          publicId: "neuracraft/course_slides_media/w10s2-quantum-algorithms25",
+          courseSlug: "quantum-computing-algorithms",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/quantum-algorithms.pdf",
+          mediaName: "Quantum Computing and Advanced Algorithms",
+        },
+        {
+          publicId: "neuracraft/course_slides_media/w10s2-quantum-tutorial456",
+          courseSlug: "quantum-computing-algorithms",
+          courseMediaURL: "https://res.cloudinary.com/placeholder/quantum-tutorial.pdf",
+          mediaName: "Quantum Computing Tutorial",
+        }
+      ],
+      isPublished: false
+
     },
+
   ]
 
 export const Questions: {
@@ -4077,7 +4957,7 @@ export const Questions: {
     },
     {
       variationId: 4,
-      topicSlug: "ai-ml",
+      topicSlug: "machine-learning",
       questionContent:
         '<p>Which of the following is an example of supervised learning?</p>',
       questionDifficulty: QuestionDifficulty.Medium,
@@ -10604,4 +11484,14871 @@ export const Questions: {
         ]
       }
     },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>Which layer of the OSI model is responsible for routing and logical addressing?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-nw82mxp1",
+            answerContent: "Network Layer",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-k92lmx0q",
+            answerContent: "Transport Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-j73hxp9r",
+            answerContent: "Data Link Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-h64gxp8s",
+            answerContent: "Physical Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>In a neural network, what activation function outputs values between 0 and 1, making it useful for binary classification problems?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-p45kxm3v",
+            answerContent: "Sigmoid",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-q56lxn4w",
+            answerContent: "ReLU",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-r67mxo5x",
+            answerContent: "Tanh",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-s78nxp6y",
+            answerContent: "Leaky ReLU",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: '<p>What is the term for a database property that ensures all transactions are processed reliably, maintaining data integrity?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-t89oxq7z",
+            answerContent: "ACID",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-u90pxr8a",
+            answerContent: "BASE",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-v01qxs9b",
+            answerContent: "CAP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-w12rxts0c",
+            answerContent: "SOLID",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>Which of the following attack types exploits input validation vulnerabilities by injecting malicious scripts into web pages?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-x23sxt1d",
+            answerContent: "Cross-Site Scripting (XSS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-y34txu2e",
+            answerContent: "SQL Injection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-z45uxv3f",
+            answerContent: "Buffer Overflow",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-a56vxw4g",
+            answerContent: "DDoS Attack",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>In the context of distributed systems, what is the CAP theorem\'s fundamental assertion about distributed data stores?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-b67wxz5h",
+            answerContent: "It is impossible to simultaneously guarantee Consistency, Availability, and Partition tolerance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-c78xya6i",
+            answerContent: "All distributed systems must sacrifice security for performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-d89yzb7j",
+            answerContent: "Distributed systems can only scale vertically",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-e90zac8k",
+            answerContent: "Network latency is the only limiting factor in distributed systems",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>What architectural pattern separates an application into three interconnected components?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-f01abd9l",
+            answerContent: "Model-View-Controller (MVC)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-g12bce0m",
+            answerContent: "Peer-to-Peer (P2P)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-h23cdf1n",
+            answerContent: "Client-Server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-i34deg2o",
+            answerContent: "Microservices",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>Which HTTP status code indicates a successful request where a new resource was created?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-j45efh3p",
+            answerContent: "201",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-k56fgi4q",
+            answerContent: "200",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-l67ghj5r",
+            answerContent: "204",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-m78hij6s",
+            answerContent: "302",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: '<p>What principle of OOP states that a class should have only one reason to change?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-n89ijk7t",
+            answerContent: "Single Responsibility Principle",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-o90jkl8u",
+            answerContent: "Open-Closed Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-p01klm9v",
+            answerContent: "Liskov Substitution Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-q12lmn0w",
+            answerContent: "Interface Segregation Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>Which AWS service is used for deploying and scaling web applications automatically?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-r23mno1x",
+            answerContent: "Elastic Beanstalk",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-s34nop2y",
+            answerContent: "DynamoDB",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-t45opq3z",
+            answerContent: "CloudFront",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-u56pqr4a",
+            answerContent: "Route 53",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: '<p>What is the time complexity of finding the shortest path between all pairs of vertices using the Floyd-Warshall algorithm?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-v67qrs5b",
+            answerContent: "O(V³)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-w78rst6c",
+            answerContent: "O(V²)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-x89stu7d",
+            answerContent: "O(E log V)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-y90tuv8e",
+            answerContent: "O(V + E)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: '<p>Which statistical measure is most resistant to outliers when describing central tendency?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-z01uvw9f",
+            answerContent: "Median",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-a12vwx0g",
+            answerContent: "Mean",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-b23wxy1h",
+            answerContent: "Mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-c34xyz2i",
+            answerContent: "Range",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>What consensus mechanism does Bitcoin use to validate transactions and create new blocks?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-d45yza3j",
+            answerContent: "Proof of Work",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-e56zab4k",
+            answerContent: "Proof of Stake",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-f67abc5l",
+            answerContent: "Proof of Authority",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-g78bcd6m",
+            answerContent: "Delegated Proof of Stake",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: '<p>Which testing approach focuses on testing the internal workings of a module or component?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-h89cde7n",
+            answerContent: "White Box Testing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-i90def8o",
+            answerContent: "Black Box Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-j01efg9p",
+            answerContent: "Integration Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-k12fgh0q",
+            answerContent: "System Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>Which tool is used for container orchestration and automation of application deployment, scaling, and management?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-l23ghi1r",
+            answerContent: "Kubernetes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-m34hij2s",
+            answerContent: "Docker",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-n45ijk3t",
+            answerContent: "Jenkins",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-o56jkl4u",
+            answerContent: "Git",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: '<p>Which search algorithm is guaranteed to find the optimal solution in a weighted graph with non-negative edge weights?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-p67klm5v",
+            answerContent: "Dijkstra's Algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-q78lmn6w",
+            answerContent: "Breadth-First Search",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-r89mno7x",
+            answerContent: "Depth-First Search",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-s90nop8y",
+            answerContent: "Best-First Search",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: '<p>Which network security device operates at Layer 7 of the OSI model and can inspect application-level protocols?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-t01opq9z",
+            answerContent: "Application Firewall",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-u12pqr0a",
+            answerContent: "Packet Filter",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-v23qrs1b",
+            answerContent: "Network Switch",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-w34rst2c",
+            answerContent: "Router",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>What quantum gate performs a NOT operation on a qubit?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-x45stu3d",
+            answerContent: "Pauli-X Gate",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-y56tuv4e",
+            answerContent: "Hadamard Gate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-z67uvw5f",
+            answerContent: "CNOT Gate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-a78vwx6g",
+            answerContent: "Toffoli Gate",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>Which component of the Hadoop ecosystem is responsible for resource management and job scheduling?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-b89wxy7h",
+            answerContent: "YARN",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-c90xyz8i",
+            answerContent: "HDFS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-d01yza9j",
+            answerContent: "MapReduce",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-e12zab0k",
+            answerContent: "Hive",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: '<p>Which design pattern provides a surrogate or placeholder for another object to control access to it?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-f23abc1l",
+            answerContent: "Proxy Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-g34bcd2m",
+            answerContent: "Decorator Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-h45cde3n",
+            answerContent: "Adapter Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-i56def4o",
+            answerContent: "Bridge Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: '<p>What UX research method involves observing users in their natural environment while they interact with a product?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-aa1def1k",
+            answerContent: "Contextual Inquiry",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bb2efg2l",
+            answerContent: "A/B Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3fgh3m",
+            answerContent: "Card Sorting",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dd4ghi4n",
+            answerContent: "Heuristic Evaluation",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>Which iOS design pattern is used to break down complex view controller logic by delegating responsibilities to other objects?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ee5hij5o",
+            answerContent: "Coordinator Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ff6ijk6p",
+            answerContent: "Singleton Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-gg7jkl7q",
+            answerContent: "Factory Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hh8klm8r",
+            answerContent: "Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: '<p>In a distributed database system, what consistency model provides the strongest consistency guarantees but potentially higher latency?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ii9lmn9s",
+            answerContent: "Strong Consistency",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jj0mno0t",
+            answerContent: "Eventual Consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kk1nop1u",
+            answerContent: "Casual Consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ll2opq2v",
+            answerContent: "Weak Consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: '<p>Which type of security testing attempts to gain access to a system by simulating an attack from malicious outsiders?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-mm3pqr3w",
+            answerContent: "Black Box Penetration Testing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-nn4qrs4x",
+            answerContent: "White Box Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oo5rst5y",
+            answerContent: "Grey Box Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pp6stu6z",
+            answerContent: "Vulnerability Scanning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>Which architectural style is best suited for real-time applications requiring two-way communication between client and server?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qq7tuv7a",
+            answerContent: "WebSocket Architecture",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rr8uvw8b",
+            answerContent: "REST Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ss9vwx9c",
+            answerContent: "SOAP Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tt0wxy0d",
+            answerContent: "GraphQL Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: '<p>What is the time complexity of inserting an element into a min-heap data structure?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-uu1xyz1e",
+            answerContent: "O(log n)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vv2yza2f",
+            answerContent: "O(n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ww3zab3g",
+            answerContent: "O(1)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xx4abc4h",
+            answerContent: "O(n log n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: '<p>Which data structure would be most efficient for implementing an undo/redo functionality in a text editor?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-yy5bcd5i",
+            answerContent: "Two Stacks",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-zz6cde6j",
+            answerContent: "Queue",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ab7def7k",
+            answerContent: "Binary Tree",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc8efg8l",
+            answerContent: "Hash Table",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>Which web security header helps prevent Cross-Site Scripting (XSS) attacks by controlling which sources can execute scripts?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cd9fgh9m",
+            answerContent: "Content-Security-Policy",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-de0ghi0n",
+            answerContent: "X-Frame-Options",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ef1hij1o",
+            answerContent: "X-XSS-Protection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-fg2ijk2p",
+            answerContent: "Strict-Transport-Security",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>Which technique is used to prevent overfitting in neural networks by randomly deactivating neurons during training?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-gh3jkl3q",
+            answerContent: "Dropout",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hi4klm4r",
+            answerContent: "Batch Normalization",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ij5lmn5s",
+            answerContent: "Data Augmentation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jk6mno6t",
+            answerContent: "Early Stopping",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>Which cloud service model provides the most control over the underlying infrastructure while requiring the most management overhead?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-kl7nop7u",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-lm8opq8v",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mn9pqr9w",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-no0qrs0x",
+            answerContent: "Function as a Service (FaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>Which routing protocol uses link-state advertisements to maintain a complete view of network topology?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-op1rst1y",
+            answerContent: "OSPF",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pq2stu2z",
+            answerContent: "RIP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qr3tuv3a",
+            answerContent: "BGP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rs4uvw4b",
+            answerContent: "EIGRP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: '<p>Which type of database index would be most efficient for range queries on numerical data?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-st5vwx5c",
+            answerContent: "B-tree Index",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tu6wxy6d",
+            answerContent: "Hash Index",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-uv7xyz7e",
+            answerContent: "Bitmap Index",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vw8yza8f",
+            answerContent: "Full-Text Index",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: '<p>Which testing technique focuses on testing all possible combinations of input parameters and their values?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wx9zab9g",
+            answerContent: "Combinatorial Testing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xy0abc0h",
+            answerContent: "Boundary Value Analysis",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-yz1bcd1i",
+            answerContent: "Equivalence Partitioning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-za2cde2j",
+            answerContent: "Decision Table Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>What is the main purpose of a kernel in an operating system?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-kernel1",
+            answerContent: "To manage system resources and communication between hardware and software",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kernel2",
+            answerContent: "To provide graphical user interface support",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kernel3",
+            answerContent: "To store and retrieve user files",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kernel4",
+            answerContent: "To compile code for application development",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent:
+        '<p>Which protocol is used to ensure secure data transmission over the internet?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "HTTPS",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "HTTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "SMTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent:
+        '<p>What is overfitting in machine learning?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "When a model performs well on training data but poorly on unseen data",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "When a model performs poorly on both training and unseen data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "When a model underfits the training data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "When a model uses regularization techniques excessively",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>Which of the following is an example of a Platform as a Service (PaaS) offering?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Google App Engine",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Amazon EC2",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Dropbox",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Microsoft OneDrive",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent:
+        '<p>What is the primary purpose of a firewall in cybersecurity?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "To block unauthorized access to or from a private network",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "To detect and remove malware from a system",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "To encrypt data during transmission",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "To monitor system performance and uptime",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent:
+        '<p>What is a blockchain primarily used for?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "To create a decentralized and secure ledger of transactions",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "To host websites on distributed networks",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "To improve database indexing performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "To encrypt data for secure communication",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent:
+        '<p>Which tool is commonly used for container orchestration in DevOps?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dev1",
+            answerContent: "Kubernetes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev2",
+            answerContent: "Docker",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev3",
+            answerContent: "Jenkins",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev4",
+            answerContent: "GitLab",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: '<p>In reinforcement learning, what is the term for the dilemma between exploiting known rewards and exploring new possibilities?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cd3ghi3l",
+            answerContent: "Exploration-Exploitation Trade-off",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-de4hij4m",
+            answerContent: "Reward-Action Dilemma",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ef5ijk5n",
+            answerContent: "State-Value Problem",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-fg6jkl6o",
+            answerContent: "Policy-Value Balance",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>What is the primary purpose of a Merkle tree in blockchain technology?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-gh7klm7p",
+            answerContent: "Efficiently verify transactions without storing entire blockchain",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hi8lmn8q",
+            answerContent: "Increase mining speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ij9mno9r",
+            answerContent: "Store wallet addresses",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jk0nop0s",
+            answerContent: "Process smart contracts",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: '<p>Which cognitive psychology principle states that users spend most of their time on other sites and prefer websites to work similarly to ones they already know?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-kl1opq1t",
+            answerContent: "Jakob's Law",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-lm2pqr2u",
+            answerContent: "Fitts's Law",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mn3qrs3v",
+            answerContent: "Hick's Law",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-no4rst4w",
+            answerContent: "Miller's Law",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>Which quantum computing phenomenon allows particles to affect each other instantaneously regardless of distance?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-op5stu5x",
+            answerContent: "Quantum Entanglement",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pq6tuv6y",
+            answerContent: "Quantum Superposition",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qr7uvw7z",
+            answerContent: "Quantum Tunneling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rs8vwx8a",
+            answerContent: "Quantum Decoherence",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: '<p>Which sampling method divides the population into subgroups and then randomly samples from each subgroup?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-st9wxy9b",
+            answerContent: "Stratified Sampling",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tu0xyz0c",
+            answerContent: "Simple Random Sampling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-uv1yza1d",
+            answerContent: "Cluster Sampling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vw2zab2e",
+            answerContent: "Systematic Sampling",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: '<p>What software development principle suggests that software entities should be open for extension but closed for modification?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wx3abc3f",
+            answerContent: "Open-Closed Principle",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xy4bcd4g",
+            answerContent: "Single Responsibility Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-yz5cde5h",
+            answerContent: "Interface Segregation Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-za6def6i",
+            answerContent: "Dependency Inversion Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>Which attack type involves intercepting communications between two parties who believe they are directly communicating with each other?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ab7efg7j",
+            answerContent: "Man-in-the-Middle Attack",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc8fgh8k",
+            answerContent: "Phishing Attack",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cd9ghi9l",
+            answerContent: "SQL Injection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-de0hij0m",
+            answerContent: "Brute Force Attack",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>Which Android component is used to perform long-running operations in the background without affecting the user interface?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ef1ijk1n",
+            answerContent: "Service",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-fg2jkl2o",
+            answerContent: "Activity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-gh3klm3p",
+            answerContent: "Content Provider",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hi4lmn4q",
+            answerContent: "Broadcast Receiver",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: '<p>Which algorithm is used to find the maximum flow possible in a flow network?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ij5mno5r",
+            answerContent: "Ford-Fulkerson Algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jk6nop6s",
+            answerContent: "Bellman-Ford Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kl7opq7t",
+            answerContent: "Kruskal's Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-lm8pqr8u",
+            answerContent: "Prim's Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>Which distributed systems pattern is used to handle partial failures in a system where some components may fail while others continue to function?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-mn9qrs9v",
+            answerContent: "Circuit Breaker Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-no0rst0w",
+            answerContent: "Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-op1stu1x",
+            answerContent: "Facade Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pq2tuv2y",
+            answerContent: "Decorator Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>Which protocol is used to automatically assign IP addresses to devices in a network?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qr3uvw3z",
+            answerContent: "DHCP",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rs4vwx4a",
+            answerContent: "DNS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st5wxy5b",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tu6xyz6c",
+            answerContent: "SMTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>Which property of big data refers to the speed at which new data is generated and needs to be processed?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-uv7yza7d",
+            answerContent: "Velocity",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vw8zab8e",
+            answerContent: "Volume",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wx9abc9f",
+            answerContent: "Variety",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xy0bcd0g",
+            answerContent: "Veracity",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: '<p>Which memory management technique moves processes between main memory and secondary storage to accommodate all active processes?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-yz1cde1h",
+            answerContent: "Swapping",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-za2def2i",
+            answerContent: "Paging",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ab3efg3j",
+            answerContent: "Segmentation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4fgh4k",
+            answerContent: "Virtual Memory",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: '<p>What is the space complexity of storing a complete binary tree with n nodes in a linked representation?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ef7hij7n",
+            answerContent: "O(n)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-fg8ijk8o",
+            answerContent: "O(log n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-gh9jkl9p",
+            answerContent: "O(n²)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hi0klm0q",
+            answerContent: "O(2ⁿ)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>Which storage mechanism in web browsers is best suited for storing sensitive data that should not persist after the browser session ends?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ij1lmn1r",
+            answerContent: "sessionStorage",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jk2mno2s",
+            answerContent: "localStorage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kl3nop3t",
+            answerContent: "Cookies",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-lm4opq4u",
+            answerContent: "IndexedDB",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>Which clustering algorithm is most suitable when the number of clusters is unknown and data points have varying densities?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-mn5pqr5v",
+            answerContent: "DBSCAN",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-no6qrs6w",
+            answerContent: "K-means",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-op7rst7x",
+            answerContent: "Hierarchical Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pq8stu8y",
+            answerContent: "Mean Shift",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>Which container orchestration feature automatically replaces failed containers to maintain desired state?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qr9tuv9z",
+            answerContent: "Self-healing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rs0uvw0a",
+            answerContent: "Load Balancing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st1vwx1b",
+            answerContent: "Auto-scaling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tu2wxy2c",
+            answerContent: "Rolling Updates",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: '<p>Which network security device operates at Layer 2 of the OSI model and can prevent MAC address spoofing attacks?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-uv3xyz3d",
+            answerContent: "Port Security",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vw4yza4e",
+            answerContent: "Firewall",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wx5zab5f",
+            answerContent: "IDS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xy6abc6g",
+            answerContent: "VPN",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: '<p>Which type of NoSQL database is best suited for storing and querying hierarchical data structures?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-yz7bcd7h",
+            answerContent: "Document Store",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-za8cde8i",
+            answerContent: "Key-Value Store",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ab9def9j",
+            answerContent: "Wide-Column Store",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc0efg0k",
+            answerContent: "Graph Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>Which architectural pattern is best suited for building a system that needs to process large streams of real-time data?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cd1fgh1l",
+            answerContent: "Event-Driven Architecture",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-de2ghi2m",
+            answerContent: "Layered Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ef3hij3n",
+            answerContent: "Pipeline Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-fg4ijk4o",
+            answerContent: "Repository Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: '<p>Which algorithm is used to find the longest common subsequence between two strings?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-gh5jkl5p",
+            answerContent: "Dynamic Programming",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hi6klm6q",
+            answerContent: "Greedy Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ij7lmn7r",
+            answerContent: "Divide and Conquer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-jk8mno8s",
+            answerContent: "Binary Search",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>Which encryption mode is vulnerable to replay attacks when used without additional security measures?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-kl9nop9t",
+            answerContent: "Electronic Codebook (ECB)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-lm0opq0u",
+            answerContent: "Cipher Block Chaining (CBC)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mn1pqr1v",
+            answerContent: "Counter Mode (CTR)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-no2qrs2w",
+            answerContent: "Galois/Counter Mode (GCM)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>Which iOS design pattern is used to manage the flow between different view controllers in an application?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-op3rst3x",
+            answerContent: "Coordinator Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pq4stu4y",
+            answerContent: "Singleton Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qr5tuv5z",
+            answerContent: "Factory Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rs6uvw6a",
+            answerContent: "Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>Which consensus algorithm is used in distributed systems to achieve agreement even in the presence of Byzantine failures?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-st7vwx7b",
+            answerContent: "Practical Byzantine Fault Tolerance (PBFT)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-tu8wxy8c",
+            answerContent: "Paxos",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-uv9xyz9d",
+            answerContent: "Raft",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-vw0yza0e",
+            answerContent: "Two-Phase Commit",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: '<p>Which design pattern allows object behavior to be extended dynamically at runtime without affecting other objects?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wx1zab1f",
+            answerContent: "Decorator Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-xy2abc2g",
+            answerContent: "Strategy Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-yz3bcd3h",
+            answerContent: "Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-za4cde4i",
+            answerContent: "Factory Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>Which quantum algorithm provides an exponential speedup over classical algorithms for integer factorization?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ab5def5j",
+            answerContent: "Shor's Algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc6efg6k",
+            answerContent: "Grover's Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cd7fgh7l",
+            answerContent: "Deutsch-Jozsa Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-de8ghi8m",
+            answerContent: "Quantum Fourier Transform",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: "<p>Which layer of the OSI model is responsible for routing and forwarding data packets between different networks?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Network Layer",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Transport Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Data Link Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Application Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: "<p>In gradient descent optimization, what does the learning rate control?</p>",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "The size of steps taken during optimization",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "The number of training epochs",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "The batch size of training data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "The number of hidden layers",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: "<p>What is the main purpose of database normalization?</p>",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Eliminate data redundancy and maintain data integrity",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Increase database performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Reduce database size",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Improve query execution speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: "<p>Which of the following describes a 'Man-in-the-Middle' (MITM) attack?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "An attacker secretly relays and possibly alters communication between two parties",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "A brute force attempt to crack passwords",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "A denial of service attack",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "A type of malware that encrypts files",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: "<p>What is the CAP theorem in distributed systems? Choose the correct statement.</p>",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "A distributed system can only guarantee two out of these three: Consistency, Availability, and Partition tolerance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "A distributed system must guarantee all three: Consistency, Availability, and Partition tolerance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "A distributed system can guarantee only one out of: Consistency, Availability, and Partition tolerance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "The CAP theorem only applies to non-distributed systems",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: "<p>What architectural pattern is best suited for applications requiring real-time updates and event-driven communication?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Event-Driven Architecture (EDA)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Monolithic Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Client-Server Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Layered Architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: "<p>What is the primary purpose of a consensus mechanism in blockchain technology?</p>",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "To ensure all nodes agree on the state of the network without central authority",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "To encrypt transactions on the blockchain",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "To store user data securely",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "To process transactions faster",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: "<p>Which design pattern should be used when you need to ensure a class has only one instance and provide a global point of access to it?</p>",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Singleton Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Factory Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Decorator Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: "<p>What is the primary purpose of Continuous Integration (CI) in DevOps?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dev1",
+            answerContent: "Automatically building and testing code changes when committed to version control",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev2",
+            answerContent: "Managing server infrastructure",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev3",
+            answerContent: "Monitoring application performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dev4",
+            answerContent: "Deploying applications to production",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: "<p>What is the difference between supervised and unsupervised learning in AI?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Supervised learning uses labeled data for training, while unsupervised learning finds patterns in unlabeled data",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Supervised learning is faster than unsupervised learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Supervised learning requires no human intervention",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Unsupervised learning always produces better results",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: "<p>What is the purpose of the Cross-Origin Resource Sharing (CORS) policy?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "To control which domains can access resources on a web server",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "To compress web resources for faster loading",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "To cache web resources in the browser",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "To encrypt data transmission between client and server",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: "<p>What is the primary difference between unit testing and integration testing?</p>",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Unit testing tests individual components in isolation, while integration testing tests how components work together",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Unit testing is manual while integration testing is automated",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Unit testing is only for frontend code",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Integration testing is faster than unit testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: "<p>What is the main advantage of using auto-scaling in cloud computing?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Automatically adjusting resources based on demand to optimize cost and performance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Providing better security for cloud applications",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Reducing network latency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Improving data backup capabilities",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: "<p>What is the time complexity of binary search on a sorted array?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "O(log n)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "O(n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "O(n log n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "O(n²)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: "<p>What is polymorphism in Object-Oriented Programming?</p>",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "The ability of objects to take multiple forms and respond differently to the same method call",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "The process of creating new objects",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "The ability to hide implementation details",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "The process of inheriting properties from a parent class",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: "<p>Which statistical measure is most appropriate for detecting outliers in a dataset?</p>",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Z-score (Standard Score)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Mean",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Median",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: "<p>What is the primary advantage of using React Native for mobile development?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-mob1",
+            answerContent: "The ability to write once and deploy on both iOS and Android platforms",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob2",
+            answerContent: "Better performance than native applications",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob3",
+            answerContent: "Direct access to all device hardware features",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob4",
+            answerContent: "Smaller application size",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: "<p>What is the purpose of a penetration test?</p>",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "To identify and exploit security vulnerabilities before malicious hackers do",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "To monitor network traffic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "To backup system data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "To improve system performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>What is the main purpose of a process scheduler in an operating system?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To allocate CPU time to processes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To allocate memory to processes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To manage file systems",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To manage hardware devices",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent:
+        '<p>Which protocol is used for sending email messages?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "SMTP",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "HTTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "SNMP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent:
+        '<p>Which type of database model organizes data into tables with rows and columns?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Relational",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Hierarchical",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Document",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Graph",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent:
+        '<p>Which HTML tag is used to define an unordered list?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "<ul>",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "<li>",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "<ol>",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "<div>",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent:
+        '<p>Which of the following represents a concept where a child class inherits behavior from a parent class?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Inheritance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Encapsulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent:
+        '<p>Which type of machine learning involves labeled training data?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Supervised Learning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Unsupervised Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Reinforcement Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Deep Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>What does the acronym IaaS stand for in cloud computing?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Infrastructure as a Service",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Internet as a Service",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Integration as a Service",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Interface as a Service",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent:
+        '<p>What is the primary goal of a Denial of Service (DoS) attack?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To overwhelm a system, making it unavailable",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To steal sensitive information",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To inject malicious code",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To gain unauthorized access",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent:
+        '<p>Which language is primarily used for building iOS applications?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Swift",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Java",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Kotlin",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Dart",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent:
+        '<p>What does the term "technical debt" refer to in software engineering?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent:
+              "The cost of additional work due to shortcuts in development",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "The monetary cost of software development",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "The amount of bugs in the software",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "The effort required for maintenance",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "data-structures",
+      questionContent:
+        '<p>In a trie data structure, which scenario would lead to the maximum space consumption for storing a set of words?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "All words share no common prefixes.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "All words share the same prefix.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Words have a mix of shared and unique prefixes.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "All words are of the same length.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "algorithms",
+      questionContent:
+        '<p>Which specific type of graph algorithm would you use to detect negative weight cycles in a graph?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Bellman-Ford Algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Dijkstra’s Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Floyd-Warshall Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Prim’s Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>In a multi-threaded program, what type of synchronization mechanism prevents the occurrence of a race condition?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Mutex",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Semaphore",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Condition Variable",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Spinlock",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "networking",
+      questionContent:
+        '<p>What is the purpose of the ARP (Address Resolution Protocol) in a local area network?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent:
+              "To resolve an IP address to its corresponding MAC address",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent:
+              "To resolve a domain name to its corresponding IP address",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent:
+              "To establish a route between source and destination in a network",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To ensure data integrity in transmission",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "database-systems",
+      questionContent:
+        '<p>In a relational database, which SQL command is used to enforce a relationship between two tables?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "FOREIGN KEY",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "PRIMARY KEY",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "UNIQUE",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "INDEX",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "web-development",
+      questionContent:
+        '<p>Which HTTP status code is returned when a client sends a malformed request to the server?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "400 Bad Request",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "404 Not Found",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "403 Forbidden",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "500 Internal Server Error",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "machine-learning",
+      questionContent:
+        '<p>What type of machine learning algorithm would you use for a problem that involves predicting a continuous numeric value?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Regression",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Classification",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Reinforcement Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>Which cloud service model provides hardware resources like virtual machines and networking capabilities?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "IaaS (Infrastructure as a Service)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "PaaS (Platform as a Service)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "SaaS (Software as a Service)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "DBaaS (Database as a Service)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>In the context of the CAP theorem, if a distributed system chooses to maintain Consistency and Partition tolerance (CP), which scenario would most likely occur during a network partition?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cp1",
+            answerContent: "Some nodes become unavailable to maintain data consistency",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp2",
+            answerContent: "All nodes continue to accept writes independently",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp3",
+            answerContent: "The system maintains eventual consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp4",
+            answerContent: "Data is automatically merged when the partition heals",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>In a neural network using batch normalization, what happens to the distribution of layer inputs during training when the batch size is extremely small (e.g., batch size = 2)?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bn1",
+            answerContent: "The variance estimates become unstable and unreliable",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn2",
+            answerContent: "The normalization process becomes more accurate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn3",
+            answerContent: "Training converges faster",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn4",
+            answerContent: "The model becomes more resistant to overfitting",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>During a buffer overflow attack on a system using Address Space Layout Randomization (ASLR), which of the following techniques would most likely be used by an attacker to bypass ASLR protection?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cs1",
+            answerContent: "Return-Oriented Programming (ROP) with information leak",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs2",
+            answerContent: "Simple NOP sled technique",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs3",
+            answerContent: "Direct return address overwrite",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs4",
+            answerContent: "Stack canary manipulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>In a blockchain implementation using Proof of Stake (PoS), what happens to the validator\'s stake if they sign two different blocks at the same height (double signing)?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "The validator's stake is slashed and they are removed from the validator set",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "The validator receives a warning but keeps their stake",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "The validator's stake is temporarily frozen",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "The validator's future rewards are reduced",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>When implementing Shor\'s algorithm on a quantum computer, what is the primary purpose of the Quantum Fourier Transform (QFT) phase?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "To identify the period of the modular exponentiation function",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "To generate entangled qubit pairs",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "To perform error correction",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "To measure the final quantum state",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: '<p>In what scenario would the Bridge pattern be more appropriate than the Adapter pattern when dealing with matrix operations in a scientific computing library?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "When you need to support multiple matrix implementations and multiple operations independently",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "When converting an existing matrix interface to match client expectations",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "When wrapping a legacy matrix implementation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "When making incompatible matrix interfaces work together",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>In a React Native application using Hermes engine, what happens to the JavaScript bundle size when you enable engine bytecode compilation?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "The bundle size increases but launch time improves",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "The bundle size decreases automatically",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "The bundle size remains exactly the same",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "The bundle is split into multiple files",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: '<p>When implementing DNS-over-HTTPS (DoH), what security vulnerability might arise if the HTTPS connection uses a proxy that terminates TLS?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "DNS queries become visible to the proxy server, defeating the privacy purpose",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "The DNS server becomes unreachable",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "DNSSEC validation fails automatically",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "The proxy server crashes due to encrypted traffic",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>In a microservices architecture using event sourcing, what is the most effective way to handle a scenario where an event consumer needs to process events in a different order than they were produced?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sa1",
+            answerContent: "Implement a resequencer pattern with a buffer and timestamp-based ordering",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa2",
+            answerContent: "Process events as they arrive and handle conflicts later",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa3",
+            answerContent: "Force the producer to send events in the required order",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa4",
+            answerContent: "Ignore events that arrive out of order",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>In a blue-green deployment strategy, what happens to the database schema changes if the rollback is initiated after the new version has already modified the schema?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-do1",
+            answerContent: "The schema remains in the new version as schema rollbacks can cause data loss",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do2",
+            answerContent: "The schema automatically reverts to the previous version",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do3",
+            answerContent: "Both schemas run in parallel",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do4",
+            answerContent: "The deployment fails immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>When implementing a web application that uses Service Workers for offline functionality, what happens to IndexedDB data when the user clears their browser cache?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wd1",
+            answerContent: "IndexedDB data remains intact as it's stored separately from the cache",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd2",
+            answerContent: "All IndexedDB data is automatically deleted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd3",
+            answerContent: "Only encrypted IndexedDB data is preserved",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd4",
+            answerContent: "IndexedDB data is backed up to the server",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "data-structures",
+      questionContent:
+        '<p>What data structure would you use to implement an autocomplete feature in a search bar, and why?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Trie",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Array",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Hash Table",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Linked List",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "algorithms",
+      questionContent:
+        '<p>Which algorithm is most suitable for finding the shortest path in a weighted graph where some edges have negative weights, and why?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Bellman-Ford Algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Dijkstra’s Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Floyd-Warshall Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "A* Algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>How does a process scheduler decide between using preemptive and non-preemptive scheduling algorithms, and what are the trade-offs?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Preemptive allows multitasking, but non-preemptive avoids race conditions.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Non-preemptive minimizes overhead, but preemptive prioritizes fairness.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Preemptive is simpler to implement but slower.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Non-preemptive is suitable for time-sharing systems.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "networking",
+      questionContent:
+        '<p>What is the purpose of using a subnet mask in IP networking, and how does it influence routing decisions?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To define the network and host portions of an IP address.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To encrypt network traffic.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To map domain names to IP addresses.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To allocate bandwidth among users.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "database-systems",
+      questionContent:
+        '<p>What is the difference between vertical and horizontal database scaling, and which is more suitable for handling large datasets?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Horizontal scaling is better for large datasets due to distributed storage.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Vertical scaling is cheaper but less efficient for large datasets.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Horizontal scaling only increases CPU power.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Vertical scaling is always better for scalability.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "software-engineering",
+      questionContent:
+        '<p>Explain the concept of technical debt and how it can impact the long-term maintainability of a software project.</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "It represents shortcuts in code that can increase future costs.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "It is the cost of using outdated libraries.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "It refers to a debt incurred by hiring junior developers.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "It means delaying deployment to production.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "object-oriented-programming",
+      questionContent:
+        '<p>What is the difference between polymorphism and method overloading in object-oriented programming?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Polymorphism is runtime, while method overloading is compile-time.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Both are forms of inheritance.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Overloading is a type of polymorphism.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Polymorphism is achieved using static methods.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>When implementing a Lambda architecture for real-time analytics, what happens to the accuracy of the speed layer if the batch layer processing window overlaps with the real-time processing window?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Results may be temporarily double-counted until the batch view is updated",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "The speed layer automatically adjusts its calculations",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "The batch layer skips overlapping data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Real-time processing is paused during batch updates",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: '<p>In a mobile application with gesture-based navigation, what cognitive load issue might arise when implementing a diagonal swipe gesture that conflicts with the standard back gesture?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Users experience gesture confusion leading to accidental navigation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "The app becomes slower to respond",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Battery consumption increases",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "The screen brightness automatically adjusts",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: '<p>During a web application penetration test, you discover a GraphQL endpoint that doesn\'t implement query depth limiting. What is the most serious potential consequence?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "A nested recursive query could cause denial of service",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "The database schema becomes public",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "Authentication tokens are exposed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "The API documentation is revealed",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: '<p>When implementing the Memento pattern in a multi-threaded environment, what synchronization issue might arise if the originator creates mementos too frequently?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Memory leaks from abandoned memento objects that are still referenced",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "The pattern automatically switches to Singleton",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Inheritance hierarchies are broken",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Polymorphism stops working",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>In a serverless architecture using AWS Lambda, what happens to concurrent executions if a custom VPC configuration is added to the function?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cc1",
+            answerContent: "Cold start latency increases due to ENI provisioning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc2",
+            answerContent: "Concurrency automatically doubles",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3",
+            answerContent: "The function becomes stateful",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc4",
+            answerContent: "Memory allocation increases",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: '<p>When implementing feature flags in a microservices architecture, what consistency issue might arise if the flag configuration service becomes temporarily unavailable?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Different services may operate with inconsistent feature states",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "All features automatically disable",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "Services stop communicating entirely",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "The system reverts to its initial state",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: '<p>When implementing a lock-free concurrent skip list, what problem might occur if the memory reclamation strategy doesn\'t account for the ABA problem?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Nodes might be accidentally removed while still being referenced",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "The list becomes sorted in reverse order",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Search operations always return null",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "The skip list converts to a linked list",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: '<p>In a parallel implementation of Floyd-Warshall algorithm for all-pairs shortest paths, what unexpected behavior might occur when the graph size exceeds the L3 cache size?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-al1",
+            answerContent: "Cache thrashing causes performance to degrade non-linearly",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al2",
+            answerContent: "The algorithm finds incorrect paths",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al3",
+            answerContent: "Memory allocation fails",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al4",
+            answerContent: "The graph becomes disconnected",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: '<p>When implementing a custom page replacement algorithm in a virtual memory system, what happens if the algorithm consistently selects pages that are currently being accessed?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Thrashing occurs as pages are continuously swapped in and out",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "The system automatically switches to LRU",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "Memory compression is activated",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "The page table expands infinitely",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>In a QUIC protocol implementation, what happens to stream data if a packet containing a stream frame is lost but later packets in the same stream are received?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Later data is buffered while the lost frame is retransmitted",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "All subsequent data is discarded",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "The connection switches to TCP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "The stream is automatically closed",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: '<p>When using a columnar database with dictionary encoding, what performance impact occurs if the cardinality of a column suddenly increases dramatically?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dbs1",
+            answerContent: "Dictionary size grows, reducing compression effectiveness",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dbs2",
+            answerContent: "The column automatically switches to row storage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dbs3",
+            answerContent: "Indexes are rebuilt immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dbs4",
+            answerContent: "The database switches to JSON storage",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>In a deep learning model using attention mechanisms, what happens to the attention weights if the input sequence length varies significantly between training and inference?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Attention scores may become poorly calibrated for longer sequences",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "The model automatically retrains",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Attention layers are skipped",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "The model switches to a simpler architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>When implementing Certificate Transparency (CT) monitoring, what security issue might arise if your monitor only checks for exact domain name matches?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cs1",
+            answerContent: "Typosquatting certificates using similar domains go undetected",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs2",
+            answerContent: "SSL certificates stop working",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs3",
+            answerContent: "The CA becomes untrusted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs4",
+            answerContent: "HTTPS connections fail",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: '<p>When implementing a concurrent ring buffer with multiple producers and consumers, what happens if the buffer size is not a power of 2?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Modulo operations become more expensive, reducing throughput",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "The buffer automatically resizes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Concurrent access becomes impossible",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "The buffer operates in single-threaded mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>When implementing quantum error correction using the Surface code, what happens to the logical error rate if you increase the code distance without improving the physical qubit quality?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "The logical error rate may increase due to accumulated physical errors",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "Error correction becomes perfect",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "The code automatically simplifies",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "Quantum supremacy is achieved",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>In a microservices architecture using the Saga pattern, what happens if a compensation transaction fails during a rollback?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sa1",
+            answerContent: "The system enters a partially compensated state requiring manual intervention",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa2",
+            answerContent: "All services automatically reset",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa3",
+            answerContent: "The saga coordinator shuts down",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa4",
+            answerContent: "Transaction atomicity is guaranteed",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>When using canary deployments with automated rollback triggers, what potential issue arises if the monitoring metrics have high latency?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-do1",
+            answerContent: "Faulty canaries may receive more traffic before detection",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do2",
+            answerContent: "The deployment automatically succeeds",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do3",
+            answerContent: "All traffic routes to old version",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do4",
+            answerContent: "Metrics collection stops completely",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: '<p>In a reinforcement learning system using proximal policy optimization (PPO), what happens if the clipping parameter ε is set too small?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Learning becomes too conservative, slowing down policy improvement",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "The policy becomes random",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Memory usage increases exponentially",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "The system switches to Q-learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>When implementing a web application using WebAssembly, what performance issue might occur if the JavaScript-WebAssembly boundary is crossed too frequently?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wd1",
+            answerContent: "Serialization overhead negates WebAssembly\'s speed advantage",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd2",
+            answerContent: "The application crashes immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd3",
+            answerContent: "WebAssembly code is recompiled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd4",
+            answerContent: "The browser disables WebAssembly",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: '<p>In a zero-trust network architecture, what security vulnerability might arise if the device attestation service becomes overwhelmed?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "Devices may be granted access with expired or invalid certificates",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "The network becomes fully open",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "All devices are permanently blocked",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "The network switches to traditional perimeter security",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>When implementing deep linking in a mobile app, what happens if the app is launched via a deep link while it\'s already running in the background?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "The existing instance is brought to foreground with new navigation state",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "A new instance of the app is created",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "The deep link is ignored completely",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "The app restarts from scratch",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: '<p>When using change data capture (CDC) with a microservices architecture, what consistency issue might arise if a service processes CDC events out of order?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "The service state may temporarily reflect future events before past ones",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "The database stops generating CDC events",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "All services automatically resync",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "CDC is disabled system-wide",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: '<p>When implementing a parallel version of the Bellman-Ford algorithm, what synchronization issue might occur if distance updates are not properly atomic?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ao1",
+            answerContent: "Race conditions may cause missed updates and incorrect shortest paths",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao2",
+            answerContent: "The algorithm automatically becomes sequential",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao3",
+            answerContent: "The graph becomes disconnected",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao4",
+            answerContent: "Negative cycles are ignored",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: '<p>During a red team assessment, what security risk arises if the team\'s C2 (Command and Control) infrastructure shares IP ranges with legitimate business services?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "Legitimate services might be blocked by defensive measures",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "The assessment automatically succeeds",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "All network traffic is encrypted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "The C2 server becomes undetectable",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>In a Kubernetes cluster using horizontal pod autoscaling, what unexpected behavior might occur if the metrics server has high latency?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cc1",
+            answerContent: "Delayed scaling decisions lead to resource utilization spikes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc2",
+            answerContent: "Pods are deleted randomly",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3",
+            answerContent: "The cluster switches to manual scaling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc4",
+            answerContent: "All pods are restarted",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: '<p>When implementing property-based testing for a stateful system, what happens if the test generates an invalid sequence of state transitions?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-st1",
+            answerContent: "The shrinking process may fail to find the minimal failing case",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st2",
+            answerContent: "All tests are marked as passed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st3",
+            answerContent: "The system state is permanently corrupted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st4",
+            answerContent: "Testing switches to unit tests only",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "machine-learning",
+      questionContent:
+        '<p>Which type of machine learning algorithm is most appropriate for classifying emails as spam or not spam?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Supervised Learning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Unsupervised Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Reinforcement Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Semi-supervised Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>Which cloud computing model provides a platform allowing developers to build, test, and deploy applications without managing underlying infrastructure?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Serverless Computing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "cybersecurity",
+      questionContent:
+        '<p>What is the primary purpose of using a firewall in a network?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To block unauthorized access while permitting authorized communications.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To encrypt all data within the network.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To monitor CPU usage across devices.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To increase network speed.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "mobile-development",
+      questionContent:
+        '<p>Which cross-platform framework allows developers to write mobile applications in a single programming language that compiles to native code for Android and iOS?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Flutter",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "React",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "SwiftUI",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Kotlin Multiplatform",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "data-analytics",
+      questionContent:
+        '<p>Which technique in data analytics uses historical data to predict future trends?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Predictive Analytics",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Descriptive Analytics",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Diagnostic Analytics",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Prescriptive Analytics",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "software-testing",
+      questionContent:
+        '<p>What type of software testing focuses on evaluating the individual modules or components of a software application?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Unit Testing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Integration Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "System Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Acceptance Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "devops",
+      questionContent:
+        '<p>In DevOps, what is the purpose of using Continuous Integration (CI)?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To frequently merge code changes into a shared repository.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To deploy code to production automatically.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To manage server configurations.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To track bugs in the production environment.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "design-patterns",
+      questionContent:
+        '<p>Which design pattern is most suitable for providing a single, globally accessible instance of a class?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Singleton",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Factory",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Adapter",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Observer",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: '<p>In a time-series database using a Late Materialization strategy, what happens to query performance if the compression algorithm chosen for numeric columns produces variable-length encoded values?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ad1",
+            answerContent: "Random access performance degrades due to offset calculation overhead",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad2",
+            answerContent: "Queries become faster due to smaller data size",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad3",
+            answerContent: "The database switches to early materialization",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad4",
+            answerContent: "Compression is automatically disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>When implementing federated learning with heterogeneous devices, what happens to model convergence if some clients have significantly different data distributions?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Client drift causes model performance to vary across different subpopulations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "All clients automatically synchronize their data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "The model becomes centralized",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Training stops after one round",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>When implementing a distributed rate limiter using the token bucket algorithm, what consistency issue might arise during a network partition?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Rate limits may be exceeded due to independent bucket implementations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All requests are automatically accepted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "The system switches to unlimited mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Rate limiting is permanently disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>In a blockchain using Practical Byzantine Fault Tolerance (PBFT), what happens to consensus latency if the number of validators increases quadratically?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Message complexity increases exponentially, severely impacting throughput",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Consensus becomes instantaneous",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "The network automatically shards",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Block time reduces to zero",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: '<p>When implementing skeleton screens for content loading, what cognitive issue might arise if the skeleton layout doesn\'t match the final content structure?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Users experience layout shift disorientation when content loads",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "The page crashes immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Content never loads",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "The browser shows an error",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: '<p>When implementing a zero-downtime database schema migration in a microservices architecture, what happens if services using different schema versions process the same event?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Data inconsistencies may occur due to schema version mismatch",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "All services automatically upgrade",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "The database reverts to the old schema",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Services stop processing events",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>In a GitOps workflow using ArgoCD, what happens to the application state if the Git repository becomes temporarily unavailable?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-do1",
+            answerContent: "Existing deployments continue running but new changes are blocked",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do2",
+            answerContent: "All applications are immediately terminated",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do3",
+            answerContent: "The cluster resets to default state",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do4",
+            answerContent: "Manual deployments are automatically enabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>When implementing TCP BBR congestion control on a network path with multiple bottlenecks, what happens to bandwidth estimation if the bottleneck capacity changes frequently?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "BBR may oscillate between different bandwidth estimates",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "The connection switches to UDP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Bandwidth becomes unlimited",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "The network automatically stabilizes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>When implementing a Web Application Firewall (WAF) with machine learning-based rules, what security risk arises if the training data is not regularly updated?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cs1",
+            answerContent: "New attack patterns may bypass detection due to concept drift",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs2",
+            answerContent: "The WAF blocks all traffic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs3",
+            answerContent: "The firewall switches to allow-all mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs4",
+            answerContent: "ML models are automatically updated",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: '<p>In a parallel implementation of the A* pathfinding algorithm, what synchronization issue might occur if the open set is not thread-safe?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-al1",
+            answerContent: "Nodes might be expanded multiple times, causing redundant work",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al2",
+            answerContent: "The algorithm becomes depth-first search",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al3",
+            answerContent: "All paths become invalid",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al4",
+            answerContent: "The graph becomes disconnected",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>When implementing a real-time stream processing system using Apache Flink, what happens to event time windows if events arrive significantly out of order?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Late events may be dropped if they exceed the allowed lateness",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Windows process all events regardless of time",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "The system switches to batch processing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Processing time is used instead",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>When implementing background fetch in a mobile app, what battery impact occurs if the optimal fetch interval is not properly calculated?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Frequent wake cycles drain battery unnecessarily",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "The app crashes on low battery",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Background fetch is permanently disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "The device automatically optimizes fetching",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>When implementing a Progressive Web App (PWA) with background sync, what happens to pending sync requests if the user clears site data?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wd1",
+            answerContent: "Pending sync requests are lost and need to be reinitialized",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd2",
+            answerContent: "Sync requests execute immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd3",
+            answerContent: "The PWA reverts to a regular website",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd4",
+            answerContent: "Sync requests are automatically recovered",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "algorithms",
+      questionContent:
+        '<p>What is the time complexity of binary search in a sorted array?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "O(log n)",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "O(n)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "O(n²)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "O(1)",
+            isCorrect: false,
+            isLatex: true,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "web-development",
+      questionContent:
+        '<p>Which HTML element is used to create a hyperlink?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "&lt;a&gt;",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "&lt;link&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "&lt;nav&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "&lt;href&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "databases",
+      questionContent:
+        '<p>What type of database stores data in tables with rows and columns?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Relational Database",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "NoSQL Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Graph Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Key-Value Store",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "ai",
+      questionContent:
+        '<p>Which of the following is an example of supervised learning?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Classification",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Dimensionality Reduction",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Reinforcement Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "cybersecurity",
+      questionContent:
+        '<p>Which technique is used to encrypt data such that only the intended recipient can decrypt it?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Public Key Encryption",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Hashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Data Masking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Tokenization",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "networking",
+      questionContent:
+        '<p>Which protocol is primarily used for securely transferring files over the internet?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "SFTP",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "HTTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "SMTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>Which type of cloud computing service provides a complete application over the internet?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Serverless Computing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "programming-languages",
+      questionContent:
+        '<p>Which programming language is commonly used for data analysis and machine learning?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Python",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Java",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "C++",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Ruby",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "project-management",
+      questionContent:
+        '<p>Which project management methodology emphasizes short, iterative cycles called sprints?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Scrum",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Waterfall",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Kanban",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Lean",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>Which operating system component manages hardware resources?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Kernel",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Shell",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "File System",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Process Manager",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: '<p>In a time-series database using a Late Materialization strategy, what happens to query performance if the compression algorithm chosen for numeric columns produces variable-length encoded values?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ad1",
+            answerContent: "Random access performance degrades due to offset calculation overhead",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad2",
+            answerContent: "Queries become faster due to smaller data size",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad3",
+            answerContent: "The database switches to early materialization",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ad4",
+            answerContent: "Compression is automatically disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>When implementing federated learning with heterogeneous devices, what happens to model convergence if some clients have significantly different data distributions?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Client drift causes model performance to vary across different subpopulations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "All clients automatically synchronize their data",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "The model becomes centralized",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Training stops after one round",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>When implementing a distributed rate limiter using the token bucket algorithm, what consistency issue might arise during a network partition?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Rate limits may be exceeded due to independent bucket implementations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All requests are automatically accepted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "The system switches to unlimited mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Rate limiting is permanently disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>In a blockchain using Practical Byzantine Fault Tolerance (PBFT), what happens to consensus latency if the number of validators increases quadratically?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Message complexity increases exponentially, severely impacting throughput",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Consensus becomes instantaneous",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "The network automatically shards",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Block time reduces to zero",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: '<p>When implementing skeleton screens for content loading, what cognitive issue might arise if the skeleton layout doesn\'t match the final content structure?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Users experience layout shift disorientation when content loads",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "The page crashes immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Content never loads",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "The browser shows an error",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: '<p>When implementing a zero-downtime database schema migration in a microservices architecture, what happens if services using different schema versions process the same event?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Data inconsistencies may occur due to schema version mismatch",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "All services automatically upgrade",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "The database reverts to the old schema",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Services stop processing events",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>In a GitOps workflow using ArgoCD, what happens to the application state if the Git repository becomes temporarily unavailable?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-do1",
+            answerContent: "Existing deployments continue running but new changes are blocked",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do2",
+            answerContent: "All applications are immediately terminated",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do3",
+            answerContent: "The cluster resets to default state",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-do4",
+            answerContent: "Manual deployments are automatically enabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: '<p>When implementing TCP BBR congestion control on a network path with multiple bottlenecks, what happens to bandwidth estimation if the bottleneck capacity changes frequently?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "BBR may oscillate between different bandwidth estimates",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "The connection switches to UDP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Bandwidth becomes unlimited",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "The network automatically stabilizes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>When implementing a Web Application Firewall (WAF) with machine learning-based rules, what security risk arises if the training data is not regularly updated?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cs1",
+            answerContent: "New attack patterns may bypass detection due to concept drift",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs2",
+            answerContent: "The WAF blocks all traffic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs3",
+            answerContent: "The firewall switches to allow-all mode",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cs4",
+            answerContent: "ML models are automatically updated",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: '<p>In a parallel implementation of the A* pathfinding algorithm, what synchronization issue might occur if the open set is not thread-safe?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-al1",
+            answerContent: "Nodes might be expanded multiple times, causing redundant work",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al2",
+            answerContent: "The algorithm becomes depth-first search",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al3",
+            answerContent: "All paths become invalid",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-al4",
+            answerContent: "The graph becomes disconnected",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>When implementing a real-time stream processing system using Apache Flink, what happens to event time windows if events arrive significantly out of order?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Late events may be dropped if they exceed the allowed lateness",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Windows process all events regardless of time",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "The system switches to batch processing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Processing time is used instead",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>When implementing background fetch in a mobile app, what battery impact occurs if the optimal fetch interval is not properly calculated?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Frequent wake cycles drain battery unnecessarily",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "The app crashes on low battery",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Background fetch is permanently disabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "The device automatically optimizes fetching",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: '<p>When implementing a Progressive Web App (PWA) with background sync, what happens to pending sync requests if the user clears site data?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wd1",
+            answerContent: "Pending sync requests are lost and need to be reinitialized",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd2",
+            answerContent: "Sync requests execute immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd3",
+            answerContent: "The PWA reverts to a regular website",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd4",
+            answerContent: "Sync requests are automatically recovered",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "algorithms",
+      questionContent:
+        '<p>What is the time complexity of binary search in a sorted array?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "O(log n)",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "O(n)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "O(n²)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "O(1)",
+            isCorrect: false,
+            isLatex: true,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "web-development",
+      questionContent:
+        '<p>Which HTML element is used to create a hyperlink?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "&lt;a&gt;",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "&lt;link&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "&lt;nav&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "&lt;href&gt;",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "databases",
+      questionContent:
+        '<p>What type of database stores data in tables with rows and columns?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Relational Database",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "NoSQL Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Graph Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Key-Value Store",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "ai",
+      questionContent:
+        '<p>Which of the following is an example of supervised learning?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Classification",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Dimensionality Reduction",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Reinforcement Learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "cybersecurity",
+      questionContent:
+        '<p>Which technique is used to encrypt data such that only the intended recipient can decrypt it?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Public Key Encryption",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Hashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Data Masking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Tokenization",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "networking",
+      questionContent:
+        '<p>Which protocol is primarily used for securely transferring files over the internet?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "SFTP",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "HTTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "SMTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "cloud-computing",
+      questionContent:
+        '<p>Which type of cloud computing service provides a complete application over the internet?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Serverless Computing",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "programming-languages",
+      questionContent:
+        '<p>Which programming language is commonly used for data analysis and machine learning?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Python",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Java",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "C++",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Ruby",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "project-management",
+      questionContent:
+        '<p>Which project management methodology emphasizes short, iterative cycles called sprints?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Scrum",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Waterfall",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "Kanban",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Lean",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "operating-systems",
+      questionContent:
+        '<p>Which operating system component manages hardware resources?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Kernel",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Shell",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "File System",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Process Manager",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: '<p>In the context of the CAP theorem, if a distributed system chooses to maintain Consistency and Partition tolerance (CP), which specific scenario would trigger the system to become unavailable?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cp1",
+            answerContent: "When network partitions occur between nodes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp2",
+            answerContent: "When the system experiences high load",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp3",
+            answerContent: "When data becomes corrupted",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cp4",
+            answerContent: "When multiple clients request updates simultaneously",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: '<p>Which consensus mechanism reduces energy consumption by requiring validators to prove ownership of a certain amount of cryptocurrency instead of solving complex mathematical problems?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Proof of Stake (PoS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Proof of Work (PoW)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Proof of Authority (PoA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Proof of Capacity (PoC)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: '<p>What quantum phenomenon allows a qubit to exist in multiple states simultaneously, making quantum computers potentially more powerful than classical computers for certain calculations?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "Superposition",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "Entanglement",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "Quantum Tunneling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "Wave-Particle Duality",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: '<p>In a Blue-Green deployment strategy, what happens to the database schema changes when both environments need different schemas during the transition period?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dv1",
+            answerContent: "Implement backward-compatible schema changes in multiple steps",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dv2",
+            answerContent: "Update both schemas simultaneously",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dv3",
+            answerContent: "Maintain separate databases for each environment",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dv4",
+            answerContent: "Roll back all schema changes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: '<p>When implementing a convolutional neural network (CNN), what is the primary purpose of using dilated convolutions instead of standard convolutions?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "To increase the receptive field without increasing computational cost",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "To reduce the model's memory footprint",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "To prevent overfitting during training",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "To speed up the convolution operation",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      }
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: '<p>In a TLS 1.3 handshake, why was the RSA key exchange removed in favor of (EC)DHE for forward secrecy?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "To prevent decryption of past communications if the private key is compromised",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "To increase the handshake speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "To reduce the server's computational load",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "To support larger key sizes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: '<p>When implementing Multi-Version Concurrency Control (MVCC), what specific problem does the "First-Committer-Wins" rule solve?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Prevents write skew in serializable isolation level",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Reduces database size growth",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Improves read performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Eliminates deadlocks",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: '<p>In the context of Domain-Driven Design, what is the primary purpose of an Anti-Corruption Layer when integrating with legacy systems?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sa1",
+            answerContent: "Translates between different domain models while preventing concept bleeding",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa2",
+            answerContent: "Improves system performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa3",
+            answerContent: "Provides data validation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa4",
+            answerContent: "Handles error logging",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: '<p>When implementing the A* pathfinding algorithm, what effect does an inadmissible heuristic have on the solution?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ao1",
+            answerContent: "It may not find the optimal path but could find a solution faster",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao2",
+            answerContent: "It will always find the optimal path but slower",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao3",
+            answerContent: "It will never find a path",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao4",
+            answerContent: "It will consume less memory",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: '<p>In reinforcement learning, what is the primary advantage of using Prioritized Experience Replay over standard Experience Replay?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "More frequent sampling of important transitions for faster learning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Reduced memory usage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Simplified implementation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Better exploration of the environment",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: '<p>When implementing the Lambda architecture for big data processing, what specific problem does the Speed Layer solve that the Batch Layer cannot handle effectively?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Processing real-time data with low latency requirements",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Handling historical data analysis",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "Ensuring data consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Managing data storage",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>In a serverless architecture using AWS Lambda, what is the primary purpose of the VPC Lambda Hyperplane?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cc1",
+            answerContent: "Enable Lambda functions to access VPC resources without NAT gateways",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc2",
+            answerContent: "Improve Lambda cold start times",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3",
+            answerContent: "Provide additional security layers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc4",
+            answerContent: "Manage Lambda scaling",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: '<p>During a web application penetration test, you discover a DOM-based XSS vulnerability. Why might this be harder to detect using traditional DAST tools compared to reflected XSS?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "The payload execution occurs client-side without server interaction",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "It requires authentication to exploit",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "It only affects certain browsers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "It requires specific HTTP methods",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: '<p>In the Context-Action-Object (CAO) pattern, what specific problem does it solve that the traditional Command pattern does not address?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Handling complex undo operations with context-specific behavior",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Reducing memory usage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Improving execution speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Simplifying command creation",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: '<p>When implementing deep linking in a React Native application, what specific challenge does the new Linking API solve compared to the legacy deep linking approach?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Handling universal links and app links with consistent behavior across platforms",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "Reducing app size",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Improving app performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "Supporting offline functionality",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: '<p>In the context of memory management, what specific problem does the Completely Fair Page Replacement algorithm solve that LRU cannot handle effectively?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Preventing scan resistance while maintaining fairness across processes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "Reducing memory fragmentation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "Improving cache hit rates",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "Handling larger page sizes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: '<p>When implementing a time-series forecasting model, what advantage does Prophet\'s changepoint detection offer over traditional ARIMA models?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Automatically identifies and adapts to trend changes without manual intervention",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Provides better seasonal adjustments",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Handles missing data more effectively",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Reduces computational complexity",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: '<p>In mutation testing, what specific insight does the equivalent mutant survival provide about the test suite?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-st1",
+            answerContent: "Indicates potential semantic redundancies in the code that tests cannot detect",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st2",
+            answerContent: "Shows test suite performance issues",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st3",
+            answerContent: "Identifies memory leaks",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-st4",
+            answerContent: "Reveals integration problems",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "operating-systems",
+      questionContent: '<p>Which scheduling algorithm minimizes the average waiting time for a set of processes?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Shortest Job Next (SJN)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Round Robin",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "First Come First Serve (FCFS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Priority Scheduling",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+
+    {
+      variationId: 3,
+      topicSlug: "networking",
+      questionContent: '<p>What is the primary purpose of a router in a computer network?</p>',
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To forward data packets between networks",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To store data securely",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To manage hardware components",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To run virtual machines",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+
+    {
+      variationId: 4,
+      topicSlug: "database-systems",
+      questionContent: '<p>What type of database model is best suited for representing hierarchical relationships?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "Hierarchical Database Model",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "Relational Database Model",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "NoSQL Database Model",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "Network Database Model",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+
+    {
+      variationId: 5,
+      topicSlug: "cloud-computing",
+      questionContent: '<p>Which cloud service model offers both infrastructure and platform components?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "IaaS + PaaS",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "SaaS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "PaaS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "IaaS",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+
+    {
+      variationId: 6,
+      topicSlug: "cybersecurity",
+      questionContent: '<p>What is the primary function of a firewall in network security?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qchybm2w9",
+            answerContent: "To monitor and control incoming and outgoing network traffic",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raaste6zq",
+            answerContent: "To store sensitive data securely",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-0gvacclf1",
+            answerContent: "To run antivirus software",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-naqloqvqx",
+            answerContent: "To automate backup processes",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent:
+        '<p>In the context of the Byzantine Generals Problem, if there are n total generals and f Byzantine (faulty) generals, what is the minimum number of total generals needed to achieve consensus?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-byz1",
+            answerContent: "3f + 1",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-byz2",
+            answerContent: "2f + 1",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-byz3",
+            answerContent: "4f + 1",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-byz4",
+            answerContent: "f + 2",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent:
+        '<p>What potential vulnerability could arise if a smart contract uses block.timestamp as a source of randomness for distributing rewards?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bl1",
+            answerContent: "Miners can manipulate the timestamp within certain bounds to influence the outcome",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bl2",
+            answerContent: "The timestamp will always be too large to process",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bl3",
+            answerContent: "Smart contracts cannot access block.timestamp",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bl4",
+            answerContent: "The timestamp will reset after each block",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent:
+        '<p>When implementing the Knuth-Morris-Pratt (KMP) string matching algorithm, what is the purpose of the failure function (also known as the prefix function)?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-kmp1",
+            answerContent: "To avoid reexamining previously matched characters by storing information about the pattern's prefix-suffix matches",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kmp2",
+            answerContent: "To count the number of pattern occurrences in the text",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kmp3",
+            answerContent: "To store the pattern in reverse order for backward matching",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-kmp4",
+            answerContent: "To calculate the hash value of the pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent:
+        '<p>In Grover\'s algorithm, if you have a database of N items and you want to find a specific item, how many iterations of the Grover operator are needed to maximize the probability of finding the correct item?</p>',
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "π/4 * √N",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "log₂(N)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "N/2",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "2^N",
+            isCorrect: false,
+            isLatex: true,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent:
+        '<p>In a PostgreSQL database using MVCC (Multi-Version Concurrency Control), what happens to the visibility of a row that has been updated within an uncommitted transaction when another transaction tries to read it?</p>',
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-pg1",
+            answerContent: "The second transaction sees the previous version of the row that was last committed",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pg2",
+            answerContent: "The second transaction is blocked until the first transaction commits",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pg3",
+            answerContent: "The second transaction sees the updated version immediately",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-pg4",
+            answerContent: "The second transaction receives an error",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>In the context of neural networks, consider the following activation function:</p>
+        <pre>f(x) = max(0, x)</pre>
+        <p>This ReLU activation can sometimes lead to <strong>dying neurons</strong>. Which of the following modifications would best address this issue while maintaining the benefits of ReLU?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "f(x) = \\begin{cases} 0.01x & \\text{if } x < 0 \\\\ x & \\text{if } x \\geq 0 \\end{cases}",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "f(x) = \\frac{1}{1 + e^{-x}}",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "f(x) = \\tanh(x)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "f(x) = x",
+            isCorrect: false,
+            isLatex: true,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given a directed graph G with negative edge weights, consider this modification to Dijkstra's algorithm:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  for each vertex v in G:
+      if distance[v] > distance[u] + weight(u,v):
+          distance[v] = distance[u] + weight(u,v)
+          predecessor[v] = u</pre>
+        <p>Why would this modification <em>still fail</em> to find the shortest path in a graph with negative edges?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-alg1",
+            answerContent: "The greedy choice property is violated as paths through negative edges might be discovered after their vertices are finalized",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-alg2",
+            answerContent: "The algorithm will run indefinitely due to negative edges",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-alg3",
+            answerContent: "The predecessor array would overflow",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-alg4",
+            answerContent: "Negative edges are impossible in a directed graph",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Consider a database table with the following schema:</p>
+        <code style="display: block; margin: 10px 0;">
+          CREATE TABLE Transactions (
+            id SERIAL PRIMARY KEY,
+            amount DECIMAL(10,2),
+            timestamp TIMESTAMPTZ
+          );</code>
+        <p>Given this time-series data, which of the following indexing strategies would be <em>most efficient</em> for queries that frequently access recent transactions in specific amount ranges?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "CREATE INDEX idx_trans_ts_amount ON Transactions (timestamp DESC, amount) INCLUDE (id);",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "CREATE INDEX idx_trans_amount ON Transactions (amount);",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "CREATE INDEX idx_trans_ts ON Transactions (timestamp);",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "CREATE INDEX idx_trans_id ON Transactions (id);",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: `
+        <p>In a distributed system processing streaming data, you observe the following pattern:</p>
+        <div style="background-color: #f8f9fa; padding: 10px; border-left: 3px solid #007bff;">
+          <p>Time t: 100 events processed</p>
+          <p>Time t+1: 200 events processed</p>
+          <p>Time t+2: 50 events processed</p>
+          <p>Time t+3: 300 events processed</p>
+        </div>
+        <p>Which windowing strategy would be most appropriate to handle this bursty traffic while maintaining event-time ordering?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Sliding windows with watermarks defined as: max(event_time) - \\alpha \\cdot stddev(event_times)",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Fixed windows of size t",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "Session windows with 30-second timeout",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Tumbling windows of size 2t",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>Consider a microservices architecture with the following components:</p>
+        <ul>
+          <li>Order Service</li>
+          <li>Payment Service</li>
+          <li>Inventory Service</li>
+          <li>Notification Service</li>
+        </ul>
+        <p>During a network partition that isolates the Payment Service, which of these <em>consistency patterns</em> would best maintain system availability while ensuring eventual consistency?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sa1",
+            answerContent: "SAGA pattern with compensating transactions and local state machines",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa2",
+            answerContent: "Two-phase commit protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa3",
+            answerContent: "Synchronous HTTP calls with retries",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa4",
+            answerContent: "Circuit breaker without fallback",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>Analyze this code snippet for potential security vulnerabilities:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  def process_login(request):
+      username = request.POST.get('username')
+      password = request.POST.get('password')
+      user = db.query(f"SELECT * FROM users WHERE username='{username}' AND password='{password}'")
+      if user:
+          session['user_id'] = user.id
+          return redirect('/dashboard')
+      return redirect('/login')</pre>
+        <p>Which combination of security issues is present?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "SQL injection vulnerability, plaintext password storage, and timing attack vulnerability in comparison",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Cross-site scripting (XSS) vulnerability only",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "CSRF token missing only",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Insecure direct object reference only",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>Consider this CSS flexbox container:</p>
+        <div style="background-color: #f5f5f5; padding: 10px;">
+          <code>
+            .container {
+              display: flex;
+              justify-content: center;
+              align-items: ??;
+            }
+          </code>
+        </div>
+        <p>Which <code>align-items</code> value would <em>vertically center</em> all children within this container?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "center",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "middle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "vertical-center",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "stretch",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>Given a pandas DataFrame <code>df</code> with daily sales data:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+        Date        Sales  Store
+  2024-01-01    100     A
+  2024-01-01    150     B
+  2024-01-02    120     A
+  2024-01-02    140     B</pre>
+        <p>Which code would calculate the <strong>average daily sales per store</strong>?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "df.groupby('Store')['Sales'].mean()",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "df.groupby('Date')['Sales'].mean()",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "df['Sales'].mean()",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "df.groupby(['Store', 'Date'])['Sales'].sum()",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>Consider this Python code using inheritance:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  class Animal:
+      def speak(self):
+          pass
+  
+  class Dog(Animal):
+      def speak(self):
+          return "Woof!"
+  
+  class Cat(Animal):
+      def speak(self):
+          return "Meow!"</pre>
+        <p>What principle of Object-Oriented Programming is being demonstrated here?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Polymorphism",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Encapsulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Composition",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>In a test suite for a user registration system, you have:</p>
+        <ul>
+          <li>Test for valid email format</li>
+          <li>Test for password strength</li>
+          <li>Test for unique username</li>
+        </ul>
+        <p>Which testing methodology is being implemented when these tests are run <em>before</em> writing the actual registration code?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Test-Driven Development (TDD)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Behavior-Driven Development (BDD)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Integration Testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Regression Testing",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: `
+        <p>You're building a notification system that needs to:</p>
+        <ol>
+          <li>Send emails</li>
+          <li>Send SMS messages</li>
+          <li>Push mobile notifications</li>
+        </ol>
+        <p>Each notification type requires different formatting but follows the same basic steps: compose, validate, and send.</p>
+        <p>Which design pattern would be most appropriate here?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Template Method",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Singleton",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Proxy",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Decorator",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: `
+        <p>In React Native, consider this component:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  const UserList = () => {
+    const [users, setUsers] = useState([]);
+    
+    useEffect(() => {
+      fetchUsers().then(data => setUsers(data));
+    }, []);
+  
+    return (
+      <FlatList
+        data={users}
+        renderItem={({item}) => (
+          <Text>{item.name}</Text>
+        )}
+        keyExtractor={item => item.id}
+      />
+    );
+  }</pre>
+        <p>Why is <code>FlatList</code> preferred over mapping through the array with <code>users.map()</code> for large lists?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-rn1",
+            answerContent: "FlatList implements windowing to render only visible items, improving performance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rn2",
+            answerContent: "FlatList automatically adds animation effects",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rn3",
+            answerContent: "FlatList prevents the array from being modified",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-rn4",
+            answerContent: "FlatList provides automatic error handling",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>You have a CI/CD pipeline that currently:</p>
+        <div style="background-color: #f8f9fa; padding: 10px; margin: 10px 0;">
+          <ol>
+            <li>Runs unit tests</li>
+            <li>Builds Docker image</li>
+            <li>Deploys to production</li>
+          </ol>
+        </div>
+        <p>What critical security step is missing <em>before</em> the deployment stage?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "Container image vulnerability scanning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "Load testing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "Database backup",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "Documentation generation",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>A client is trying to connect to a web server but receives a <code>Connection refused</code> error. The network topology is:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  Client (192.168.1.100) → Router (192.168.1.1) → Server (10.0.0.50:80)</pre>
+        <p>Which command would help verify if the server's port is actually open and listening?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "telnet 10.0.0.50 80",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "ping 10.0.0.50",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "ifconfig",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "route -n",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: `
+        <p>You're designing a form and observe these user behaviors:</p>
+        <div style="background-color: #f8f9fa; padding: 10px; margin: 10px 0;">
+          <ul>
+            <li>Users often skip the "Phone Number" field</li>
+            <li>Error rate is high for "Date of Birth" input</li>
+            <li>"Address" completion takes longest</li>
+        </ul>
+        </div>
+        <p>Which UX improvement would have the <em>highest impact</em> on form completion rates?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Mark optional fields instead of required fields, and use a date picker for Date of Birth",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "Make all fields required",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Remove the Phone Number field",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "Add field descriptions",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>Your AWS Lambda function is experiencing cold starts. The current configuration is:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  Runtime: Node.js 16.x
+  Memory: 128MB
+  Timeout: 30 seconds
+  VPC: Enabled
+  Dependencies: 5 node modules</pre>
+        <p>Which change would most effectively reduce cold start times?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-aws1",
+            answerContent: "Increase memory allocation to 256MB",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-aws2",
+            answerContent: "Increase timeout to 60 seconds",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-aws3",
+            answerContent: "Update to Node.js 18.x",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-aws4",
+            answerContent: "Add more dependencies",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>In a neural network using backpropagation, the gradient for a weight <code>w</code> is calculated as:</p>
+        <div style="text-align: center; padding: 15px;">
+          <p>\\[ \\frac{\\partial E}{\\partial w} = \\frac{\\partial E}{\\partial a} \\cdot \\frac{\\partial a}{\\partial z} \\cdot \\frac{\\partial z}{\\partial w} \\]</p>
+        </div>
+        <p>What does \\( \\frac{\\partial a}{\\partial z} \\) represent in this equation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "The derivative of the activation function",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "The learning rate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "The weight update",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "The bias term",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: `
+        <p>During a penetration test, you discover this PHP code:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  $filename = $_GET['file'];
+  if (file_exists($filename)) {
+      include($filename);
+  }</pre>
+        <p>Which attack vector should be <em>prioritized</em> in your security report?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Local File Inclusion (LFI)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Cross-Site Scripting (XSS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "SQL Injection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Buffer Overflow",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: `
+        <p>Your team is reviewing this code:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  class UserManager {
+      private Database db;
+      private EmailService emailService;
+      private LoggerService logger;
+      private PaymentProcessor payment;
+      private NotificationService notify;
+      
+      public UserManager(Database db, EmailService email,
+          LoggerService logger, PaymentProcessor payment,
+          NotificationService notify) {
+          // constructor implementation
+      }
+  }</pre>
+        <p>Which SOLID principle is likely being violated?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Single Responsibility Principle",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "Open/Closed Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "Liskov Substitution Principle",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Interface Segregation Principle",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: `
+        <p>Given a Binary Search Tree with this structure:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px; text-align: center;">
+          5
+         / \\
+        3   7
+       / \\   \\
+      2   4   8</pre>
+        <p>What would be the time complexity of finding the element with value 8 if this specific structure was maintained for <em>n</em> nodes?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "O(log n)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "O(n)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "O(1)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "O(n^2)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>Consider this Solidity smart contract code:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  contract Token {
+      mapping(address => uint) balances;
+      
+      function transfer(address to, uint amount) public {
+          require(balances[msg.sender] >= amount);
+          balances[to] += amount;
+          balances[msg.sender] -= amount;
+      }
+  }</pre>
+        <p>What potential vulnerability exists in this implementation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Integer overflow in the addition operation could lead to unauthorized token creation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "The require statement is unnecessary",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Transfer to address(0) is allowed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "The function should be private",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: `
+        <p>You observe these patterns in your network logs:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  Time      Source IP     Dest Port    Protocol
+  12:00:01  192.168.1.5   80          TCP
+  12:00:02  192.168.1.5   81          TCP
+  12:00:03  192.168.1.5   82          TCP
+  12:00:04  192.168.1.5   83          TCP
+  ...</pre>
+        <p>What type of reconnaissance activity is likely being performed?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "Port scanning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "ARP poisoning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "DNS enumeration",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "Man-in-the-middle attack",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given this dynamic programming implementation:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  def fibonacci(n):
+      dp = [0] * (n + 1)
+      dp[1] = 1
+      for i in range(2, n + 1):
+          dp[i] = dp[i-1] + dp[i-2]
+      return dp[n]</pre>
+        <p>How could you optimize the space complexity while maintaining the same time complexity?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ao1",
+            answerContent: "Keep only the last two values instead of the entire array",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao2",
+            answerContent: "Use recursion instead",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao3",
+            answerContent: "Store values in a hash map",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao4",
+            answerContent: "Convert to matrix multiplication",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Your classification model shows these metrics:</p>
+        <div style="background-color: #f5f5f5; padding: 10px; margin: 10px 0;">
+          <p>Precision: 0.95</p>
+          <p>Recall: 0.45</p>
+          <p>Accuracy: 0.80</p>
+        </div>
+        <p>If this is a fraud detection system, what does this performance suggest?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "The model is too conservative, missing many fraudulent cases despite high confidence in its positive predictions",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "The model is too aggressive in flagging fraud",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "The model is well-balanced",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "The model needs more training data",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a microservices architecture, Service A makes this call:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  GET /api/users/123/orders
+  Authorization: Bearer {jwt_token}
+  X-Request-ID: 789
+  X-Correlation-ID: abc-def-456</pre>
+        <p>What is the purpose of the <code>X-Correlation-ID</code> header?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "To trace requests across multiple services for debugging and monitoring",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "To authenticate the request",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "To cache the response",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "To specify the API version",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>You receive this error in your application logs:</p>
+        <pre style="background-color: #f5f5f5; color: red; padding: 10px;">
+  ERROR: PKIX path building failed:
+  sun.security.provider.certpath.SunCertPathBuilderException:
+  unable to find valid certification path to requested target</pre>
+        <p>What is the most likely security-related cause?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Self-signed or untrusted SSL certificate",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Firewall blocking the connection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Invalid API key",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "DDoS attack in progress",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Consider this query execution plan:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  → Hash Join (cost=235.66..742.89 rows=1000)
+     Hash Cond: (orders.customer_id = customers.id)
+     → Seq Scan on orders (cost=0.00..242.30 rows=10000)
+     → Hash (cost=184.23..184.23 rows=1000)
+        → Seq Scan on customers</pre>
+        <p>What performance improvement would you suggest?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Create an index on orders.customer_id to replace the sequential scan",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Add more RAM to the database server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Use a CTE instead of a join",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Increase the work_mem parameter",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You're debugging a React component that's not updating properly:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px;">
+  const UserProfile = ({ userId }) => {
+    const [userData, setUserData] = useState({});
+    
+    useEffect(() => {
+      const fetchData = async () => {
+        const data = await fetchUserData(userId);
+        setUserData(data);
+      };
+      fetchData();
+    }, []); // Empty dependency array
+  
+    return <div>{userData.name}</div>;
+  };</pre>
+        <p>What's causing the component to not update when <code>userId</code> changes?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-react1",
+            answerContent: "Missing userId in the useEffect dependency array",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-react2",
+            answerContent: "Wrong useState initial value",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-react3",
+            answerContent: "Missing key prop",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-react4",
+            answerContent: "Incorrect return statement",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>You're designing a real-time collaboration system where multiple users can edit a document simultaneously. The system needs to:</p>
+        <ul>
+          <li>Handle concurrent edits</li>
+          <li>Maintain consistency</li>
+          <li>Support offline editing</li>
+          <li>Resolve conflicts automatically</li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Operational Transform with a central server maintaining a transformation matrix",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Last-write-wins with timestamps",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Pessimistic locking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Manual merge resolution",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: `
+        <p>In a quantum circuit, you have the following sequence:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px; text-align: center;">
+  |0⟩ ─────■─────
+           │
+  |0⟩ ─────┼─────
+           │
+  |0⟩ ─────X─────</pre>
+        <p>What is the resulting quantum state after this operation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "|000⟩ + |111⟩",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "|000⟩",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "|111⟩",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "|010⟩",
+            isCorrect: false,
+            isLatex: true,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a distributed system using the Raft consensus algorithm, consider a cluster with 5 nodes where 2 nodes have failed. The remaining nodes have the following logs:</p>
+        <pre>
+  Node 1: [Term 1: A, B] [Term 2: C, D] [Term 3: E]
+  Node 2: [Term 1: A, B] [Term 2: C, D]
+  Node 3: [Term 1: A, B] [Term 2: C]
+        </pre>
+        <p>What entries will be committed after leader election if Node 1 becomes the leader?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Only entries A, B, C will be committed",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All entries (A, B, C, D, E) will be committed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Only entries A, B will be committed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Entries A, B, C, D will be committed",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given a weighted directed graph G(V,E), consider the following modification to Dijkstra's algorithm:</p>
+        <pre>
+  Instead of initializing distances as:
+  d[v] = ∞ for all v ≠ source
+  d[source] = 0
+  
+  We initialize as:
+  d[v] = min(direct_edge_weight(source, v)) for all v
+  d[source] = 0
+        </pre>
+        <p>What is the impact of this modification on the algorithm's correctness and performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "The algorithm remains correct but doesn't improve asymptotic performance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "The algorithm becomes incorrect as it might miss optimal paths",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "The modification reduces time complexity to O(E + V log V)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "The algorithm becomes incorrect for negative edge weights",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>In a neural network with batch normalization, given input x and learned parameters γ (scale) and β (shift), the normalized output is calculated as:</p>
+        <p style="text-align: center">$y = γ \\frac{x - μ_B}{\\sqrt{σ^2_B + ε}} + β$</p>
+        <p>During inference (test time), what is the correct way to handle the mean (μ) and variance (σ²) calculations?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Use running averages of mean and variance calculated during training",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Calculate new mean and variance for each test batch",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Use only the last batch's statistics from training",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Skip normalization during inference",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Consider a database table with the following schema and statistics:</p>
+        <pre>
+  CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    user_id INT,
+    status VARCHAR(10),
+    created_at TIMESTAMP
+  );
+  
+  Total rows: 10,000,000
+  Distinct user_ids: 1,000,000
+  Distinct status values: 5
+  Index: btree on (user_id, created_at)
+        </pre>
+        <p>Which query would benefit most from the existing index?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "SELECT * FROM orders WHERE user_id = 123 ORDER BY created_at DESC LIMIT 10",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "SELECT * FROM orders WHERE status = 'pending' AND user_id = 123",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "SELECT * FROM orders WHERE created_at > '2024-01-01'",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "SELECT * FROM orders WHERE user_id IN (1, 2, 3) GROUP BY status",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: `
+        <p>Consider the following quantum circuit:</p>
+        <pre>
+  |0⟩ ─────■─────
+           │
+  |0⟩ ─────┼─────
+           │
+  |0⟩ ─────X─────
+        </pre>
+        <p>If we apply a Toffoli gate (CCNOT) to this system, what is the probability of measuring |111⟩?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "$0$",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "$\\frac{1}{8}$",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "$\\frac{1}{2}$",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "$1$",
+            isCorrect: false,
+            isLatex: true,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "networking",
+      questionContent: `
+        <p>In the context of computer networking, which layer of the OSI model is responsible for reliable data delivery, error checking, and flow control?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Transport Layer",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Application Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Network Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Data Link Layer",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Which of the following algorithms is commonly used for dimensionality reduction in machine learning and can be represented mathematically as:</p>
+        <p><code>maximize \, ||W^TX||^2 \, subject \, to \, ||W||=1</code></p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Support Vector Machines (SVM)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "K-Means Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Gradient Descent",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>Which of the following service models in cloud computing provides a platform allowing customers to develop, run, and manage applications without dealing with the infrastructure?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Database as a Service (DaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 5,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>In cybersecurity, the process of converting plain text into unreadable text using an encryption algorithm and key is known as:</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cyber1",
+            answerContent: "Encryption",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber2",
+            answerContent: "Decryption",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber3",
+            answerContent: "Hashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber4",
+            answerContent: "Encoding",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 6,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>In a blockchain network, what is the term for the process of validating transactions and adding them to the distributed ledger?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "Mining",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "Proofing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "Hashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "Consensus",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: `
+        <p>During a security audit, you discover the following snippet in a network capture:</p>
+        <pre>
+  Client Hello:
+    Version: TLS 1.2
+    Cipher Suites:
+      TLS_RSA_WITH_AES_128_CBC_SHA
+      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      TLS_RSA_WITH_3DES_EDE_CBC_SHA
+    Extensions:
+      renegotiation_info
+      heartbeat
+        </pre>
+        <p>Which vulnerability is this system potentially exposed to?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Heartbleed vulnerability due to heartbeat extension with TLS 1.2",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "POODLE attack due to CBC mode ciphers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "BEAST attack due to TLS 1.2",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "CRIME attack due to renegotiation support",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>In an Ethereum smart contract, consider the following code:</p>
+        <pre>
+  function withdraw(uint amount) public {
+      require(balances[msg.sender] >= amount);
+      msg.sender.call.value(amount)("");
+      balances[msg.sender] -= amount;
+  }
+        </pre>
+        <p>What is the primary security concern with this implementation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Reentrancy attack vulnerability due to state update after external call",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Integer overflow in the amount parameter",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Gas limit exceeded during transfer",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Unauthorized access to balances mapping",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: `
+        <p>Given a Spark DataFrame with 1 billion rows and the following schema:</p>
+        <pre>
+  root
+   |-- user_id: long
+   |-- event_time: timestamp
+   |-- event_type: string
+   |-- device_id: string
+   |-- location: struct
+   |    |-- lat: double
+   |    |-- lon: double
+        </pre>
+        <p>You need to calculate the average number of unique devices per user per day, with data spanning one year. Which approach would be most efficient?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Use window functions with daily partitioning and device_id HyperLogLog aggregation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Group by user_id and date, then count distinct device_ids",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "Use RDD transformations with custom accumulators",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Collect data to driver and process with Pandas",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: `
+        <p>You're designing a system for a smart home automation platform. The system needs to:</p>
+        <ul>
+          <li>Support multiple types of devices (lights, thermostats, cameras)</li>
+          <li>Allow devices to be grouped into rooms and zones</li>
+          <li>Enable complex automation rules involving multiple devices</li>
+          <li>Support different communication protocols (Zigbee, Z-Wave, WiFi)</li>
+        </ul>
+        <p>Which combination of design patterns would best address these requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Composite pattern for device grouping + Bridge pattern for protocols + Command pattern for automation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Singleton pattern for device registry + Observer pattern for events",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Factory pattern for devices + Decorator pattern for features",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Strategy pattern for protocols + Template pattern for automation",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>Consider this React component utilizing the Context API:</p>
+        <pre>
+  const ThemeContext = React.createContext();
+  
+  function ThemedButton() {
+    const theme = useContext(ThemeContext);
+    return <button style={{ background: theme }}>Click Me</button>;
+  }
+  
+  function App() {
+    const [theme, setTheme] = useState('light');
+    return (
+      <ThemeContext.Provider value={theme}>
+        <ThemedButton />
+        <select onChange={e => setTheme(e.target.value)}>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </ThemeContext.Provider>
+    );
+  }
+        </pre>
+        <p>What performance issue might this implementation face in a larger application?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-wd1",
+            answerContent: "All context consumers will re-render when theme changes, even if they only need the context for rare operations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd2",
+            answerContent: "The context value is recreated on every render of App",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd3",
+            answerContent: "ThemedButton will re-render even when theme hasn't changed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-wd4",
+            answerContent: "Multiple instances of ThemeContext will be created",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>Given the following page reference string and 3 page frames using the LRU replacement algorithm:</p>
+        <pre>
+  Reference String: 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5
+  
+  Initial state of frames: Empty
+        </pre>
+        <p>Calculate the number of page faults and the final state of the page frames.</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "10 page faults, final frames: [2, 4, 5]",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "8 page faults, final frames: [3, 4, 5]",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "9 page faults, final frames: [1, 2, 5]",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "11 page faults, final frames: [1, 4, 5]",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent:
+        `<p>Which of the following algorithms is most suitable for a classification task where the output labels are highly imbalanced?</p>`,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Random Forest with class weights adjusted",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "K-Means Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Linear Regression",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Naive Bayes without adjustments",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent:
+        `<p>In the context of cloud computing, which type of service model provides developers with a platform to build, test, and deploy applications without managing the underlying infrastructure?</p>`,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Backend as a Service (BaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent:
+        `<p>You have gained unauthorized access to a system as part of an ethical hacking engagement. What is the <em>next</em> step to ensure you comply with legal and ethical standards?</p>`,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-hack1",
+            answerContent: "Document findings and immediately report to the client",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hack2",
+            answerContent: "Test additional vulnerabilities in the system",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hack3",
+            answerContent: "Erase traces to avoid detection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-hack4",
+            answerContent: "Exploit the system to understand deeper vulnerabilities",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent:
+        `<p>Given a distributed database system, what protocol is typically used to ensure <em>atomicity</em> in transactions across multiple nodes?</p>`,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Two-Phase Commit (2PC)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Multiversion Concurrency Control (MVCC)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Leader Election",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Sharding Protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent:
+        `<p>What is the primary purpose of the <code>Merkle Tree</code> in blockchain technology?</p>`,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "To efficiently verify and ensure the integrity of large datasets",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "To increase the speed of block mining",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "To add additional layers of encryption to transactions",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "To prevent forks in the blockchain",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent:
+        `<p>In a dataset with a non-linear relationship between features, which model would typically perform best for predictions?</p>`,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Gradient Boosting Machines (GBM)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Logistic Regression",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Support Vector Machines (Linear Kernel)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>In a multi-agent reinforcement learning environment, agents are competing for limited resources. The reward structure is:</p>
+        <pre>
+  R(a₁, a₂) = {
+    (3,3)  if both cooperate
+    (5,0)  if a₁ defects, a₂ cooperates
+    (0,5)  if a₁ cooperates, a₂ defects
+    (1,1)  if both defect
+  }
+        </pre>
+        <p>After implementing Q-learning with ε-greedy exploration (ε = 0.1), you observe that agents consistently converge to mutual defection despite the higher potential reward from cooperation. What modification would most effectively promote cooperative behavior?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Implement leniency by optimistically initializing Q-values and decreasing learning rate for negative experiences",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Increase the exploration rate ε to 0.3",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Add a discount factor to future rewards",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Implement experience replay buffer",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: `
+        <p>You're implementing a distributed database system that needs to maintain consistent secondary indexes. Consider this scenario:</p>
+        <pre>
+  Transaction T1:                    Transaction T2:
+  BEGIN                             BEGIN
+  UPDATE users                      UPDATE users 
+  SET status = 'premium'            SET email = 'new@example.com'
+  WHERE id = 123;                   WHERE id = 123;
+                                   
+  UPDATE status_index              UPDATE email_index
+  SET user_ids = array_append(     SET email = 'new@example.com'
+    user_ids, 123)                 WHERE user_id = 123;
+  WHERE status = 'premium';
+  COMMIT;                          COMMIT;
+        </pre>
+        <p>Which anomaly could occur in this implementation, and what's the most efficient solution?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Write skew in secondary indexes; Solution: Use a deterministic order for index updates and implement index range locking",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Phantom reads; Solution: Use serializable isolation level",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Lost updates; Solution: Use MVCC",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Dirty reads; Solution: Use read committed isolation",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>During a penetration test, you discover an API endpoint vulnerable to Server-Side Request Forgery (SSRF). The application makes HTTP requests to internal services based on a URL parameter:</p>
+        <pre>
+  GET /api/fetch?url=http://internal-service/data
+  
+  Response Headers:
+  X-Internal-Service: v2.1.0
+  Server: nginx/1.18.0
+  Content-Type: application/json
+        </pre>
+        <p>You also notice the application is running in AWS. What is the most critical security check missing from this endpoint?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Block requests to 169.254.169.254 (AWS metadata service) and internal CIDR ranges",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Validate URL protocol is HTTPS only",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Add rate limiting to the endpoint",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Implement OAuth authentication",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: `
+        <p>In a React Native application, you notice significant performance issues when rendering a list of items. The current implementation is:</p>
+        <pre>
+  const ItemList = () => {
+    const [items, setItems] = useState([]);
+    const [refreshing, setRefreshing] = useState(false);
+  
+    const renderItem = ({ item }) => (
+      <View style={styles.item}>
+        <Image 
+          source={{ uri: item.imageUrl }} 
+          style={styles.image} 
+        />
+        <Text>{item.title}</Text>
+        <Text>{item.description}</Text>
+      </View>
+    );
+  
+    return (
+      <FlatList
+        data={items}
+        renderItem={renderItem}
+        onRefresh={() => {
+          setRefreshing(true);
+          fetchItems().finally(() => setRefreshing(false));
+        }}
+        refreshing={refreshing}
+      />
+    );
+  };
+        </pre>
+        <p>Which combination of optimizations would most effectively improve performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Use getItemLayout, keyExtractor, and windowSize props + implement Image preloading and caching",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "Switch to ScrollView with map function",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Add useCallback to renderItem function",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "Implement PureComponent for list items",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>You're implementing a blue-green deployment strategy in Kubernetes. Your current manifest includes:</p>
+        <pre>
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: my-app
+  spec:
+    selector:
+      app: my-app
+      version: v1
+    ports:
+      - protocol: TCP
+        port: 80
+  ---
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: my-app-v1
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: my-app
+        version: v1
+    template:
+      metadata:
+        labels:
+          app: my-app
+          version: v1
+      spec:
+        containers:
+        - name: my-app
+          image: my-app:1.0.0
+        </pre>
+        <p>What critical component is missing for a proper blue-green deployment?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "A separate service for health checks that doesn't switch with the blue-green swap",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "An Ingress resource for load balancing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "A ConfigMap for environment variables",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "A HorizontalPodAutoscaler resource",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>You're analyzing user behavior data and encounter this pattern in your A/B test results:</p>
+        <pre>
+  Test Group A (n=10000):
+    Conversion Rate: 5.2%
+    Average Order Value: $45
+    95% CI: [4.8%, 5.6%]
+  
+  Test Group B (n=10000):
+    Conversion Rate: 5.8%
+    Average Order Value: $42
+    95% CI: [5.4%, 6.2%]
+  
+  p-value: 0.02
+  Power: 0.85
+        </pre>
+        <p>Given this data, what's the most appropriate next step in the analysis?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Calculate the expected revenue impact considering both conversion rate and order value changes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Implement variant B immediately due to higher conversion rate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Continue the test to achieve higher statistical power",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Segment the data by user demographics",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: `
+        <p>You're designing a file upload component that handles large files (>1GB). The current implementation shows:</p>
+        <pre>
+  interface UploadState {
+    status: 'idle' | 'uploading' | 'processing' | 'complete' | 'error';
+    progress: number;
+    timeRemaining?: number;
+  }
+  
+  Current User Journey:
+  1. User selects file
+  2. Progress bar appears (0%)
+  3. Upload begins
+  4. Progress updates every 500ms
+  5. Upload completes
+        </pre>
+        <p>Users report feeling uncertain about the upload process. Which combination of UX improvements would most effectively address this?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Add chunked upload with resumability + Show upload speed and file checksum verification + Provide detailed error recovery steps",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "Increase progress update frequency to 100ms",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Add animation to the progress bar",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "Show file size and type information",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're testing a payment processing system with the following characteristics:</p>
+        <pre>
+  @Test
+  public void testPaymentProcessing() {
+      PaymentRequest request = new PaymentRequest(100.00, "USD");
+      PaymentResponse response = paymentProcessor.process(request);
+      assertTrue(response.isSuccessful());
+  }
+  
+  Dependencies:
+  - External payment gateway
+  - Fraud detection service
+  - Currency conversion service
+  - Transaction logging service
+        </pre>
+        <p>Which testing strategy would provide the best balance of confidence and maintainability?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Consumer-Driven Contract tests for services + Stubbed integration tests with recorded real responses + Chaos testing in staging",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "End-to-end tests with real services",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Unit tests with mocked dependencies",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Integration tests with test doubles",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: `
+        <p>During a penetration test, you discover an endpoint vulnerable to XML External Entity (XXE) injection. The application processes XML files with this structure:</p>
+        <pre>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE user [
+     <!ENTITY xxe SYSTEM "file:///etc/passwd">
+  ]>
+  <user>
+     <name>&xxe;</name>
+     <role>user</role>
+  </user>
+  
+  Server Response:
+  HTTP/1.1 200 OK
+  Content-Type: application/xml
+  X-Powered-By: PHP/7.4.3
+        </pre>
+        <p>Beyond reading local files, what is the most severe potential impact of this vulnerability?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "SSRF attacks leading to internal service enumeration and potential RCE via expect scheme",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "SQL injection through XML payload",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "Cross-site scripting via XML entities",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "Directory traversal in file paths",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>Consider this implementation of a thread-safe singleton pattern in Java:</p>
+        <pre>
+  public class DatabaseConnection {
+      private static volatile DatabaseConnection instance;
+      private final Connection conn;
+      
+      private DatabaseConnection() {
+          conn = DriverManager.getConnection(URL, USER, PASS);
+      }
+      
+      public static DatabaseConnection getInstance() {
+          if (instance == null) {
+              synchronized (DatabaseConnection.class) {
+                  if (instance == null) {
+                      instance = new DatabaseConnection();
+                  }
+              }
+          }
+          return instance;
+      }
+  }
+        </pre>
+        <p>What critical issue could arise in a high-concurrency environment?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Connection object could be exposed before full initialization due to instruction reordering",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Multiple instances created due to race condition",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Memory leak from unused connections",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Deadlock during synchronization",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>Your microservices architecture in AWS experiences this error pattern during peak load:</p>
+        <pre>
+  Service A (ECS) → API Gateway → Lambda → DynamoDB
+  
+  CloudWatch Logs:
+  - Throttled DynamoDB requests: 15%
+  - Lambda cold starts: 200/min
+  - API Gateway 429 responses: 5%
+  - ECS service CPU: 85%
+  
+  Current Configuration:
+  - DynamoDB: Provisioned capacity
+  - Lambda: 128MB memory, 30s timeout
+  - API Gateway: Default throttling
+  - ECS: t3.medium instances
+        </pre>
+        <p>Which combination of changes would most cost-effectively improve reliability?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Switch to DynamoDB on-demand + Implement SQS buffer + Enable Lambda Provisioned Concurrency",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Increase DynamoDB provisioned capacity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Upgrade ECS instance types",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Add API Gateway caching",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>You're designing a system for a social media platform that needs to handle:</p>
+        <ul>
+          <li>10M daily active users</li>
+          <li>1M posts/hour</li>
+          <li>5M comments/hour</li>
+          <li>20M likes/hour</li>
+        </ul>
+        <p>The current design shows performance issues with the comment tree structure:</p>
+        <pre>
+  Table: comments
+  - id: uuid
+  - post_id: uuid
+  - parent_comment_id: uuid (nullable)
+  - user_id: uuid
+  - content: text
+  - created_at: timestamp
+  
+  Current Query:
+  WITH RECURSIVE CommentTree AS (
+    SELECT * FROM comments 
+    WHERE post_id = ?
+    UNION ALL
+    SELECT c.* 
+    FROM comments c
+    JOIN CommentTree ct ON c.parent_comment_id = ct.id
+  )
+  SELECT * FROM CommentTree;
+        </pre>
+        <p>Which architectural change would best address the scalability issues?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Implement materialized path pattern in comments table + Cache subtrees + Async updates for deep replies",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Switch to a NoSQL database for comments",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Add database indexes on parent_comment_id",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Implement comment pagination",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionContent: `
+        <p>You are training a deep learning model for image classification. During training, you notice the following issues:</p>
+        <ul>
+          <li>High training accuracy but low validation accuracy</li>
+          <li>The loss function saturates after a few epochs</li>
+        </ul>
+        <p>Which of the following techniques would most likely address these issues?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Use dropout to prevent overfitting",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Increase the size of the dataset using augmentation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Switch to a more complex model architecture",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Reduce the learning rate to stabilize training",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>A company is migrating its on-premises database to a cloud-based solution. The database:</p>
+        <ul>
+          <li>Stores highly sensitive financial data</li>
+          <li>Requires strong compliance with data privacy regulations</li>
+          <li>Needs to handle traffic spikes during the end of the fiscal quarter</li>
+        </ul>
+        <p>Which cloud service feature is the most critical to address these requirements?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Encryption at rest and in transit",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Auto-scaling to manage traffic spikes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Pay-as-you-go pricing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Global distribution of data centers",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionContent: `
+        <p>In a distributed system, nodes frequently exchange messages to maintain consistency. If a node experiences a delay in communication, it leads to temporary inconsistencies.</p>
+        <p>Which consistency model best accommodates this behavior while ensuring availability and eventual consistency?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dist1",
+            answerContent: "Eventual consistency",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist2",
+            answerContent: "Strict consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist3",
+            answerContent: "Linearizability",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist4",
+            answerContent: "Causal consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>In a relational database, what is the primary purpose of indexing?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "To speed up data retrieval operations",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "To enforce referential integrity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "To normalize data across tables",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "To reduce storage requirements",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>During a penetration test, you discover an open port that provides access to a sensitive service. You want to exploit this vulnerability to demonstrate the risk but must avoid service disruption.</p>
+        <p>Which ethical hacking methodology step does this action correspond to?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "Exploitation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "Reconnaissance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "Reporting",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "Post-exploitation cleanup",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>You're training a deep learning model for image classification and observe this pattern in your training metrics:</p>
+        <pre>
+  Epoch 10:
+  Train accuracy: 0.99
+  Val accuracy: 0.82
+  Train loss: 0.02
+  Val loss: 1.45
+  
+  Model Architecture:
+  - ResNet50 backbone
+  - Global Average Pooling
+  - Dense(1024, ReLU)
+  - Dropout(0.5)
+  - Dense(512, ReLU)
+  - Dense(num_classes, softmax)
+  
+  Dataset:
+  - 10,000 training images
+  - 2,000 validation images
+  - 50 classes
+        </pre>
+        <p>Beyond basic regularization techniques, what's the most effective approach to improve the model's generalization?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Implement mixup augmentation with adaptive label smoothing based on model confidence",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Add more dropout layers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Increase model capacity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Use L1/L2 regularization",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a microservices architecture, you observe the following failure pattern during a partial network outage:</p>
+        <pre>
+  Service Dependencies:
+  A → B → C
+  A → D → C
+  B → E
+  D → E
+  
+  Observed Behavior:
+  1. Service E becomes unreachable
+  2. B and D increase in latency
+  3. A starts timing out
+  4. Circuit breakers trip
+  5. System partially recovers but with degraded functionality
+        </pre>
+        <p>What architectural pattern would best prevent this cascade of failures?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Implement bulkheads with static stability patterns and bounded queue backpressure",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Add more circuit breakers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Implement retry logic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Increase timeout values",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given a dynamic programming solution for the 0/1 knapsack problem:</p>
+        <pre>
+  def knapsack(values, weights, capacity):
+      n = len(values)
+      dp = [[0 for _ in range(capacity + 1)] 
+            for _ in range(n + 1)]
+      
+      for i in range(1, n + 1):
+          for w in range(capacity + 1):
+              if weights[i-1] <= w:
+                  dp[i][w] = max(
+                      values[i-1] + dp[i-1][w-weights[i-1]],
+                      dp[i-1][w]
+                  )
+              else:
+                  dp[i][w] = dp[i-1][w]
+      
+      return dp[n][capacity]
+  
+  Space Complexity: O(n * capacity)
+  Time Complexity: O(n * capacity)
+        </pre>
+        <p>For very large inputs where <code>n = 10⁶</code> and <code>capacity = 10⁵</code>, what optimization would most effectively reduce memory usage while maintaining reasonable time complexity?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "Use two 1D arrays and bitset optimization for weight tracking",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "Implement memoization instead of tabulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "Use a greedy approximation algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "Implement branch and bound",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>You're implementing a custom consensus mechanism for a permissioned blockchain. The requirements are:</p>
+        <pre>
+  Network Characteristics:
+  - 100 validator nodes
+  - Max block size: 1MB
+  - Target block time: 5s
+  - Network latency: 50-200ms
+  
+  Required Properties:
+  - Byzantine fault tolerance
+  - High throughput (>5000 TPS)
+  - Fast finality (<10s)
+  - Energy efficient
+  
+  Current Implementation:
+  class ConsensusEngine {
+      async proposeBlock(block: Block) {
+          const validators = this.getActiveValidators();
+          const votes = await this.collectVotes(validators);
+          return this.checkThreshold(votes);
+      }
+  }
+        </pre>
+        <p>Which consensus mechanism modification would best meet these requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Implement HotStuff BFT with pipelined three-phase commit and dynamic validator rotation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Use Proof of Stake with slashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Implement RAFT consensus",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Use Practical Byzantine Fault Tolerance (PBFT)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>You're debugging a network performance issue in a Kubernetes cluster. The following metrics are observed:</p>
+        <pre>
+  Pod Network Metrics:
+  - RTT between pods: 0.5-2ms
+  - Packet loss: 0.1%
+  - MTU: 1500
+  - TCP retransmissions: 2%
+  
+  Container Network Interface (CNI):
+  - Calico in IPIP mode
+  - Default MTU configuration
+  - BGP peering enabled
+  - Cross-node encryption enabled
+  
+  Node Configuration:
+  - AWS m5.2xlarge instances
+  - Enhanced networking enabled
+  - Security groups allowing all internal traffic
+        </pre>
+        <p>What's the most likely cause of the increased latency and packet loss?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "MTU misconfiguration causing packet fragmentation in IPIP tunnels",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Network congestion due to insufficient bandwidth",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "DNS resolution delays",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "TCP window size limitations",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: `
+        <p>You're refactoring a legacy monolithic application that processes financial transactions. The current code structure is:</p>
+        <pre>
+  class TransactionProcessor {
+      public void processTransaction(Transaction tx) {
+          // 500 lines of business logic
+          if (validateTransaction(tx)) {
+              updateAccountBalance(tx);
+              notifyUser(tx);
+              generateReport(tx);
+              updateAuditLog(tx);
+              calculateFees(tx);
+              updatePartnerSystem(tx);
+          }
+      }
+      
+      private boolean validateTransaction(Transaction tx) {
+          // 300 lines of validation logic
+      }
+      
+      // 10 more private methods, 200-300 lines each
+  }
+  
+  Current issues:
+  - High cyclomatic complexity
+  - Difficult to test
+  - Frequent bugs in edge cases
+  - Hard to add new features
+        </pre>
+        <p>Which refactoring approach would most effectively improve the code while minimizing risk?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Apply Command pattern with Chain of Responsibility for validation + Event sourcing for audit trail",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "Split into smaller methods",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "Add more error handling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Implement Factory pattern",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>You're training a deep learning model for image classification and observe this pattern in your training metrics:</p>
+        <pre>
+  Epoch 10:
+  Train accuracy: 0.99
+  Val accuracy: 0.82
+  Train loss: 0.02
+  Val loss: 1.45
+  
+  Model Architecture:
+  - ResNet50 backbone
+  - Global Average Pooling
+  - Dense(1024, ReLU)
+  - Dropout(0.5)
+  - Dense(512, ReLU)
+  - Dense(num_classes, softmax)
+  
+  Dataset:
+  - 10,000 training images
+  - 2,000 validation images
+  - 50 classes
+        </pre>
+        <p>Beyond basic regularization techniques, what's the most effective approach to improve the model's generalization?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Implement mixup augmentation with adaptive label smoothing based on model confidence",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Add more dropout layers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Increase model capacity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Use L1/L2 regularization",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a microservices architecture, you observe the following failure pattern during a partial network outage:</p>
+        <pre>
+  Service Dependencies:
+  A → B → C
+  A → D → C
+  B → E
+  D → E
+  
+  Observed Behavior:
+  1. Service E becomes unreachable
+  2. B and D increase in latency
+  3. A starts timing out
+  4. Circuit breakers trip
+  5. System partially recovers but with degraded functionality
+        </pre>
+        <p>What architectural pattern would best prevent this cascade of failures?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Implement bulkheads with static stability patterns and bounded queue backpressure",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Add more circuit breakers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Implement retry logic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Increase timeout values",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given a dynamic programming solution for the 0/1 knapsack problem:</p>
+        <pre>
+  def knapsack(values, weights, capacity):
+      n = len(values)
+      dp = [[0 for _ in range(capacity + 1)] 
+            for _ in range(n + 1)]
+      
+      for i in range(1, n + 1):
+          for w in range(capacity + 1):
+              if weights[i-1] <= w:
+                  dp[i][w] = max(
+                      values[i-1] + dp[i-1][w-weights[i-1]],
+                      dp[i-1][w]
+                  )
+              else:
+                  dp[i][w] = dp[i-1][w]
+      
+      return dp[n][capacity]
+  
+  Space Complexity: O(n * capacity)
+  Time Complexity: O(n * capacity)
+        </pre>
+        <p>For very large inputs where <code>n = 10⁶</code> and <code>capacity = 10⁵</code>, what optimization would most effectively reduce memory usage while maintaining reasonable time complexity?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "Use two 1D arrays and bitset optimization for weight tracking",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "Implement memoization instead of tabulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "Use a greedy approximation algorithm",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "Implement branch and bound",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>You're implementing a custom consensus mechanism for a permissioned blockchain. The requirements are:</p>
+        <pre>
+  Network Characteristics:
+  - 100 validator nodes
+  - Max block size: 1MB
+  - Target block time: 5s
+  - Network latency: 50-200ms
+  
+  Required Properties:
+  - Byzantine fault tolerance
+  - High throughput (>5000 TPS)
+  - Fast finality (<10s)
+  - Energy efficient
+  
+  Current Implementation:
+  class ConsensusEngine {
+      async proposeBlock(block: Block) {
+          const validators = this.getActiveValidators();
+          const votes = await this.collectVotes(validators);
+          return this.checkThreshold(votes);
+      }
+  }
+        </pre>
+        <p>Which consensus mechanism modification would best meet these requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Implement HotStuff BFT with pipelined three-phase commit and dynamic validator rotation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Use Proof of Stake with slashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Implement RAFT consensus",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Use Practical Byzantine Fault Tolerance (PBFT)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>You're debugging a network performance issue in a Kubernetes cluster. The following metrics are observed:</p>
+        <pre>
+  Pod Network Metrics:
+  - RTT between pods: 0.5-2ms
+  - Packet loss: 0.1%
+  - MTU: 1500
+  - TCP retransmissions: 2%
+  
+  Container Network Interface (CNI):
+  - Calico in IPIP mode
+  - Default MTU configuration
+  - BGP peering enabled
+  - Cross-node encryption enabled
+  
+  Node Configuration:
+  - AWS m5.2xlarge instances
+  - Enhanced networking enabled
+  - Security groups allowing all internal traffic
+        </pre>
+        <p>What's the most likely cause of the increased latency and packet loss?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "MTU misconfiguration causing packet fragmentation in IPIP tunnels",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Network congestion due to insufficient bandwidth",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "DNS resolution delays",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "TCP window size limitations",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: `
+        <p>You're refactoring a legacy monolithic application that processes financial transactions. The current code structure is:</p>
+        <pre>
+  class TransactionProcessor {
+      public void processTransaction(Transaction tx) {
+          // 500 lines of business logic
+          if (validateTransaction(tx)) {
+              updateAccountBalance(tx);
+              notifyUser(tx);
+              generateReport(tx);
+              updateAuditLog(tx);
+              calculateFees(tx);
+              updatePartnerSystem(tx);
+          }
+      }
+      
+      private boolean validateTransaction(Transaction tx) {
+          // 300 lines of validation logic
+      }
+      
+      // 10 more private methods, 200-300 lines each
+  }
+  
+  Current issues:
+  - High cyclomatic complexity
+  - Difficult to test
+  - Frequent bugs in edge cases
+  - Hard to add new features
+        </pre>
+        <p>Which refactoring approach would most effectively improve the code while minimizing risk?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Apply Command pattern with Chain of Responsibility for validation + Event sourcing for audit trail",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "Split into smaller methods",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "Add more error handling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Implement Factory pattern",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "blockchain",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionContent: `
+        <p>You're designing a decentralized application (DApp) for managing digital identities. The system should:</p>
+        <ul>
+          <li>Ensure user privacy</li>
+          <li>Prevent identity theft</li>
+          <li>Allow secure verification without revealing sensitive data</li>
+        </ul>
+        <p>Which cryptographic method is best suited for implementing such a system?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "Zero-Knowledge Proofs",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "SHA-256 Hashing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "Asymmetric Encryption (RSA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "Digital Signatures",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>Consider a machine learning model trained on a dataset containing imbalanced classes. Which of the following techniques would be most appropriate to address this issue?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Oversampling the minority class",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Using a higher learning rate",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Dropping rows from the majority class",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Switching to a smaller batch size",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>Which cloud computing service model provides an environment for deploying and managing applications without worrying about underlying hardware?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Function as a Service (FaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>In a penetration testing scenario, which technique is used to identify open ports on a target system?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cyber1",
+            answerContent: "Port Scanning",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber2",
+            answerContent: "Phishing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber3",
+            answerContent: "SQL Injection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber4",
+            answerContent: "Cross-Site Scripting (XSS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 2,
+      topicSlug: "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionContent: `
+        <p>A distributed database system uses the two-phase commit protocol (2PC) to ensure atomicity during transactions. Which of the following is a drawback of this protocol?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "It can lead to a blocking state if the coordinator fails.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "It doesn't guarantee consistency across nodes.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "It cannot detect deadlocks in transactions.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "It requires a quorum-based voting system.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a distributed system using the Raft consensus algorithm, consider a cluster with 5 nodes where 2 nodes have failed. The remaining nodes have the following log entries:</p>
+        <pre>
+  Node 1: [1, 2, 3, 4]
+  Node 2: [1, 2, 3]
+  Node 3: [1, 2, 3, 4, 5]
+        </pre>
+        <p>What will happen during the next leader election if Node 3's election timeout triggers first?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-raft1",
+            answerContent: "Node 3 will become leader as it has the most complete log",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raft2",
+            answerContent: "Election will fail due to lack of quorum",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raft3",
+            answerContent: "Node 1 will become leader as it has the second-most complete log",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-raft4",
+            answerContent: "A split vote will occur, triggering a new election",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>You're implementing a path-finding algorithm for a robot navigating a warehouse. The warehouse is represented as a grid where:</p>
+        <ul>
+          <li>Some cells contain obstacles (1)</li>
+          <li>Empty cells are marked as 0</li>
+          <li>The robot can move in 8 directions</li>
+          <li>The robot must maintain a minimum distance of 1 cell from obstacles</li>
+        </ul>
+        <p>Given this constraint matrix:</p>
+        <pre>
+  [0, 0, 0, 0, 0]
+  [0, 1, 0, 1, 0]
+  [0, 0, 0, 0, 0]
+  [1, 0, 0, 0, 0]
+  [0, 0, 0, 1, 0]
+        </pre>
+        <p>What is the minimum distance from point (0,0) to (4,4) while maintaining the safety distance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-path1",
+            answerContent: "7",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-path2",
+            answerContent: "5",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-path3",
+            answerContent: "6",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-path4",
+            answerContent: "8",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Consider a neural network using batch normalization. Given the following mini-batch statistics during training:</p>
+        <p>Mean (μ) = 10<br>Variance (σ²) = 4<br>γ (scale parameter) = 2<br>β (shift parameter) = 1</p>
+        <p>For an input value x = 14, calculate the batch-normalized output using the formula:</p>
+        <p style="text-align: center">y = γ * ((x - μ) / √(σ² + ε)) + β</p>
+        <p>Assume ε = 0.001</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bn1",
+            answerContent: "5",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn2",
+            answerContent: "3",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn3",
+            answerContent: "4",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bn4",
+            answerContent: "6",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>You're implementing a custom consensus mechanism for a private blockchain. Given:</p>
+        <ul>
+          <li>Block timestamp: t</li>
+          <li>Previous block hash: h</li>
+          <li>Transaction merkle root: m</li>
+          <li>Nonce: n</li>
+        </ul>
+        <p>The block scoring function S is defined as:</p>
+        <p style="text-align: center">${'S(t,h,m,n) = \\frac{h \\oplus m}{2^{32}} + \\frac{t}{n}'}</p>
+        <p>If h = 0xA1B2C3D4, m = 0x1234ABCD, t = 1000, and n = 10, what is the block score? (Round to 3 decimal places)</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "2.718",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "3.141",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "1.414",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "4.669",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>You're analyzing a dataset of customer purchases and notice the following pattern in the data:</p>
+        <pre>
+  Customer ID | Purchase Amount | Day of Week
+      1       |      $120      |  Monday
+      2       |      $350      |  Monday
+      3       |      $95       |  Tuesday
+      4       |      $410      |  Wednesday
+      5       |      $225      |  Wednesday
+        </pre>
+        <p>If the Interquartile Range (IQR) method defines outliers as values that fall below Q1 - 1.5×IQR or above Q3 + 1.5×IQR, which purchase amount is an outlier?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "$410",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "$95",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "$120",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "No outliers present",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>Consider this CSS flexbox container:</p>
+        <pre>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .item {
+    width: 50px;
+    height: 50px;
+  }
+        </pre>
+        <p>If three .item elements are placed inside this container, and the second item has the additional CSS property <code>align-self: flex-start</code>, how will the items be positioned?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-flex1",
+            answerContent: "All items will be evenly spaced horizontally, with the middle item aligned to the top",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-flex2",
+            answerContent: "All items will be stacked vertically",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-flex3",
+            answerContent: "Items will be centered both horizontally and vertically",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-flex4",
+            answerContent: "The middle item will overlap with other items",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Given these two SQL tables:</p>
+        <pre>
+  Products:                     Orders:
+  +----+---------+-------+     +----+------------+---------+
+  | id | name    | price |     | id | product_id | quantity|
+  +----+---------+-------+     +----+------------+---------+
+  | 1  | Laptop  | 1000  |     | 1  | 1         | 2       |
+  | 2  | Mouse   | 25    |     | 2  | 3         | 1       |
+  | 3  | Monitor | 200   |     | 3  | 2         | 3       |
+  +----+---------+-------+     | 4  | 1         | 1       |
+                              +----+------------+---------+
+        </pre>
+        <p>Which SQL query will correctly calculate the total revenue (price × quantity) for each product, including products with no orders?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sql1",
+            answerContent: "SELECT p.name, COALESCE(SUM(p.price * o.quantity), 0) as revenue FROM Products p LEFT JOIN Orders o ON p.id = o.product_id GROUP BY p.name",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql2",
+            answerContent: "SELECT p.name, SUM(p.price * o.quantity) as revenue FROM Products p JOIN Orders o ON p.id = o.product_id GROUP BY p.name",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql3",
+            answerContent: "SELECT p.name, SUM(p.price * o.quantity) as revenue FROM Products p RIGHT JOIN Orders o ON p.id = o.product_id GROUP BY p.name",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql4",
+            answerContent: "SELECT p.name, COALESCE(p.price * o.quantity, 0) as revenue FROM Products p LEFT JOIN Orders o ON p.id = o.product_id",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're testing a function that validates email addresses. The function has these requirements:</p>
+        <ul>
+          <li>Must contain exactly one @ symbol</li>
+          <li>Local part (before @) must be 1-64 characters</li>
+          <li>Domain part (after @) must be 1-255 characters</li>
+          <li>Must end with a valid TLD (2+ characters)</li>
+        </ul>
+        <p>Which test case is an example of boundary value analysis?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "a@b.cc (testing minimum length requirements for all parts)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "test@example.com (testing typical email format)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "test.email+alias@example.com (testing special characters)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "@example.com (testing missing local part)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>Consider this Python class hierarchy:</p>
+        <pre>
+  class Vehicle:
+      def __init__(self, speed):
+          self._speed = speed
+      
+      @property
+      def speed(self):
+          return self._speed
+  
+  class Car(Vehicle):
+      def __init__(self, speed, fuel_type):
+          super().__init__(speed)
+          self._fuel_type = fuel_type
+          
+      @property
+      def speed(self):
+          return super().speed * 1.1
+        </pre>
+        <p>What will be the output of this code?</p>
+        <pre>
+  car = Car(100, "gasoline")
+  print(car.speed)
+        </pre>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "110.0",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "100",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Error: speed is a private attribute",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "None",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>Which of the following tags is used to create a hyperlink in HTML?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "<a>",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "<link>",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "<href>",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "<nav>",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "python",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>Which keyword is used to define a function in Python?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-python1",
+            answerContent: "def",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-python2",
+            answerContent: "func",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-python3",
+            answerContent: "function",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-python4",
+            answerContent: "declare",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>Which data structure is best suited for implementing a depth-first search (DFS) algorithm?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Stack",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Queue",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Linked List",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Binary Tree",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>Which of the following scheduling algorithms can lead to starvation for low-priority processes?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Priority Scheduling",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "Round Robin",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "First-Come, First-Served (FCFS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "Multilevel Queue",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>Which protocol is used to transfer web pages over the Internet?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "HTTP",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "FTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "SMTP",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "SSH",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "programming-basics",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>What is the output of the following code in JavaScript?</p>
+        <pre><code>
+          console.log(1 + '2' + 3);
+        </code></pre>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-prog1",
+            answerContent: `"123"`,
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-prog2",
+            answerContent: `"6"`,
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-prog3",
+            answerContent: `"15"`,
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-prog4",
+            answerContent: `"undefined"`,
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: `
+        <p>You're processing a stream of IoT sensor data with these characteristics:</p>
+        <ul>
+          <li>1 million events per second</li>
+          <li>Each event is 1KB in size</li>
+          <li>Requires real-time anomaly detection (within 5 seconds)</li>
+          <li>Needs to maintain a 7-day sliding window for historical analysis</li>
+        </ul>
+        <p>Your current architecture using Apache Kafka is showing increased latency. Which modification would best address both the real-time and historical requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Implement a Lambda architecture with Storm for real-time processing and Spark for batch processing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Scale up Kafka broker resources and increase partition count",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "Switch to Apache Flink with checkpointing enabled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Use Apache Cassandra for both real-time and historical data",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: `
+        <p>During a security audit of your microservices architecture, you discover the following issues:</p>
+        <pre>
+  Service A (Python) - JWT validation
+  Service B (Node.js) - API Gateway
+  Service C (Java) - Authentication Service
+        </pre>
+        <p>The security logs show:</p>
+        <pre>
+  [Error] Service A accepting expired tokens
+  [Warning] Multiple replay attacks detected
+  [Critical] Token signature verification bypassed
+        </pre>
+        <p>What is the root cause of these security vulnerabilities?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "Inconsistent JWT validation across services due to clock skew and non-standardized validation logic",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "Weak encryption algorithms in token generation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "Missing rate limiting in the API Gateway",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "Insufficient SSL/TLS configuration",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>You're refactoring a game engine's rendering system. Current implementation:</p>
+        <pre>
+  class Renderer {
+    void render(GameObject obj) {
+      if (obj instanceof Player)
+        renderPlayer((Player)obj);
+      else if (obj instanceof Enemy)
+        renderEnemy((Enemy)obj);
+      else if (obj instanceof Projectile)
+        renderProjectile((Projectile)obj);
+    }
+  }
+        </pre>
+        <p>The game needs to support modding, allowing users to add new game objects with custom rendering logic. Which design pattern combination would best solve this while maintaining SOLID principles?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Visitor Pattern with Strategy Pattern, allowing runtime registration of new rendering strategies",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Factory Method with Template Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Command Pattern with Observer Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Decorator Pattern with Singleton Pattern",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>Your team's CI/CD pipeline is experiencing issues:</p>
+        <ul>
+          <li>Tests pass locally but fail in CI</li>
+          <li>Deployments succeed but application crashes</li>
+          <li>Build artifacts vary between environments</li>
+          <li>Integration tests are flaky</li>
+        </ul>
+        <p>Current pipeline:</p>
+        <pre>
+  Build → Unit Tests → Integration Tests → Deploy
+        </pre>
+        <p>Which combination of changes would most effectively improve pipeline reliability?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "Implement deterministic builds with containerization and add chaos engineering stages",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "Increase test timeout values and retry failed tests",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "Add more staging environments",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "Implement blue-green deployments",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>You're designing a supply chain tracking system using blockchain. Requirements:</p>
+        <ul>
+          <li>Track 100,000 items daily</li>
+          <li>Multiple stakeholders need write access</li>
+          <li>Transaction finality within 5 minutes</li>
+          <li>Regulatory compliance requires data privacy</li>
+        </ul>
+        <p>Current implementation using public Ethereum is too expensive and slow. Which architecture would best meet these requirements while maintaining decentralization?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "Hyperledger Fabric with private channels and customized consensus per channel",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "Layer 2 solution on Ethereum using Optimistic Rollups",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "Private Ethereum network with Proof of Authority",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "Multichain implementation with bridging contracts",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "javascript",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>What is the purpose of the <code>isNaN()</code> function in JavaScript?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "js-q1",
+            answerContent: "To check if a value is NaN (Not a Number)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "js-q2",
+            answerContent: "To convert a number to a string",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "js-q3",
+            answerContent: "To check if a variable is defined",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "js-q4",
+            answerContent: "To parse a string to a number",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "css",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>Which CSS property is used to make the background of an element semi-transparent?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "css-q1",
+            answerContent: "background-color with rgba()",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "css-q2",
+            answerContent: "opacity",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "css-q3",
+            answerContent: "filter: alpha(opacity=50)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "css-q4",
+            answerContent: "color: transparent",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>Which algorithmic technique does Merge Sort use?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "algos-q1",
+            answerContent: "Divide and Conquer",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "algos-q2",
+            answerContent: "Greedy",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "algos-q3",
+            answerContent: "Dynamic Programming",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "algos-q4",
+            answerContent: "Backtracking",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "sql",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>Which SQL statement is used to retrieve data from a database?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "sql-q1",
+            answerContent: "SELECT",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "sql-q2",
+            answerContent: "INSERT",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "sql-q3",
+            answerContent: "UPDATE",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "sql-q4",
+            answerContent: "DELETE",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "react",
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionContent: `
+        <p>What is the purpose of the <code>useState</code> hook in React?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "react-q1",
+            answerContent: "To manage state in a functional component",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "react-q2",
+            answerContent: "To fetch data from an API",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "react-q3",
+            answerContent: "To add styles to a component",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "react-q4",
+            answerContent: "To create routes in an application",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "python",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>What will be the output of the following code?</p>
+        <pre><code>
+        def add_items(a, b=[]):
+            b.append(a)
+            return b
+        print(add_items(1))
+        print(add_items(2))
+        </code></pre>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "python-q1",
+            answerContent: `[1]\n[1, 2]`,
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "python-q2",
+            answerContent: `[1]\n[2]`,
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "python-q3",
+            answerContent: `[1, 2]\n[1, 2]`,
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "python-q4",
+            answerContent: `Error: Default argument is mutable`,
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "databases",
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionContent: `
+        <p>What is a foreign key in relational databases?</p>
+      `,
+      questionData: {
+        answers: [
+          {
+            key: "db-q1",
+            answerContent:
+              "A field in one table that uniquely identifies a row in another table",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "db-q2",
+            answerContent:
+              "A unique identifier for rows within the same table",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "db-q3",
+            answerContent:
+              "A field that contains only unique values in a table",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "db-q4",
+            answerContent: "A field used to perform arithmetic calculations",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>You're analyzing customer purchase data and notice the following pattern in your dataset:</p>
+        <pre>
+  Customer ID | Purchase Amount | Day of Week
+  1001        | $150           | Monday
+  1002        | $25            | Monday
+  1001        | $200           | Tuesday
+  1003        | $75            | Wednesday
+        </pre>
+        <p>Which SQL query would correctly calculate the average purchase amount per customer?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "SELECT Customer_ID, AVG(Purchase_Amount) FROM purchases GROUP BY Customer_ID",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "SELECT AVG(Purchase_Amount) FROM purchases",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "SELECT Customer_ID, SUM(Purchase_Amount) FROM purchases GROUP BY Customer_ID",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "SELECT DISTINCT Customer_ID, Purchase_Amount FROM purchases",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>Users are reporting that your web application is slow to load. You check the Network tab in Chrome DevTools and see:</p>
+        <ul>
+          <li>main.js - 2.5MB</li>
+          <li>styles.css - 500KB</li>
+          <li>hero-image.jpg - 3MB</li>
+          <li>First Contentful Paint: 3.5s</li>
+        </ul>
+        <p>Which optimization would most effectively improve the initial load time?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "Implement code splitting and lazy loading for non-critical JavaScript",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "Add a service worker",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "Minify the CSS file",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "Enable HTTP/2",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're writing unit tests for a shopping cart calculation function:</p>
+        <pre>
+  function calculateTotal(items, discount) {
+    let total = items.reduce((sum, item) => 
+      sum + item.price * item.quantity, 0);
+    return total * (1 - discount);
+  }
+        </pre>
+        <p>Which test case is most likely to catch potential bugs?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Test with empty items array and non-zero discount",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Test with single item and no discount",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Test with multiple items and 50% discount",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Test with single item and 100% discount",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: `
+        <p>Your mobile app is experiencing battery drain issues. The profiler shows:</p>
+        <pre>
+  - GPS updates every 30 seconds
+  - Background network calls every minute
+  - Camera preview running in background
+  - Continuous sensor polling
+        </pre>
+        <p>What change would most effectively reduce battery consumption while maintaining core functionality?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-mob1",
+            answerContent: "Implement location updates based on significant movement instead of time intervals",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob2",
+            answerContent: "Reduce network call frequency to every 5 minutes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob3",
+            answerContent: "Use push notifications instead of polling",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-mob4",
+            answerContent: "Compress data before transmission",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: `
+        <p>You're working on a document processing application that needs to:</p>
+        <ul>
+          <li>Support multiple document formats (PDF, DOCX, TXT)</li>
+          <li>Allow format conversion between any two formats</li>
+          <li>Maintain clean separation of format-specific code</li>
+          <li>Be easily extensible for new formats</li>
+        </ul>
+        <p>Which design pattern would best handle these requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Adapter pattern with Bridge pattern for format handling",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Factory pattern with Strategy pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Decorator pattern with Observer pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Singleton pattern with Template pattern",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: `
+        <p>Your e-commerce app's analytics show:</p>
+        <pre>
+  Cart Abandonment Rate: 75%
+  Steps to Purchase: 6
+  Form Fields: 12
+  Mobile Users: 60%
+        </pre>
+        <p>A/B testing reveals users drop off most at the shipping information page. What UX improvement would most likely increase conversion rate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Implement address autocomplete with browser geolocation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "Add a progress indicator",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Implement guest checkout",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "Add form validation messages",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>During a security audit of a web application, you find:</p>
+        <pre>
+  // Login form submission
+  $.ajax({
+    url: '/api/login',
+    method: 'POST',
+    data: {
+      username: username,
+      password: password
+    }
+  });
+        </pre>
+        <p>Which security vulnerability is present in this code?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Passwords are transmitted in plaintext without HTTPS enforcement",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "SQL injection vulnerability",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Cross-site scripting (XSS) vulnerability",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "CSRF token missing",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: `
+        <p>In the context of Binary Search Trees (BST), which of the following statements correctly describes a balanced BST?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "The heights of the left and right subtrees of every node differ by at most one",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All levels of the tree must be completely filled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "The tree must have an equal number of left and right nodes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "All leaf nodes must be at the same level",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>Which of the following best describes the primary purpose of the Process Control Block (PCB) in operating systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Stores all the information needed to manage and restore a process, including registers and state",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "Controls the execution of processes in the CPU",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "Manages the allocation of memory to different processes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "Handles communication between different processes",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>In the TCP/IP protocol stack, what is the primary purpose of the Transport layer?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Provides end-to-end communication services and ensures reliable data delivery",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Handles physical transmission of data over network hardware",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Manages logical addressing and routing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Provides user interfaces and applications",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: `
+        <p>What is the key characteristic of a greedy algorithm that distinguishes it from other algorithm types?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "Makes locally optimal choices at each step without reconsidering previous choices",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "Always produces a globally optimal solution",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "Uses recursion to solve smaller subproblems",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "Requires sorting the input data first",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Which normalization form (NF) eliminates transitive dependencies in a relational database?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Third Normal Form (3NF)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "First Normal Form (1NF)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Second Normal Form (2NF)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Boyce-Codd Normal Form (BCNF)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: `
+        <p>What is the key difference between optimistic and pessimistic concurrency control in database systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-adb1",
+            answerContent: "Optimistic assumes conflicts are rare and checks at commit time, while pessimistic locks resources in advance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb2",
+            answerContent: "Optimistic provides better performance in all scenarios",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb3",
+            answerContent: "Pessimistic control never leads to deadlocks",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb4",
+            answerContent: "Optimistic control guarantees serializability while pessimistic doesn't",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>Which principal characteristic of Object-Oriented Programming allows a class to have multiple methods with the same name but different parameters?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Method Overloading",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Method Overriding",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Encapsulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In the context of distributed systems, what is the CAP theorem's fundamental assertion?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "A distributed system can only guarantee two out of three properties: Consistency, Availability, and Partition tolerance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All three properties can be achieved simultaneously with proper design",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Only one property can be guaranteed at any time",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "The properties are mutually inclusive and always present",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: `
+        <p>In the context of Binary Search Trees (BST), which of the following statements correctly describes a balanced BST?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "The heights of the left and right subtrees of every node differ by at most one",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All levels of the tree must be completely filled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "The tree must have an equal number of left and right nodes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "All leaf nodes must be at the same level",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>Which of the following best describes the primary purpose of the Process Control Block (PCB) in operating systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Stores all the information needed to manage and restore a process, including registers and state",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "Controls the execution of processes in the CPU",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "Manages the allocation of memory to different processes",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "Handles communication between different processes",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>In the TCP/IP protocol stack, what is the primary purpose of the Transport layer?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Provides end-to-end communication services and ensures reliable data delivery",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Handles physical transmission of data over network hardware",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Manages logical addressing and routing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Provides user interfaces and applications",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: `
+        <p>What is the key characteristic of a greedy algorithm that distinguishes it from other algorithm types?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "Makes locally optimal choices at each step without reconsidering previous choices",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "Always produces a globally optimal solution",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "Uses recursion to solve smaller subproblems",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "Requires sorting the input data first",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Which normalization form (NF) eliminates transitive dependencies in a relational database?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Third Normal Form (3NF)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "First Normal Form (1NF)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Second Normal Form (2NF)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Boyce-Codd Normal Form (BCNF)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: `
+        <p>What is the key difference between optimistic and pessimistic concurrency control in database systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-adb1",
+            answerContent: "Optimistic assumes conflicts are rare and checks at commit time, while pessimistic locks resources in advance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb2",
+            answerContent: "Optimistic provides better performance in all scenarios",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb3",
+            answerContent: "Pessimistic control never leads to deadlocks",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-adb4",
+            answerContent: "Optimistic control guarantees serializability while pessimistic doesn't",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>Which principal characteristic of Object-Oriented Programming allows a class to have multiple methods with the same name but different parameters?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Method Overloading",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Method Overriding",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Encapsulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In the context of distributed systems, what is the CAP theorem's fundamental assertion?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "A distributed system can only guarantee two out of three properties: Consistency, Availability, and Partition tolerance",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "All three properties can be achieved simultaneously with proper design",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Only one property can be guaranteed at any time",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "The properties are mutually inclusive and always present",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>What is the primary difference between supervised and unsupervised learning?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Supervised learning uses labeled training data, while unsupervised learning works with unlabeled data",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Supervised learning is faster than unsupervised learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Supervised learning requires less data than unsupervised learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Unsupervised learning always produces more accurate results",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>What is the main principle behind the Microservices architectural pattern?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sa1",
+            answerContent: "Building an application as a collection of small, autonomous services that are independently deployable",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa2",
+            answerContent: "Creating a single, large codebase for better management",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa3",
+            answerContent: "Using a single database for all application components",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sa4",
+            answerContent: "Maximizing code reuse through tight coupling",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: `
+        <p>What problem does the Observer design pattern solve?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Defines a one-to-many dependency between objects where all dependents are notified automatically of state changes",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Creates objects without exposing the instantiation logic",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Provides a surrogate or placeholder for another object",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Ensures a class has only one instance",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>In artificial neural networks, what is the purpose of an activation function?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Introduces non-linearity to help the network learn complex patterns",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Speeds up the training process",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Reduces the number of parameters in the model",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Prevents overfitting by regularizing weights",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>What is the main purpose of the ARP (Address Resolution Protocol) in networking?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Maps IP addresses to MAC addresses in local network communications",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Assigns IP addresses to network devices",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Routes packets between different networks",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Encrypts network traffic",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>What is the key characteristic of Platform as a Service (PaaS) in cloud computing?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cc1",
+            answerContent: "Provides a platform allowing customers to develop, run, and manage applications without dealing with infrastructure",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc2",
+            answerContent: "Offers only virtual machines and storage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3",
+            answerContent: "Delivers software applications over the internet",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc4",
+            answerContent: "Provides complete control over the underlying hardware",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: `
+        <p>What is the primary purpose of the SOLID principles in software engineering?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "To create software designs that are more understandable, flexible, and maintainable",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "To improve code execution speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "To reduce memory usage in applications",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "To ensure backward compatibility",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: `
+        <p>What is the key advantage of using a hash table data structure?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Provides constant-time O(1) average case complexity for insertions and lookups",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Maintains elements in sorted order",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Uses less memory than arrays",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Guarantees no collisions",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>What is the main purpose of public key infrastructure (PKI)?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Creates and manages digital certificates to establish trust in public key cryptography",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Provides firewall protection",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Detects network intrusions",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Manages user passwords",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>What is the primary purpose of virtual memory in operating systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "Provides programs with a uniform view of memory and allows them to run with less physical memory than they require",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "Makes the computer run faster by caching frequently used programs",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "Prevents programs from accessing each other's memory space",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "Stores temporary files when the hard drive is full",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>What is the main difference between localStorage and sessionStorage in web browsers?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "localStorage persists after browser restart while sessionStorage is cleared when the session ends",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "localStorage has less storage capacity than sessionStorage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "sessionStorage is more secure than localStorage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "localStorage is synchronous while sessionStorage is asynchronous",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>What is the main purpose of an index in a database?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Speed up data retrieval operations by providing quick access paths to rows",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Ensure data integrity and consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Reduce the size of the database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Prevent unauthorized access to data",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>What is the primary difference between black-box and white-box testing?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Black-box testing examines functionality without knowledge of internal code, while white-box testing examines internal logic",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Black-box testing is automated while white-box testing is manual",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Black-box testing is used for unit tests while white-box testing is for integration tests",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Black-box testing is more time-consuming than white-box testing",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>What is the main purpose of containerization in DevOps?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "Package applications with their dependencies to ensure consistent behavior across different environments",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "Improve application performance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "Reduce the cost of cloud services",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "Provide better security than virtual machines",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>What is the purpose of consensus mechanisms in blockchain systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-block1",
+            answerContent: "Ensure all nodes agree on the current state of the network without requiring central authority",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block2",
+            answerContent: "Increase transaction speed",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block3",
+            answerContent: "Reduce the size of the blockchain",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-block4",
+            answerContent: "Encrypt transaction data",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>What is the primary purpose of feature scaling in data preprocessing?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Normalize features to a similar scale to prevent certain features from dominating the model",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Reduce the number of features in the dataset",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Increase the accuracy of the model by adding more features",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Remove outliers from the dataset",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>What is the main difference between supervised and reinforcement learning?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Supervised learning uses labeled training data, while reinforcement learning learns through trial and error with rewards",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Supervised learning is more complex than reinforcement learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Reinforcement learning requires more data than supervised learning",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Supervised learning is newer than reinforcement learning",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>What is the purpose of a buffer overflow attack?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Exploit programs by writing data beyond buffer boundaries to execute malicious code",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Overload network bandwidth",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Steal user passwords",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Encrypt system files",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>What is the purpose of a message queue in distributed systems?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dist1",
+            answerContent: "Enable asynchronous communication between components and handle temporary service outages",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist2",
+            answerContent: "Speed up data processing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist3",
+            answerContent: "Store system configuration",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist4",
+            answerContent: "Manage user authentication",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a microservices architecture, you notice that Service A occasionally receives outdated data from Service B, despite both services being operational. The system uses event-driven communication and implements eventual consistency. Given the following system characteristics:</p>
+        <ul>
+          <li>Multiple instances of each service running across different regions</li>
+          <li>Message queues for asynchronous communication</li>
+          <li>Cache layers in both services</li>
+        </ul>
+        <p>Which phenomenon is most likely causing this behavior?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "Split-brain syndrome with conflicting cache invalidation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Network partition tolerance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Message queue overflow",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Database replication lag",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>You're optimizing a real-time bidding system for an advertising platform. Given a bid request with \(n\) advertisers, each having a budget \(b_i\) and bid value \(v_i\), you need to maximize revenue while ensuring fair distribution. The system must respond within 100ms.</p>
+        <p>If \(T(n)\) represents the time complexity of your algorithm, which approach satisfies both the time constraint and optimization requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ao1",
+            answerContent: "Greedy algorithm with max-heap prioritization where \(T(n) = O(n\\log n)\)",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ao2",
+            answerContent: "Dynamic programming solution where \(T(n) = O(n^2)\)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ao3",
+            answerContent: "Linear scan with sorting where \(T(n) = O(n^2\\log n)\)",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-ao4",
+            answerContent: "Binary search trees where \(T(n) = O(n\\log^2 n)\)",
+            isCorrect: false,
+            isLatex: true,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>You're building a recommendation system for a streaming platform. The system exhibits the following behavior:</p>
+        <ul>
+          <li>High accuracy for users with extensive watch history</li>
+          <li>Poor performance for new users</li>
+          <li>Consistently recommends popular items regardless of user preferences</li>
+        </ul>
+        <p>Which combination of techniques would best address these issues while maintaining system performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Content-based filtering with collaborative filtering and bandits algorithm",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Pure collaborative filtering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Demographic-based filtering only",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Random forest with supervised learning",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>During a security audit of a web application, you discover the following code snippet in a login function:</p>
+        <pre>
+  query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
+  result = database.execute(query);
+  if(result.length > 0) { return true; }
+        </pre>
+        <p>Beyond the obvious SQL injection vulnerability, which additional security issues exist in this implementation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Plain text password storage, no password hashing, timing attack vulnerability, and no input sanitization",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Only SQL injection vulnerability",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Missing HTTPS protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Weak encryption algorithm",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>In a high-throughput e-commerce system, you notice the following query pattern is causing performance issues:</p>
+        <pre>
+  SELECT o.order_id, o.total_amount, 
+         p.product_name, p.price,
+         c.customer_name, c.email
+  FROM orders o
+  JOIN order_items oi ON o.order_id = oi.order_id
+  JOIN products p ON oi.product_id = p.product_id
+  JOIN customers c ON o.customer_id = c.customer_id
+  WHERE o.status = 'processing'
+  AND o.created_at > CURRENT_DATE - INTERVAL '7 days'
+  ORDER BY o.created_at DESC;
+        </pre>
+        <p>Which optimization technique would provide the most significant performance improvement while maintaining data consistency?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Create a materialized view with incremental updates and appropriate indices",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Add more RAM to the database server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Convert all JOINs to subqueries",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Switch to NoSQL database",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You're debugging a website where clicking a button should update the displayed user profile, but nothing happens. The developer console shows this code:</p>
+        <pre>
+  button.addEventListener('click', function() {
+      const userProfile = fetchUserProfile();
+      displayProfile(userProfile);
+  });
+  
+  function fetchUserProfile() {
+      return fetch('/api/profile');
+  }
+        </pre>
+        <p>What is the most likely cause of this issue?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "The fetch response is not being awaited with async/await or .then()",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "The button element is not in the DOM",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "The function name is misspelled",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "The event listener is using the wrong event type",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>A data analyst provides you with this Python code to calculate the average age of users:</p>
+        <pre>
+  total_age = 0
+  user_count = 0
+  for user in users:
+      if user.age > 0:
+          total_age += user.age
+          user_count += 1
+  average_age = total_age / user_count
+        </pre>
+        <p>Which potential issue should be addressed to make this code more robust?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "Division by zero if no users meet the age criteria",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "Incorrect age calculation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "Wrong loop syntax",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "Missing user import",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>You're reviewing code for a simple banking application and find this class:</p>
+        <pre>
+  class BankAccount {
+      private double balance;
+      
+      public void deposit(double amount) {
+          balance = balance + amount;
+      }
+      
+      public void withdraw(double amount) {
+          balance = balance - amount;
+      }
+  }
+        </pre>
+        <p>Which important validation is missing from this implementation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Checking if the amount is positive and if there are sufficient funds for withdrawal",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Adding a constructor",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Including a toString method",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Making the class public",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're writing unit tests for a function that validates email addresses. Which test case would be most valuable to include first?</p>
+        <pre>
+  function isValidEmail(email) {
+      return email.includes('@') && email.includes('.');
+  }
+        </pre>
+        <p>Select the most critical test case that should be implemented:</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Testing with null or empty input to prevent runtime errors",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Testing with a valid email address",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Testing with multiple @ symbols",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Testing with uppercase letters",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>Your team's CI/CD pipeline suddenly starts failing with this error in the logs:</p>
+        <pre>
+  Error: no space left on device
+  Pipeline failed: build artifacts could not be saved
+        </pre>
+        <p>Given that the application code hasn't changed, what is the most appropriate first step to investigate this issue?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "Check if old build artifacts and Docker images need cleanup",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "Restart the CI/CD server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "Update the build scripts",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "Add more RAM to the server",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    }
   ]
