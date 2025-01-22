@@ -145,6 +145,9 @@ const Courses = () => {
   const [overviewMessage, setOverviewMessage] = useState(
     thisCourse?.courseDescription as string
   );
+  const [introduction, setIntroductionMessage] = useState(
+    thisCourse?.courseIntroduction as string
+  );
   const [slidesMessage, setSlidesMessage] = useState(
     (thisCourse?.courseMedia as CourseMedia[]) ?? []
   );
@@ -157,6 +160,7 @@ const Courses = () => {
 
   useEffect(() => {
     setOverviewMessage(details?.courseDescription as string);
+    setIntroductionMessage(details?.courseIntroduction as string);
     setSlidesMessage((thisCourse?.courseMedia as CourseMedia[]) ?? []);
     setFileDisplay(
       (thisCourse?.courseMedia as CourseMedia[])?.map(
@@ -167,6 +171,7 @@ const Courses = () => {
     setAdditionalMessage(details?.markdown as string);
   }, [
     details?.courseDescription,
+    details?.courseIntroduction,
     details?.markdown,
     details?.video,
     thisCourse?.courseMedia,
@@ -312,11 +317,10 @@ const Courses = () => {
                     ? theme.colors.dark[6]
                     : theme.white,
                 boxShadow: theme.shadows.md,
-                border: `1px solid ${
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[4]
-                    : theme.colors.gray[1]
-                }`,
+                border: `1px solid ${theme.colorScheme === "dark"
+                  ? theme.colors.dark[4]
+                  : theme.colors.gray[1]
+                  }`,
               },
 
               active: {
@@ -405,6 +409,19 @@ const Courses = () => {
                     }),
                   }}
                 />
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(c.courseIntroduction, {
+                      ADD_TAGS: ["iframe"],
+                      ADD_ATTR: [
+                        "allow",
+                        "allowfullscreen",
+                        "frameborder",
+                        "scrolling",
+                      ],
+                    }),
+                  }}
+                />
               </TypographyStylesProvider>
               <Group className={classes.action}>
                 <Button
@@ -456,21 +473,20 @@ const Courses = () => {
                   Number of students who attempted
                 </Text>
                 <Text weight={700} size="xl">
-                  {`${
-                    Array.from(
-                      new Set(
-                        attempts.data
-                          .filter((user) =>
-                            details?.topics.some(
-                              (topic) =>
-                                topic.topicSlug ===
-                                user.questionWithAddedTime.question.topicSlug
-                            )
+                  {`${Array.from(
+                    new Set(
+                      attempts.data
+                        .filter((user) =>
+                          details?.topics.some(
+                            (topic) =>
+                              topic.topicSlug ===
+                              user.questionWithAddedTime.question.topicSlug
                           )
-                          .map((user) => user.userId)
-                      )
-                    ).length
-                  }/${users.data.length}`}
+                        )
+                        .map((user) => user.userId)
+                    )
+                  ).length
+                    }/${users.data.length}`}
                 </Text>
               </div>
             </Group>
@@ -643,11 +659,10 @@ const Courses = () => {
                                         theme.colorScheme === "dark"
                                           ? theme.colors.dark[0]
                                           : theme.colors.gray[9],
-                                      border: `1px solid ${
-                                        theme.colorScheme === "dark"
-                                          ? theme.colors.dark[6]
-                                          : theme.colors.gray[4]
-                                      }`,
+                                      border: `1px solid ${theme.colorScheme === "dark"
+                                        ? theme.colors.dark[6]
+                                        : theme.colors.gray[4]
+                                        }`,
                                       padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
                                       cursor: "pointer",
                                       fontSize: theme.fontSizes.sm,
@@ -841,6 +856,7 @@ const Courses = () => {
         onClose={() => {
           setOpenedEdit(false);
           setOverviewMessage(thisCourse?.courseDescription as string);
+          setIntroductionMessage(thisCourse?.courseIntroduction as string);
           setVideoMessage(thisCourse?.video as string);
           setAdditionalMessage(thisCourse?.markdown as string);
         }}
@@ -915,7 +931,7 @@ const Courses = () => {
                     stroke={1.5}
                     color={
                       theme.colors[theme.primaryColor]?.[
-                        theme.colorScheme === "dark" ? 4 : 6
+                      theme.colorScheme === "dark" ? 4 : 6
                       ]
                     }
                   />
@@ -971,6 +987,7 @@ const Courses = () => {
                 onClick={() => {
                   setOpenedEdit(false);
                   setOverviewMessage(details?.courseDescription as string);
+                  setIntroductionMessage(details?.courseIntroduction as string);
                   setSlidesMessage(details?.courseMedia as CourseMedia[]);
                   setVideoMessage(details?.video as string);
                   setAdditionalMessage(details?.markdown as string);
@@ -990,9 +1007,8 @@ export default Courses;
 
 const useStyles = createStyles((theme) => ({
   card: {
-    border: `1px solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]
-    }`,
+    border: `1px solid ${theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]
+      }`,
   },
 
   cardTitle: {
@@ -1018,9 +1034,8 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
     boxShadow: theme.shadows.xs,
     overflow: "hidden",
-    border: `1px solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[1]
-    }`,
+    border: `1px solid ${theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[1]
+      }`,
   },
 
   control: {
@@ -1037,19 +1052,19 @@ const useStyles = createStyles((theme) => ({
     backgroundColor:
       theme.colorScheme === "dark"
         ? theme.fn.variant({
-            variant: "light",
-            color: theme.primaryColor,
-          }).background
+          variant: "light",
+          color: theme.primaryColor,
+        }).background
         : theme.fn.variant({
-            variant: "filled",
-            color: theme.primaryColor,
-          }).background,
+          variant: "filled",
+          color: theme.primaryColor,
+        }).background,
     color:
       theme.colorScheme === "dark"
         ? theme.fn.variant({ variant: "light", color: theme.primaryColor })
-            .color
+          .color
         : theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-            .color,
+          .color,
   },
 
   image: {
