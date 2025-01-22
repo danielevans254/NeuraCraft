@@ -114,42 +114,49 @@ export default function CoursesPage() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-8">All Courses</h1>
         </div>
       </div>
-      {/* TODO: Create an initial quiz */}
-      {[
-        { title: "Quizzes", type: CourseType.Quiz },
-        { title: "Foundational Courses", type: CourseType.Content, level: Level.Foundational },
-        { title: "Intermediate Courses", type: CourseType.Content, level: Level.Intermediate },
-        { title: "Advanced Courses", type: CourseType.Content, level: Level.Advanced }
-      ].map((section, index) => (
-        <div key={index} className="container mx-auto py-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-left mb-4">{section.title}</h2>
-          <p className="text-lg text-gray-600 mb-6">
-            {section.title === "Quizzes" ? "Quizzes in Neuracraft are designed to test your knowledge..." : ""}
-          </p>
-          <CarouselWrapper>
-            {courses.data
-              .filter((course) =>
-                section.type === CourseType.Quiz ? course.type === section.type
-                  : course.courseLevel === section.level && course.type === section.type
-              )
-              .map((course) => (
-                <Carousel.Slide key={course.courseSlug}>
-                  <BadgeCard
-                    {...{
-                      slug: course.courseSlug,
-                      image: course.courseImage,
-                      title: course.courseName,
-                      category: `W${course.week}S${course.studio}`,
-                      description: course.courseDescription.replace(/<\/?[^>]+(>|$)/g, ""),
-                      badges: course.topics.map((topic) => topic.topicSlug),
-                    }}
-                  />
-                </Carousel.Slide>
-              ))}
-          </CarouselWrapper>
+      {courses.data.length === 0 || courses.data.every(course => !course.isPublished) ? (
+        <div className="container mx-auto py-8 text-center">
+          <p className="text-xl text-gray-700">No published courses available at the moment.</p>
         </div>
-      ))}
+      ) : (
+        [
+          { title: "Quizzes", type: CourseType.Quiz },
+          { title: "Foundational Courses", type: CourseType.Content, level: Level.Foundational },
+          { title: "Intermediate Courses", type: CourseType.Content, level: Level.Intermediate },
+          { title: "Advanced Courses", type: CourseType.Content, level: Level.Advanced }
+        ].map((section, index) => (
+          <div key={index} className="container mx-auto py-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-left mb-4">{section.title}</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              {section.title === "Quizzes" ? "Quizzes in Neuracraft are designed to test your knowledge..." : ""}
+            </p>
+            <CarouselWrapper>
+              {courses.data
+                .filter((course) =>
+                  course.isPublished &&
+                  (section.type === CourseType.Quiz ? course.type === section.type
+                    : course.courseLevel === section.level && course.type === section.type)
+                )
+                .map((course) => (
+                  <Carousel.Slide key={course.courseSlug}>
+                    <BadgeCard
+                      {...{
+                        slug: course.courseSlug,
+                        image: course.courseImage,
+                        title: course.courseName,
+                        category: `W${course.week}S${course.studio}`,
+                        description: course.courseIntroduction.replace(/<\/?[^>]+(>|$)/g, ""),
+                        badges: course.topics.map((topic) => topic.topicSlug),
+                      }}
+                    />
+                  </Carousel.Slide>
+                ))}
+            </CarouselWrapper>
+          </div>
+        ))
+      )}
       <Footer />
     </>
+
   );
 }
