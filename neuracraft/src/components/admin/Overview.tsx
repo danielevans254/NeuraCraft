@@ -168,19 +168,19 @@ const Overview = () => {
             radius="md"
             p="lg"
             w={250}
-            bg={theme.fn.rgba(theme.colors.yellow[3], 0.5)}
+            bg={theme.fn.rgba(theme.colors.yellow[5], 0.2)} // Adjusted for dark mode
           >
             <Group py="md">
               {numStudentsWithTopicPing === 0 ? (
-                <IconUserCheck />
+                <IconUserCheck color={theme.colors.yellow[5]} />
               ) : (
-                <IconUserExclamation />
+                <IconUserExclamation color={theme.colors.yellow[5]} />
               )}
               <div>
-                <Text size="xs" transform="uppercase" weight={700}>
+                <Text size="xs" transform="uppercase" weight={700} color={theme.colors.gray[0]}>
                   Students to help
                 </Text>
-                <Text weight={700} size="md">
+                <Text weight={700} size="md" color={theme.colors.gray[0]}>
                   {numStudentsWithTopicPing}/{users.data.length}
                 </Text>
               </div>
@@ -192,15 +192,15 @@ const Overview = () => {
             radius="md"
             p="lg"
             w={250}
-            bg={theme.fn.rgba(theme.colors.teal[3], 0.5)}
+            bg={theme.fn.rgba(theme.colors.teal[5], 0.2)} // Adjusted for dark mode
           >
             <Group py="md">
-              <IconUserPlus />
+              <IconUserPlus color={theme.colors.teal[5]} />
               <div>
-                <Text size="xs" transform="uppercase" weight={700}>
+                <Text size="xs" transform="uppercase" weight={700} color={theme.colors.gray[0]}>
                   Best Student
                 </Text>
-                <Text weight={700} size="md">
+                <Text weight={700} size="md" color={theme.colors.gray[0]}>
                   {studentMasteryAverages[0]?.name}
                 </Text>
               </div>
@@ -212,19 +212,16 @@ const Overview = () => {
             radius="md"
             p="lg"
             w={250}
-            bg={theme.fn.rgba(theme.colors.red[3], 0.5)}
+            bg={theme.fn.rgba(theme.colors.red[5], 0.2)} // Adjusted for dark mode
           >
             <Group py="md">
-              <IconUserMinus />
+              <IconUserMinus color={theme.colors.red[5]} />
               <div>
-                <Text size="xs" transform="uppercase" weight={700}>
+                <Text size="xs" transform="uppercase" weight={700} color={theme.colors.gray[0]}>
                   Weakest Student
                 </Text>
-                <Text weight={700} size="md">
-                  {
-                    studentMasteryAverages[studentMasteryAverages.length - 1]
-                      ?.name
-                  }
+                <Text weight={700} size="md" color={theme.colors.gray[0]}>
+                  {studentMasteryAverages[studentMasteryAverages.length - 1]?.name}
                 </Text>
               </div>
             </Group>
@@ -233,7 +230,7 @@ const Overview = () => {
       </Flex>
 
       <Container my="xl" py="xl">
-        <Title size="h2">% Correct by Topic</Title>
+        <Title size="h2" color={theme.colors.gray[0]}>% Correct by Topic</Title>
         <Bar
           datasetIdKey="id"
           data={{
@@ -248,7 +245,7 @@ const Overview = () => {
                       a.correctCount / a.totalCount || 0
                   )
                   .map((topic) => topic.correctCount / topic.totalCount),
-                backgroundColor: theme.fn.rgba(theme.colors.green[4], 0.75),
+                backgroundColor: theme.fn.rgba(theme.colors.green[5], 0.75), // Adjusted for dark mode
               },
             ],
           }}
@@ -260,6 +257,7 @@ const Overview = () => {
                   autoSkip: false,
                   font: {
                     size: mobile ? 10 : 14,
+                    color: theme.colors.gray[0], // Text color adjusted
                   },
                 },
                 grid: {
@@ -272,6 +270,7 @@ const Overview = () => {
                     style: "percent",
                     maximumSignificantDigits: 3,
                   },
+                  color: theme.colors.gray[0], // Text color adjusted
                 },
               },
             },
@@ -285,7 +284,7 @@ const Overview = () => {
       </Container>
 
       <Container my="xl" py="xl">
-        <Title size="h2"># Attempted by Topic</Title>
+        <Title size="h2" color={theme.colors.gray[0]}># Attempted by Topic</Title>
         <Bar
           datasetIdKey="id"
           data={{
@@ -296,6 +295,7 @@ const Overview = () => {
                 data: topicAttemptsArray
                   .sort((a, b) => b.totalCount - a.totalCount)
                   .map((topic) => topic.totalCount),
+                backgroundColor: theme.fn.rgba(theme.colors.blue[5], 0.75), // Adjusted for dark mode
               },
             ],
           }}
@@ -307,6 +307,7 @@ const Overview = () => {
                   autoSkip: false,
                   font: {
                     size: mobile ? 10 : 14,
+                    color: theme.colors.gray[0], // Text color adjusted
                   },
                 },
                 grid: {
