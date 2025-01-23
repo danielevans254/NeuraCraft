@@ -45,16 +45,16 @@ export default function AdminPage() {
   }, [isMobile]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100">
       <Header title="Admin Panel" />
       <TopNavbar sidebarOpened={sidebarOpened} setSidebarOpened={setSidebarOpened} />
 
       <div className="flex">
         {sidebarOpened && (
-          <nav className="w-64 min-h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
-            <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+          <nav className="w-64 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
+            <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <div className="flex justify-between items-center">
-                <h2 className="text-xl font-medium">Admin</h2>
+                <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100">Admin</h2>
                 <RoleBadge role={session?.data?.user?.role} />
               </div>
             </div>
@@ -70,20 +70,20 @@ export default function AdminPage() {
                       isMobile && setSidebarOpened(false);
                     }}
                     className={`w-full px-4 py-3 flex items-center space-x-3 rounded-lg transition-all ${isActive
-                        ? "bg-blue-500 text-white dark:bg-blue-700 dark:text-blue-100"
-                        : "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                      ? "bg-blue-600 text-white dark:bg-blue-700 dark:text-blue-100"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                       }`}
                   >
                     <div
                       className={`p-2 rounded-lg ${isActive
-                          ? "bg-blue-600 dark:bg-blue-800"
-                          : "bg-gray-100 dark:bg-gray-700"
+                        ? "bg-blue-700 dark:bg-blue-800"
+                        : "bg-gray-100 dark:bg-gray-800"
                         }`}
                     >
                       <item.icon
                         className={`w-5 h-5 ${isActive
-                            ? "text-white dark:text-blue-300"
-                            : "text-gray-500 dark:text-gray-400"
+                          ? "text-white dark:text-blue-200"
+                          : "text-gray-500 dark:text-gray-400"
                           }`}
                       />
                     </div>
@@ -93,10 +93,10 @@ export default function AdminPage() {
               })}
             </div>
 
-            <div className="absolute bottom-0 w-64 border-t border-gray-200 dark:border-gray-700">
+            <div className="absolute bottom-0 w-64 border-t border-gray-200 dark:border-gray-800">
               <Link
                 href="/courses"
-                className="flex items-center px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                className="flex items-center px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200"
               >
                 <IconArrowBarLeft className="w-5 h-5 mr-2" />
                 <span>Back to Courses</span>
@@ -105,7 +105,7 @@ export default function AdminPage() {
           </nav>
         )}
 
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-950">
           {active === "Overview" ? (
             <Overview />
           ) : active === "Questions" ? (
