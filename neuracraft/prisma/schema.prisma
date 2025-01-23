@@ -52,7 +52,7 @@ model User {
   email                  String                  @unique
   emailVerified          DateTime?
   isNewUser              Boolean                 @default(true)
-  image                  String?
+  image                  String?                 @default("https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/profile%2Fde7834s-6515bd40-8b2c-4dc6-a843-5ac1a95a8b55.jpg?alt=media&token=f1ee34ef-2765-45a2-a4b7-0cb3a1b6127f")
   role                   Role                    @default(USER)
   name                   String?
   ceuId                  String?
@@ -129,6 +129,7 @@ model Course {
   courseSlug             String                  @id
   courseName             String                  @unique
   courseDescription      String                  @db.Text
+  courseIntroduction     String                  @db.Text
   courseImage            String                  @db.Text
   courseLevel            Level
   type                   CourseType
@@ -143,28 +144,8 @@ model Course {
   attempts               Attempt[]
   courseMedia            CourseMedia[]
   questionsWithAddedTime QuestionWithAddedTime[]
-  createdAt              DateTime                @default(now())
-  updatedAt              DateTime                @updatedAt
 
-  isPublished Boolean   @default(false)
-  chapters    Chapter[]
-}
-
-model Chapter {
-  chapterId          String  @id @default(cuid())
-  chapterName        String
-  chapterDescription String  @db.Text
-  chapterPosition    Int
-  isPublished        Boolean @default(false)
-  courseSlug         String
-  course             Course  @relation(fields: [courseSlug], references: [courseSlug], onDelete: Cascade)
-
-  userProgress UserProgress[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([courseSlug])
+  isPublished Boolean @default(true)
 }
 
 model UserProgress {
@@ -173,7 +154,6 @@ model UserProgress {
   chapterId   String
   isCompleted Boolean @default(false)
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  chapter     Chapter @relation(fields: [chapterId], references: [chapterId], onDelete: Cascade)
 
   @@unique([userId, chapterId])
   @@index([chapterId])
@@ -210,7 +190,7 @@ model Topic {
   topicSlug  String     @id
   topicName  String     @unique
   topicLevel Level
-  topicPrior Float      @default(0.25)
+  topicPrior Float      @default(0.15)
   questions  Question[]
   mastery    Mastery[]
   courses    Course[]
@@ -219,15 +199,27 @@ model Topic {
   @@index([topicLevel])
 }
 
+// TODO: Add a way for user to bookmark a certain learning material, either the video, pdf, or pdf page
+
+// todo: add differernt question types
+// Question Types enum
+enum QuestionType {
+  MultipleChoice
+  TrueFalse
+  Ordering
+  Matching
+  MultiSelect
+}
+
 model Question {
-  // Generic question, either dynamic or static, no user-specific information
   questionId             Int                     @default(autoincrement())
   variationId            Int                     @default(1)
   topicSlug              String
   questionTitle          String                  @unique
+  questionType           QuestionType            @default(MultipleChoice)
   questionDifficulty     QuestionDifficulty
   questionContent        String                  @db.Text
-  questionData           Json?
+  questionData           Json? // Type-specific question data
   lastModified           DateTime                @updatedAt
   topic                  Topic                   @relation(fields: [topicSlug], references: [topicSlug])
   questionsWithAddedTime QuestionWithAddedTime[]
