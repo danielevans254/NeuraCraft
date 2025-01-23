@@ -201,28 +201,8 @@ export default function Navbar({
           <FullLogo />
         )}
 
-        {/* {session.status === "loading" && (
-          <Center>
-            <ActionIcon radius="xl" mr="xl" onClick={handleColorSchemeChange}>
-              {colorScheme === "dark" ? (
-                <IconSun size={18} stroke={1.5} />
-              ) : (
-                <IconMoon size={18} stroke={1.5} />
-              )}
-            </ActionIcon>
-            <Loader />
-          </Center>
-        )} */}
-
         {session.status === "unauthenticated" && (
           <Center>
-            {/* <ActionIcon radius="xl" mr="xl" onClick={handleColorSchemeChange}>
-              {colorScheme === "dark" ? (
-                <IconSun size={18} stroke={1.5} />
-              ) : (
-                <IconMoon size={18} stroke={1.5} />
-              )}
-            </ActionIcon> */}
             <Menu
               shadow="xl"
               width={320}
@@ -373,7 +353,7 @@ export default function Navbar({
                   component={Link}
                   href="/dashboard"
                   icon={<IconGauge size={14} stroke={1.5} />}
-                  color="cyan"
+                  color="black"
                 >
                   My Dashboard
                 </Menu.Item>
@@ -381,7 +361,7 @@ export default function Navbar({
                   component={Link}
                   href="/courses"
                   icon={<IconBook size={14} stroke={1.5} />}
-                  color="cyan"
+                  color="black"
                 >
                   Learn
                 </Menu.Item>
@@ -393,7 +373,7 @@ export default function Navbar({
                   href=""
                   target="_blank"
                   icon={<IconCheckupList size={14} stroke={1.5} />}
-                  color="yellow"
+                  color="black"
                 >
                   Usage Survey
                 </Menu.Item>
@@ -414,6 +394,7 @@ export default function Navbar({
                 <Menu.Item
                   onClick={() => signOut({ callbackUrl: "/" })}
                   icon={<IconLogout size={14} stroke={1.5} />}
+                  color="red"
                 >
                   Logout
                 </Menu.Item>
