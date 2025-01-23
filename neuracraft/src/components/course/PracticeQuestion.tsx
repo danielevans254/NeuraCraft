@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
+import { IconCheck, IconX, IconTrendingUp } from "@tabler/icons-react";
 import VariablesBox from "@/components/editor/VariablesBox";
 import Latex from "@/components/Latex";
 import { QuestionDifficultyBadge } from "@/components/misc/Badges";
@@ -12,11 +13,13 @@ import { QuestionDataType } from "@/types/question-types";
 import { CustomMath } from "@/utils/CustomMath";
 import {
   ActionIcon,
+  Badge,
   Box,
   Button,
   Center,
   Checkbox,
   Flex,
+  Group,
   Loader,
   Modal,
   Paper,
@@ -26,7 +29,7 @@ import {
   Tooltip,
   useMantineTheme,
 } from "@mantine/core";
-import { Question, QuestionWithAddedTime, User } from "@prisma/client";
+import { Question, QuestionDifficulty, QuestionWithAddedTime, User } from "@prisma/client";
 import { IconBulb } from "@tabler/icons";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -50,15 +53,83 @@ export default function PracticeQuestion() {
   const router = useRouter();
   const currentCourseSlug = router.query.courseSlug as string;
 
+  const [confirmationModalOpened, setConfirmationModalOpened] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+  const [streak, setStreak] = useState({ correct: 0, incorrect: 0 });
+  const [lastDifficulty, setLastDifficulty] = useState<QuestionDifficulty | null>(null);
+  const [attemptHistoryLocked, setAttemptHistoryLocked] = useState(false);
 
   // TODO: Add different question types
+  // TODO: Sometimes the state isn't updated correctly, causing the streak counter to show wrong numbers
   const [questionKey, setQuestionKey] = useState(0);
   const [selectedChoices, setSelectedChoices] = useState([]);
   const [orderedItems, setOrderedItems] = useState([]);
   const [matches, setMatches] = useState([]);
   const [booleanAnswer, setBooleanAnswer] = useState(null);
   const [hintsOpened, setHintsOpened] = useState(false);
+
+  useEffect(() => {
+    const fetchStreakAndDifficulty = async () => {
+      try {
+        const response = await axios.get("/api/user/getStreak");
+        setStreak({
+          correct: response.data.streakCorrect,
+          incorrect: response.data.streakIncorrect,
+        });
+        setLastDifficulty(response.data.lastDifficulty);
+      } catch (error) {
+        console.error("Failed to fetch streak and difficulty data:", error);
+      }
+    };
+
+    fetchStreakAndDifficulty();
+  }, []);
+
+  const handleQuizStart = () => {
+    setConfirmationModalOpened(true);
+  };
+
+  const getGradient = (streakCount: number, isCorrect: boolean) => {
+    const intensity = Math.min(streakCount, 7) / 7;
+    const color = isCorrect ? theme.colors.teal : theme.colors.red;
+
+    return {
+      from: color[5],
+      to: color[7 - Math.floor(intensity * 5)],
+      deg: 45,
+    };
+  };
+
+  const fetchAttemptHistory = async () => {
+    try {
+      const response = await axios.get("/api/quiz/getAttemptHistory", {
+        params: {
+          userId: session?.data?.user?.id,
+          topicSlug: UCQAT?.data.question.topicSlug,
+        },
+      });
+
+      if (response.data.success) {
+        // Display attempt history
+        console.log(response.data.attempts);
+      } else {
+        setAttemptHistoryLocked(true);
+      }
+    } catch (error) {
+      console.error("Failed to fetch attempt history:", error);
+    }
+  };
+
+  const confirmQuizStart = async () => {
+    setConfirmationModalOpened(false);
+    // Lock attempt history for the topic
+    await axios.post("/api/quiz/lockAttemptHistory", {
+      userId: session?.data?.user?.id,
+      topicSlug: UCQAT?.data.question.topicSlug,
+    });
+    // Proceed with the quiz
+    refetch();
+  };
 
   const { data: UCQAT, refetch } = useQuery({
     queryKey: ["get-ucqat"],
@@ -90,6 +161,9 @@ export default function PracticeQuestion() {
           isCorrect: boolean;
           topicSlug: string;
           topicName: string;
+          difficulty: QuestionDifficulty;
+          streakCorrect: number;
+          streakIncorrect: number;
         };
       }) => {
         return axios.post(
@@ -98,19 +172,22 @@ export default function PracticeQuestion() {
         );
       },
       onSuccess: (res) => {
-        setSelectedKeys([]);
         const { data } = res;
+        const isCorrect = data.isCorrect;
+
+        setStreak(prev => ({
+          correct: isCorrect ? prev.correct + 1 : 0,
+          incorrect: isCorrect ? 0 : prev.incorrect + 1,
+        }));
+
+        setSelectedKeys([]);
         toast(
-          `[${data.topic}] Mastery: ${CustomMath.round(
-            data.masteryLevel * 100,
-            1
-          )}%`,
+          `[${data.topic}] Mastery: ${CustomMath.round(data.masteryLevel * 100, 1)}%`,
           {
-            icon: data.isCorrect ? "🎉" : "💪",
-            className: `border border-solid ${data.isCorrect ? "border-green-500" : "border-red-500"
-              }`,
+            icon: isCorrect ? "🎉" : "💪",
+            className: `border border-solid ${isCorrect ? "border-green-500" : "border-red-500"}`,
             position: "top-right",
-            duration: 5000,
+            duration: 10000,
           }
         );
         queryClient.invalidateQueries(["get-ucqat"]);
@@ -183,11 +260,21 @@ export default function PracticeQuestion() {
   );
 
   useEffect(() => {
+    if (UCQAT?.data) {
+      const currentDifficulty = UCQAT.data.question.questionDifficulty;
+
+      if (lastDifficulty && lastDifficulty !== currentDifficulty) {
+        console.log(`User changed difficulty from ${lastDifficulty} to ${currentDifficulty}`);
+        setStreak({ correct: 0, incorrect: 0 });
+      }
+
+      setLastDifficulty(lastDifficulty);
+    }
+
     // Reset selectedKeys and increment questionKey whenever new UCQAT data is fetched
     setSelectedKeys([]);
     setQuestionKey(prev => prev + 1);
   }, [UCQAT?.data]);
-  console.log(questionKey, "questionKey")
 
   if (!UCQAT) {
     return (
@@ -231,6 +318,9 @@ export default function PracticeQuestion() {
                 selectedKeys.every((item) => correctKeys.includes(item)),
               topicSlug: UCQAT.data.question.topicSlug,
               topicName: UCQAT.data.question.topic.topicName,
+              difficulty: UCQAT.data.question.questionDifficulty || "Easy", // Fallback to "Easy"
+              streakCorrect: streak.correct || 0, // Fallback to 0
+              streakIncorrect: streak.incorrect || 0, // Fallback to 0
             },
           });
         }}
@@ -239,6 +329,39 @@ export default function PracticeQuestion() {
           questionDifficulty={UCQAT.data.question.questionDifficulty}
           {...{ radius: "lg", size: "md" }}
         />
+        {/* TODO: Fix this, this will later also be used for the topic recommendation, as a additional logic check, also style this better */}
+        <Group spacing="sm" align="center" mt="md">
+          {/* Streak Badge */}
+          <Badge
+            variant="gradient"
+            gradient={getGradient(
+              streak.correct > 0 ? streak.correct : streak.incorrect,
+              streak.correct > 0
+            )}
+            size="lg"
+            leftSection={
+              streak.correct > 0 ? (
+                <IconCheck size={16} />
+              ) : (
+                <IconX size={16} />
+              )
+            }
+          >
+            {streak.correct > 0
+              ? `${streak.correct} correct in a row`
+              : `${streak.incorrect} incorrect in a row`}
+          </Badge>
+
+          {/* Last Difficulty Badge */}
+          <Badge
+            color="blue"
+            variant="outline"
+            size="lg"
+            leftSection={<IconTrendingUp size={16} />}
+          >
+            Last Difficulty: {lastDifficulty || "N/A"}
+          </Badge>
+        </Group>
         <div
           className="rawhtml mt-4"
           dangerouslySetInnerHTML={{
@@ -361,6 +484,27 @@ export default function PracticeQuestion() {
               )
             )}
           </Stack>
+        </Modal>
+
+        {/* Confirmation Modal */}
+        <Modal
+          opened={confirmationModalOpened}
+          onClose={() => setConfirmationModalOpened(false)}
+          title="Are you sure you want to take this quiz?"
+          centered
+        >
+          <Text>
+            If you proceed, your attempt history for this topic will be locked for 5 minutes.
+            You will not be able to view your attempt history for this topic during this time.
+          </Text>
+          <Group position="right" mt="md">
+            <Button variant="outline" onClick={() => setConfirmationModalOpened(false)}>
+              Cancel
+            </Button>
+            <Button color="red" onClick={confirmQuizStart}>
+              Start Quiz
+            </Button>
+          </Group>
         </Modal>
       </form>
     </Paper>
