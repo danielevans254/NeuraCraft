@@ -4,7 +4,6 @@ from fastapi.security import APIKeyHeader
 from pyBKT.models import Model, Roster
 from pydantic import BaseModel
 from typing import Literal
-
 import logging
 from pathlib import Path
 import numpy as np
@@ -17,10 +16,7 @@ load_dotenv("../neuracraft/.env")
 # Middleware to require a valid API key
 api_key_header = APIKeyHeader(name="access_token", auto_error=False)
 
-
-async def get_api_key(
-    api_key_header: str = Security(api_key_header),
-) -> str:
+async def get_api_key(api_key_header: str = Security(api_key_header)) -> str:
     if api_key_header == os.environ.get("RECOMMENDER_API_KEY"):
         return api_key_header
     else:
@@ -49,54 +45,102 @@ storage = firebase_storage.storage()
 # Multiprocessing lock for thread safety
 lock = multiprocessing.Lock()
 
+# List of all skills (topics)
+ALL_SKILLS = [
+    'data-structures', 'algorithms', 'operating-systems', 'networking',
+    'database-systems', 'software-engineering', 'web-development',
+    'object-oriented-programming', 'machine-learning', 'cloud-computing',
+    'cybersecurity', 'mobile-development', 'data-analytics', 'software-testing',
+    'devops', 'design-patterns', 'algorithms-optimization',
+    'advanced-database-systems', 'distributed-systems', 'artificial-intelligence',
+    'network-security', 'blockchain', 'user-experience-design', 'ethical-hacking',
+    'software-architecture', 'quantum-computing', 'big-data'
+]
+
 
 def get_model() -> Model:
     """
     Loads the trained model from a pickle file in storage.
     """
+    try:
+        model = Model()
+        model_path = "computer_science_bktmodel.pkl"
 
-    model = Model()
-    model.load("computer_science_bktmodel.pkl")
-    print(model)
-    # Model(parallel=True, num_fits=1, seed=42, defaults={'skill_name': 'topicSlug', 'correct': 'isCorrect', 'user_id': 'studentId'})
-    return model
-# FIXME: Fix the roster model
-# FIXME: This mf doesn't download the roster model correctly
-def get_roster_model() -> Roster:
+        # Check if the model file exists locally
+        if not os.path.exists(model_path):
+            logging.debug("[INFO] Local model not found, downloading from Firebase...")
+            storage.child(model_path).download(model_path)
+
+        # Load the model
+        model.load(model_path)
+        logging.debug(f"Model loaded successfully: {model}")
+        return model
+
+    except Exception as e:
+        logging.error(f"Failed to load model: {e}")
+        raise RuntimeError("Failed to initialize the BKT model.")
+
+
+def get_roster_model(model: Model) -> Roster:
     """
-    Loads the roster file from the /models directory.
-    Updates the roster with the latest training model on startup.
+    Loads the roster file from the /models directory or Firebase and enhances it with additional features.
     """
     try:
-        roster_path = os.path.join("models", "computer_science_bktmodel.pkl")
+        roster_path = os.path.join("models", "computer_science_roster_model.pkl")
+
+        # Check if the roster file exists locally
         if os.path.exists(roster_path):
             logging.debug(f"Loading roster model from {roster_path}")
             with open(roster_path, "rb") as handle:
                 roster: Roster = pickle.load(handle)
+
+            # Validate the loaded roster
+            if not isinstance(roster, Roster):
+                logging.warning("Loaded roster is not a valid Roster object, initializing new roster")
+                raise ValueError("Invalid Roster object")
         else:
             logging.debug("[INFO] Local roster model not found, downloading from Firebase...")
-            storage.child("computer_science_bktmodel.pkl").download("computer_science_bktmodel.pkl")
-            with open("computer_science_bktmodel.pkl", "rb") as handle:
+            storage.child("computer_science_roster_model.pkl").download("computer_science_roster_model.pkl")
+            with open("computer_science_roster_model.pkl", "rb") as handle:
                 roster: Roster = pickle.load(handle)
 
-        if not hasattr(roster, 'skill_rosters'):
-            logging.warning("Loaded roster missing skill_rosters, initializing new roster")
-            topics = get_all_topics()
-            roster = Roster(students=[], skills=topics, model=app.state.model)
+            # Validate the loaded roster
+            if not isinstance(roster, Roster):
+                logging.warning("Downloaded roster is not a valid Roster object, initializing new roster")
+                raise ValueError("Invalid Roster object")
 
-        roster.set_model(app.state.model)
-        logging.debug("Roster model set successfully")
-        print(roster)
+        # Set the model for the roster
+        roster.set_model(model)
 
+        # Enhance the roster with additional features
+        roster.mastery_threshold = 0.95  # Set mastery threshold
+        roster.review_threshold = 0.3  # Set review threshold
+
+        # Define skill dependencies
+        roster.skill_dependencies = {
+            "algorithms": ["data-structures"],
+            "advanced-database-systems": ["database-systems"],
+            "distributed-systems": ["operating-systems", "networking"],
+            "machine-learning": ["data-structures", "algorithms"],
+            "artificial-intelligence": ["machine-learning"],
+            "network-security": ["networking", "cybersecurity"],
+            "ethical-hacking": ["cybersecurity"],
+            "software-architecture": ["software-engineering", "design-patterns"],
+            "quantum-computing": ["algorithms", "networking"],
+        }
+
+        # Initialize tracking for consecutive responses
+        roster.consecutive_responses = {}
+
+        logging.debug("Roster model set and enhanced successfully")
+        logging.debug(f"Roster: {roster}")
 
         return roster
 
     except Exception as e:
         logging.error(f"Failed to load roster model: {e}")
         logging.info("Initializing new empty roster")
-        topics = get_all_topics()
-        return Roster(students=[], skills=topics, model=app.state.model)
-
+        return Roster(students=[], skills=ALL_SKILLS, model=model)
 
 
 def get_all_topics() -> list[str]:
@@ -134,23 +178,27 @@ app = FastAPI()
 @app.on_event("startup")
 async def startup_event() -> None:
     """
-    Updates state variables with the latest model in persistent storage during startup.
+    Initializes the model and roster during startup.
     """
     try:
+        # Load the BKT model
         app.state.model = get_model()
-        app.state.roster = get_roster_model()
-        
+
+        # Load the roster model
+        app.state.roster = get_roster_model(app.state.model)
+
+        # Validate the roster
         if not hasattr(app.state.roster, 'skill_rosters'):
             raise AttributeError("Roster initialization failed - missing skill_rosters")
-            
-        print("[STARTUP] Model and Roster initialized successfully")
-        
+
+        logging.debug("[STARTUP] Model and Roster initialized successfully")
+
     except Exception as e:
-        print(f"[STARTUP ERROR] Failed to initialize: {e}")
+        logging.error(f"[STARTUP ERROR] Failed to initialize: {e}")
         # Initialize empty roster as fallback
-        topics = get_all_topics()
-        app.state.roster = Roster(students=[], skills=topics, model=app.state.model)
-        print("[STARTUP] Initialized empty roster as fallback")
+        app.state.model = Model()  # Initialize a default model
+        app.state.roster = Roster(students=[], skills=ALL_SKILLS, model=app.state.model)
+        logging.debug("[STARTUP] Initialized empty roster as fallback")
 
 
 @app.get("/", status_code=status.HTTP_200_OK)
@@ -369,9 +417,28 @@ def update_state_of_student(
         ):
             app.state.roster.add_students(topic, [student_id])
 
-        app.state.roster.update_state(
-            topic, student_id, np.array([int(i) for i in correct])
-        )
+        # Get current mastery probability
+        current_mastery = app.state.roster.get_mastery_prob(topic, student_id)
+
+        # Update state based on correctness
+        if correct == "0":
+            # Aggressive update for incorrect answers
+            # Simulate multiple incorrect responses to reduce mastery more aggressively
+            for _ in range(3):  # Simulate 3 incorrect responses
+                app.state.roster.update_state(topic, student_id, np.array([0]))
+        else:
+            # Normal update for correct answers
+            app.state.roster.update_state(topic, student_id, np.array([int(correct)]))
+
+        # Check for mastery >= 95% and perform soft reset
+        updated_mastery = app.state.roster.get_mastery_prob(topic, student_id)
+        if updated_mastery >= 0.90:
+            # Soft reset: Reset the student's history for this topic
+            app.state.roster.remove_students(topic, [student_id])
+            app.state.roster.add_students(topic, [student_id])
+            # Simulate some incorrect responses to set mastery to ~30%
+            for _ in range(30):  # Simulate 5 incorrect responses
+                app.state.roster.update_state(topic, student_id, np.array([0]))
 
         save_roster_model()
 
@@ -392,7 +459,6 @@ def update_multiple_states_of_student(
     Notes:
         Update 1 student at a time
     """
-
     with lock:
         for topic in topics.topics:
             if topic not in app.state.roster.skill_rosters:
@@ -403,11 +469,29 @@ def update_multiple_states_of_student(
             elif (
                 student_id not in app.state.roster.skill_rosters[topic].students
             ):  # Add student if doesn't exist in the Roster
-                app.state.roster.add_students(topic, [student_id])  # Fixed: Wrapped in list
+                app.state.roster.add_students(topic, [student_id])
 
-            app.state.roster.update_state(
-                topic, student_id, np.array([int(i) for i in topics.topics[topic]])
-            )
+            # Get current mastery probability
+            current_mastery = app.state.roster.get_mastery_prob(topic, student_id)
+
+            # Update state based on correctness
+            if topics.topics[topic] == "0":
+                # Aggressive update for incorrect answers
+                for _ in range(3):  # Simulate 3 incorrect responses
+                    app.state.roster.update_state(topic, student_id, np.array([0]))
+            else:
+                # Normal update for correct answers
+                app.state.roster.update_state(topic, student_id, np.array([int(topics.topics[topic])]))
+
+            # Check for mastery >= 95% and perform soft reset
+            updated_mastery = app.state.roster.get_mastery_prob(topic, student_id)
+            if updated_mastery >= 0.90:
+                # Soft reset: Reset the student's history for this topic
+                app.state.roster.remove_students(topic, [student_id])
+                app.state.roster.add_students(topic, [student_id])
+                # Simulate some incorrect responses to set mastery to ~30%
+                for _ in range(30):  # Simulate 5 incorrect responses
+                    app.state.roster.update_state(topic, student_id, np.array([0]))
 
         save_roster_model()
 
@@ -459,8 +543,19 @@ def save_roster_model() -> None:
     """
     Saves the Roster model to disk and persistent storage.
     """
-    with open("computer_science_roster_model.pkl", "wb") as handle:
-        pickle.dump(app.state.roster, handle, protocol=pickle.HIGHEST_PROTOCOL)
-    storage.child("computer_science_roster_model.pkl").put("computer_science_roster_model.pkl")
+    try:
+        roster_path = os.path.join("models", "computer_science_roster_model.pkl")
 
-    print(f"[{time.strftime('%D %H:%M:%S')}] ROSTER MODEL SAVED")
+        # Ensure the models directory exists
+        os.makedirs(os.path.dirname(roster_path), exist_ok=True)
+
+        # Save the roster to disk
+        with open(roster_path, "wb") as handle:
+            pickle.dump(app.state.roster, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+        # Upload the roster to Firebase
+        storage.child("computer_science_roster_model.pkl").put(roster_path)
+
+        logging.debug(f"[{time.strftime('%D %H:%M:%S')}] ROSTER MODEL SAVED")
+    except Exception as e:
+        logging.error(f"Failed to save roster model: {e}")
