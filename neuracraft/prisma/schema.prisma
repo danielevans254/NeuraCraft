@@ -70,6 +70,10 @@ model User {
   comments               Comment[]
   postLikes              PostLikes[]
   UserProgress           UserProgress[]
+  streakCorrect          Int                     @default(0) // New field for correct streak
+  streakIncorrect        Int                     @default(0) // New field for incorrect streak
+  lastDifficulty         QuestionDifficulty? // New field for last attempted difficulty
+  AttemptHistoryLock     AttemptHistoryLock[]
 }
 
 enum Role {
@@ -109,6 +113,18 @@ model Attempt {
   @@index([userId])
   @@index([courseSlug])
   @@index([qatId])
+}
+
+model AttemptHistoryLock {
+  id          String   @id @default(cuid())
+  userId      String
+  topicSlug   String
+  lockedUntil DateTime
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, topicSlug])
+  @@index([userId])
+  @@index([topicSlug])
 }
 
 // QUESTION BANK
