@@ -221,7 +221,7 @@ export default function QuestionViewer() {
             sortable: true,
           },
           {
-            accessor: "topic.topicName",
+            accessor: "topicSlug",
             title: "Topic",
             sortable: true,
           },
