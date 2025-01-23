@@ -77,6 +77,8 @@ ChartJS.register(
   Filler
 );
 
+// TODO: add te application upload file functionality
+
 const Editor = dynamic(import("@/components/editor/CustomRichTextEditor"), {
   ssr: false,
   loading: () => <p>Loading Editor...</p>,
@@ -307,105 +309,47 @@ const Courses = () => {
 
   return (
     <>
-      <Container size="lg">
-        <Center>
-          <SegmentedControl
-            sx={(theme) => ({
-              root: {
-                backgroundColor:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[6]
-                    : theme.white,
-                boxShadow: theme.shadows.md,
-                border: `1px solid ${theme.colorScheme === "dark"
-                  ? theme.colors.dark[4]
-                  : theme.colors.gray[1]
-                  }`,
-              },
-
-              active: {
-                backgroundImage: theme.fn.gradient({
-                  from: "pink",
-                  to: "orange",
-                }),
-              },
-
-              control: {
-                border: "0",
-              },
-
-              labelActive: {
-                color: `${theme.white}`,
-              },
-            })}
-            size={mobile ? "xs" : "md"}
-            radius="xl"
-            data={[
-              { value: "All Courses", label: "All Courses" },
-              {
-                value: "Foundational",
-                label: "Foundational",
-              },
-              {
-                value: "Intermediate",
-                label: "Intermediate",
-              },
-              {
-                value: "Advanced",
-                label: "Advanced",
-              },
-            ]}
-            value={sort}
-            onChange={setSort}
-          />
-        </Center>
-        <SimpleGrid
-          cols={3}
-          spacing="xl"
-          mt={30}
-          breakpoints={[{ maxWidth: "md", cols: 1 }]}
-        >
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center">
+          <div className="bg-white dark:bg-gray-800 shadow-md rounded-full border border-gray-200 dark:border-gray-700 p-1">
+            <div className="flex space-x-1">
+              {["All Courses", "Foundational", "Intermediate", "Advanced"].map((value) => (
+                <button
+                  key={value}
+                  className={`px-4 py-2 rounded-full text-sm font-medium ${sort === value
+                    ? "bg-gradient-to-r from-pink-500 to-orange-500 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    }`}
+                  onClick={() => setSort(value)}
+                >
+                  {value}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {filteredCourses.map((c) => (
-            <Card
+            <div
               key={c.courseSlug}
-              shadow="md"
-              radius="md"
-              className={classes.card}
-              p="xl"
+              className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6"
             >
               {c.courseLevel === "Advanced" ? (
-                <IconSquareNumber3 className="stroke-red-500 dark:stroke-red-700" />
+                <IconSquareNumber3 className="w-6 h-6 stroke-red-500 dark:stroke-red-700" />
               ) : c.courseLevel === "Foundational" ? (
-                <IconSquareNumber1 className="stroke-green-500 dark:stroke-green-700" />
+                <IconSquareNumber1 className="w-6 h-6 stroke-green-500 dark:stroke-green-700" />
               ) : (
-                <IconSquareNumber2 className="stroke-yellow-500 dark:stroke-yellow-700" />
+                <IconSquareNumber2 className="w-6 h-6 stroke-yellow-500 dark:stroke-yellow-700" />
               )}
-              <Text
-                size="lg"
-                weight={500}
-                className={classes.cardTitle}
-                mt="md"
-              >
+              <h3 className="text-lg font-semibold mt-4 text-gray-900 dark:text-gray-100">
                 {c.courseName}
-              </Text>
-              <TypographyStylesProvider
-                sx={(theme) => ({
-                  color: theme.colors.gray[6],
-                  fontSize: theme.fontSizes.sm,
-                })}
-                mt="sm"
-                mb={70}
-              >
+              </h3>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(c.courseDescription, {
                       ADD_TAGS: ["iframe"],
-                      ADD_ATTR: [
-                        "allow",
-                        "allowfullscreen",
-                        "frameborder",
-                        "scrolling",
-                      ],
+                      ADD_ATTR: ["allow", "allowfullscreen", "frameborder", "scrolling"],
                     }),
                   }}
                 />
@@ -413,66 +357,52 @@ const Courses = () => {
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(c.courseIntroduction, {
                       ADD_TAGS: ["iframe"],
-                      ADD_ATTR: [
-                        "allow",
-                        "allowfullscreen",
-                        "frameborder",
-                        "scrolling",
-                      ],
+                      ADD_ATTR: ["allow", "allowfullscreen", "frameborder", "scrolling"],
                     }),
                   }}
                 />
-              </TypographyStylesProvider>
-              <Group className={classes.action}>
-                <Button
-                  radius="xl"
-                  style={{ flex: 1 }}
+              </div>
+              <div className="flex space-x-2 mt-4">
+                <button
+                  className="flex-1 bg-blue-500 text-white rounded-full py-2 px-4 hover:bg-blue-600"
                   onClick={() => {
                     setOpenedEdit(true);
                     setDetails(c);
                   }}
-                  className={classes.controlModal}
                 >
                   Edit
-                </Button>
-                <Button
-                  radius="xl"
-                  style={{ flex: 1 }}
+                </button>
+                <button
+                  className="flex-1 bg-green-500 text-white rounded-full py-2 px-4 hover:bg-green-600"
                   onClick={() => {
                     setOpenedDetails(true);
                     setDetails(c);
                   }}
-                  className={classes.controlModal}
                 >
                   Details
-                </Button>
-              </Group>
-            </Card>
+                </button>
+              </div>
+            </div>
           ))}
-        </SimpleGrid>
-      </Container>
+        </div>
+      </div>
 
+      {/* Modal for Details */}
       <Modal
-        opened={openedDetails}
+        isOpen={openedDetails}
         onClose={() => setOpenedDetails(false)}
         title={details?.courseName}
         size={mobile ? "full" : "70%"}
       >
-        <Group px={"md"}>
-          <Paper withBorder radius="md" px="sm" py="xs">
-            <Group py={"md"}>
-              <IconUsers />
-
+        <div className="p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center space-x-2">
+              <IconUsers className="w-5 h-5 text-gray-500 dark:text-gray-400" />
               <div>
-                <Text
-                  color="dimmed"
-                  size="xs"
-                  transform="uppercase"
-                  weight={700}
-                >
+                <p className="text-xs uppercase text-gray-500 dark:text-gray-400 font-bold">
                   Number of students who attempted
-                </Text>
-                <Text weight={700} size="xl">
+                </p>
+                <p className="text-xl font-bold">
                   {`${Array.from(
                     new Set(
                       attempts.data
@@ -485,335 +415,106 @@ const Courses = () => {
                         )
                         .map((user) => user.userId)
                     )
-                  ).length
-                    }/${users.data.length}`}
-                </Text>
+                  ).length}/${users.data.length}`}
+                </p>
               </div>
-            </Group>
-          </Paper>
-        </Group>
-        <MultiSelect
-          value={multiValue}
-          onChange={setMultiValue}
-          data={topicData}
-          label="Selected Topics"
-          placeholder="Pick all the topics that you'd like to show"
-          px={"md"}
-          py={"md"}
-          defaultValue={topicData}
-        />
-        {avgMasteryLevels.map((topic) => (
-          <Paper
-            withBorder
-            radius="md"
-            my="lg"
-            p="sm"
-            sx={(theme) => ({
-              backgroundColor:
-                theme.colorScheme === "dark"
-                  ? theme.colors.dark[7]
-                  : theme.colors.gray[0],
-            })}
-            key={topic.topicSlug}
-          >
-            <Group py={"md"} position="apart">
-              <Group>
-                <IconUsers />
-                <Text size="md" weight={700} color="dimmed">
-                  Average {topic.topicName} Mastery
-                </Text>
-              </Group>
-              {topic.avgMasteryLevel !== 0 ? (
-                <Text size="md" weight={500}>
-                  {(topic.avgMasteryLevel * 100).toFixed(2)}/100
-                </Text>
-              ) : (
-                <Text size="md" weight={500}>
-                  No Mastery Yet!
-                </Text>
-              )}
-            </Group>
-
-            <Progress
-              value={topic.avgMasteryLevel * 100}
-              size="lg"
-              radius="xl"
+            </div>
+          </div>
+          <div className="mt-4">
+            <MultiSelect
+              value={multiValue}
+              onChange={setMultiValue}
+              data={topicData}
+              label="Selected Topics"
+              placeholder="Pick all the topics that you'd like to show"
+              className="w-full"
             />
-            {questions.data.filter(
-              (q) =>
-                q.questionsWithAddedTime.some(
-                  (qt) => qt.courseSlug === details?.courseSlug
-                ) && q.topicSlug === topic.topicSlug
-            ).length > 0 ? (
-              <Accordion
-                mt={"lg"}
-                chevronPosition="right"
-                chevronSize={50}
-                variant="separated"
-                disableChevronRotation
-                chevron={
-                  <ThemeIcon radius="xl" size={32}>
-                    <IconPlus size={18} stroke={1.5} />
-                  </ThemeIcon>
-                }
-              >
-                <Accordion.Item
-                  className={classes.item}
-                  value="display-questions"
-                >
-                  <Accordion.Control
-                    sx={(theme) => ({
-                      backgroundColor:
-                        theme.colorScheme === "dark"
-                          ? theme.colors.dark[7]
-                          : theme.white,
-                    })}
-                  >
-                    Display Questions
-                  </Accordion.Control>
-                  <Accordion.Panel>
-                    <Accordion>
-                      {questions.data
-                        .filter(
-                          (question) =>
-                            question.questionsWithAddedTime.some(
-                              (q) => q.courseSlug === details?.courseSlug
-                            ) && question.topicSlug === topic.topicSlug
-                        )
-                        .map((question, index) =>
-                          question.variationId !== 0 ? (
-                            <Accordion.Item
-                              value={String(question.questionId)}
-                              key={question.questionId}
-                            >
-                              <Accordion.Control>
-                                <Group my={"xs"} position="apart">
-                                  <Title size={"xs"}>
-                                    Question ID: {question.questionId}
-                                  </Title>
-                                  <Text>
-                                    Total Number of Attempts:{" "}
-                                    {
-                                      question.questionsWithAddedTime.filter(
-                                        (q) =>
-                                          q.attempts.some(
-                                            (a) =>
-                                              a.courseSlug ===
-                                              details?.courseSlug
-                                          )
-                                      ).length
-                                    }
-                                  </Text>
-                                </Group>
-                                <Text italic fw={500}>
-                                  Correct % for This Question:{" "}
-                                  {(
-                                    (question.questionsWithAddedTime.flatMap(
-                                      (q) =>
-                                        q.attempts.filter(
-                                          (attempt) => attempt.isCorrect
-                                        )
-                                    ).length /
-                                      question.questionsWithAddedTime.length) *
-                                    100
-                                  ).toFixed(2)}
-                                  %
-                                </Text>
-                              </Accordion.Control>
-                              <Accordion.Panel>
-                                <div
-                                  className="rawhtml"
-                                  dangerouslySetInnerHTML={{
-                                    __html: DOMPurify.sanitize(
-                                      question.questionContent,
+          </div>
+          {avgMasteryLevels.map((topic) => (
+            <div
+              key={topic.topicSlug}
+              className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 my-4"
+            >
+              <div className="flex justify-between items-center">
+                <div className="flex items-center space-x-2">
+                  <IconUsers className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                  <p className="text-md font-bold text-gray-500 dark:text-gray-400">
+                    Average {topic.topicName} Mastery
+                  </p>
+                </div>
+                {topic.avgMasteryLevel !== 0 ? (
+                  <p className="text-md font-bold">
+                    {(topic.avgMasteryLevel * 100).toFixed(2)}/100
+                  </p>
+                ) : (
+                  <p className="text-md font-bold">No Mastery Yet!</p>
+                )}
+              </div>
+              <div className="mt-2">
+                <Progress value={topic.avgMasteryLevel * 100} size="lg" />
+              </div>
+              {questions.data.filter(
+                (q) =>
+                  q.questionsWithAddedTime.some(
+                    (qt) => qt.courseSlug === details?.courseSlug
+                  ) && q.topicSlug === topic.topicSlug
+              ).length > 0 ? (
+                <div className="mt-4">
+                  <Accordion>
+                    <Accordion.Item value="display-questions">
+                      <Accordion.Header>
+                        <p className="text-md font-bold">Display Questions</p>
+                      </Accordion.Header>
+                      <Accordion.Panel>
+                        <Accordion>
+                          {questions.data
+                            .filter(
+                              (question) =>
+                                question.questionsWithAddedTime.some(
+                                  (q) => q.courseSlug === details?.courseSlug
+                                ) && question.topicSlug === topic.topicSlug
+                            )
+                            .map((question, index) => (
+                              <Accordion.Item
+                                key={question.questionId}
+                                value={String(question.questionId)}
+                              >
+                                <Accordion.Header>
+                                  <div className="flex justify-between items-center">
+                                    <p className="text-sm font-bold">
+                                      Question ID: {question.questionId}
+                                    </p>
+                                    <p className="text-sm">
+                                      Total Number of Attempts:{" "}
                                       {
-                                        ADD_TAGS: ["iframe"],
-                                        ADD_ATTR: [
-                                          "allow",
-                                          "allowfullscreen",
-                                          "frameborder",
-                                          "scrolling",
-                                        ],
+                                        question.questionsWithAddedTime.filter(
+                                          (q) =>
+                                            q.attempts.some(
+                                              (a) =>
+                                                a.courseSlug === details?.courseSlug
+                                            )
+                                        ).length
                                       }
-                                    ),
-                                  }}
-                                />
-                                <VariablesBox
-                                  variables={
-                                    (question.questionData as QuestionDataType)
-                                      .variables
-                                  }
-                                />
-                                <Tabs
-                                  defaultValue={String(index)}
-                                  orientation="vertical"
-                                  unstyled
-                                  styles={(theme) => ({
-                                    tab: {
-                                      ...theme.fn.focusStyles(),
-                                      backgroundColor:
-                                        theme.colorScheme === "dark"
-                                          ? theme.colors.dark[6]
-                                          : theme.white,
-                                      color:
-                                        theme.colorScheme === "dark"
-                                          ? theme.colors.dark[0]
-                                          : theme.colors.gray[9],
-                                      border: `1px solid ${theme.colorScheme === "dark"
-                                        ? theme.colors.dark[6]
-                                        : theme.colors.gray[4]
-                                        }`,
-                                      padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
-                                      cursor: "pointer",
-                                      fontSize: theme.fontSizes.sm,
-                                      display: "flex",
-                                      alignItems: "center",
-
-                                      "&:disabled": {
-                                        opacity: 0.5,
-                                        cursor: "not-allowed",
-                                      },
-
-                                      "&:not(:first-of-type)": {
-                                        borderLeft: 0,
-                                      },
-
-                                      "&:first-of-type": {
-                                        borderTopLeftRadius: theme.radius.md,
-                                        borderBottomLeftRadius: theme.radius.md,
-                                      },
-
-                                      "&:last-of-type": {
-                                        borderTopRightRadius: theme.radius.md,
-                                        borderBottomRightRadius:
-                                          theme.radius.md,
-                                      },
-
-                                      "&[data-active]": {
-                                        backgroundColor: theme.colors.cyan[5],
-                                        borderColor: theme.colors.cyan[5],
-                                        color: theme.white,
-                                      },
-                                    },
-
-                                    tabIcon: {
-                                      marginRight: theme.spacing.xs,
-                                      display: "flex",
-                                      alignItems: "center",
-                                    },
-
-                                    tabsList: {
-                                      display: "flex",
-                                    },
-                                  })}
-                                >
-                                  <Tabs.List mb={"xl"}>
+                                    </p>
+                                  </div>
+                                  <p className="text-sm italic font-bold">
+                                    Correct % for This Question:{" "}
                                     {(
-                                      question.questionData as QuestionDataType
-                                    ).answers?.map((answer, index) => (
-                                      <Tabs.Tab
-                                        key={answer.key}
-                                        value={index.toString()}
-                                        icon={
-                                          answer.isCorrect ? (
-                                            <ThemeIcon
-                                              color={"green.7"}
-                                              size={"sm"}
-                                            >
-                                              <IconCheck
-                                                size={18}
-                                                color={"white"}
-                                              />
-                                            </ThemeIcon>
-                                          ) : (
-                                            <ThemeIcon
-                                              color={"red"}
-                                              size={"sm"}
-                                            >
-                                              <IconX
-                                                size={18}
-                                                color={"white"}
-                                              />
-                                            </ThemeIcon>
-                                          )
-                                        }
-                                      >
-                                        Option {index}
-                                      </Tabs.Tab>
-                                    ))}
-                                  </Tabs.List>
-                                  {(
-                                    question.questionData as QuestionDataType
-                                  ).answers?.map((answer, index) => (
-                                    <Tabs.Panel
-                                      key={index}
-                                      value={index.toString()}
-                                      pl={"xs"}
-                                    >
-                                      <>
-                                        <Divider size="xs" my={"lg"} />
-                                        <Text>
-                                          Option Detail:{" "}
-                                          <Latex>{answer.answerContent}</Latex>
-                                        </Text>
-                                        <Divider size="xs" my={"lg"} />
-                                        <Text>
-                                          Number of Attempts:{" "}
-                                          {
-                                            question.questionsWithAddedTime.filter(
-                                              (q) =>
-                                                q.attempts.some(
-                                                  (a) =>
-                                                    a.courseSlug ===
-                                                    details?.courseSlug
-                                                )
-                                            ).length
-                                          }
-                                        </Text>
-                                      </>
-                                    </Tabs.Panel>
-                                  ))}
-                                </Tabs>
-                              </Accordion.Panel>
-                            </Accordion.Item>
-                          ) : (
-                            <Accordion.Item
-                              value={String(question.questionId)}
-                              key={question.questionId}
-                            >
-                              <Accordion.Control>
-                                <Group my={"xs"} position="apart">
-                                  <Title size={"xs"}>
-                                    Question ID: {question.questionId}
-                                  </Title>
-                                  <Text>
-                                    Total Number of Attempts on This Variation
-                                    of Question:{" "}
-                                    {question.questionsWithAddedTime.length}
-                                  </Text>
-                                </Group>
-                                <Text italic fw={500}>
-                                  Correct % for This Question:{" "}
-                                  {(
-                                    (question.questionsWithAddedTime.flatMap(
-                                      (q) =>
-                                        q.attempts.filter(
-                                          (attempt) => attempt.isCorrect
-                                        )
-                                    ).length /
-                                      question.questionsWithAddedTime.length) *
-                                    100
-                                  ).toFixed(2)}
-                                  %
-                                </Text>
-                              </Accordion.Control>
-                              <Accordion.Panel>
-                                <div
-                                  className="rawhtml"
-                                  dangerouslySetInnerHTML={{
-                                    __html: DOMPurify.sanitize(
-                                      question.questionContent,
-                                      {
+                                      (question.questionsWithAddedTime.flatMap(
+                                        (q) =>
+                                          q.attempts.filter((attempt) => attempt.isCorrect)
+                                      ).length /
+                                        question.questionsWithAddedTime.length) *
+                                      100
+                                    ).toFixed(2)}
+                                    %
+                                  </p>
+                                </Accordion.Header>
+                                <Accordion.Panel>
+                                  <div
+                                    className="rawhtml"
+                                    dangerouslySetInnerHTML={{
+                                      __html: DOMPurify.sanitize(question.questionContent, {
                                         ADD_TAGS: ["iframe"],
                                         ADD_ATTR: [
                                           "allow",
@@ -821,38 +522,38 @@ const Courses = () => {
                                           "frameborder",
                                           "scrolling",
                                         ],
-                                      }
-                                    ),
-                                  }}
-                                />
-                                <VariablesBox
-                                  variables={
-                                    (question.questionData as QuestionDataType)
-                                      .variables
-                                  }
-                                />
-                              </Accordion.Panel>
-                            </Accordion.Item>
-                          )
-                        )}
-                    </Accordion>
-                  </Accordion.Panel>
-                </Accordion.Item>
-              </Accordion>
-            ) : (
-              <Center mt={"xl"}>
-                <>
-                  <IconZoomQuestion size={20} stroke={1.5} color="gray" />
-                  <Text px={"sm"}>No question from Topic attempted</Text>
-                </>
-              </Center>
-            )}
-          </Paper>
-        ))}
+                                      }),
+                                    }}
+                                  />
+                                  <VariablesBox
+                                    variables={
+                                      (question.questionData as QuestionDataType).variables
+                                    }
+                                  />
+                                </Accordion.Panel>
+                              </Accordion.Item>
+                            ))}
+                        </Accordion>
+                      </Accordion.Panel>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
+              ) : (
+                <div className="flex items-center justify-center mt-4">
+                  <IconZoomQuestion className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                  <p className="text-sm text-gray-500 dark:text-gray-400 ml-2">
+                    No question from Topic attempted
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </Modal>
 
+      {/* Modal for Edit */}
       <Modal
-        opened={openedEdit}
+        isOpen={openedEdit}
         onClose={() => {
           setOpenedEdit(false);
           setOverviewMessage(thisCourse?.courseDescription as string);
@@ -863,127 +564,104 @@ const Courses = () => {
         title={details?.courseName}
         size={mobile ? "full" : "70%"}
       >
-        <Center>
-          <Text fw={500}>
-            [Note]: Please use the Questions tab for question generation
-          </Text>
-        </Center>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleFileUpload(files);
-          }}
-        >
-          <>
-            <Group m={10} pt={"md"}>
-              <IconApps size={19} />
-              <Title order={4}>Edit Overview</Title>
-            </Group>
-            <Editor
-              upload_preset="course_overview_media"
-              value={overviewMessage}
-              onChange={setOverviewMessage}
-            />
-            <Box>
-              <Group m={10} pt={"md"}>
-                <IconPresentation size={19} />
-                <Title order={4}>Edit Lecture Slides</Title>
-                <Text italic>*PDF Files Only</Text>
-              </Group>
-            </Box>
-            <Box>
-              <>
-                {fileDisplay?.map((mediaName) => {
-                  return (
-                    <Group key={mediaName}>
-                      <Text>{mediaName}</Text>
-                      <ActionIcon onClick={() => handleDeleteFile(mediaName)}>
-                        <IconX size={18} />
-                      </ActionIcon>
-                    </Group>
-                  );
-                })}
-              </>
-            </Box>
-            <Dropzone
-              onDrop={(files) => {
-                setFiles((prevSelectedFiles) => [
-                  ...prevSelectedFiles,
-                  ...files,
-                ]);
-                setFileDisplay((prevFileNames) => [
-                  ...prevFileNames,
-                  ...files.map((file) => file.name),
-                ]);
-              }}
-              onReject={(files) => console.log("rejected files", files)}
-              maxSize={10000000}
-              accept={{ "application/pdf": [".pdf"] }}
-            >
-              <Group
-                position="center"
-                spacing="xl"
-                style={{ minHeight: 220, pointerEvents: "none" }}
+        <div className="p-4">
+          <div className="text-center">
+            <p className="text-md font-bold">
+              [Note]: Please use the Questions tab for question generation
+            </p>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleFileUpload(files);
+            }}
+          >
+            <div className="mt-4">
+              <div className="flex items-center space-x-2">
+                <IconApps className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h4 className="text-lg font-bold">Edit Overview</h4>
+              </div>
+              <Editor
+                upload_preset="course_overview_media"
+                value={overviewMessage}
+                onChange={setOverviewMessage}
+              />
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center space-x-2">
+                <IconPresentation className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h4 className="text-lg font-bold">Edit Lecture Slides</h4>
+                <p className="text-sm italic text-gray-500 dark:text-gray-400">
+                  *PDF Files Only
+                </p>
+              </div>
+              <div className="mt-2">
+                {fileDisplay?.map((mediaName) => (
+                  <div key={mediaName} className="flex items-center space-x-2">
+                    <p className="text-sm">{mediaName}</p>
+                    <button
+                      onClick={() => handleDeleteFile(mediaName)}
+                      className="text-red-500 hover:text-red-700"
+                    >
+                      <IconX className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <Dropzone
+                onDrop={(files) => {
+                  setFiles((prevSelectedFiles) => [...prevSelectedFiles, ...files]);
+                  setFileDisplay((prevFileNames) => [
+                    ...prevFileNames,
+                    ...files.map((file) => file.name),
+                  ]);
+                }}
+                onReject={(files) => console.log("rejected files", files)}
+                maxSize={10000000}
+                accept={{ "application/pdf": [".pdf"] }}
               >
-                <Dropzone.Accept>
-                  <IconUpload
-                    size={50}
-                    stroke={1.5}
-                    color={
-                      theme.colors[theme.primaryColor]?.[
-                      theme.colorScheme === "dark" ? 4 : 6
-                      ]
-                    }
-                  />
-                </Dropzone.Accept>
-                <Dropzone.Reject>
-                  <IconX
-                    size={50}
-                    stroke={1.5}
-                    color={
-                      theme.colors.red[theme.colorScheme === "dark" ? 4 : 6]
-                    }
-                  />
-                </Dropzone.Reject>
-                <Dropzone.Idle>
-                  <IconPhoto size={50} stroke={1.5} />
-                </Dropzone.Idle>
-
-                <div>
-                  <Text size="xl" inline>
+                <div className="flex flex-col items-center justify-center p-4 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg">
+                  <IconUpload className="w-10 h-10 text-gray-500 dark:text-gray-400" />
+                  <p className="text-md text-gray-500 dark:text-gray-400">
                     Drag images here or click to select files
-                  </Text>
-                  <Text size="sm" color="dimmed" inline mt={7}>
-                    Attach as many files as you like, each file should not
-                    exceed 5mb
-                  </Text>
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Attach as many files as you like, each file should not exceed 5mb
+                  </p>
                 </div>
-              </Group>
-            </Dropzone>
-            <Group m={10} pt={"md"}>
-              <IconVideo size={19} />
-              <Title order={4}>Edit Lecture Video</Title>
-            </Group>
-            <Editor
-              upload_preset="course_video_media"
-              value={videoMessage}
-              onChange={setVideoMessage}
-            />
-            <Group m={10} pt={"md"}>
-              <IconReportSearch size={19} />
-              <Title order={4}>Edit Additional Resources</Title>
-            </Group>
-            <Editor
-              upload_preset="course_additional_media"
-              value={additionalMessage}
-              onChange={setAdditionalMessage}
-            />
-            <Group position="center" mt="xl">
-              <Button type="submit" className={classes.controlModal}>
+              </Dropzone>
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center space-x-2">
+                <IconVideo className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h4 className="text-lg font-bold">Edit Lecture Video</h4>
+              </div>
+              <Editor
+                upload_preset="course_video_media"
+                value={videoMessage}
+                onChange={setVideoMessage}
+              />
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center space-x-2">
+                <IconReportSearch className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h4 className="text-lg font-bold">Edit Additional Resources</h4>
+              </div>
+              <Editor
+                upload_preset="course_additional_media"
+                value={additionalMessage}
+                onChange={setAdditionalMessage}
+              />
+            </div>
+            <div className="flex justify-center mt-6 space-x-4">
+              <button
+                type="submit"
+                className="bg-blue-500 text-white rounded-full py-2 px-6 hover:bg-blue-600"
+              >
                 Confirm Changes
-              </Button>
-              <Button
-                className={classes.controlModal}
+              </button>
+              <button
+                className="bg-gray-500 text-white rounded-full py-2 px-6 hover:bg-gray-600"
                 onClick={() => {
                   setOpenedEdit(false);
                   setOverviewMessage(details?.courseDescription as string);
@@ -994,10 +672,10 @@ const Courses = () => {
                 }}
               >
                 Cancel
-              </Button>
-            </Group>
-          </>
-        </form>
+              </button>
+            </div>
+          </form>
+        </div>
       </Modal>
     </>
   );
