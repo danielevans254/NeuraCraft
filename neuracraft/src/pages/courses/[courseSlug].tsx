@@ -49,7 +49,7 @@ export default function CourseMainPage({
   courseDetails: Course & { courseMedia: CourseMedia[] };
 }) {
   const { theme, classes, cx } = useStyles();
-  const { sidebarWidth } = useViewportSize();
+  const { width } = useViewportSize();
   const router = useRouter();
   const { courseSlug, tab, section = "learn" } = router.query;
 
@@ -111,17 +111,17 @@ export default function CourseMainPage({
   const tabs = useMemo(() => ({
     learn: [
       { label: "Overview", icon: IconApps, route: "overview" },
-      courseDetails.courseMedia.length > 0 && {
+      courseDetails?.courseMedia?.length > 0 && {
         label: "Lecture Slides",
         icon: IconPresentation,
         route: "lecture-slides"
       },
-      courseDetails.video && {
+      courseDetails?.video && {
         label: "Lecture Videos",
         icon: IconVideo,
         route: "lecture-videos"
       },
-      courseDetails.markdown && {
+      courseDetails?.markdown && {
         label: "Additional Resources",
         icon: IconReportSearch,
         route: "resources"
@@ -143,7 +143,7 @@ export default function CourseMainPage({
   };
 
   const links = useMemo(() => (
-    tabs[currentSection as keyof typeof tabs].map((item) => (
+    tabs[currentSection as keyof typeof tabs].map((item) => item && (
       <a
         className={cx(classes.link, {
           [classes.linkActive]: item.route === tab,
@@ -171,9 +171,8 @@ export default function CourseMainPage({
         }
       }, undefined, { shallow: true });
     }
-  }, [courseSlug]); // Add this effect to handle initial routing
+  }, [courseSlug]);
 
-  // Handle loading and error states
   if (isLoading) {
     return (
       <AppShell
@@ -181,7 +180,7 @@ export default function CourseMainPage({
         navbarOffsetBreakpoint="sm"
         header={
           <>
-            <TopHeader title={courseDetails.courseName} />
+            <TopHeader title={courseDetails?.courseName ?? "Loading..."} />
             <Header height={80}>
               <Container className="flex items-center h-full">
                 <TopNavbar
@@ -253,7 +252,7 @@ export default function CourseMainPage({
     return { type: "markdown", string: part };
   });
 
-  // const sidebarWidth = 500;
+  const sidebarWidth = 500;
 
   return (
     <AppShell
