@@ -9006,7 +9006,7 @@ export const Questions: {
       variationId: 1,
       "topicSlug": "advanced-database-systems",
       "questionContent": "<p>What is data mining, and how is it used in the context of databases?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9074,7 +9074,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>What is the purpose of a primary key in a relational database?</p>",
-      "questionDifficulty": QuestionDifficulty.Easy,
+      questionDifficulty: QuestionDifficulty.Easy,
       questionData: {
         "answers": [
           {
@@ -9108,7 +9108,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>Explain the concept of database normalization and why it is important.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9142,7 +9142,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>What is a distributed database system, and what are its advantages?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9176,7 +9176,7 @@ export const Questions: {
       variationId: 1,
       "topicSlug": "advanced-database-systems",
       "questionContent": "<p>Explain the concept of ACID properties in the context of distributed database systems.</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -9312,7 +9312,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>What is a distributed database system, and what are its advantages?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9346,7 +9346,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>Explain the concept of ACID properties in the context of distributed database systems.</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -9380,7 +9380,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>What is a NoSQL database, and how does it differ from a relational database?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9414,7 +9414,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "advanced-database-systems",
       "questionContent": "<p>Explain the concept of data warehousing and its role in business intelligence.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9482,7 +9482,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are some common sources of big data?</p>",
-      "questionDifficulty": QuestionDifficulty.Easy,
+      questionDifficulty: QuestionDifficulty.Easy,
       questionData: {
         "answers": [
           {
@@ -9516,7 +9516,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are some of the key challenges in processing and analyzing big data?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9550,7 +9550,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are some of the popular technologies used for big data processing and analysis (e.g., Hadoop, Spark)?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9584,7 +9584,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>Explain the concept of MapReduce in the context of big data processing.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9618,7 +9618,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are some of the business applications of big data analytics?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9652,7 +9652,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are the ethical considerations related to the use of big data?</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -9720,7 +9720,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What is the role of data lakes in big data analytics?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9754,7 +9754,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What is the Internet of Things (IoT) and how does it contribute to the growth of big data?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9788,7 +9788,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>Explain the concept of streaming analytics in the context of big data.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9822,7 +9822,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>What are some of the challenges associated with real-time analytics on big data streams?</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -9856,7 +9856,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "big-data",
       "questionContent": "<p>Explain the concept of machine learning in the context of big data analysis.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9924,7 +9924,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the difference between symmetric and asymmetric encryption?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9958,7 +9958,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a VPN (Virtual Private Network), and how does it enhance network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -9992,7 +9992,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a denial-of-service (DoS) attack, and how can it be mitigated?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10026,7 +10026,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the importance of network security audits and penetration testing?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10060,7 +10060,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is social engineering, and how can it be used to compromise network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10128,7 +10128,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the difference between symmetric and asymmetric encryption?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10162,7 +10162,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a VPN (Virtual Private Network), and how does it enhance network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10196,7 +10196,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a denial-of-service (DoS) attack, and how can it be mitigated?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10230,7 +10230,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the importance of network security audits and penetration testing?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10264,7 +10264,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is social engineering, and how can it be used to compromise network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10332,7 +10332,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the difference between symmetric and asymmetric encryption?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10366,7 +10366,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a VPN (Virtual Private Network), and how does it enhance network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10400,7 +10400,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is a denial-of-service (DoS) attack, and how can it be mitigated?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10434,7 +10434,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is the importance of network security audits and penetration testing?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10468,7 +10468,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "network-security",
       "questionContent": "<p>What is social engineering, and how can it be used to compromise network security?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10536,7 +10536,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>Explain the concept of quantum superposition.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10570,7 +10570,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>Explain the concept of quantum entanglement.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10604,7 +10604,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>What are some potential applications of quantum computing?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10638,7 +10638,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>What are some of the challenges facing the development of quantum computers?</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -10672,7 +10672,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>Explain the concept of quantum supremacy.</p>",
-      "questionDifficulty": QuestionDifficulty.Hard,
+      questionDifficulty: QuestionDifficulty.Hard,
       questionData: {
         "answers": [
           {
@@ -10706,7 +10706,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>How does quantum entanglement enable faster computations?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10740,7 +10740,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>What is the significance of Shor's algorithm in the context of quantum computing?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10774,7 +10774,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>What is the difference between a classical computer and a quantum computer in terms of how they process information?</p>",
-      "questionDifficulty": "Medium",
+      questionDifficulty: "Medium",
       questionData: {
         "answers": [
           {
@@ -10808,7 +10808,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>What is meant by 'decoherence' in the context of quantum computing?</p>",
-      "questionDifficulty": "Hard",
+      questionDifficulty: "Hard",
       questionData: {
         "answers": [
           {
@@ -10842,7 +10842,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "quantum-computing",
       "questionContent": "<p>How does quantum computing have the potential to revolutionize drug discovery?</p>",
-      "questionDifficulty": "Medium",
+      questionDifficulty: "Medium",
       questionData: {
         "answers": [
           {
@@ -10910,7 +10910,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What are some common architectural patterns used in software development (e.g., MVC, microservices)?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10944,7 +10944,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of modularity in software architecture and its benefits.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -10978,7 +10978,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the significance of scalability in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11012,7 +11012,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of loose coupling in software architecture.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11046,7 +11046,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the role of design patterns in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11114,7 +11114,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What are some common architectural patterns used in software development (e.g., MVC, microservices)?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11148,7 +11148,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of modularity in software architecture and its benefits.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11182,7 +11182,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the significance of scalability in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11216,7 +11216,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of loose coupling in software architecture.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11250,7 +11250,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the role of design patterns in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11318,7 +11318,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What are some common architectural patterns used in software development (e.g., MVC, microservices)?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11352,7 +11352,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of modularity in software architecture and its benefits.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11386,7 +11386,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the significance of scalability in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11420,7 +11420,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>Explain the concept of loose coupling in software architecture.</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -11454,7 +11454,7 @@ export const Questions: {
       variationId: 1,
       topicSlug: "software-architecture",
       "questionContent": "<p>What is the role of design patterns in software architecture?</p>",
-      "questionDifficulty": QuestionDifficulty.Medium,
+      questionDifficulty: QuestionDifficulty.Medium,
       questionData: {
         "answers": [
           {
@@ -17279,41 +17279,6 @@ export const Questions: {
     },
     {
       variationId: 4,
-      topicSlug: "ai",
-      questionContent:
-        '<p>Which of the following is an example of supervised learning?</p>',
-      questionDifficulty: QuestionDifficulty.Medium,
-      questionData: {
-        answers: [
-          {
-            key: "mantine-qchybm2w9",
-            answerContent: "Classification",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "mantine-raaste6zq",
-            answerContent: "Clustering",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-0gvacclf1",
-            answerContent: "Dimensionality Reduction",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-naqloqvqx",
-            answerContent: "Reinforcement Learning",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
       topicSlug: "cybersecurity",
       questionContent:
         '<p>Which technique is used to encrypt data such that only the intended recipient can decrypt it?</p>',
@@ -18063,41 +18028,6 @@ export const Questions: {
           {
             key: "mantine-naqloqvqx",
             answerContent: "Key-Value Store",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
-      topicSlug: "ai",
-      questionContent:
-        '<p>Which of the following is an example of supervised learning?</p>',
-      questionDifficulty: QuestionDifficulty.Medium,
-      questionData: {
-        answers: [
-          {
-            key: "mantine-qchybm2w9",
-            answerContent: "Classification",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "mantine-raaste6zq",
-            answerContent: "Clustering",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-0gvacclf1",
-            answerContent: "Dimensionality Reduction",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-naqloqvqx",
-            answerContent: "Reinforcement Learning",
             isCorrect: false,
             isLatex: false,
           },
@@ -23815,45 +23745,6 @@ export const Questions: {
       },
     },
     {
-      variationId: 3,
-      topicSlug: "programming-basics",
-      questionDifficulty: QuestionDifficulty.Medium,
-      questionContent: `
-        <p>What is the output of the following code in JavaScript?</p>
-        <pre><code>
-          console.log(1 + '2' + 3);
-        </code></pre>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "mantine-prog1",
-            answerContent: `"123"`,
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "mantine-prog2",
-            answerContent: `"6"`,
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-prog3",
-            answerContent: `"15"`,
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "mantine-prog4",
-            answerContent: `"undefined"`,
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
       variationId: 1,
       topicSlug: "big-data",
       questionContent: `
@@ -24085,78 +23976,6 @@ export const Questions: {
     },
     {
       variationId: 4,
-      topicSlug: "javascript",
-      questionDifficulty: QuestionDifficulty.Easy,
-      questionContent: `
-        <p>What is the purpose of the <code>isNaN()</code> function in JavaScript?</p>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "js-q1",
-            answerContent: "To check if a value is NaN (Not a Number)",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "js-q2",
-            answerContent: "To convert a number to a string",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "js-q3",
-            answerContent: "To check if a variable is defined",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "js-q4",
-            answerContent: "To parse a string to a number",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
-      topicSlug: "css",
-      questionDifficulty: QuestionDifficulty.Medium,
-      questionContent: `
-        <p>Which CSS property is used to make the background of an element semi-transparent?</p>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "css-q1",
-            answerContent: "background-color with rgba()",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "css-q2",
-            answerContent: "opacity",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "css-q3",
-            answerContent: "filter: alpha(opacity=50)",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "css-q4",
-            answerContent: "color: transparent",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
       topicSlug: "algorithms",
       questionDifficulty: QuestionDifficulty.Medium,
       questionContent: `
@@ -24185,121 +24004,6 @@ export const Questions: {
           {
             key: "algos-q4",
             answerContent: "Backtracking",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
-      topicSlug: "sql",
-      questionDifficulty: QuestionDifficulty.Easy,
-      questionContent: `
-        <p>Which SQL statement is used to retrieve data from a database?</p>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "sql-q1",
-            answerContent: "SELECT",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "sql-q2",
-            answerContent: "INSERT",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "sql-q3",
-            answerContent: "UPDATE",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "sql-q4",
-            answerContent: "DELETE",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
-      topicSlug: "react",
-      questionDifficulty: QuestionDifficulty.Easy,
-      questionContent: `
-        <p>What is the purpose of the <code>useState</code> hook in React?</p>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "react-q1",
-            answerContent: "To manage state in a functional component",
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "react-q2",
-            answerContent: "To fetch data from an API",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "react-q3",
-            answerContent: "To add styles to a component",
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "react-q4",
-            answerContent: "To create routes in an application",
-            isCorrect: false,
-            isLatex: false,
-          },
-        ],
-      },
-    },
-    {
-      variationId: 4,
-      topicSlug: "python",
-      questionDifficulty: QuestionDifficulty.Medium,
-      questionContent: `
-        <p>What will be the output of the following code?</p>
-        <pre><code>
-        def add_items(a, b=[]):
-            b.append(a)
-            return b
-        print(add_items(1))
-        print(add_items(2))
-        </code></pre>
-      `,
-      questionData: {
-        answers: [
-          {
-            key: "python-q1",
-            answerContent: `[1]\n[1, 2]`,
-            isCorrect: true,
-            isLatex: false,
-          },
-          {
-            key: "python-q2",
-            answerContent: `[1]\n[2]`,
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "python-q3",
-            answerContent: `[1, 2]\n[1, 2]`,
-            isCorrect: false,
-            isLatex: false,
-          },
-          {
-            key: "python-q4",
-            answerContent: `Error: Default argument is mutable`,
             isCorrect: false,
             isLatex: false,
           },
@@ -26350,5 +26054,14139 @@ export const Questions: {
           }
         ],
       },
+    },
+    {
+      variationId: 2,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Suppose you're building a spam email classifier. You decide to use a Naive Bayes algorithm for text classification. However, you encounter the issue of zero probabilities for certain words.</p>
+        <p>Which technique can address this issue?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Laplace Smoothing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Regularization",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Gradient Descent",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Feature Scaling",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 3,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>A company implements multi-factor authentication (MFA) but still falls victim to a phishing attack that steals session cookies.</p>
+        <p>What security measure can mitigate such attacks?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cyber1",
+            answerContent: "Implementing SameSite cookies with HTTPOnly flag",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber2",
+            answerContent: "Disabling third-party cookies",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber3",
+            answerContent: "Using CAPTCHAs on login pages",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cyber4",
+            answerContent: "Requiring biometric authentication",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 4,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>You are designing a distributed file storage system that must guarantee high availability and consistency. However, network partitions are inevitable.</p>
+        <p>Based on the CAP theorem, which of the following trade-offs would you most likely make?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dist1",
+            answerContent: "Sacrifice consistency to ensure availability",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist2",
+            answerContent: "Sacrifice availability to ensure consistency",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist3",
+            answerContent: "Sacrifice network partition tolerance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dist4",
+            answerContent: "Achieve all three simultaneously by optimizing the network",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 5,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>A retail chain wants to analyze customer buying patterns over the last decade. The data is too large to fit into memory, and complex aggregations need to run across multiple nodes.</p>
+        <p>Which framework is best suited for this task?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-analytics1",
+            answerContent: "Apache Spark",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-analytics2",
+            answerContent: "Pandas",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-analytics3",
+            answerContent: "Dask",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-analytics4",
+            answerContent: "SQLAlchemy",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 6,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>In an e-commerce application, you decide to model payment processing using polymorphism. You have classes like CreditCardPayment, PayPalPayment, and BankTransferPayment, each with a common method <code>processPayment()</code>.</p>
+        <p>Which principle of object-oriented programming are you applying?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Polymorphism",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Encapsulation",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Inheritance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a cache for a web server that must:</p><ul><li>Evict the least recently used items when full</li><li>Support O(1) time complexity for both insertions and lookups</li></ul><p>Which data structure combination would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Hash Map + Doubly Linked List",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Binary Search Tree",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Queue + Array",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Stack + Hash Set",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 2,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a genome sequence alignment algorithm. The algorithm must:</p><ul><li>Handle sequences of length up to 10,000 base pairs</li><li>Account for insertions, deletions, and substitutions</li><li>Optimize for both time and space complexity</li></ul><p>Which algorithm would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Needleman-Wunsch algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Breadth-First Search (BFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "QuickSort",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Dijkstra's algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 3,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are troubleshooting a network where users are experiencing intermittent connectivity issues. The network uses a mix of wired and wireless connections. Which tool would be most effective for diagnosing the issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Wireshark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Ping",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Traceroute",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Netstat",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 4,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed database system that must:</p><ul><li>Handle high write throughput</li><li>Ensure strong consistency</li><li>Support automatic failover</li></ul><p>Which database architecture would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Distributed SQL (e.g., CockroachDB)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "NoSQL (e.g., MongoDB)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Single-node relational database",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "In-memory cache (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 5,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of the Agile methodology?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Iterative development and continuous feedback",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Comprehensive documentation before development",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Strict adherence to a fixed project plan",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Minimal communication with stakeholders",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 6,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a single-page application (SPA) that requires real-time updates. Which technology stack would be most suitable for this scenario?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "React + WebSocket",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Angular + REST API",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "jQuery + AJAX",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Vanilla JavaScript + XML",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 7,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following best describes the concept of encapsulation in object-oriented programming?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Bundling data and methods that operate on that data within a single unit",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Inheriting properties and methods from a parent class",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Creating multiple methods with the same name but different parameters",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Allowing a class to implement multiple interfaces",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 8,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a deep learning model for image classification, but the model is overfitting. Which technique would be most effective to address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Dropout regularization",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Increasing the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Adding more layers to the neural network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Reducing the batch size",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 9,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a microservices architecture on a cloud platform. Which service would best help you manage service discovery and load balancing?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "Kubernetes",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon S3",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "AWS Lambda",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Google BigQuery",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 10,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are tasked with securing a web application that handles sensitive user data. Which of the following is the most effective way to prevent SQL injection attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Using parameterized queries",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Encrypting the database",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Disabling JavaScript in the browser",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Using CAPTCHA on login forms",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are developing a mobile app that needs to work offline and sync data when the device reconnects to the internet. Which database solution would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Realm Database",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "MySQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "PostgreSQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "MongoDB",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are analyzing a large dataset with missing values. Which technique would be most appropriate for handling missing data without introducing bias?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Multiple Imputation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Dropping rows with missing values",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Replacing missing values with zeros",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "Using the mean for all missing values",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key benefit of automated unit testing?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Early detection of bugs in the development cycle",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Reducing the need for manual testing entirely",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Eliminating the need for code reviews",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Guaranteeing 100% code coverage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a microservices-based application. Which tool would be most suitable for automating deployments across multiple environments?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Jenkins",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Git",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Docker",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Kubernetes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a system that needs to support multiple database types (e.g., SQL, NoSQL) without changing the application code. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Repository Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms-optimization",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing an algorithm that processes large graphs. The algorithm must:</p><ul><li>Handle graphs with up to 1 million nodes</li><li>Perform efficiently in both sparse and dense graphs</li></ul><p>Which graph traversal algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-algo1",
+            "answerContent": "Breadth-First Search (BFS) with adjacency lists",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo2",
+            "answerContent": "Depth-First Search (DFS) with adjacency matrices",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo3",
+            "answerContent": "Dijkstra's algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo4",
+            "answerContent": "Floyd-Warshall algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database system that must handle complex transactions with high concurrency. Which isolation level would best prevent dirty reads and non-repeatable reads?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Repeatable Read",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Read Uncommitted",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Read Committed",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Serializable",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed system that must handle node failures gracefully. Which protocol ensures consistency and availability in the presence of network partitions?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Raft Consensus Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Two-Phase Commit (2PC)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Paxos Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Gossip Protocol",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "artificial-intelligence",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are training a reinforcement learning agent to play a game. The agent must learn from sparse rewards. Which algorithm would be most effective?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ai1",
+            "answerContent": "Q-Learning with Experience Replay",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai2",
+            "answerContent": "A* Search Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai3",
+            "answerContent": "K-Means Clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai4",
+            "answerContent": "Linear Regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a network that must prevent man-in-the-middle (MITM) attacks. Which protocol would best ensure secure communication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-netsec1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are processing a large dataset that requires real-time analytics. Which framework would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-big1",
+            "answerContent": "Apache Spark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big2",
+            "answerContent": "Hadoop MapReduce",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big3",
+            "answerContent": "Apache Kafka",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big4",
+            "answerContent": "Elasticsearch",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which data structure is best suited for implementing a First-In-First-Out (FIFO) mechanism?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Queue",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Stack",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are implementing an algorithm to find the shortest path in a weighted graph with negative edges. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system that must handle real-time tasks with strict deadlines. Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      variationId: 7,
+      topicSlug: "algorithms",
+      questionContent: `
+        <p>You are tasked with sorting a large dataset of integers. The dataset is mostly sorted, with only a few elements out of place.</p>
+        <p>Which sorting algorithm is the most efficient for this task?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "Insertion Sort",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "Merge Sort",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "Quick Sort",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "Heap Sort",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 8,
+      topicSlug: "databases",
+      questionContent: `
+        <p>A company wants to store customer purchase data with high transaction rates. They require ACID compliance and a relational structure.</p>
+        <p>Which type of database would best suit their needs?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Relational Database (e.g., PostgreSQL)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Document Database (e.g., MongoDB)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Key-Value Store (e.g., Redis)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Graph Database (e.g., Neo4j)",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 9,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>You are deploying a web application that requires auto-scaling, managed databases, and serverless functions. The application must minimize operational overhead.</p>
+        <p>Which cloud service model would you choose?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Platform as a Service (PaaS)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Infrastructure as a Service (IaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Software as a Service (SaaS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "On-Premise Hosting",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 10,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>A program you developed is consuming 100% CPU usage despite being designed to wait for user input. What is the most likely cause?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "The program is using a busy-wait loop.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "The program is multithreaded and deadlocked.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "The program is waiting on a semaphore.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "The program is executing too many I/O operations.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 11,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>Which algorithm is commonly used to reduce the dimensionality of data while preserving its variance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "K-Nearest Neighbors (KNN)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Support Vector Machine (SVM)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Decision Tree",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 12,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>Which HTTP status code indicates that the request was successful but no content is returned?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "204 No Content",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "200 OK",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "201 Created",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "202 Accepted",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      variationId: 13,
+      topicSlug: "networking",
+      questionContent: `
+        <p>What is the primary function of the ARP (Address Resolution Protocol) in a computer network?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "Resolve IP addresses to MAC addresses.",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "Resolve domain names to IP addresses.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "Encrypt network traffic.",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "Control data flow between networks.",
+            isCorrect: false,
+            isLatex: false,
+          },
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key advantage of using React Native for mobile app development?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Write once, run on both iOS and Android",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "Better performance than native apps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "No need for JavaScript knowledge",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "Full access to device hardware without plugins",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are analyzing a dataset with skewed distributions. Which technique would best normalize the data for analysis?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Log transformation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Min-max scaling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Z-score normalization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "One-hot encoding",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are writing unit tests for a function that calculates the factorial of a number. Which testing approach would best ensure correctness?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Test edge cases (e.g., 0, 1, negative numbers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Test only positive integers",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Skip testing for small inputs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Test only the happy path",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a containerized application. Which tool would best help you manage container orchestration?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Kubernetes",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Docker Compose",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Jenkins",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Ansible",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that needs to decouple the sender of a request from its receiver. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Command Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>In a microservices architecture, you observe that Service A occasionally returns stale data despite Service B having updated the related information. The system uses:</p>
+        <ul>
+          <li>Event-driven communication</li>
+          <li>Redis for caching</li>
+          <li>PostgreSQL as the primary database</li>
+        </ul>
+        <p>Which consistency pattern would best resolve this issue while maintaining system performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "CQRS with Event Sourcing",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "Two-Phase Commit Protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "Saga Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "Simple Cache Invalidation",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms-optimization",
+      questionContent: `
+        <p>Given a string representation of a mathematical expression containing nested parentheses, you need to determine if it's balanced. Consider this modification of the traditional problem:</p>
+        <p>The expression also includes square brackets and curly braces, and follows these rules:</p>
+        <ul>
+          <li>Parentheses must close in correct order: <code>{[()]}</code> is valid, <code>{[(])}</code> is not</li>
+          <li>Each closing bracket must match the most recently opened unmatched opening bracket</li>
+          <li>Expression may contain mathematical operators and numbers</li>
+        </ul>
+        <p>What is the space complexity of the most efficient solution?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ao1",
+            answerContent: "O(n) where n is the number of brackets",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao2",
+            answerContent: "O(1) using constant space",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao3",
+            answerContent: "O(log n) using recursion",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ao4",
+            answerContent: "O(n²) due to nested validation",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>In a recommendation system for an e-commerce platform, you observe that the model consistently suggests popular items but fails to surface niche products that might interest specific users. Given the following metrics:</p>
+        <p>Current implementation:</p>
+        <ul>
+          <li>Average precision: 0.82</li>
+          <li>Recall for niche items: 0.35</li>
+          <li>User engagement: 45%</li>
+        </ul>
+        <p>Which technique would most effectively address the long-tail recommendation problem while maintaining overall system performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Multi-armed bandit with Thompson Sampling",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "Simple collaborative filtering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Content-based filtering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Popularity-based ranking",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>Consider a time-series database storing IoT sensor data with the following characteristics:</p>
+        <ul>
+          <li>10,000 sensors sending data every second</li>
+          <li>Each record contains timestamp, sensor_id, temperature, humidity, and pressure</li>
+          <li>Queries primarily analyze data within specific time windows</li>
+          <li>Data older than 30 days needs to be archived</li>
+        </ul>
+        <p>What would be the most efficient partitioning strategy for this scenario?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Time-based partitioning with daily chunks and sensor_id clustering",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "Hash partitioning based on sensor_id",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Range partitioning based on temperature values",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "List partitioning by sensor location",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "quantum-computing",
+      questionContent: `
+        <p>Given a quantum circuit with the following state:</p>
+        <p>\\[ |\\psi\\rangle = \\frac{1}{\\sqrt{2}}(|00\\rangle + |11\\rangle) \\]</p>
+        <p>After applying a CNOT gate followed by a Hadamard gate on the first qubit, what is the resulting quantum state?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-qc1",
+            answerContent: "\\[ \\frac{1}{\\sqrt{2}}(|00\\rangle + |11\\rangle) \\]",
+            isCorrect: true,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc2",
+            answerContent: "\\[ \\frac{1}{\\sqrt{2}}(|01\\rangle + |10\\rangle) \\]",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc3",
+            answerContent: "\\[ |00\\rangle \\]",
+            isCorrect: false,
+            isLatex: true,
+          },
+          {
+            key: "mantine-qc4",
+            answerContent: "\\[ \\frac{1}{2}(|00\\rangle + |01\\rangle + |10\\rangle + |11\\rangle) \\]",
+            isCorrect: false,
+            isLatex: true,
+          }
+        ],
+      },
+    },
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>What is the Big O notation for an algorithm that performs a linear search in an array?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(1)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>Which of the following data structures is best suited for implementing a LIFO (Last In First Out) mechanism?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "Stack",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "Queue",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "Array",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "Linked List",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "algorithms",
+
+      questionContent:
+
+        '<p>What is the average case time complexity of the QuickSort algorithm?</p>',
+
+      questionDifficulty: QuestionDifficulty.Medium,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n log n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>You're designing a real-time collaboration system where multiple users can edit a document simultaneously. The system needs to:</p>
+        <ul>
+          <li>Handle concurrent edits</li>
+          <li>Maintain consistency</li>
+          <li>Support offline editing</li>
+          <li>Resolve conflicts automatically</li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Operational Transform with a central server maintaining a transformation matrix",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Last-write-wins with timestamps",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Pessimistic locking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Manual merge resolution",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>You are designing a microservices-based architecture for an e-commerce application. Each microservice has its own database. To maintain data consistency across services, which of the following techniques is most suitable?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-distr1",
+            answerContent: "Eventual Consistency using an Event Sourcing model",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr2",
+            answerContent: "Two-Phase Commit Protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr3",
+            answerContent: "Pessimistic Concurrency Control",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr4",
+            answerContent: "Database Sharding",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Which of the following algorithms is best suited for a classification task with highly imbalanced datasets?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Random Forest with oversampling techniques",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "K-Means Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Support Vector Regression",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>A company wants to protect its sensitive data from being accessed by unauthorized users. Which of the following methods provides the best approach to achieve this?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Implementing Role-Based Access Control (RBAC)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Using a simple password authentication mechanism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Enabling logging of access attempts",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Relying on physical security measures only",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You are developing a single-page application (SPA) that communicates with a backend API. To enhance performance and reduce server load, which of the following strategies should you use?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "Implementing client-side caching",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "Using server-side rendering (SSR) for all requests",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "Performing frequent polling to the server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "Disabling browser caching",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>In object-oriented programming, what principle ensures that the implementation details of a class are hidden from its users?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Encapsulation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Inheritance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key advantage of using React Native for mobile app development?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Write once, run on both iOS and Android",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "Better performance than native apps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "No need for JavaScript knowledge",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "Full access to device hardware without plugins",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are analyzing a dataset with skewed distributions. Which technique would best normalize the data for analysis?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Log transformation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Min-max scaling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Z-score normalization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "One-hot encoding",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are writing unit tests for a function that calculates the factorial of a number. Which testing approach would best ensure correctness?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Test edge cases (e.g., 0, 1, negative numbers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Test only positive integers",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Skip testing for small inputs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Test only the happy path",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a containerized application. Which tool would best help you manage container orchestration?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Kubernetes",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Docker Compose",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Jenkins",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Ansible",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that needs to decouple the sender of a request from its receiver. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Command Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>During a security audit of a financial application, you discover the following implementation for password hashing:</p>
+        <pre><code>
+  function hashPassword(password) {
+    const salt = generateRandomSalt();
+    return md5(password + salt);
+  }
+        </code></pre>
+        <p>The application handles millions of transactions daily and requires:</p>
+        <ul>
+          <li>Compliance with GDPR and PCI DSS</li>
+          <li>Password recovery functionality</li>
+          <li>Protection against rainbow table attacks</li>
+        </ul>
+        <p>Which security enhancement would provide the best protection while maintaining system performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Argon2id with configurable memory and time cost parameters",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "SHA-256 with multiple iterations",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "PBKDF2 with fixed iteration count",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "BCrypt with work factor 10",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "artificial-intelligence",
+      questionContent: `
+        <p>You're developing an AI system for autonomous drone delivery in urban environments. The system experiences the following issues:</p>
+        <ul>
+          <li>20% of deliveries take longer routes than necessary</li>
+          <li>Drones sometimes hover unnecessarily when encountering new obstacles</li>
+          <li>Battery consumption varies significantly between similar routes</li>
+        </ul>
+        <p>Given this scenario and the reward function:</p>
+        <p>\\[ R(s,a) = -0.1t - 0.5d + 10\\delta_{goal} - 5\\delta_{collision} \\]</p>
+        <p>Where t is time, d is distance, \\(\\delta_{goal}\\) is goal achievement, and \\(\\delta_{collision}\\) is collision detection.</p>
+        <p>Which enhancement would most effectively improve the system's performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ai1",
+            answerContent: "Hierarchical reinforcement learning with sub-task decomposition",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai2",
+            answerContent: "Simple Q-learning with ε-greedy exploration",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai3",
+            answerContent: "Rule-based decision system",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ai4",
+            answerContent: "Deep neural network with supervised learning",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "blockchain",
+      questionContent: `
+        <p>In a private blockchain network for supply chain tracking, you observe:</p>
+        <ul>
+          <li>Transaction confirmation times increasing exponentially</li>
+          <li>Network consistently reaching 85% storage capacity</li>
+          <li>Some nodes failing to sync properly</li>
+        </ul>
+        <p>Given the current block structure:</p>
+        <pre><code>
+  {
+    "blockHeader": {
+      "previousHash": "0x...",
+      "merkleRoot": "0x...",
+      "timestamp": 1645729846,
+      "nonce": 247852
+    },
+    "transactions": [
+      // Array of transaction objects
+    ]
+  }
+        </code></pre>
+        <p>Which optimization would most effectively address these scaling issues while maintaining data integrity?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bc1",
+            answerContent: "Implement pruning with merkle tree verification and state checkpoints",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc2",
+            answerContent: "Increase block size limit",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc3",
+            answerContent: "Reduce block creation time",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bc4",
+            answerContent: "Add more validator nodes",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "devops",
+      questionContent: `
+        <p>Your team manages a microservices architecture with the following metrics:</p>
+        <ul>
+          <li>Average deployment frequency: 20/day</li>
+          <li>Change failure rate: 15%</li>
+          <li>Mean time to recovery: 45 minutes</li>
+        </ul>
+        <p>Current CI/CD pipeline:</p>
+        <pre><code>
+  stages:
+    - build
+    - test
+    - deploy
+  
+  variables:
+    TEST_COVERAGE: "80"
+    </code></pre>
+        <p>Which pipeline enhancement would most effectively reduce the change failure rate while maintaining deployment frequency?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-devops1",
+            answerContent: "Feature flags with gradual rollouts and automated canary analysis",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops2",
+            answerContent: "Increase test coverage threshold to 95%",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops3",
+            answerContent: "Add manual approval gates",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-devops4",
+            answerContent: "Implement blue-green deployments",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're working on a testing strategy for a critical payment processing system. The system exhibits:</p>
+        <ul>
+          <li>Non-deterministic behavior in concurrent transactions</li>
+          <li>Complex state dependencies between components</li>
+          <li>Integration with external payment gateways</li>
+        </ul>
+        <p>Current test code shows the following pattern:</p>
+        <pre><code>
+  @Test
+  public void testPaymentProcessing() {
+      PaymentRequest request = new PaymentRequest(100.00);
+      PaymentResponse response = paymentService.process(request);
+      assertTrue(response.isSuccessful());
+  }
+        </code></pre>
+        <p>Which testing approach would most effectively identify race conditions and state-dependent bugs?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Property-based testing with stateful model checking",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Standard unit tests with mocking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Integration tests with real dependencies",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "End-to-end tests with recorded scenarios",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>What is the Big O notation for an algorithm that performs a linear search in an array?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(1)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>Which of the following data structures is best suited for implementing a LIFO (Last In First Out) mechanism?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "Stack",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "Queue",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "Array",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "Linked List",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "algorithms",
+
+      questionContent:
+
+        '<p>What is the average case time complexity of the QuickSort algorithm?</p>',
+
+      questionDifficulty: QuestionDifficulty.Medium,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n log n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>You're designing a real-time collaboration system where multiple users can edit a document simultaneously. The system needs to:</p>
+        <ul>
+          <li>Handle concurrent edits</li>
+          <li>Maintain consistency</li>
+          <li>Support offline editing</li>
+          <li>Resolve conflicts automatically</li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Operational Transform with a central server maintaining a transformation matrix",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Last-write-wins with timestamps",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Pessimistic locking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Manual merge resolution",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>You are designing a microservices-based architecture for an e-commerce application. Each microservice has its own database. To maintain data consistency across services, which of the following techniques is most suitable?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-distr1",
+            answerContent: "Eventual Consistency using an Event Sourcing model",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr2",
+            answerContent: "Two-Phase Commit Protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr3",
+            answerContent: "Pessimistic Concurrency Control",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr4",
+            answerContent: "Database Sharding",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Which of the following algorithms is best suited for a classification task with highly imbalanced datasets?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Random Forest with oversampling techniques",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "K-Means Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Support Vector Regression",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>A company wants to protect its sensitive data from being accessed by unauthorized users. Which of the following methods provides the best approach to achieve this?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "Implementing Role-Based Access Control (RBAC)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "Using a simple password authentication mechanism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "Enabling logging of access attempts",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "Relying on physical security measures only",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You are developing a single-page application (SPA) that communicates with a backend API. To enhance performance and reduce server load, which of the following strategies should you use?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: "Implementing client-side caching",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: "Using server-side rendering (SSR) for all requests",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: "Performing frequent polling to the server",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: "Disabling browser caching",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>In object-oriented programming, what principle ensures that the implementation details of a class are hidden from its users?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Encapsulation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Inheritance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "big-data",
+      questionContent: `
+        <p>You're optimizing a real-time analytics pipeline processing social media data with these characteristics:</p>
+        <ul>
+          <li>Input rate: 500,000 events/second</li>
+          <li>Peak hours show 3x normal traffic</li>
+          <li>Each event contains: user_id, timestamp, action_type, metadata (variable size)</li>
+          <li>Current processing latency: 5-15 seconds</li>
+        </ul>
+        <p>Current architecture:</p>
+        <pre><code>
+  Kafka (ingestion) → Spark Streaming (processing) → Cassandra (storage)
+        </code></pre>
+        <p>Given these requirements:</p>
+        <ul>
+          <li>Maximum latency: 2 seconds</li>
+          <li>No data loss during peak hours</li>
+          <li>Cost-effective scaling</li>
+        </ul>
+        <p>Which optimization would most effectively meet these requirements?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-bd1",
+            answerContent: "Implement stream windowing with adaptive backpressure and parallel event processors",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd2",
+            answerContent: "Increase Kafka partitions and consumer groups",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd3",
+            answerContent: "Switch to batch processing",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-bd4",
+            answerContent: "Add more Cassandra nodes",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: `
+        <p>You're debugging a mobile app that exhibits the following issues:</p>
+        <ul>
+          <li>Memory usage increases by 50MB every hour of active use</li>
+          <li>UI freezes for 200ms when loading new content</li>
+          <li>Battery drain is 2x higher than similar apps</li>
+        </ul>
+        <p>Current implementation of image loading:</p>
+        <pre><code>
+  class ImageLoader {
+    private val cache = HashMap<String, Bitmap>()
+    
+    fun loadImage(url: String) {
+      if (!cache.containsKey(url)) {
+        val bitmap = downloadAndDecode(url)
+        cache[url] = bitmap
+      }
+      return cache[url]
     }
+  }
+        </code></pre>
+        <p>Which optimization would most effectively address all three issues?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Implement LruCache with weak references and progressive image loading",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "Use SQLite for image caching",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Implement eager loading of images",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "Add more RAM to cache",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "advanced-database-systems",
+      questionContent: `
+        <p>In a distributed database system managing medical records, you observe:</p>
+        <p>Query pattern analysis:</p>
+        <pre><code>
+  SELECT *
+  FROM patient_records pr
+  JOIN medical_history mh ON pr.id = mh.patient_id
+  WHERE pr.last_visit_date > NOW() - INTERVAL '6 months'
+    AND mh.condition = 'diabetes'
+  ORDER BY pr.last_visit_date DESC;
+        </code></pre>
+        <p>Current metrics:</p>
+        <ul>
+          <li>Average query time: 3.5 seconds</li>
+          <li>Storage used: 4TB across 5 nodes</li>
+          <li>Write operations: 1000/minute</li>
+          <li>Read operations: 5000/minute</li>
+        </ul>
+        <p>Which indexing strategy would optimize this query while maintaining write performance?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "Covering index on (condition, last_visit_date) with BRIN index on large tables",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "B-tree index on last_visit_date",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "Hash index on patient_id",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "Full table scan with materialized views",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "network-security",
+      questionContent: `
+        <p>During a security audit of a financial institution's network, you discover:</p>
+        <ul>
+          <li>Unusual DNS queries to random subdomains</li>
+          <li>Encrypted traffic spikes during non-business hours</li>
+          <li>Multiple failed SSH attempts from internal IPs</li>
+        </ul>
+        <p>Network capture sample:</p>
+        <pre><code>
+  16:42:13.123 IP 192.168.1.100.31337 > 8.8.8.8.53: 
+    DNS A? x7f3a9.attacker.com
+  16:42:14.234 IP 192.168.1.100.31337 > 8.8.8.8.53:
+    DNS A? k8d92b.attacker.com
+        </code></pre>
+        <p>Which type of attack is most likely occurring, and what is the most effective mitigation?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ns1",
+            answerContent: "DNS tunneling exfiltration; Implement DNS Response Policy Zones (RPZ) with entropy analysis",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns2",
+            answerContent: "DDoS attack; Increase bandwidth",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns3",
+            answerContent: "Brute force attack; Change SSH ports",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ns4",
+            answerContent: "SQL injection; Update WAF rules",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "user-experience-design",
+      questionContent: `
+        <p>You're analyzing user behavior in an e-commerce app and observe:</p>
+        <ul>
+          <li>Cart abandonment rate: 75%</li>
+          <li>Average time to complete purchase: 4.5 minutes</li>
+          <li>Form completion rate: 45%</li>
+        </ul>
+        <p>Current checkout flow:</p>
+        <pre><code>
+  1. Cart Review
+  2. Shipping Details (2 screens)
+  3. Billing Information
+  4. Order Summary
+  5. Payment Processing
+        </code></pre>
+        <p>Heat map analysis shows users repeatedly switching between screens 2 and 3.</p>
+        <p>Which UX optimization would most effectively reduce cart abandonment while maintaining security?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ux1",
+            answerContent: "Progressive disclosure with smart defaults and contextual validation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux2",
+            answerContent: "Add more payment options",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux3",
+            answerContent: "Implement one-page checkout",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ux4",
+            answerContent: "Add progress indicators",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You're building a simple contact form and need to validate an email address. Which HTML5 input type would provide built-in email validation without requiring JavaScript?</p>
+        <p>Example form field needed:</p>
+        <pre><code>&lt;form&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input _____&gt;
+  &lt;/form&gt;</code></pre>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-web1",
+            answerContent: 'type="email"',
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web2",
+            answerContent: 'type="text"',
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web3",
+            answerContent: 'type="mail"',
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-web4",
+            answerContent: 'type="emailaddress"',
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "object-oriented-programming",
+      questionContent: `
+        <p>In a simple music player application, you have a Song class:</p>
+        <pre><code>class Song {
+      private String title;
+      private String artist;
+      private int duration;
+  }
+  </code></pre>
+        <p>Which OOP principle is being demonstrated by marking the variables as private?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-oop1",
+            answerContent: "Encapsulation",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop2",
+            answerContent: "Inheritance",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop3",
+            answerContent: "Polymorphism",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-oop4",
+            answerContent: "Abstraction",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>You have a simple online bookstore database with a books table containing these columns:</p>
+        <ul>
+          <li>id (integer)</li>
+          <li>title (text)</li>
+          <li>author (text)</li>
+          <li>price (decimal)</li>
+        </ul>
+        <p>Which SQL query would find all books priced under $20, ordered by title?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sql1",
+            answerContent: "SELECT * FROM books WHERE price < 20 ORDER BY title;",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql2",
+            answerContent: "SELECT * FROM books WHERE price > 20 ORDER BY title;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql3",
+            answerContent: "SELECT * FROM books ORDER BY price < 20, title;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sql4",
+            answerContent: "SELECT * WHERE books.price < 20 ORDER title;",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-testing",
+      questionContent: `
+        <p>You're testing a simple calculator function that adds two numbers:</p>
+        <pre><code>function add(a, b) {
+      return a + b;
+  }</code></pre>
+        <p>Which of these test cases would be most important to include in your basic test suite?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-test1",
+            answerContent: "Test with two positive numbers (2 + 2 = 4)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test2",
+            answerContent: "Test with very large numbers (999999 + 999999)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test3",
+            answerContent: "Test with decimal numbers (1.1 + 2.2)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-test4",
+            answerContent: "Test with null values (null + null)",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "networking",
+      questionContent: `
+        <p>A user reports they can't access any websites. You want to check if their computer can reach the internet.</p>
+        <p>Which command would be most appropriate to test basic network connectivity?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-net1",
+            answerContent: "ping google.com",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net2",
+            answerContent: "ipconfig",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net3",
+            answerContent: "netstat",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-net4",
+            answerContent: "tracert",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>You have a dataset of student grades:</p>
+        <pre><code>
+  grades = [85, 90, 88, 92, 95, 85, 88, 90]
+        </code></pre>
+        <p>Which Python function would you use to find the average grade?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "sum(grades) / len(grades)",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "grades.average()",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "average(grades)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "grades.mean",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>You need to store user profile pictures in the cloud. The requirements are:</p>
+        <ul>
+          <li>Public access to the images</li>
+          <li>Low-cost storage</li>
+          <li>No need for frequent updates</li>
+        </ul>
+        <p>Which AWS service would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cloud1",
+            answerContent: "Amazon S3",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud2",
+            answerContent: "Amazon EBS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud3",
+            answerContent: "Amazon RDS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cloud4",
+            answerContent: "Amazon EFS",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>What is the Big O notation for an algorithm that performs a linear search in an array?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(1)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "data-structures",
+
+      questionContent:
+
+        '<p>Which of the following data structures is best suited for implementing a LIFO (Last In First Out) mechanism?</p>',
+
+      questionDifficulty: QuestionDifficulty.Easy,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "Stack",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "Queue",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "Array",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "Linked List",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+
+      variationId: 1,
+
+      topicSlug: "algorithms",
+
+      questionContent:
+
+        '<p>What is the average case time complexity of the QuickSort algorithm?</p>',
+
+      questionDifficulty: QuestionDifficulty.Medium,
+
+      questionData: {
+
+        answers: [
+
+          {
+
+            key: "mantine-qchybm2w9",
+
+            answerContent: "O(n log n)",
+
+            isCorrect: true,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-raaste6zq",
+
+            answerContent: "O(n^2)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-0gvacclf1",
+
+            answerContent: "O(n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+          {
+
+            key: "mantine-naqloqvqx",
+
+            answerContent: "O(log n)",
+
+            isCorrect: false,
+
+            isLatex: false,
+
+          },
+
+        ],
+
+      },
+
+    },
+
+    {
+      variationId: 1,
+      topicSlug: "software-architecture",
+      questionContent: `
+        <p>You're designing a real-time collaboration system where multiple users can edit a document simultaneously. The system needs to:</p>
+        <ul>
+          <li>Handle concurrent edits</li>
+          <li>Maintain consistency</li>
+          <li>Support offline editing</li>
+          <li>Resolve conflicts automatically</li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-arch1",
+            answerContent: "Operational Transform with a central server maintaining a transformation matrix",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch2",
+            answerContent: "Last-write-wins with timestamps",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch3",
+            answerContent: "Pessimistic locking",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-arch4",
+            answerContent: "Manual merge resolution",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "distributed-systems",
+      questionContent: `
+        <p>You are designing a microservices-based architecture for an e-commerce application. Each microservice has its own database. To maintain data consistency across services, which of the following techniques is most suitable?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Hard,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-distr1",
+            answerContent: "Eventual Consistency using an Event Sourcing model",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr2",
+            answerContent: "Two-Phase Commit Protocol",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr3",
+            answerContent: "Pessimistic Concurrency Control",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-distr4",
+            answerContent: "Database Sharding",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "machine-learning",
+      questionContent: `
+        <p>Which of the following algorithms is best suited for a classification task with highly imbalanced datasets?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Medium,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ml1",
+            answerContent: "Random Forest with oversampling techniques",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml2",
+            answerContent: "K-Means Clustering",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml3",
+            answerContent: "Principal Component Analysis (PCA)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ml4",
+            answerContent: "Support Vector Regression",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms-optimization",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing an algorithm that must solve the traveling salesman problem (TSP) for a small number of cities. Which approach would best balance accuracy and computational efficiency?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-algo1",
+            "answerContent": "Dynamic Programming (e.g., Held-Karp algorithm)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo2",
+            "answerContent": "Brute Force",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo3",
+            "answerContent": "Genetic Algorithms",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo4",
+            "answerContent": "Simulated Annealing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a database system that must handle high write throughput and provide strong consistency. Which database type would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "NewSQL (e.g., Google Spanner)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "NoSQL (e.g., MongoDB)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Relational Database (e.g., MySQL)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "In-Memory Database (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed system that must handle network partitions and maintain availability. Which consistency model would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Eventual Consistency",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Strong Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Linearizability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Sequential Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "artificial-intelligence",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are training a reinforcement learning agent to play a game. The agent must learn from sparse rewards. Which algorithm would be most effective?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ai1",
+            "answerContent": "Q-Learning with Experience Replay",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai2",
+            "answerContent": "A* Search Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai3",
+            "answerContent": "K-Means Clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai4",
+            "answerContent": "Linear Regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a network that must prevent man-in-the-middle (MITM) attacks. Which protocol would best ensure secure communication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-netsec1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-structures",
+      questionContent: `
+        <p>You need to store a list of unique usernames for a small application. Which Python data structure would be most appropriate?</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>No duplicate usernames allowed</li>
+          <li>Need to check if username exists</li>
+          <li>Order doesn't matter</li>
+        </ul>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-ds1",
+            answerContent: "set",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds2",
+            answerContent: "list",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds3",
+            answerContent: "tuple",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-ds4",
+            answerContent: "dictionary",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cybersecurity",
+      questionContent: `
+        <p>Which of these passwords would be considered the most secure for a user account?</p>
+        <p>Available options:</p>
+        <ul>
+          <li>password123</li>
+          <li>P@ssw0rd!</li>
+          <li>iLoveProgramming2023!</li>
+          <li>abcd1234</li>
+        </ul>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-sec1",
+            answerContent: "iLoveProgramming2023!",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec2",
+            answerContent: "P@ssw0rd!",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec3",
+            answerContent: "password123",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-sec4",
+            answerContent: "abcd1234",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "operating-systems",
+      questionContent: `
+        <p>You need to view the contents of a text file named 'notes.txt' in a Linux terminal. Which command should you use?</p>
+        <pre><code>$ ls
+  documents/  notes.txt  images/
+  $ _______</code></pre>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-os1",
+            answerContent: "cat notes.txt",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os2",
+            answerContent: "open notes.txt",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os3",
+            answerContent: "show notes.txt",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-os4",
+            answerContent: "view notes.txt",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "web-development",
+      questionContent: `
+        <p>You want to center a div element both horizontally and vertically within its parent container using CSS. Which CSS properties would you use?</p>
+        <pre><code>.parent {
+    /* What properties to add here? */
+  }
+  
+  .child {
+    width: 200px;
+    height: 200px;
+    background: blue;
+  }</code></pre>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-css1",
+            answerContent: "display: flex; justify-content: center; align-items: center;",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-css2",
+            answerContent: "text-align: center; vertical-align: middle;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-css3",
+            answerContent: "margin: auto; padding: 50%;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-css4",
+            answerContent: "position: center; display: block;",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "algorithms",
+      questionContent: `
+        <p>You have a list of numbers: <code>[4, 2, 7, 1, 3]</code></p>
+        <p>After the first pass of a bubble sort algorithm, what will the list look like?</p>
+        <pre><code>Original: [4, 2, 7, 1, 3]
+  First pass: ?</code></pre>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-algo1",
+            answerContent: "[2, 4, 1, 3, 7]",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo2",
+            answerContent: "[1, 2, 3, 4, 7]",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo3",
+            answerContent: "[4, 2, 1, 3, 7]",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-algo4",
+            answerContent: "[2, 1, 3, 4, 7]",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "database-systems",
+      questionContent: `
+        <p>In a customer database, you want to find all unique cities where customers live. The table structure is:</p>
+        <pre><code>customers
+  -----------
+  id: integer
+  name: text
+  city: text
+  state: text</code></pre>
+        <p>Which SQL query would you use?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-db1",
+            answerContent: "SELECT DISTINCT city FROM customers;",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db2",
+            answerContent: "SELECT city FROM customers;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db3",
+            answerContent: "SELECT UNIQUE city FROM customers;",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-db4",
+            answerContent: "SELECT city FROM customers GROUP BY city;",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are processing a large dataset that requires real-time analytics. Which framework would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-big1",
+            "answerContent": "Apache Spark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big2",
+            "answerContent": "Hadoop MapReduce",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big3",
+            "answerContent": "Apache Kafka",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big4",
+            "answerContent": "Elasticsearch",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which data structure is best suited for implementing a First-In-First-Out (FIFO) mechanism?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Queue",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Stack",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are implementing an algorithm to find the shortest path in a weighted graph with negative edges. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system that must handle real-time tasks with strict deadlines. Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      variationId: 1,
+      topicSlug: "data-analytics",
+      questionContent: `
+        <p>You have a dataset of product sales:</p>
+        <pre><code>
+  import pandas as pd
+  
+  sales_data = pd.DataFrame({
+      'product': ['A', 'B', 'A', 'C', 'B'],
+      'quantity': [10, 5, 15, 8, 12]
+  })</code></pre>
+        <p>How would you find the total quantity sold for each product?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-da1",
+            answerContent: "sales_data.groupby('product')['quantity'].sum()",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da2",
+            answerContent: "sales_data.sum('quantity')",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da3",
+            answerContent: "sales_data.product.sum(quantity)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-da4",
+            answerContent: "sales_data.total('quantity', by='product')",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "software-engineering",
+      questionContent: `
+        <p>You're reviewing code and find this function:</p>
+        <pre><code>function processUserData(data) {
+    if(data) {
+      if(data.name) {
+        if(data.age) {
+          // Process data
+        }
+      }
+    }
+  }</code></pre>
+        <p>What common code smell is present in this function?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-se1",
+            answerContent: "Arrow Code/Pyramid of Doom",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se2",
+            answerContent: "Code Duplication",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se3",
+            answerContent: "Magic Numbers",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-se4",
+            answerContent: "Long Method",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "mobile-development",
+      questionContent: `
+        <p>In a mobile app, you need to store user preferences (theme, language, notifications). Which storage option is most appropriate?</p>
+        <ul>
+          <li>Data size: < 1MB</li>
+          <li>Needs to persist after app restart</li>
+          <li>Simple key-value pairs</li>
+        </ul>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-md1",
+            answerContent: "Shared Preferences / UserDefaults",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md2",
+            answerContent: "SQLite Database",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md3",
+            answerContent: "Cache Storage",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-md4",
+            answerContent: "Cloud Storage",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "design-patterns",
+      questionContent: `
+        <p>You're building a notification system that needs to:</p>
+        <ul>
+          <li>Update multiple UI elements when data changes</li>
+          <li>Keep UI elements in sync</li>
+          <li>Allow for easy addition of new UI elements</li>
+        </ul>
+        <p>Which design pattern would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-dp1",
+            answerContent: "Observer Pattern",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp2",
+            answerContent: "Singleton Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp3",
+            answerContent: "Factory Pattern",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-dp4",
+            answerContent: "Builder Pattern",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "ethical-hacking",
+      questionContent: `
+        <p>During a security assessment, you notice suspicious logs:</p>
+        <pre><code>login.php?username=admin'--
+  login.php?username=admin' OR '1'='1
+  login.php?username=admin' UNION SELECT ...</code></pre>
+        <p>What type of attack is being attempted?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-eh1",
+            answerContent: "SQL Injection",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh2",
+            answerContent: "Cross-Site Scripting (XSS)",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh3",
+            answerContent: "Brute Force Attack",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-eh4",
+            answerContent: "Directory Traversal",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      variationId: 1,
+      topicSlug: "cloud-computing",
+      questionContent: `
+        <p>Your web application needs to implement caching for frequently accessed data. Requirements:</p>
+        <ul>
+          <li>Sub-millisecond response time</li>
+          <li>In-memory storage</li>
+          <li>Key-value data structure</li>
+        </ul>
+        <p>Which AWS service would be most appropriate?</p>
+      `,
+      questionDifficulty: QuestionDifficulty.Easy,
+      questionData: {
+        answers: [
+          {
+            key: "mantine-cc1",
+            answerContent: "Amazon ElastiCache",
+            isCorrect: true,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc2",
+            answerContent: "Amazon RDS",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc3",
+            answerContent: "Amazon DynamoDB",
+            isCorrect: false,
+            isLatex: false,
+          },
+          {
+            key: "mantine-cc4",
+            answerContent: "Amazon S3",
+            isCorrect: false,
+            isLatex: false,
+          }
+        ],
+      },
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are processing a large dataset that requires real-time analytics. Which framework would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-big1",
+            "answerContent": "Apache Spark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big2",
+            "answerContent": "Hadoop MapReduce",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big3",
+            "answerContent": "Apache Kafka",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big4",
+            "answerContent": "Elasticsearch",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which data structure is best suited for implementing a First-In-First-Out (FIFO) mechanism?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Queue",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Stack",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are implementing an algorithm to find the shortest path in a weighted graph with negative edges. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system that must handle real-time tasks with strict deadlines. Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    }, {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key advantage of using React Native for mobile app development?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Write once, run on both iOS and Android",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "Better performance than native apps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "No need for JavaScript knowledge",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "Full access to device hardware without plugins",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are analyzing a dataset with skewed distributions. Which technique would best normalize the data for analysis?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Log transformation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Min-max scaling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Z-score normalization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "One-hot encoding",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are writing unit tests for a function that calculates the factorial of a number. Which testing approach would best ensure correctness?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Test edge cases (e.g., 0, 1, negative numbers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Test only positive integers",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Skip testing for small inputs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Test only the happy path",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a containerized application. Which tool would best help you manage container orchestration?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Kubernetes",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Docker Compose",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Jenkins",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Ansible",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that needs to decouple the sender of a request from its receiver. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Command Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms-optimization",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing an algorithm that must solve the traveling salesman problem (TSP) for a small number of cities. Which approach would best balance accuracy and computational efficiency?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-algo1",
+            "answerContent": "Dynamic Programming (e.g., Held-Karp algorithm)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo2",
+            "answerContent": "Brute Force",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo3",
+            "answerContent": "Genetic Algorithms",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo4",
+            "answerContent": "Simulated Annealing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a database system that must handle high write throughput and provide strong consistency. Which database type would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "NewSQL (e.g., Google Spanner)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "NoSQL (e.g., MongoDB)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Relational Database (e.g., MySQL)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "In-Memory Database (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed system that must handle network partitions and maintain availability. Which consistency model would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Eventual Consistency",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Strong Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Linearizability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Sequential Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "artificial-intelligence",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are training a reinforcement learning agent to play a game. The agent must learn from sparse rewards. Which algorithm would be most effective?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ai1",
+            "answerContent": "Q-Learning with Experience Replay",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai2",
+            "answerContent": "A* Search Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai3",
+            "answerContent": "K-Means Clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai4",
+            "answerContent": "Linear Regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a network that must prevent man-in-the-middle (MITM) attacks. Which protocol would best ensure secure communication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-netsec1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are processing a large dataset that requires real-time analytics. Which framework would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-big1",
+            "answerContent": "Apache Spark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big2",
+            "answerContent": "Hadoop MapReduce",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big3",
+            "answerContent": "Apache Kafka",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big4",
+            "answerContent": "Elasticsearch",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which data structure is best suited for implementing a First-In-First-Out (FIFO) mechanism?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Queue",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Stack",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are implementing an algorithm to find the shortest path in a weighted graph with negative edges. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system that must handle real-time tasks with strict deadlines. Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are developing a mobile app that needs to work offline and sync data when the device reconnects to the internet. Which database solution would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Realm Database",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "MySQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "PostgreSQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "MongoDB",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are analyzing a large dataset with missing values. Which technique would be most appropriate for handling missing data without introducing bias?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Multiple Imputation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Dropping rows with missing values",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Replacing missing values with zeros",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "Using the mean for all missing values",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key benefit of automated unit testing?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Early detection of bugs in the development cycle",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Reducing the need for manual testing entirely",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Eliminating the need for code reviews",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Guaranteeing 100% code coverage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a microservices-based application. Which tool would be most suitable for automating deployments across multiple environments?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Jenkins",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Git",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Docker",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Kubernetes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a system that needs to support multiple database types (e.g., SQL, NoSQL) without changing the application code. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Repository Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms-optimization",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing an algorithm that processes large graphs. The algorithm must:</p><ul><li>Handle graphs with up to 1 million nodes</li><li>Perform efficiently in both sparse and dense graphs</li></ul><p>Which graph traversal algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-algo1",
+            "answerContent": "Breadth-First Search (BFS) with adjacency lists",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo2",
+            "answerContent": "Depth-First Search (DFS) with adjacency matrices",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo3",
+            "answerContent": "Dijkstra's algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo4",
+            "answerContent": "Floyd-Warshall algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database system that must handle complex transactions with high concurrency. Which isolation level would best prevent dirty reads and non-repeatable reads?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Repeatable Read",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Read Uncommitted",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Read Committed",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Serializable",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed system that must handle node failures gracefully. Which protocol ensures consistency and availability in the presence of network partitions?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Raft Consensus Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Two-Phase Commit (2PC)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Paxos Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Gossip Protocol",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "artificial-intelligence",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are training a reinforcement learning agent to play a game. The agent must learn from sparse rewards. Which algorithm would be most effective?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ai1",
+            "answerContent": "Q-Learning with Experience Replay",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai2",
+            "answerContent": "A* Search Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai3",
+            "answerContent": "K-Means Clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai4",
+            "answerContent": "Linear Regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a network that must prevent man-in-the-middle (MITM) attacks. Which protocol would best ensure secure communication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-netsec1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are processing a large dataset that requires real-time analytics. Which framework would be most suitable for this task?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-big1",
+            "answerContent": "Apache Spark",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big2",
+            "answerContent": "Hadoop MapReduce",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big3",
+            "answerContent": "Apache Kafka",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-big4",
+            "answerContent": "Elasticsearch",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which data structure is best suited for implementing a First-In-First-Out (FIFO) mechanism?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Queue",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Stack",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are implementing an algorithm to find the shortest path in a weighted graph with negative edges. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system that must handle real-time tasks with strict deadlines. Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are building a progressive web app (PWA) that must work offline. Which technology would enable the app to cache resources for offline use?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are training a neural network for image recognition, but the model is underfitting. Which technique would best address this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Increase the complexity of the model (e.g., add more layers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Reduce the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Apply dropout regularization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a smaller dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a serverless application that needs to scale automatically based on demand. Which cloud service would best meet this requirement?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "AWS Lambda",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Amazon EC2",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Google Kubernetes Engine (GKE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Microsoft Azure Virtual Machines",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are securing a web application that uses passwords for authentication. Which technique would best protect against brute-force attacks?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement rate limiting and account lockout",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Use HTTP instead of HTTPS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Store passwords in plaintext",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Disable password complexity requirements",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key advantage of using React Native for mobile app development?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mobile1",
+            "answerContent": "Write once, run on both iOS and Android",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile2",
+            "answerContent": "Better performance than native apps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile3",
+            "answerContent": "No need for JavaScript knowledge",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mobile4",
+            "answerContent": "Full access to device hardware without plugins",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are analyzing a dataset with skewed distributions. Which technique would best normalize the data for analysis?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-analytics1",
+            "answerContent": "Log transformation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics2",
+            "answerContent": "Min-max scaling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics3",
+            "answerContent": "Z-score normalization",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-analytics4",
+            "answerContent": "One-hot encoding",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are writing unit tests for a function that calculates the factorial of a number. Which testing approach would best ensure correctness?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Test edge cases (e.g., 0, 1, negative numbers)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Test only positive integers",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Skip testing for small inputs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Test only the happy path",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a containerized application. Which tool would best help you manage container orchestration?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Kubernetes",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Docker Compose",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Jenkins",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Ansible",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that needs to decouple the sender of a request from its receiver. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Command Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms-optimization",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing an algorithm that must solve the traveling salesman problem (TSP) for a small number of cities. Which approach would best balance accuracy and computational efficiency?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-algo1",
+            "answerContent": "Dynamic Programming (e.g., Held-Karp algorithm)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo2",
+            "answerContent": "Brute Force",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo3",
+            "answerContent": "Genetic Algorithms",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-algo4",
+            "answerContent": "Simulated Annealing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a database system that must handle high write throughput and provide strong consistency. Which database type would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "NewSQL (e.g., Google Spanner)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "NoSQL (e.g., MongoDB)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Relational Database (e.g., MySQL)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "In-Memory Database (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed system that must handle network partitions and maintain availability. Which consistency model would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Eventual Consistency",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Strong Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Linearizability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Sequential Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "artificial-intelligence",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are training a reinforcement learning agent to play a game. The agent must learn from sparse rewards. Which algorithm would be most effective?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ai1",
+            "answerContent": "Q-Learning with Experience Replay",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai2",
+            "answerContent": "A* Search Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai3",
+            "answerContent": "K-Means Clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ai4",
+            "answerContent": "Linear Regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a network that must prevent man-in-the-middle (MITM) attacks. Which protocol would best ensure secure communication?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-netsec1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-netsec4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a blockchain-based voting system. Which consensus mechanism would best ensure security and prevent double-spending?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-block1",
+            "answerContent": "Proof of Stake (PoS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block2",
+            "answerContent": "Proof of Work (PoW)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block3",
+            "answerContent": "Delegated Proof of Stake (DPoS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-block4",
+            "answerContent": "Proof of Authority (PoA)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": "<p>Which of the following is a key principle of user-centered design?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ux1",
+            "answerContent": "Focus on user needs and preferences",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux2",
+            "answerContent": "Prioritize aesthetic design over functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux3",
+            "answerContent": "Minimize user interaction to reduce errors",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ux4",
+            "answerContent": "Use complex terminology to appear professional",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are performing a penetration test on a web application. Which tool would be most effective for identifying SQL injection vulnerabilities?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-eth1",
+            "answerContent": "SQLmap",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth2",
+            "answerContent": "Nmap",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth3",
+            "answerContent": "Wireshark",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-eth4",
+            "answerContent": "Metasploit",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are implementing a quantum algorithm to solve a problem that requires factoring large numbers. Which algorithm would be most suitable?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-quant1",
+            "answerContent": "Shor's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant2",
+            "answerContent": "Grover's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant3",
+            "answerContent": "Quantum Fourier Transform",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-quant4",
+            "answerContent": "Quantum Teleportation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are leading a team developing a microservices-based e-commerce platform. During peak traffic, one of the services responsible for processing payments becomes a bottleneck. Which strategy would best address this issue without compromising data consistency?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Implement a message queue (e.g., RabbitMQ) to handle payment requests asynchronously",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Increase the number of instances of the payment service",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Switch to a monolithic architecture for the payment service",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Disable payment processing during peak hours",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are troubleshooting a network where users report intermittent connectivity issues. After analyzing logs, you notice frequent ARP broadcast storms. Which solution would best mitigate this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Implement Spanning Tree Protocol (STP) to prevent loops in the network",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Increase the bandwidth of the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Disable ARP entirely on the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Replace all routers with switches",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a database for a ride-sharing app that must handle millions of concurrent read and write operations. Which database architecture would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "A distributed NoSQL database like Cassandra",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "A single-node relational database like MySQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "An in-memory database like Redis",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "A graph database like Neo4j",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a web application that handles sensitive user data. During a security audit, you discover that the application is vulnerable to Cross-Site Scripting (XSS) attacks. Which approach would best mitigate this vulnerability?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement input validation and output encoding for all user inputs",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Disable JavaScript in the browser",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Use HTTPS instead of HTTP",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Block all user inputs containing special characters",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are building a recommendation system for a streaming platform. The system must handle cold-start problems for new users and items. Which approach would best address this challenge?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Use a hybrid model combining collaborative filtering and content-based filtering",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Rely solely on collaborative filtering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Exclude new users and items from the recommendation system",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a rule-based system with predefined recommendations",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a distributed file storage system that must ensure high availability and fault tolerance. Which replication strategy would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Use a quorum-based replication strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Store all data on a single centralized server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Replicate data to only one backup server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Use no replication to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a multi-region application on a cloud platform. The application must ensure low latency for users across the globe. Which strategy would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "Use a Content Delivery Network (CDN) to cache static assets closer to users",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Deploy all services in a single region to reduce complexity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Increase the bandwidth of the primary server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Disable caching to ensure data consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are testing a web application that allows users to upload files. During testing, you discover that large file uploads cause the application to crash. Which testing approach would best identify the root cause of this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-testing1",
+            "answerContent": "Perform stress testing with large file uploads to identify memory leaks or resource exhaustion",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing2",
+            "answerContent": "Skip testing for large files to save time",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing3",
+            "answerContent": "Test only small file uploads to ensure basic functionality",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-testing4",
+            "answerContent": "Manually inspect the code for potential issues",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are setting up a CI/CD pipeline for a containerized application. During deployment, you notice that the application fails to start due to missing environment variables. Which approach would best prevent this issue in the future?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-devops1",
+            "answerContent": "Use a secrets management tool (e.g., HashiCorp Vault) to inject environment variables securely",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops2",
+            "answerContent": "Hardcode environment variables in the application code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops3",
+            "answerContent": "Manually set environment variables on each deployment",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-devops4",
+            "answerContent": "Ignore environment variables and rely on default values",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "design-patterns",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a logging system for a distributed application. The system must allow multiple components to log messages without tightly coupling them to the logging implementation. Which design pattern would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-design1",
+            "answerContent": "Observer Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design3",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-design4",
+            "answerContent": "Adapter Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are designing a system to manage <strong>real-time stock price updates</strong> for a trading platform. The system must:</p><ul><li>Handle millions of updates per second</li><li>Allow users to query the latest price for any stock</li><li>Support historical price lookups</li></ul><p>Which data structure would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "A combination of <strong>hash maps</strong> for real-time updates and <strong>time-series databases</strong> for historical data",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "A single <strong>binary search tree</strong> for all data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "A <strong>linked list</strong> to store all updates sequentially",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "A <strong>stack</strong> to store the latest updates",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are optimizing a route planning algorithm for a delivery service. The algorithm must:</p><ul><li>Handle up to <strong>10,000 delivery points</strong></li><li>Account for <strong>real-time traffic updates</strong></li><li>Minimize total travel time</li></ul><p>Which algorithmic approach would be most efficient for this scenario?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Dijkstra's algorithm with a <strong>priority queue</strong> and dynamic updates",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Floyd-Warshall algorithm for precomputing all shortest paths",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Breadth-First Search (BFS) for unweighted graphs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Depth-First Search (DFS) for exploring all possible routes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing an operating system for a <strong>real-time embedded system</strong> that controls a medical device. The system must:</p><ul><li>Guarantee <strong>strict deadlines</strong> for critical tasks</li><li>Handle <strong>interrupts</strong> from multiple sensors</li><li>Ensure <strong>fault tolerance</strong></li></ul><p>Which scheduling algorithm would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are troubleshooting a network where users report <strong>intermittent connectivity issues</strong>. After analyzing logs, you notice frequent <strong>ARP broadcast storms</strong>. Which solution would best mitigate this issue?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Implement <strong>Spanning Tree Protocol (STP)</strong> to prevent loops in the network",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Increase the bandwidth of the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Disable ARP entirely on the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Replace all routers with switches",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a database for a <strong>ride-sharing app</strong> that must handle millions of concurrent read and write operations. Which database architecture would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "A distributed <strong>NoSQL database</strong> like Cassandra",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "A single-node <strong>relational database</strong> like MySQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "An <strong>in-memory database</strong> like Redis",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "A <strong>graph database</strong> like Neo4j",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are building a <strong>recommendation system</strong> for a streaming platform. The system must handle <strong>cold-start problems</strong> for new users and items. Which approach would best address this challenge?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Use a <strong>hybrid model</strong> combining collaborative filtering and content-based filtering",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Rely solely on <strong>collaborative filtering</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Exclude new users and items from the recommendation system",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a <strong>rule-based system</strong> with predefined recommendations",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": "<p>You are deploying a <strong>multi-region application</strong> on a cloud platform. The application must ensure <strong>low latency</strong> for users across the globe. Which strategy would best achieve this?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "Use a <strong>Content Delivery Network (CDN)</strong> to cache static assets closer to users",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Deploy all services in a <strong>single region</strong> to reduce complexity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Increase the <strong>bandwidth</strong> of the primary server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Disable caching to ensure <strong>data consistency</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are securing a web application that handles <strong>sensitive user data</strong>. During a security audit, you discover that the application is vulnerable to <strong>Cross-Site Scripting (XSS)</strong> attacks. Which approach would best mitigate this vulnerability?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement <strong>input validation</strong> and <strong>output encoding</strong> for all user inputs",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Disable <strong>JavaScript</strong> in the browser",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Use <strong>HTTPS</strong> instead of HTTP",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Block all user inputs containing <strong>special characters</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a <strong>distributed file storage system</strong> that must ensure <strong>high availability</strong> and <strong>fault tolerance</strong>. Which replication strategy would best meet these requirements?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Use a <strong>quorum-based replication</strong> strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Store all data on a <strong>single centralized server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Replicate data to only <strong>one backup server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Use <strong>no replication</strong> to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": "<p>You are designing a <strong>real-time collaboration system</strong> where multiple users can edit a document simultaneously. The system must:</p><ul><li>Handle <strong>concurrent edits</strong></li><li>Maintain <strong>consistency</strong></li><li>Support <strong>offline editing</strong></li><li>Resolve conflicts <strong>automatically</strong></li></ul><p>Which conflict resolution strategy would be most appropriate?</p>",
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Operational Transform with a central server maintaining a transformation matrix",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Last-write-wins with timestamps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Pessimistic locking",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Manual merge resolution",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a system to manage <strong>real-time stock price updates</strong> for a trading platform. The system must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>millions of updates per second</strong></span></li>
+          <li>Allow users to query the <span style="color: #3498db;"><strong>latest price</strong></span> for any stock</li>
+          <li>Support <span style="color: #2ecc71;"><strong>historical price lookups</strong></span></li>
+        </ul>
+        <p>Which data structure would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "A combination of <strong>hash maps for real-time updates and time-series databases for historical data",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "A single binary search tree for all data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "A linked list to store all updates sequentially",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "A stack to store the latest updates",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are optimizing a <strong>route planning algorithm</strong> for a delivery service. The algorithm must:</p>
+        <ul>
+          <li>Handle up to <span style="color: #e74c3c;"><strong>10,000 delivery points</strong></span></li>
+          <li>Account for <span style="color: #3498db;"><strong>real-time traffic updates</strong></span></li>
+          <li>Minimize <span style="color: #2ecc71;"><strong>total travel time</strong></span></li>
+        </ul>
+        <p>Which algorithmic approach would be most efficient for this scenario?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Dijkstra's algorithm with a priority queue and dynamic updates",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Floyd-Warshall algorithm for precomputing all shortest paths",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Breadth-First Search (BFS) for unweighted graphs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Depth-First Search (DFS) for exploring all possible routes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing an operating system for a <strong>real-time embedded system</strong> that controls a medical device. The system must:</p>
+        <ul>
+          <li>Guarantee <span style="color: #e74c3c;"><strong>strict deadlines</strong></span> for critical tasks</li>
+          <li>Handle <span style="color: #3498db;"><strong>interrupts</strong></span> from multiple sensors</li>
+          <li>Ensure <span style="color: #2ecc71;"><strong>fault tolerance</strong></span></li>
+        </ul>
+        <p>Which scheduling algorithm would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are troubleshooting a network where users report <strong>intermittent connectivity issues</strong>. After analyzing logs, you notice frequent <strong>ARP broadcast storms</strong>. Which solution would best mitigate this issue?</p>
+        <p><em>Hint: ARP storms are often caused by network loops.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Implement <strong>Spanning Tree Protocol (STP)</strong> to prevent loops in the network",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Increase the bandwidth of the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Disable ARP entirely on the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Replace all routers with switches",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a database for a <strong>ride-sharing app</strong> that must handle millions of concurrent read and write operations. Which database architecture would best meet these requirements?</p>
+        <p><em>Hint: Consider scalability and fault tolerance.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "A distributed <strong>NoSQL database</strong> like Cassandra",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "A single-node <strong>relational database</strong> like MySQL",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "An <strong>in-memory database</strong> like Redis",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "A <strong>graph database</strong> like Neo4j",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are building a <strong>recommendation system</strong> for a streaming platform. The system must handle <strong>cold-start problems</strong> for new users and items. Which approach would best address this challenge?</p>
+        <p><em>Hint: Cold-start problems occur when there is insufficient data for new users or items.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Use a <strong>hybrid model</strong> combining collaborative filtering and content-based filtering",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Rely solely on <strong>collaborative filtering</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Exclude new users and items from the recommendation system",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a <strong>rule-based system</strong> with predefined recommendations",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cloud-computing",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are deploying a <strong>multi-region application</strong> on a cloud platform. The application must ensure <strong>low latency</strong> for users across the globe. Which strategy would best achieve this?</p>
+        <p><em>Hint: Consider caching and content delivery.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cloud1",
+            "answerContent": "Use a <strong>Content Delivery Network (CDN)</strong> to cache static assets closer to users",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud2",
+            "answerContent": "Deploy all services in a <strong>single region</strong> to reduce complexity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud3",
+            "answerContent": "Increase the <strong>bandwidth</strong> of the primary server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cloud4",
+            "answerContent": "Disable caching to ensure <strong>data consistency</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "cybersecurity",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are securing a web application that handles <strong>sensitive user data</strong>. During a security audit, you discover that the application is vulnerable to <strong>Cross-Site Scripting (XSS)</strong> attacks. Which approach would best mitigate this vulnerability?</p>
+        <p><em>Hint: XSS attacks occur when malicious scripts are injected into web pages.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cyber1",
+            "answerContent": "Implement <strong>input validation</strong> and <strong>output encoding</strong> for all user inputs",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber2",
+            "answerContent": "Disable <strong>JavaScript</strong> in the browser",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber3",
+            "answerContent": "Use <strong>HTTPS</strong> instead of HTTP",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cyber4",
+            "answerContent": "Block all user inputs containing <strong>special characters</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed file storage system</strong> that must ensure <strong>high availability</strong> and <strong>fault tolerance</strong>. Which replication strategy would best meet these requirements?</p>
+        <p><em>Hint: Consider consistency and partition tolerance.</em></p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-dist1",
+            "answerContent": "Use a <strong>quorum-based replication</strong> strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist2",
+            "answerContent": "Store all data on a <strong>single centralized server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist3",
+            "answerContent": "Replicate data to only <strong>one backup server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-dist4",
+            "answerContent": "Use <strong>no replication</strong> to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>real-time collaboration system</strong> where multiple users can edit a document simultaneously. The system must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>concurrent edits</strong></span></li>
+          <li>Maintain <span style="color: #3498db;"><strong>consistency</strong></span></li>
+          <li>Support <span style="color: #2ecc71;"><strong>offline editing</strong></span></li>
+          <li>Resolve conflicts <span style="color: #f39c12;"><strong>automatically</strong></span></li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-arch1",
+            "answerContent": "Operational Transform with a central server maintaining a transformation matrix",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch2",
+            "answerContent": "Last-write-wins with timestamps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch3",
+            "answerContent": "Pessimistic locking",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-arch4",
+            "answerContent": "Manual merge resolution",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed file storage system</strong> that must ensure <strong>high availability</strong> and <strong>fault tolerance</strong>. Which replication strategy would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Use a <strong>quorum-based replication</strong> strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Store all data on a <strong>single centralized server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Replicate data to only <strong>one backup server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Use <strong>no replication</strong> to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>graph</strong> to represent a social network. The graph must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>millions of users</strong></span></li>
+          <li>Support <span style="color: #3498db;"><strong>efficient friend recommendations</strong></span></li>
+          <li>Allow <span style="color: #2ecc71;"><strong>quick lookups</strong></span> of connections between users</li>
+        </ul>
+        <p>Which graph representation would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Adjacency list with hash maps for quick lookups",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Adjacency matrix for dense graphs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Edge list for simplicity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Binary tree for hierarchical relationships",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>real-time collaboration system</strong> where multiple users can edit a document simultaneously. The system must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>concurrent edits</strong></span></li>
+          <li>Maintain <span style="color: #3498db;"><strong>consistency</strong></span></li>
+          <li>Support <span style="color: #2ecc71;"><strong>offline editing</strong></span></li>
+          <li>Resolve conflicts <span style="color: #f39c12;"><strong>automatically</strong></span></li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Operational Transform with a central server maintaining a transformation matrix",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Last-write-wins with timestamps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Pessimistic locking",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Manual merge resolution",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a cache for a web server that must:</p>
+        <ul>
+          <li>Evict the <span style="color: #e74c3c;"><strong>least recently used</strong></span> items when full</li>
+          <li>Support <span style="color: #3498db;"><strong>O(1)</strong></span> time complexity for both insertions and lookups</li>
+        </ul>
+        <p>Which data structure combination would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Hash Map + Doubly Linked List",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Binary Search Tree",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Queue + Array",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Stack + Hash Set",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are implementing a <strong>binary search tree (BST)</strong>. Which of the following is a valid property of a BST?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "The left subtree of a node contains only values less than the node's value",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "The right subtree of a node contains only values less than the node's value",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "All nodes must have exactly two children",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "The tree must be balanced",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a system to manage <strong>real-time stock price updates</strong> for a trading platform. The system must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>millions of updates per second</strong></span></li>
+          <li>Allow users to query the <span style="color: #3498db;"><strong>latest price</strong></span> for any stock</li>
+          <li>Support <span style="color: #2ecc71;"><strong>historical price lookups</strong></span></li>
+        </ul>
+        <p>Which data structure would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "A combination of <strong>hash maps</strong> for real-time updates and <strong>time-series databases</strong> for historical data",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "A single <strong>binary search tree</strong> for all data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "A <strong>linked list</strong> to store all updates sequentially",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "A <strong>stack</strong> to store the latest updates",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>You are implementing a <strong>queue</strong> to manage tasks in a printer. Which of the following best describes the behavior of a queue?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "First-In-First-Out (FIFO)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Last-In-First-Out (LIFO)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Random access",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Priority-based access",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which data structure is best suited for implementing a <strong>LIFO (Last-In-First-Out)</strong> mechanism?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Stack",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Queue",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "Linked List",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Tree",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-structures",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key characteristic of a <strong>linked list</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ds1",
+            "answerContent": "Dynamic size and efficient insertions/deletions",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds2",
+            "answerContent": "Fixed size and random access",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds3",
+            "answerContent": "LIFO access pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ds4",
+            "answerContent": "Stores data in a hierarchical manner",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed file storage system</strong> that must ensure <strong>high availability</strong> and <strong>fault tolerance</strong>. Which replication strategy would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Use a <strong>quorum-based replication</strong> strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Store all data on a <strong>single centralized server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Replicate data to only <strong>one backup server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Use <strong>no replication</strong> to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>graph</strong> to represent a social network. The graph must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>millions of users</strong></span></li>
+          <li>Support <span style="color: #3498db;"><strong>efficient friend recommendations</strong></span></li>
+          <li>Allow <span style="color: #2ecc71;"><strong>quick lookups</strong></span> of connections between users</li>
+        </ul>
+        <p>Which graph representation would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Adjacency list with hash maps for quick lookups",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Adjacency matrix for dense graphs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Edge list for simplicity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Binary tree for hierarchical relationships",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are implementing a <strong>route planning algorithm</strong> for a delivery service. The algorithm must:</p>
+        <ul>
+          <li>Handle up to <span style="color: #e74c3c;"><strong>10,000 delivery points</strong></span></li>
+          <li>Account for <span style="color: #3498db;"><strong>real-time traffic updates</strong></span></li>
+          <li>Minimize <span style="color: #2ecc71;"><strong>total travel time</strong></span></li>
+        </ul>
+        <p>Which algorithmic approach would be most efficient for this scenario?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Dijkstra's algorithm with a <strong>priority queue</strong> and dynamic updates",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Floyd-Warshall algorithm for precomputing all shortest paths",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Breadth-First Search (BFS) for unweighted graphs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Depth-First Search (DFS) for exploring all possible routes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are optimizing a <strong>genome sequence alignment algorithm</strong>. The algorithm must:</p>
+        <ul>
+          <li>Handle sequences of length up to <span style="color: #e74c3c;"><strong>10,000 base pairs</strong></span></li>
+          <li>Account for <span style="color: #3498db;"><strong>insertions, deletions, and substitutions</strong></span></li>
+          <li>Optimize for both <span style="color: #2ecc71;"><strong>time and space complexity</strong></span></li>
+        </ul>
+        <p>Which algorithm would be most suitable for this task?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Needleman-Wunsch algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Breadth-First Search (BFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "QuickSort",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Dijkstra's algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are implementing a <strong>binary search algorithm</strong> on a sorted array. What is the <strong>time complexity</strong> of this algorithm?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "$O(\\log n)$",
+            "isCorrect": true,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "$O(n)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "$O(n^2)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "$O(1)$",
+            "isCorrect": false,
+            "isLatex": true
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the <strong>time complexity</strong> of a linear search algorithm?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "$O(n)$",
+            "isCorrect": true,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "$O(1)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "$O(n^2)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "$O(\\log n)$",
+            "isCorrect": false,
+            "isLatex": true
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following algorithms is used to find the <strong>shortest path</strong> in an unweighted graph?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Breadth-First Search (BFS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Depth-First Search (DFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Bellman-Ford Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the <strong>best-case time complexity</strong> of the QuickSort algorithm?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "$O(n \\log n)$",
+            "isCorrect": true,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "$O(n^2)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "$O(n)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "$O(\\log n)$",
+            "isCorrect": false,
+            "isLatex": true
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following algorithms is used to find the <strong>minimum spanning tree</strong> of a graph?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "Kruskal's Algorithm",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "Dijkstra's Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "Floyd-Warshall Algorithm",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "Breadth-First Search (BFS)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "algorithms",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the <strong>time complexity</strong> of the MergeSort algorithm?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-alg1",
+            "answerContent": "$O(n \\log n)$",
+            "isCorrect": true,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg2",
+            "answerContent": "$O(n^2)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg3",
+            "answerContent": "$O(n)$",
+            "isCorrect": false,
+            "isLatex": true
+          },
+          {
+            "key": "mantine-alg4",
+            "answerContent": "$O(\\log n)$",
+            "isCorrect": false,
+            "isLatex": true
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>real-time operating system (RTOS)</strong> for a medical device. The system must:</p>
+        <ul>
+          <li>Guarantee <span style="color: #e74c3c;"><strong>strict deadlines</strong></span> for critical tasks</li>
+          <li>Handle <span style="color: #3498db;"><strong>interrupts</strong></span> from multiple sensors</li>
+          <li>Ensure <span style="color: #2ecc71;"><strong>fault tolerance</strong></span></li>
+        </ul>
+        <p>Which scheduling algorithm would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Rate-Monotonic Scheduling (RMS)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>memory management system</strong> that must handle large-scale applications with frequent memory allocations and deallocations. Which of the following techniques would best prevent <strong>fragmentation</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Use a combination of <strong>paging</strong> and <strong>compaction</strong>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Rely solely on <strong>segmentation</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Disable virtual memory",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Use a <strong>stack-based memory allocation</strong> strategy",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed file system</strong> that must ensure <strong>high availability</strong> and <strong>fault tolerance</strong>. Which replication strategy would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Use a <strong>quorum-based replication</strong> strategy with a majority voting system",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Store all data on a <strong>single centralized server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Replicate data to only <strong>one backup server</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Use <strong>no replication</strong> to minimize storage costs",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>virtual memory system</strong> that must handle frequent page faults. Which of the following techniques would best improve performance?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Use a <strong>working set model</strong> to keep frequently used pages in memory",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Disable paging entirely",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Increase the size of the page table",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Use a <strong>FIFO page replacement algorithm</strong>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a <strong>scheduling algorithm</strong> for a multi-core CPU. Which of the following algorithms would best balance fairness and efficiency?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Round-Robin Scheduling",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "First-Come-First-Served (FCFS)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Shortest Job Next (SJN)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Priority Scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of <strong>paging</strong> over <strong>segmentation</strong> in memory management?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Eliminates external fragmentation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Supports variable-sized memory allocation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Simplifies memory access control",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Reduces internal fragmentation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are troubleshooting a system where processes are experiencing <strong>deadlock</strong>. Which of the following conditions must be present for a deadlock to occur?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Mutual exclusion, hold and wait, no preemption, and circular wait",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "High CPU utilization and low memory availability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "I/O-bound processes and CPU-bound processes",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Priority inversion and context switching",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of <strong>virtual memory</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Allows processes to use more memory than physically available",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Reduces the need for secondary storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Eliminates the need for paging",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Improves CPU clock speed",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key responsibility of the <strong>I/O scheduler</strong> in an operating system?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Optimize the order of I/O requests to improve performance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Manage CPU scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Handle memory allocation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Control network communication",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the primary function of an <strong>operating system</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Manage hardware resources and provide services to applications",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Compile source code into machine code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Optimize network bandwidth",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Design user interfaces",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is an example of a <strong>multi-tasking operating system</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Windows 10",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "MS-DOS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "BIOS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Linux Kernel (without user processes)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of a <strong>file system</strong> in an operating system?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Organize and manage files on storage devices",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Manage CPU scheduling",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Handle network communication",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Allocate memory to processes",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key feature of a <strong>real-time operating system (RTOS)</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Guaranteed response times for critical tasks",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "High throughput for general-purpose tasks",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Support for graphical user interfaces",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Optimized for gaming performance",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "operating-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the role of the <strong>kernel</strong> in an operating system?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-os1",
+            "answerContent": "Manage system resources and provide core services",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os2",
+            "answerContent": "Handle user authentication",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os3",
+            "answerContent": "Render graphics on the screen",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-os4",
+            "answerContent": "Compile application code",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed system</strong> that must handle network partitions and maintain availability. Which consistency model would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Eventual Consistency",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Strong Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Linearizability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Sequential Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>load balancer</strong> for a high-traffic web application. Which algorithm would best distribute traffic evenly across servers?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Round-Robin with weighted distribution",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Least Connections",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "IP Hash",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Random Selection",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are securing a network that must prevent <strong>man-in-the-middle (MITM)</strong> attacks. Which protocol would best ensure secure communication?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "TLS (Transport Layer Security)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "SMTP (Simple Mail Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>content delivery network (CDN)</strong> to reduce latency for users across the globe. Which strategy would best achieve this?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Cache static assets on edge servers closer to users",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Increase the bandwidth of the primary server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Use a single centralized server for all requests",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Disable caching to ensure data consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>software-defined networking (SDN)</strong> solution. Which of the following is a key advantage of SDN?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Centralized control and programmability of network devices",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Improved hardware performance for routers and switches",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Reduced need for network administrators",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Automatic encryption of all network traffic",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are troubleshooting a network where users report <strong>intermittent connectivity issues</strong>. After analyzing logs, you notice frequent <strong>ARP broadcast storms</strong>. Which solution would best mitigate this issue?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Implement <strong>Spanning Tree Protocol (STP)</strong> to prevent loops in the network",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Increase the bandwidth of the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Disable ARP entirely on the network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Replace all routers with switches",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>IPv6</strong> over <strong>IPv4</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Larger address space to support more devices",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Better compatibility with older networking hardware",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Simpler header structure for faster processing",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Built-in encryption for all communications",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are configuring a <strong>wireless network</strong> and want to ensure the highest level of security. Which encryption protocol should you use?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "WPA3",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "WEP",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "WPA",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Open (no encryption)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key function of the <strong>Transport Layer</strong> in the OSI model?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Ensuring reliable data transfer between end systems",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Routing packets between networks",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Providing physical connectivity between devices",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "Encrypting data for secure communication",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>TCP</strong> over <strong>UDP</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "Guaranteed delivery of data packets",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "Lower latency for real-time applications",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "Smaller header size for faster transmission",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "No need for handshaking before communication",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the primary purpose of the <strong>Internet Protocol (IP)</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "To route packets between devices across networks",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "To encrypt data for secure communication",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "To manage file transfers between servers",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "To provide error correction for data transmission",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the function of a <strong>router</strong> in a network?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "To forward data packets between different networks",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "To connect devices within the same local network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "To encrypt data for secure communication",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "To store and manage files on a network",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which protocol is used to resolve domain names to IP addresses?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "DNS (Domain Name System)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "HTTP (Hypertext Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "FTP (File Transfer Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "TCP (Transmission Control Protocol)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of a <strong>firewall</strong> in a network?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "To monitor and control incoming and outgoing network traffic",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "To route data packets between networks",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "To provide wireless connectivity to devices",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "To store and manage files on a network",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "networking",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a private IP address range?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-net1",
+            "answerContent": "192.168.0.0 - 192.168.255.255",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net2",
+            "answerContent": "8.8.8.8 - 8.8.8.8",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net3",
+            "answerContent": "172.16.0.0 - 172.31.255.255",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-net4",
+            "answerContent": "10.0.0.0 - 10.255.255.255",
+            "isCorrect": true,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>distributed database system</strong> that must handle high write throughput and provide strong consistency. Which database type would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "NewSQL (e.g., Google Spanner)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "NoSQL (e.g., MongoDB)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Relational Database (e.g., MySQL)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "In-Memory Database (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>database replication</strong> strategy to ensure high availability and fault tolerance. Which replication model would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Multi-master replication with conflict resolution",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Single-master replication with read replicas",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "No replication to minimize complexity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Asynchronous replication with eventual consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>data warehouse</strong> for a large organization. Which of the following techniques would best optimize query performance for analytical workloads?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Use a star schema with denormalized fact and dimension tables",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Normalize the schema to reduce redundancy",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Use a graph database for complex relationships",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Disable indexing to reduce overhead",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>database sharding</strong> strategy to handle large-scale data. Which of the following is a key consideration for effective sharding?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Choose a sharding key that evenly distributes data and queries",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Use a single shard for all data to simplify management",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Disable replication to minimize complexity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Use a graph database for sharding",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>real-time analytics system</strong> that must process large volumes of data with low latency. Which database architecture would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "A distributed columnar database (e.g., Apache Cassandra)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "A single-node relational database (e.g., MySQL)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "An in-memory database (e.g., Redis)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "A graph database (e.g., Neo4j)",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a database schema for an e-commerce platform. Which normalization level would best balance performance and data integrity?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Third Normal Form (3NF)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "First Normal Form (1NF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Boyce-Codd Normal Form (BCNF)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Denormalization",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>indexes</strong> in a database?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Improve query performance by speeding up data retrieval",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Reduce the size of the database",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Eliminate the need for primary keys",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Simplify database schema design",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are troubleshooting a database query that is running slowly. Which of the following techniques would best improve its performance?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Add an index on the columns used in the WHERE clause",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Increase the size of the database cache",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Denormalize the database schema",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Disable foreign key constraints",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>transactions</strong> in a database?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Ensure data consistency and integrity",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Improve query performance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Reduce the size of the database",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Simplify database schema design",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key responsibility of a <strong>database administrator (DBA)</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Manage database performance, security, and backups",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Design user interfaces for data entry",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Optimize network bandwidth",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Compile SQL queries into machine code",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the primary purpose of a <strong>database management system (DBMS)</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Store, retrieve, and manage data efficiently",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Compile SQL queries into machine code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Optimize network bandwidth",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Design user interfaces for data entry",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is an example of a <strong>relational database</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "MySQL",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "MongoDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Redis",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Cassandra",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of a <strong>primary key</strong> in a database table?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Uniquely identify each record in the table",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Store large binary data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Define relationships between tables",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Optimize query performance",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key feature of a <strong>NoSQL database</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Schema flexibility and scalability",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Strict adherence to ACID properties",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Support for complex joins",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Fixed table structure",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "database-systems",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of a <strong>foreign key</strong> in a database table?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-db1",
+            "answerContent": "Establish relationships between tables",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db2",
+            "answerContent": "Uniquely identify each record in the table",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db3",
+            "answerContent": "Store large binary data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-db4",
+            "answerContent": "Optimize query performance",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>real-time collaboration system</strong> where multiple users can edit a document simultaneously. The system must:</p>
+        <ul>
+          <li>Handle <span style="color: #e74c3c;"><strong>concurrent edits</strong></span></li>
+          <li>Maintain <span style="color: #3498db;"><strong>consistency</strong></span></li>
+          <li>Support <span style="color: #2ecc71;"><strong>offline editing</strong></span></li>
+          <li>Resolve conflicts <span style="color: #f39c12;"><strong>automatically</strong></span></li>
+        </ul>
+        <p>Which conflict resolution strategy would be most appropriate?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Operational Transform with a central server maintaining a transformation matrix",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Last-write-wins with timestamps",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Pessimistic locking",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Manual merge resolution",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>distributed system</strong> that must handle <strong>network partitions</strong> and maintain <strong>availability</strong>. Which consistency model would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Eventual Consistency",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Strong Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Linearizability",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Sequential Consistency",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>microservices architecture</strong> for a large-scale application. Which of the following is a key challenge of this approach?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Increased complexity in managing inter-service communication",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Simplified deployment process",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Reduced development time",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Eliminates the need for testing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>continuous integration (CI)</strong> pipeline for a large-scale application. Which of the following is a key benefit of CI?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Early detection of integration issues",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Reduced need for testing",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Simplified deployment process",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Eliminates the need for version control",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a <strong>microservices architecture</strong> for a large-scale application. Which of the following is a key advantage of this approach?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Improved scalability and fault isolation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Simplified deployment process",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Reduced development time",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Eliminates the need for testing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key principle of <strong>DevOps</strong> in software engineering?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Continuous integration and continuous delivery (CI/CD)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Manual deployment of applications",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Avoiding automation to ensure control",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Separating development and operations teams",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are implementing a <strong>test-driven development (TDD)</strong> approach. Which of the following is the correct sequence of steps?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Write a failing test, write code to pass the test, refactor the code",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Write code, write tests, refactor the code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Refactor the code, write tests, write code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Write tests, refactor the code, write code",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key benefit of using <strong>design patterns</strong> in software engineering?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Reusable solutions to common problems",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Reduced need for documentation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Eliminates the need for testing",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Simplifies the deployment process",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a <strong>RESTful API</strong> for a web application. Which of the following is a key principle of REST?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Stateless communication",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Stateful communication",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Tight coupling between client and server",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Use of SOAP for communication",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key principle of <strong>software engineering</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Modularity",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Hardcoding values for simplicity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Avoiding documentation to save time",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Using monolithic architecture for all projects",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the primary goal of <strong>software requirements engineering</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "To define what the system should do",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "To write code for the system",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "To design the user interface",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "To test the system after deployment",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key benefit of using <strong>version control systems</strong> like Git?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Tracking changes and collaborating with others",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Automatically fixing bugs in the code",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Compiling code into executable files",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Designing user interfaces",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key principle of <strong>Agile software development</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "Iterative development and continuous feedback",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "Comprehensive documentation before development",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "Strict adherence to a fixed project plan",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "Minimal communication with stakeholders",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-engineering",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of <strong>unit testing</strong> in software engineering?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-se1",
+            "answerContent": "To test individual components or functions of the software",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se2",
+            "answerContent": "To test the entire system as a whole",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se3",
+            "answerContent": "To design the user interface",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-se4",
+            "answerContent": "To write documentation for the software",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>single-page application (SPA)</strong> that requires real-time updates. Which technology stack would be most suitable for this scenario?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "React + WebSocket",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Angular + REST API",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "jQuery + AJAX",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Vanilla JavaScript + XML",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>progressive web app (PWA)</strong> that must work offline. Which technology would enable the app to cache resources for offline use?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Service Workers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Local Storage",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "IndexedDB",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Session Storage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a <strong>responsive web page</strong> that must adapt to different screen sizes. Which CSS technique is best suited for creating a <strong>responsive layout</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Media Queries",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Fixed-width layouts",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "Inline styles",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Absolute positioning",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a <strong>real-time chat application</strong> that must handle multiple users simultaneously. Which technology would best enable real-time communication?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "WebSocket",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "REST API",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "AJAX",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "XMLHttpRequest",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a responsive web page. Which CSS technique is best suited for creating a <strong>flexible grid layout</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>display: flex;</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>display: grid;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>display: block;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>display: inline;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is the correct way to define a <strong>JavaScript function</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>function myFunction() {}</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>def myFunction() {}</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>func myFunction() {}</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>method myFunction() {}</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using a <strong>front-end framework</strong> like React or Angular?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Simplifies the development of complex user interfaces",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Eliminates the need for CSS",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "Reduces the need for JavaScript",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Improves server-side performance",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is the correct way to <strong>center an element horizontally</strong> using CSS?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>margin: 0 auto;</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>align: center;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>text-align: center;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>position: center;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>CSS preprocessors</strong> like SASS or LESS?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "Allows the use of variables, nesting, and mixins",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "Eliminates the need for HTML",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "Improves JavaScript performance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "Reduces the need for responsive design",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the correct way to create a <strong>hyperlink</strong> in HTML?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>&lt;a href=\"https://example.com\"&gt;Link&lt;/a&gt;</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>&lt;link src=\"https://example.com\"&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>&lt;a src=\"https://example.com\"&gt;Link&lt;/a&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>&lt;hyperlink url=\"https://example.com\"&gt;Link&lt;/hyperlink&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which CSS property is used to change the <strong>text color</strong> of an element?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>color</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>text-color</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>font-color</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>background-color</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the correct way to include an <strong>external JavaScript file</strong> in an HTML document?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>&lt;script src=\"script.js\"&gt;&lt;/script&gt;</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>&lt;script href=\"script.js\"&gt;&lt;/script&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>&lt;js src=\"script.js\"&gt;&lt;/js&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>&lt;link src=\"script.js\"&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which HTML tag is used to define a <strong>paragraph</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>&lt;p&gt;</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>&lt;para&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>&lt;text&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>&lt;paragraph&gt;</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "web-development",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which CSS property is used to add <strong>space between the content and the border</strong> of an element?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-web1",
+            "answerContent": "<code>padding</code>",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web2",
+            "answerContent": "<code>margin</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web3",
+            "answerContent": "<code>spacing</code>",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-web4",
+            "answerContent": "<code>border-spacing</code>",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a system that needs to support multiple database types (e.g., SQL, NoSQL) without changing the application code. Which design pattern would best achieve this?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Repository Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a logging system for a distributed application. The system must allow multiple components to log messages without tightly coupling them to the logging implementation. Which design pattern would best achieve this?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Observer Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Adapter Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are implementing a system that must handle concurrent edits to a shared resource. Which design pattern would best achieve this?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Mutex Pattern",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Singleton Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Observer Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Factory Pattern",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are designing a system that must handle high traffic with low latency. Which architectural pattern would best meet these requirements?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Microservices with load balancing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Monolithic architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Peer-to-peer architecture",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Client-server architecture",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are designing a class hierarchy for a game that includes characters with shared and unique abilities. Which principle of OOP would best help you avoid code duplication?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Inheritance",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Polymorphism",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Abstraction",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>polymorphism</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "It allows for flexible and reusable code",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "It reduces the need for inheritance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "It simplifies memory management",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "It eliminates the need for encapsulation",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following best describes the <strong>Liskov Substitution Principle (LSP)</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "A class should have only one reason to change",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "A class should be open for extension but closed for modification",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "A class should hide its internal details from the outside world",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>encapsulation</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "It protects the internal state of an object from unintended modification",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "It allows for dynamic binding of methods at runtime",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "It enables multiple inheritance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "It simplifies memory management",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>abstraction</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "It reduces complexity by hiding unnecessary details",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "It allows for dynamic binding of methods at runtime",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "It enables multiple inheritance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "It simplifies memory management",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key principle of <strong>Object-Oriented Programming (OOP)</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Encapsulation",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Procedural programming",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Functional programming",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Imperative programming",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the primary purpose of <strong>encapsulation</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "To hide the internal details of an object and expose only necessary functionality",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "To allow multiple classes to share the same methods",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "To enable dynamic binding of methods at runtime",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "To create reusable code snippets",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following best describes <strong>inheritance</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "A mechanism where a new class derives properties and behaviors from an existing class",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "A way to hide implementation details from the user",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "A method to create multiple instances of a class",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "A technique to optimize memory usage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the primary purpose of <strong>polymorphism</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "To allow objects of different classes to be treated as objects of a common superclass",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "To restrict access to certain class members",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "To create multiple instances of a class",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "To optimize memory usage",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "object-oriented-programming",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is an example of <strong>abstraction</strong> in OOP?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-oop1",
+            "answerContent": "Defining a class with only essential features and hiding unnecessary details",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop2",
+            "answerContent": "Creating multiple instances of a class",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop3",
+            "answerContent": "Allowing a class to inherit properties from another class",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-oop4",
+            "answerContent": "Enabling dynamic binding of methods at runtime",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are training a <strong>neural network</strong> for image classification, but the model is overfitting. Which technique would best address this issue?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Use dropout regularization",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Increase the learning rate",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Add more layers to the neural network",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Reduce the batch size",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are building a <strong>recommendation system</strong> for a streaming platform. The system must handle <strong>cold-start problems</strong> for new users and items. Which approach would best address this challenge?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Use a hybrid model combining collaborative filtering and content-based filtering",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Rely solely on collaborative filtering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Exclude new users and items from the recommendation system",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Use a rule-based system with predefined recommendations",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are evaluating a <strong>classification model</strong> and observe that the ROC curve is close to the diagonal line. What does this indicate?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "The model is performing no better than random guessing",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "The model has perfect classification accuracy",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "The model is overfitting to the training data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "The model is underfitting to the training data",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Hard,
+      "questionContent": `
+        <p>You are working on a <strong>time-series forecasting</strong> problem. Which of the following techniques is most suitable for handling seasonality in the data?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Seasonal decomposition (e.g., using STL or seasonal ARIMA)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Principal Component Analysis (PCA)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "k-means clustering",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Linear regression",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are building a <strong>linear regression model</strong> to predict house prices. Which of the following assumptions must hold true for the model to perform well?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Linear relationship between features and target variable",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Features are independent of each other",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Target variable is normally distributed",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "All features are categorical",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>k-means clustering</strong> over hierarchical clustering?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Scalability for large datasets",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Ability to handle categorical data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "No need to specify the number of clusters",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Produces more interpretable results",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>You are evaluating a <strong>binary classification model</strong> and observe that the precision is high but the recall is low. What does this indicate?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "The model is making few false positives but missing many true positives",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "The model is making many false positives but missing few true positives",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "The model is performing well on both precision and recall",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "The model is overfitting to the training data",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key step in <strong>data preprocessing</strong> for machine learning?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Feature scaling (e.g., normalization or standardization)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Training the model on the entire dataset",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Evaluating the model using the training data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Visualizing the results without preprocessing",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Medium,
+      "questionContent": `
+        <p>Which of the following is a key advantage of using <strong>cross-validation</strong> in model evaluation?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Reduces the risk of overfitting by using multiple train-test splits",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Speeds up the training process",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Eliminates the need for a separate test set",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Improves the interpretability of the model",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is the primary goal of <strong>supervised learning</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Learn a mapping from input to output using labeled data",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Discover hidden patterns in unlabeled data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Optimize a reward function through trial and error",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Reduce the dimensionality of data",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is an example of a <strong>classification problem</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Predicting whether an email is spam or not",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Predicting the price of a house",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Grouping customers based on purchasing behavior",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Reducing the number of features in a dataset",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>What is the purpose of <strong>data preprocessing</strong> in machine learning?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Clean and transform raw data into a suitable format for modeling",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Train the model on labeled data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Evaluate the performance of the model",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Visualize the results of the model",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a common technique for handling missing data in <strong>data preprocessing</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Imputation (e.g., filling missing values with the mean or median)",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Removing all rows with missing values",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "Ignoring missing values during model training",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Replacing missing values with zeros",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "machine-learning",
+      questionDifficulty: QuestionDifficulty.Easy,
+      "questionContent": `
+        <p>Which of the following is a key metric for evaluating <strong>classification models</strong>?</p>
+      `,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ml1",
+            "answerContent": "Accuracy",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml2",
+            "answerContent": "Mean Squared Error (MSE)",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml3",
+            "answerContent": "R-squared",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ml4",
+            "answerContent": "Silhouette Score",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "big-data",
+      "questionContent": "<p>Which of the following is a key characteristic of big data?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-abc123def",
+            "answerContent": "Velocity - the speed at which data is generated and processed",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-def456ghi",
+            "answerContent": "Small file sizes",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ghi789jkl",
+            "answerContent": "Single data source",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-jkl012mno",
+            "answerContent": "Simple data structures",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "quantum-computing",
+      "questionContent": "<p>What is a qubit in quantum computing?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-mno345pqr",
+            "answerContent": "A quantum bit that can exist in a superposition of states",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-pqr678stu",
+            "answerContent": "A classical binary bit",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-stu901vwx",
+            "answerContent": "A quantum storage device",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-vwx234yza",
+            "answerContent": "A quantum processor",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "blockchain",
+      "questionContent": "<p>What is a smart contract in blockchain technology?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-yza567bcd",
+            "answerContent": "Self-executing contracts with terms directly written into code",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-bcd890efg",
+            "answerContent": "A legal document stored on the blockchain",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-efg123hij",
+            "answerContent": "A type of cryptocurrency",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-hij456klm",
+            "answerContent": "A blockchain security feature",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "data-analytics",
+      "questionContent": "<p>What is the purpose of data normalization in data analytics?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-klm789nop",
+            "answerContent": "Scale different variables to a comparable range",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-nop012qrs",
+            "answerContent": "Remove all outliers from the dataset",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-qrs345tuv",
+            "answerContent": "Convert text data to numerical values",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-tuv678wxy",
+            "answerContent": "Sort data in ascending order",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-testing",
+      "questionContent": "<p>What is the difference between unit testing and integration testing?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-wxy901zab",
+            "answerContent": "Unit testing tests individual components, while integration testing tests component interactions",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-zab234cde",
+            "answerContent": "Unit testing is manual, integration testing is automated",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-cde567fgh",
+            "answerContent": "Unit testing is slower than integration testing",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-fgh890ijk",
+            "answerContent": "Unit testing requires more resources",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "network-security",
+      "questionContent": "<p>What is the purpose of a firewall in network security?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ijk123lmn",
+            "answerContent": "Monitor and control incoming and outgoing network traffic",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-lmn456opq",
+            "answerContent": "Speed up network connections",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-opq789rst",
+            "answerContent": "Store network data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-rst012uvw",
+            "answerContent": "Compress network traffic",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "user-experience-design",
+      "questionContent": "<p>What is the purpose of a user persona in UX design?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-uvw345xyz",
+            "answerContent": "Represent typical users to guide design decisions",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-xyz678abc",
+            "answerContent": "Create user accounts",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-abc901def",
+            "answerContent": "Test website performance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-def234ghi",
+            "answerContent": "Generate user statistics",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "ethical-hacking",
+      "questionContent": "<p>What is the purpose of penetration testing?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-ghi567jkl",
+            "answerContent": "Identify security vulnerabilities by simulating cyber attacks",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-jkl890mno",
+            "answerContent": "Test network speed",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-mno123pqr",
+            "answerContent": "Monitor user activity",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-pqr456stu",
+            "answerContent": "Backup system data",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "mobile-security",
+      "questionContent": "<p>What is app sandboxing in mobile security?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-stu789vwx",
+            "answerContent": "Isolating apps from each other and system resources for security",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-vwx012yza",
+            "answerContent": "Testing apps in a virtual environment",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-yza345bcd",
+            "answerContent": "Encrypting app data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-bcd678efg",
+            "answerContent": "Backing up app data",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "distributed-systems",
+      "questionContent": "<p>What is the purpose of load balancing in distributed systems?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-efg901hij",
+            "answerContent": "Distribute workload evenly across multiple servers",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-hij234klm",
+            "answerContent": "Increase network speed",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-klm567nop",
+            "answerContent": "Store system backups",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-nop890qrs",
+            "answerContent": "Monitor system performance",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "advanced-database-systems",
+      "questionContent": "<p>What is the purpose of database sharding?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-qrs123tuv",
+            "answerContent": "Horizontally partition data across multiple databases",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-tuv456wxy",
+            "answerContent": "Encrypt database contents",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-wxy789zab",
+            "answerContent": "Backup database data",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-zab012cde",
+            "answerContent": "Compress database files",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "software-architecture",
+      "questionContent": "<p>What is the main advantage of microservices architecture?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-cde345fgh",
+            "answerContent": "Independent deployment and scaling of services",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-fgh678ijk",
+            "answerContent": "Simpler development process",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-ijk901lmn",
+            "answerContent": "Lower infrastructure costs",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-lmn234opq",
+            "answerContent": "Easier database management",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
+    {
+      "variationId": 1,
+      "topicSlug": "devops",
+      "questionContent": "<p>What is the purpose of containerization in DevOps?</p>",
+      "questionDifficulty": QuestionDifficulty.Medium,
+      "questionData": {
+        "answers": [
+          {
+            "key": "mantine-opq567rst",
+            "answerContent": "Package applications with their dependencies for consistent deployment",
+            "isCorrect": true,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-rst890uvw",
+            "answerContent": "Increase application security",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-uvw123xyz",
+            "answerContent": "Improve network performance",
+            "isCorrect": false,
+            "isLatex": false
+          },
+          {
+            "key": "mantine-xyz456abc",
+            "answerContent": "Manage user permissions",
+            "isCorrect": false,
+            "isLatex": false
+          }
+        ]
+      }
+    },
   ]
