@@ -2,7 +2,7 @@ import axios from "axios";
 import DOMPurify from "dompurify";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 import VariablesBox from "@/components/editor/VariablesBox";
@@ -30,6 +30,7 @@ import { Question, QuestionWithAddedTime, User } from "@prisma/client";
 import { IconBulb } from "@tabler/icons";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
+// TODO: Add different question types
 interface UserData extends User {
   attempts: { [timestamp: string]: number };
 }
@@ -41,17 +42,25 @@ export type UCQATAnswersType = {
   isLatex: boolean;
 }[];
 
+// todo: IF A given question was given previously it needs to properly reset the selected keys
+
 export default function PracticeQuestion() {
   const session = useSession();
   const theme = useMantineTheme();
-
   const router = useRouter();
   const currentCourseSlug = router.query.courseSlug as string;
 
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
-  const [hintsOpened, setHintsOpened] = useState<boolean>(false);
 
-  const { data: UCQAT } = useQuery({
+  // TODO: Add different question types
+  const [questionKey, setQuestionKey] = useState(0);
+  const [selectedChoices, setSelectedChoices] = useState([]);
+  const [orderedItems, setOrderedItems] = useState([]);
+  const [matches, setMatches] = useState([]);
+  const [booleanAnswer, setBooleanAnswer] = useState(null);
+  const [hintsOpened, setHintsOpened] = useState(false);
+
+  const { data: UCQAT, refetch } = useQuery({
     queryKey: ["get-ucqat"],
     queryFn: () =>
       axios.get<
@@ -91,7 +100,6 @@ export default function PracticeQuestion() {
       onSuccess: (res) => {
         setSelectedKeys([]);
         const { data } = res;
-        console.log(data);
         toast(
           `[${data.topic}] Mastery: ${CustomMath.round(
             data.masteryLevel * 100,
@@ -119,6 +127,8 @@ export default function PracticeQuestion() {
 
   const { submitAnswer, submitAnswerStatus } = useSubmitAnswer();
 
+  const queryClient = useQueryClient();
+
   // Check if first question attempted
   const { data: userInfo } = useQuery<UserData>({
     queryKey: ["userInfo", session?.data?.user?.id],
@@ -130,8 +140,6 @@ export default function PracticeQuestion() {
     },
     enabled: !!session?.data?.user?.id,
   });
-
-  const queryClient = useQueryClient();
 
   // Award points for attempting a question
   const { mutate: updatePoints } = useMutation(
@@ -174,6 +182,13 @@ export default function PracticeQuestion() {
     }
   );
 
+  useEffect(() => {
+    // Reset selectedKeys and increment questionKey whenever new UCQAT data is fetched
+    setSelectedKeys([]);
+    setQuestionKey(prev => prev + 1);
+  }, [UCQAT?.data]);
+  console.log(questionKey, "questionKey")
+
   if (!UCQAT) {
     return (
       <Center className="h-[calc(100vh-180px)]">
@@ -191,18 +206,9 @@ export default function PracticeQuestion() {
   }
 
   const answerOptions = UCQAT?.data.answers as UCQATAnswersType;
-
-  // For the correctKeys calculation
   const correctKeys = Array.isArray(answerOptions)
     ? answerOptions.filter((item) => item.isCorrect).map((item) => item.key)
     : [];
-
-  console.log('Raw answers:', UCQAT?.data?.answers);
-  console.log('typeof answers:', typeof answerOptions);
-  console.log('Parsed answers:', answerOptions);
-  console.log('Is Array:', Array.isArray(answerOptions));
-  console.log(correctKeys);
-
 
   return (
     <Paper p="xl" radius="md" withBorder>
@@ -252,12 +258,10 @@ export default function PracticeQuestion() {
         />
         {correctKeys.length === 1 ? (
           <Radio.Group
+            key={`radio-group-${questionKey}`}
             mt="xl"
-            value={selectedKeys[0]}
+            value={selectedKeys[0] || ''} // Ensure it's always a string
             onChange={(value) => {
-              console.log(
-                value === answerOptions?.find((item) => item.isCorrect)?.key
-              );
               setSelectedKeys([value]);
             }}
             orientation="vertical"
@@ -283,22 +287,14 @@ export default function PracticeQuestion() {
             ))}
           </Radio.Group>
         ) : (
-          // FIXME: Apparently the radio button option is working, when mapping the answer options but for the checkbox option, it is not working, as expected
           <Checkbox.Group
             mt="xl"
             value={selectedKeys}
-            onChange={(values) => {
-              console.log(
-                values.length === correctKeys.length &&
-                values.every((item) => correctKeys.includes(item))
-              );
-              setSelectedKeys(values);
-            }}
+            onChange={setSelectedKeys}
             orientation="vertical"
             description="Select all correct options"
             required
           >
-            {/* FIXME: Temporary fix need to actually map the object better, but it works */}
             {UCQAT?.data?.question?.questionData.answers ? (
               UCQAT.data.question.questionData.answers.map((item) => (
                 <Checkbox
@@ -321,7 +317,6 @@ export default function PracticeQuestion() {
               <Text>No answer options available.</Text>
             )}
           </Checkbox.Group>
-
         )}
         <Flex mt="xl" align="center" gap="md">
           <Button
