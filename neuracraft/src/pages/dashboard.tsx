@@ -45,7 +45,7 @@ export default function DashboardPage() {
   const { classes, theme, cx } = useStyles();
   const [active, setActive] = useSessionStorage({
     key: "dashboardActiveTab",
-    defaultValue: "Daily Streak",
+    defaultValue: "Account",
   });
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
   const [sidebarOpened, setSidebarOpened] = useState(false);
@@ -96,9 +96,9 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className={`flex min-h-screen ${theme.colorScheme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
       {sidebarOpened && (
-        <div className="bg-indigo-600 text-white w-64 p-6 flex flex-col justify-between">
+        <div className={`${theme.colorScheme === 'dark' ? 'bg-gray-800' : 'bg-indigo-600'} text-white w-64 p-6 flex flex-col justify-between`}>
           <div>
             <div className="flex flex-col items-center mb-6">
               <Center>
@@ -113,13 +113,6 @@ export default function DashboardPage() {
             </div>
             <nav>{links}</nav>
           </div>
-          {/* <a
-            className="flex items-center p-2 rounded-md font-medium cursor-pointer hover:bg-red-500"
-            onClick={() => signOut({ callbackUrl: "/" })}
-          >
-            <IconLogout className="mr-2 text-white" stroke={1.5} />
-            <span>Logout</span>
-          </a> */}
         </div>
       )}
       <div className="flex-grow flex flex-col">
@@ -169,7 +162,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
       alignItems: "center",
       textDecoration: "none",
       fontSize: "0.875rem", // Tailwind's text-sm
-      color: "rgba(255, 255, 255, 0.9)",
+      color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : "rgba(255, 255, 255, 0.9)",
       padding: "0.5rem 1rem",
       borderRadius: "0.375rem",
       fontWeight: 600,
@@ -177,15 +170,14 @@ const useStyles = createStyles((theme, _params, getRef) => {
       transition: "background-color 0.3s, color 0.3s", // Smooth transition for hover effects
 
       "&:hover": {
-        backgroundColor: "rgba(255, 255, 255, 0.1)", // Light transparent background on hover
-        color: "white", // Full white on hover for contrast
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : "rgba(255, 255, 255, 0.1)", // Light transparent background on hover
+        color: theme.colorScheme === 'dark' ? theme.white : "white", // Full white on hover for contrast
       },
     },
 
-
     linkIcon: {
       ref: icon,
-      color: "white",
+      color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : "white",
       marginRight: theme.spacing.sm,
     },
 
@@ -204,9 +196,9 @@ const useStyles = createStyles((theme, _params, getRef) => {
               }).background ?? theme.primaryColor,
               0.15
             ),
-        color: "white",
+        color: theme.colorScheme === 'dark' ? theme.white : "white",
         [`& .${icon}`]: {
-          color: "white",
+          color: theme.colorScheme === 'dark' ? theme.white : "white",
           opacity: 0.9,
         },
       },
