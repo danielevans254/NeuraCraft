@@ -11,6 +11,8 @@ import {
   FileInput,
   Group,
   TextInput,
+  Title,
+  useMantineColorScheme,
 } from "@mantine/core";
 import { useForm, zodResolver } from "@mantine/form";
 import { User } from "@prisma/client";
@@ -23,6 +25,8 @@ interface AccountProps {
 export default function Account({ userInfo }: AccountProps) {
   const session = useSession();
   const { classes } = useStyles();
+  const { colorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === "dark";
 
   const allowedTypes = ["image/png", "image/jpeg", "image/jpg", "image/webp"];
   const form = useForm({
@@ -42,7 +46,6 @@ export default function Account({ userInfo }: AccountProps) {
           .max(30, "Maximum 30 characters")
           .or(z.literal(null))
           .or(z.literal("")),
-        // TODO:
         userCeuId: z
           .string()
           .trim()
@@ -66,7 +69,6 @@ export default function Account({ userInfo }: AccountProps) {
     async () => {
       let imageResponse;
       if (form.values.file) {
-        // Generate Signature for Cloudinary Signed Upload
         const timestamp = Math.round(new Date().getTime() / 1000);
         const res = await axios.post("/api/signature", {
           id: session?.data?.user?.id,
@@ -75,7 +77,6 @@ export default function Account({ userInfo }: AccountProps) {
 
         const [signature, key] = [res.data.signature, res.data.key];
 
-        // TODO: Abstract all of these media upload logic into a separate file
         const formData = new FormData();
         formData.append("file", form.values.file);
         formData.append("api_key", key);
@@ -92,12 +93,8 @@ export default function Account({ userInfo }: AccountProps) {
 
       return await axios.post("/api/user/update", {
         id: session?.data?.user?.id,
-        ceuId:
-          form.values.userCeuId.trim() === ""
-            ? null
-            : form.values.userCeuId,
-        username:
-          form.values.userName.trim() === "" ? null : form.values.userName,
+        ceuId: form.values.userCeuId.trim() === "" ? null : form.values.userCeuId,
+        username: form.values.userName.trim() === "" ? null : form.values.userName,
         image: imageResponse?.data?.eager?.[0]?.secure_url ?? userInfo.image,
       });
     },
@@ -115,8 +112,10 @@ export default function Account({ userInfo }: AccountProps) {
 
   return (
     <>
-      <h1 className="text-center">Account Settings</h1>
-      <hr className="my-4 h-px border-0 bg-gray-200" />
+      <Title align="center" mb="md" color={isDark ? "white" : "dark"}>
+        Account Settings
+      </Title>
+      <hr className={classes.divider} />
       <form
         onSubmit={form.onSubmit(
           () => {
@@ -129,12 +128,12 @@ export default function Account({ userInfo }: AccountProps) {
           }
         )}
       >
-        <Center className="mt-3">
+        <Center className={classes.avatarContainer}>
           <Avatar
             size={90}
             src={userInfo?.image}
             radius={100}
-            className="mb-3"
+            className={classes.avatar}
           />
         </Center>
         <FileInput
@@ -143,10 +142,11 @@ export default function Account({ userInfo }: AccountProps) {
           description="* PNG / JPG / JPEG / WEBP"
           name="image"
           accept={allowedTypes.join(",")}
+          className={classes.fileInput}
           {...form.getInputProps("file")}
         />
         <TextInput
-          className="mt-4"
+          className={classes.textInput}
           label="Username (Visible to everyone)"
           placeholder="Please select a username"
           name="name"
@@ -154,7 +154,7 @@ export default function Account({ userInfo }: AccountProps) {
           {...form.getInputProps("userName")}
         />
         <TextInput
-          className="mt-4"
+          className={classes.textInput}
           label="CEU ID"
           placeholder="Please enter your CEU ID if you are an CEU student"
           name="ceuId"
@@ -163,14 +163,14 @@ export default function Account({ userInfo }: AccountProps) {
           onChange={(e) => {
             form.setFieldValue("userCeuId", e.target.value.toUpperCase());
           }}
-          error={form.errors.userC}
+          error={form.errors.userCeuId}
         />
         <Group position="center" mt="xl">
           <Button type="submit" size="md" loading={updateUserLoading}>
             Confirm
           </Button>
           <Button
-            variant="white"
+            variant="outline"
             type="button"
             size="md"
             onClick={form.reset}
@@ -185,36 +185,29 @@ export default function Account({ userInfo }: AccountProps) {
 }
 
 const useStyles = createStyles((theme) => ({
-  control: {
-    backgroundColor:
-      theme.colorScheme === "dark"
-        ? theme.fn.variant({
-          variant: "light",
-          color: theme.primaryColor,
-        }).background
-        : theme.fn.variant({
-          variant: "filled",
-          color: theme.primaryColor,
-        }).background,
-    color:
-      theme.colorScheme === "dark"
-        ? theme.fn.variant({ variant: "light", color: theme.primaryColor })
-          .color
-        : theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .color,
+  avatarContainer: {
+    marginTop: theme.spacing.md,
+  },
+  avatar: {
+    marginBottom: theme.spacing.md,
+  },
+  fileInput: {
+    marginTop: theme.spacing.md,
+  },
+  textInput: {
+    marginTop: theme.spacing.md,
+  },
+  divider: {
+    border: 0,
+    height: 1,
+    background: theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2],
+    marginBottom: theme.spacing.md,
   },
   cancel: {
-    backgroundColor:
-      theme.colorScheme === "dark"
-        ? theme.fn.variant({
-          variant: "light",
-        }).background
-        : theme.fn.variant({
-          variant: "white",
-        }).background,
-    color:
-      theme.colorScheme === "dark"
-        ? theme.fn.variant({ variant: "light" }).color
-        : theme.fn.variant({ variant: "white" }).color,
+    backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[1],
+    color: theme.colorScheme === "dark" ? theme.colors.gray[0] : theme.colors.dark[6],
+    '&:hover': {
+      backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2],
+    },
   },
 }));
