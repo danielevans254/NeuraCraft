@@ -8,7 +8,7 @@ export default async function handler(
 ) {
   const questions = await prisma.question.findMany({
     include: {
-      topic: true,
+      topic: false,
       questionsWithAddedTime: {
         include: {
           attempts: true,
@@ -16,6 +16,6 @@ export default async function handler(
       },
     },
   });
-
+  console.log(questions)
   res.status(200).json(questions);
 }
