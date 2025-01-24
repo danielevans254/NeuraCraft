@@ -474,7 +474,7 @@ export const Courses: {
   week?: number | null;
   studio?: number | null;
   topics: Topic["topicSlug"][];
-  courseMedia: CourseMedia[] | null;
+  courseMedia: CourseMedia[];
   isPublished: boolean;
 }[] = [
     {
@@ -484,13 +484,13 @@ export const Courses: {
       studio: 0,
       courseSlug: "welcome-quiz-assessment",
       courseName: "Quiz Assessment",
-      courseDescription: "",
+      courseDescription: "<div style='font-family: Arial, sans-serif;'><p>The <strong>Quiz Assessment</strong> is a comprehensive diagnostic tool designed to evaluate your current knowledge and skill level across various computer science domains. This unique assessment provides insights into your strengths and areas for potential improvement.</p><p>By taking this quiz, you'll gain a clear understanding of your baseline technical skills and receive personalized recommendations for your learning journey.</p><h2>Why take the Quiz Assessment?</h2><ul style='list-style-type: disc; margin-left: 20px;'><li>Identify your current proficiency levels in key computer science topics</li><li>Receive personalized learning path suggestions</li><li>Benchmark your skills across multiple technical domains</li><li>Get a holistic view of your technical knowledge</li></ul><p>The assessment covers a wide range of critical computer science areas, including data structures, algorithms, networking, software engineering, and more. With carefully crafted questions and an intelligent evaluation system, this quiz offers a comprehensive snapshot of your technical capabilities.</p></div>",
       courseIntroduction: "Get a quick assessment of your current level and mastery.",
       courseImage: "https://firebasestorage.googleapis.com/v0/b/neuracraft-1df48.appspot.com/o/course_thumbnails%2Fandrew-neel-o93echtXf84-unsplash.jpg?alt=media&token=bcec6125-fe81-4b83-b740-d035505d2810",
       courseLevel: Level.Foundational,
       type: CourseType.Quiz,
       topics: ["data-structures", "algorithms", "operating-systems", "networking", "database-systems", "software-engineering", "web-development", "object-oriented-programming", "machine-learning", "cloud-computing", "cybersecurity", "mobile-development", "data-analytics", "software-testing", "devops", "design-patterns", "algorithms-optimization", "advanced-database-systems", "distributed-systems"],
-      courseMedia: null,
+      courseMedia: [],
       isPublished: true,
     },
     {
