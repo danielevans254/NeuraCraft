@@ -23,6 +23,7 @@ import {
   Text, Title, Tooltip, TypographyStylesProvider,
   Group,
   Modal,
+  Progress,
 } from "@mantine/core";
 import {
   useMediaQuery, useSessionStorage, useViewportSize,
@@ -36,6 +37,7 @@ import {
 import { useQuery } from "@tanstack/react-query";
 import PaginatedPDFViewer from "@/components/course/PaginatedPDFViewer";
 import toast from "react-hot-toast";
+import QuizStartButton from "@/components/course/QuizStartButton";
 
 export type CourseInfoType = {
   topics: (Topic & {
@@ -77,7 +79,7 @@ export default function CourseMainPage({
 
   const lockTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // TODO: Fix the quiz confirmation modal, and attempt history lock
+  // TODO: When the time runs out show the modal again
   // TODO:
 
   useEffect(() => {
@@ -177,19 +179,6 @@ export default function CourseMainPage({
     }
   };
 
-  // Prevent leaving during active lock
-  // useEffect(() => {
-  //   const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-  //     if (attemptHistoryLocked) {
-  //       e.preventDefault();
-  //       e.returnValue = "You have an active quiz. Are you sure you want to leave?";
-  //     }
-  //   };
-
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-  //   return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  // }, [attemptHistoryLocked]);
-
   useEffect(() => {
     if (active === "Attempts" || active === "Question") {
       fetchLockStatus();
@@ -279,18 +268,9 @@ export default function CourseMainPage({
   }), [courseDetails]);
 
   const handleNavigation = (route: string, label: string) => {
-    // If attempting to navigate to question
     if (route === "question") {
-      // If not locked and currently in practice section, show confirmation modal
-      if (!attemptHistoryLocked && currentSection !== "practice") {
-        // Switch to practice section first
+      if (currentSection !== "practice") {
         handleSectionChange("practice");
-      }
-
-      // Show confirmation modal if not locked
-      if (!attemptHistoryLocked) {
-        setConfirmationModalOpened(true);
-        return;
       }
     }
 
@@ -523,17 +503,44 @@ export default function CourseMainPage({
           p="md"
           mb="sm"
           sx={(theme) => ({
-            backgroundColor: theme.colors.blue[1],
-            borderBottom: `2px solid ${theme.colors.blue[3]}`,
+            backgroundColor: timeLeft <= 10
+              ? theme.colors.red[1]
+              : theme.colors.blue[1],
+            borderBottom: `2px solid ${timeLeft <= 10
+              ? theme.colors.red[3]
+              : theme.colors.blue[3]
+              }`,
           })}
         >
-          <Group position="apart">
-            <Text weight={500}>
-              ⏳ Quiz Session Ongoing - {Math.floor(timeLeft / 60)}:
+          <Group position="apart" mb="xs">
+            <Text
+              weight={500}
+              color={timeLeft <= 10 ? 'red' : 'dark'}
+            >
+              {timeLeft <= 10
+                ? '⚠️ Quiz Ending!'
+                : '⏳ Quiz Session Ongoing'}
+              {' '}
+              - {Math.floor(timeLeft / 60)}:
               {(timeLeft % 60).toString().padStart(2, "0")} remaining
             </Text>
           </Group>
+          <Progress
+            value={(timeLeft / 300) * 100} // 5 Minutes
+            color={timeLeft <= 10 ? 'red' : 'blue'}
+            size="sm"
+            animate={timeLeft <= 10}
+          />
         </Box>
+      )}
+
+      {/* TODO: This should be in the practice question component but the props sharing is so annoying to do */}
+      {active === "Question" && (
+        <QuizStartButton
+          active="Question"
+          attemptHistoryLocked={attemptHistoryLocked}
+          setConfirmationModalOpened={setConfirmationModalOpened}
+        />
       )}
 
       <ScrollArea className="h-full">
@@ -637,7 +644,7 @@ export default function CourseMainPage({
                   onClick={handleModalClose}
                   disabled={isModalClosing}
                 >
-                  Practice for now
+                  Cancel
                 </Button>
                 <Button
                   color="blue"
@@ -648,7 +655,9 @@ export default function CourseMainPage({
                 </Button>
               </Group>
             </Modal>
-            <PracticeQuestion />
+            {attemptHistoryLocked && (
+              <PracticeQuestion />
+            )}
           </>
         ) : active === "Attempts" ? (
           attemptHistoryLocked ? (
