@@ -69,7 +69,6 @@ model User {
   posts                  Post[]
   comments               Comment[]
   postLikes              PostLikes[]
-  UserProgress           UserProgress[]
   streakCorrect          Int                     @default(0) // New field for correct streak
   streakIncorrect        Int                     @default(0) // New field for incorrect streak
   lastDifficulty         QuestionDifficulty? // New field for last attempted difficulty
@@ -162,17 +161,6 @@ model Course {
   questionsWithAddedTime QuestionWithAddedTime[]
 
   isPublished Boolean @default(true)
-}
-
-model UserProgress {
-  id          String  @id @default(cuid())
-  userId      String
-  chapterId   String
-  isCompleted Boolean @default(false)
-  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([userId, chapterId])
-  @@index([chapterId])
 }
 
 model CourseMedia {
