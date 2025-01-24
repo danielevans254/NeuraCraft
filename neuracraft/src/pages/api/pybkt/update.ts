@@ -23,8 +23,7 @@ export default async function handler(
 
     // Patch then get data then update mastery
     const patch_res = await axios.patch(
-      `${process.env.RECOMMENDER_URL}/update-state/${session?.user?.id}/${
-        req.topicSlug
+      `${process.env.RECOMMENDER_URL}/update-state/${session?.user?.id}/${req.topicSlug
       }/${String(req.correct ? 1 : 0)}`,
       req,
       {
@@ -75,7 +74,7 @@ export default async function handler(
         },
       },
     });
-    console.log(wrongness);
+    console.log(wrongness, "Wrongness");
   }
 
   if (req.body.masteryConditionFlag === true) {
