@@ -34,95 +34,94 @@ const tabs = [
 
 export default function AdminPage() {
   const session = useSession();
-  const [active, setActive] = useState("Overview");
-  const isMobile = useMediaQuery("(max-width: 640px)");
-  const [sidebarOpened, setSidebarOpened] = useState(!isMobile);
+  const [activeTab, setActiveTab] = useState("Overview");
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
 
   useMemo(() => {
     if (isMobile !== undefined) {
-      setSidebarOpened(!isMobile);
+      setSidebarOpen(!isMobile);
     }
   }, [isMobile]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100">
-      <Header title="Admin Panel" />
-      <TopNavbar sidebarOpened={sidebarOpened} setSidebarOpened={setSidebarOpened} />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+      <Header title="Admin Dashboard" />
+      <TopNavbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-      <div className="flex">
-        {sidebarOpened && (
-          <nav className="w-64 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
-            <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-              <div className="flex justify-between items-center">
-                <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100">Admin</h2>
+      <div className="flex relative">
+        {/* Sidebar */}
+        {sidebarOpen && (
+          <aside className="w-64 min-h-screen bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 fixed md:relative md:translate-x-0 transform transition-transform duration-200 ease-in-out z-20">
+            <div className="px-4 py-5 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-200">
+                  Dashboard
+                </h2>
                 <RoleBadge role={session?.data?.user?.role} />
               </div>
             </div>
 
-            <div className="py-4">
+            <nav className="py-4 px-2 space-y-1">
               {tabs.map((item) => {
-                const isActive = item.label === active;
+                const isActive = item.label === activeTab;
                 return (
                   <button
                     key={item.label}
                     onClick={() => {
-                      setActive(item.label);
-                      isMobile && setSidebarOpened(false);
+                      setActiveTab(item.label);
+                      isMobile && setSidebarOpen(false);
                     }}
-                    className={`w-full px-4 py-3 flex items-center space-x-3 rounded-lg transition-all ${isActive
-                      ? "bg-blue-600 text-white dark:bg-blue-700 dark:text-blue-100"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                    className={`w-full flex items-center px-3 py-3 rounded-lg transition-all duration-200 ${isActive
+                      ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300'
+                      : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50'
                       }`}
                   >
-                    <div
-                      className={`p-2 rounded-lg ${isActive
-                        ? "bg-blue-700 dark:bg-blue-800"
-                        : "bg-gray-100 dark:bg-gray-800"
+                    <item.icon
+                      className={`flex-shrink-0 w-6 h-6 ${isActive
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-500 dark:text-gray-400'
                         }`}
-                    >
-                      <item.icon
-                        className={`w-5 h-5 ${isActive
-                          ? "text-white dark:text-blue-200"
-                          : "text-gray-500 dark:text-gray-400"
-                          }`}
-                      />
-                    </div>
-                    <span>{item.label}</span>
+                    />
+                    <span className="ml-3 font-medium">{item.label}</span>
                   </button>
                 );
               })}
-            </div>
+            </nav>
 
-            <div className="absolute bottom-0 w-64 border-t border-gray-200 dark:border-gray-800">
+            <div className="absolute bottom-0 w-full px-4 py-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
               <Link
                 href="/courses"
-                className="flex items-center px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                className="flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200"
               >
                 <IconArrowBarLeft className="w-5 h-5 mr-2" />
-                <span>Back to Courses</span>
+                Return to Courses
               </Link>
             </div>
-          </nav>
+          </aside>
         )}
 
-        <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-950">
-          {active === "Overview" ? (
-            <Overview />
-          ) : active === "Questions" ? (
-            <QuestionViewer />
-          ) : active === "Accounts" ? (
-            <Accounts />
-          ) : active === "Courses" ? (
-            <Courses />
-          ) : active === "Performance" ? (
-            <Users />
-          ) : active === "Settings" ? (
-            <Settings />
-          ) : null}
+        {/* Main Content */}
+        <main className={`flex-1 ${sidebarOpen ? 'md:ml-64' : ''} transition-spacing duration-200`}>
+          <div className="px-4 py-6 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            {activeTab === "Overview" ? (
+              <Overview />
+            ) : activeTab === "Questions" ? (
+              <QuestionViewer />
+            ) : activeTab === "Accounts" ? (
+              <Accounts />
+            ) : activeTab === "Courses" ? (
+              <Courses />
+            ) : activeTab === "Performance" ? (
+              <Users />
+            ) : activeTab === "Settings" ? (
+              <Settings />
+            ) : null}
+          </div>
         </main>
       </div>
 
       <Footer />
     </div>
   );
-}
+};
