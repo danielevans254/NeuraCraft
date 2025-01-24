@@ -22,7 +22,8 @@ export default async function handler(
     b. Difficulty: according to new mastery level
   3. Add a new questionWithAddedTime with runtime generated answer options
   4. Add a new attempt
-  5. Return the new mastery to fire a custom notification
+  5. Update the user's streak and last difficulty
+  6. Return the new mastery to fire a custom notification
   */
 
   const session = await getServerSession(req, res, authOptions);
@@ -35,16 +36,19 @@ export default async function handler(
       })
       .parse(req.query);
 
-    const { attemptedKeys, isCorrect, topicSlug, topicName } = z
+    const { attemptedKeys, isCorrect, topicSlug, topicName, difficulty, streakCorrect, streakIncorrect } = z
       .object({
         attemptedKeys: z.array(z.string()),
         isCorrect: z.boolean(),
         topicSlug: z.string(),
         topicName: z.string(),
+        difficulty: z.enum(["Easy", "Medium", "Hard"]),
+        streakCorrect: z.number(),
+        streakIncorrect: z.number()
       })
       .parse(req.body);
 
-    // Step 1
+    // Step 1: Update the BKT model and get user's new mastery
     const { data: pybktUpdate } = await axios.patch<{
       Updated: boolean;
     }>(
@@ -81,7 +85,7 @@ export default async function handler(
       `[${topicSlug}] NEW MASTERY: ${(pybktGet.Mastery * 100).toFixed(2)}%`
     );
 
-    // Step 2
+    // Step 2: Recommend a new question
     const { recommendedTopicSlug, recommendedQuestion } =
       await RecommendQuestion(courseSlug, pybktGet.Mastery);
 
@@ -90,7 +94,7 @@ export default async function handler(
       recommendedQuestion.questionId
     );
 
-    // Step 3
+    // Step 3: Add a new questionWithAddedTime with runtime generated answer options
     const questionData = recommendedQuestion.questionData as QuestionDataType;
 
     // Only evaluate variables and methods if dynamic question
@@ -116,7 +120,7 @@ export default async function handler(
       },
     });
 
-    // Step 4
+    // Step 4: Add a new attempt
     await prisma.attempt.create({
       data: {
         userId: session?.user?.id as string,
@@ -124,10 +128,22 @@ export default async function handler(
         qatId: qatId,
         attemptedKeys: attemptedKeys,
         isCorrect: isCorrect,
+        difficulty: difficulty,
+        streakCorrect: streakCorrect,
+        streakIncorrect: streakIncorrect,
       },
     });
 
-    // Step 5
+    await prisma.user.update({
+      where: { id: session?.user?.id as string },
+      data: {
+        streakCorrect: isCorrect ? streakCorrect + 1 : 0,
+        streakIncorrect: isCorrect ? 0 : streakIncorrect + 1,
+        lastDifficulty: difficulty,
+      },
+    });
+
+    // Step 6: Return the new mastery to fire a custom notification
     res.status(200).json({
       customToast: true,
       message: "Answer submitted successfully",
