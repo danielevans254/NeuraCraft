@@ -10,6 +10,7 @@ import {
   Tooltip,
 } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import { Box, Grid } from "@mantine/core";
 
 import {
   AttemptsInfoType,
@@ -47,10 +48,14 @@ ChartJS.register(
 );
 
 ChartJS.defaults.font.size = 16;
+ChartJS.defaults.font.family = "'Inter', sans-serif";
+ChartJS.defaults.color = "#6B7280"; // Default text color for charts
 
 const Overview = () => {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+  const { colors, fn } = theme;
+  const { primaryColor } = theme;
 
   const [{ data: users }, { data: courses }, { data: attempts }] = useQueries({
     queries: [
@@ -72,9 +77,9 @@ const Overview = () => {
 
   if (!users || !courses || !attempts) {
     return (
-      <Center className="h-screen">
-        <Loader />
-      </Center>
+      <Box className="h-[60vh] flex items-center justify-center">
+        <Loader size="xl" variant="dots" />
+      </Box>
     );
   }
 
