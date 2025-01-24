@@ -3,8 +3,9 @@ import DOMPurify from "dompurify";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import { Document, Page } from "react-pdf";
+import { useSession } from "next-auth/react"
 
 import CourseDiscussion from "@/components/course/CourseDiscussion";
 import PracticeQuestion from "@/components/course/PracticeQuestion";
@@ -20,6 +21,8 @@ import {
   ActionIcon, AppShell, Box, Button, Center, Container, createStyles, Divider,
   Flex, Header, Loader, Navbar as Sidebar, ScrollArea, SegmentedControl, Stack,
   Text, Title, Tooltip, TypographyStylesProvider,
+  Group,
+  Modal,
 } from "@mantine/core";
 import {
   useMediaQuery, useSessionStorage, useViewportSize,
@@ -27,11 +30,12 @@ import {
 import { Course, CourseMedia, Mastery, Topic } from "@prisma/client";
 import {
   IconApps, IconArrowBarLeft, IconArrowLeft, IconArrowRight, IconChartLine,
-  IconChevronsLeft, IconChevronsRight, IconDownload, IconMessages,
+  IconChevronsLeft, IconChevronsRight, IconDownload, IconLock, IconMessages,
   IconPresentation, IconReportSearch, IconTarget, IconVideo, IconZoomQuestion,
 } from "@tabler/icons";
 import { useQuery } from "@tanstack/react-query";
 import PaginatedPDFViewer from "@/components/course/PaginatedPDFViewer";
+import toast from "react-hot-toast";
 
 export type CourseInfoType = {
   topics: (Topic & {
@@ -48,6 +52,12 @@ export default function CourseMainPage({
 }: {
   courseDetails: Course & { courseMedia: CourseMedia[] };
 }) {
+
+  // TODO: Fix a bug with the navigation for the question when clicking no for the starting of quiz session, since the modal is not there i am unable to navigate to it until i switch tabs, just a boolean check error but still need to debug this
+
+  const { data: session } = useSession();
+  const userId = session?.user?.id;
+
   const { theme, classes, cx } = useStyles();
   const { width } = useViewportSize();
   const router = useRouter();
@@ -57,6 +67,138 @@ export default function CourseMainPage({
   const [sidebarOpened, setSidebarOpened] = useState(true);
   const [active, setActive] = useState("Overview");
   const [currentSection, setCurrentSection] = useState(section as string);
+  const [confirmationModalOpened, setConfirmationModalOpened] = useState(false);
+  const [attemptHistoryLocked, setAttemptHistoryLocked] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<number>(0);
+  const lockIntervalRef = useRef<NodeJS.Timeout>();
+  const isMounted = useRef(true);
+  const [lockIntervalId, setLockIntervalId] = useState<NodeJS.Timeout>();
+  const [isModalClosing, setIsModalClosing] = useState(false);
+
+  const lockTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // TODO: Fix the quiz confirmation modal, and attempt history lock
+  // TODO:
+
+  useEffect(() => {
+    const controller = new AbortController();
+    return () => {
+      isMounted.current = false;
+      controller.abort();
+      if (lockIntervalRef.current) clearInterval(lockIntervalRef.current);
+    };
+  }, []);
+
+  const fetchLockStatus = useCallback(async () => {
+    if (!userId || !courseSlug) return;
+
+    try {
+      const { data } = await axios.get("/api/question/getAttemptHistory", {
+        params: { userId, topicSlug: courseSlug }
+      });
+
+      if (data.locked) {
+        const lockedUntil = new Date(data.lockedUntil).getTime();
+        const remainingTime = Math.max(0, Math.floor((lockedUntil - Date.now()) / 1000));
+
+        setAttemptHistoryLocked(true);
+        setTimeLeft(remainingTime);
+
+        // Clear any existing timer
+        if (lockTimerRef.current) clearInterval(lockTimerRef.current);
+
+        // Start new countdown timer
+        lockTimerRef.current = setInterval(() => {
+          setTimeLeft(prev => {
+            if (prev <= 1) {
+              clearInterval(lockTimerRef.current!);
+              setAttemptHistoryLocked(false);
+              return 0;
+            }
+            return prev - 1;
+          });
+        }, 1000);
+      } else {
+        setAttemptHistoryLocked(false);
+        setTimeLeft(0);
+        if (lockTimerRef.current) clearInterval(lockTimerRef.current);
+      }
+    } catch (error) {
+      console.error("Lock status fetch failed", error);
+    }
+  }, [userId, courseSlug]);
+
+  useEffect(() => {
+    fetchLockStatus();
+
+    return () => {
+      if (lockTimerRef.current) clearInterval(lockTimerRef.current);
+    };
+  }, [fetchLockStatus]);
+
+  useEffect(() => {
+    const interval = setInterval(fetchLockStatus, 10000);
+    return () => clearInterval(interval);
+  }, [fetchLockStatus]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (["Attempts", "Question"].includes(active)) {
+        fetchLockStatus();
+      }
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [active, fetchLockStatus]);
+
+  const confirmQuizStart = async () => {
+    try {
+      setConfirmationModalOpened(false);
+
+      const { data } = await axios.post("/api/question/lockAttemptHistory", {
+        userId,
+        topicSlug: courseSlug
+      });
+
+      if (!data.success) throw new Error("Lock failed");
+
+      await fetchLockStatus();
+
+      router.push({
+        pathname: `/courses/${courseSlug}`,
+        query: {
+          section: currentSection,
+          tab: "question"
+        }
+      }, undefined, { shallow: true });
+
+    } catch (error) {
+      toast.error("Failed to start quiz. Please try again.");
+    }
+  };
+
+  // Prevent leaving during active lock
+  // useEffect(() => {
+  //   const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+  //     if (attemptHistoryLocked) {
+  //       e.preventDefault();
+  //       e.returnValue = "You have an active quiz. Are you sure you want to leave?";
+  //     }
+  //   };
+
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
+  //   return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  // }, [attemptHistoryLocked]);
+
+  useEffect(() => {
+    if (active === "Attempts" || active === "Question") {
+      fetchLockStatus();
+    }
+
+    return () => {
+      lockIntervalId && clearInterval(lockIntervalId);
+    };
+  }, [active]);
 
   // React Query configuration
   const { data: courseData, isLoading, isError } = useQuery({
@@ -69,6 +211,8 @@ export default function CourseMainPage({
     staleTime: 5 * 60 * 1000, // Consider data fresh for 5 minutes
     cacheTime: 30 * 60 * 1000, // Keep data in cache for 30 minutes
   });
+
+  // TODO: Fix the modal and attempt history lock
 
   useEffect(() => {
     if (tab) {
@@ -135,12 +279,57 @@ export default function CourseMainPage({
   }), [courseDetails]);
 
   const handleNavigation = (route: string, label: string) => {
+    // If attempting to navigate to question
+    if (route === "question") {
+      // If not locked and currently in practice section, show confirmation modal
+      if (!attemptHistoryLocked && currentSection !== "practice") {
+        // Switch to practice section first
+        handleSectionChange("practice");
+      }
+
+      // Show confirmation modal if not locked
+      if (!attemptHistoryLocked) {
+        setConfirmationModalOpened(true);
+        return;
+      }
+    }
+
+    const requiredSection =
+      ["question", "attempts", "mastery"].includes(route) ? "practice" : "learn";
+
+    if (currentSection !== requiredSection) {
+      handleSectionChange(requiredSection);
+    }
+
     router.push({
       pathname: `/courses/${courseSlug}`,
-      query: { section: currentSection, tab: route }
+      query: {
+        section: requiredSection,
+        tab: route
+      }
     }, undefined, { shallow: true });
-    mobile && setSidebarOpened(false);
+
+    if (mobile) setSidebarOpened(false);
   };
+
+  const handleModalClose = () => {
+    if (!isModalClosing) {
+      setIsModalClosing(true);
+      setConfirmationModalOpened(false);
+      setTimeout(() => setIsModalClosing(false), 300);
+    }
+  };
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      const currentTab = router.query.tab?.toString() || "overview";
+      const formattedTab = formatTab(currentTab);
+      setActive(formattedTab);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => router.events.off("routeChangeComplete", handleRouteChange);
+  }, [router]);
 
   const links = useMemo(() => (
     tabs[currentSection as keyof typeof tabs].map((item) => item && (
@@ -162,7 +351,7 @@ export default function CourseMainPage({
 
   useEffect(() => {
     if (courseSlug && !tab) {
-      // Push initial route with default tab
+
       router.push({
         pathname: `/courses/${courseSlug}`,
         query: {
@@ -191,6 +380,7 @@ export default function CourseMainPage({
             </Header>
           </>
         }
+
       >
         <Center className="h-[calc(100vh-180px)]">
           <Loader size="xl" />
@@ -283,7 +473,6 @@ export default function CourseMainPage({
               <Text weight={600} size="lg" align="center" mb="lg">
                 {courseDetails.courseName}
               </Text>
-
               <SegmentedControl
                 value={currentSection}
                 onChange={handleSectionChange}
@@ -295,7 +484,6 @@ export default function CourseMainPage({
                 ]}
               />
             </Sidebar.Section>
-
             <Sidebar.Section mt="xl" grow>
               {links}
               <Divider my="sm" variant="dotted" />
@@ -305,13 +493,14 @@ export default function CourseMainPage({
                 onClick={(event) => {
                   event.preventDefault();
                   setActive("Course Discussion");
-                  router.push({
-                    pathname: `/courses/${courseSlug}`,
-                    query: {
-                      section: currentSection,
-                      tab: "discussion"
-                    }
-                  }, undefined, { shallow: true });
+                  router.push(
+                    {
+                      pathname: `/courses/${courseSlug}`,
+                      query: { section: currentSection, tab: "discussion" },
+                    },
+                    undefined,
+                    { shallow: true }
+                  );
                   mobile && setSidebarOpened(false);
                 }}
               >
@@ -329,6 +518,24 @@ export default function CourseMainPage({
         ) : undefined
       }
     >
+      {attemptHistoryLocked && (
+        <Box
+          p="md"
+          mb="sm"
+          sx={(theme) => ({
+            backgroundColor: theme.colors.blue[1],
+            borderBottom: `2px solid ${theme.colors.blue[3]}`,
+          })}
+        >
+          <Group position="apart">
+            <Text weight={500}>
+              ⏳ Quiz Session Ongoing - {Math.floor(timeLeft / 60)}:
+              {(timeLeft % 60).toString().padStart(2, "0")} remaining
+            </Text>
+          </Group>
+        </Box>
+      )}
+
       <ScrollArea className="h-full">
         {active === "Overview" ? (
           <Container>
@@ -351,27 +558,37 @@ export default function CourseMainPage({
             </TypographyStylesProvider>
           </Container>
         ) : active === "Lecture Slides" ? (
-          <PaginatedPDFViewer
-            courseMedia={courseDetails.courseMedia}
-            sidebarWidth={sidebarWidth}
-          />
-        ) : active === "Lecture Videos" ? (
-          <div className="h-[calc(100vh-180px)] w-full">
-            <div
-              className="w-full h-full"
-              dangerouslySetInnerHTML={{
-                __html: modifiedVideo ? DOMPurify.sanitize(modifiedVideo, {
-                  ADD_TAGS: ["iframe"],
-                  ADD_ATTR: [
-                    "allow",
-                    "allowfullscreen",
-                    "frameborder",
-                    "scrolling",
-                  ],
-                }) : '',
-              }}
+          attemptHistoryLocked ? (
+            <LockedAttemptsMessage timeLeft={timeLeft} message="Lecture Slides Locked" />
+          ) : (
+            <PaginatedPDFViewer
+              courseMedia={courseDetails.courseMedia}
+              sidebarWidth={sidebarWidth}
             />
-          </div>
+          )
+        ) : active === "Lecture Videos" ? (
+          attemptHistoryLocked ? (
+            <LockedAttemptsMessage timeLeft={timeLeft} message="Lecture Videos Locked" />
+          ) : (
+            <div className="h-[calc(100vh-180px)] w-full">
+              <div
+                className="w-full h-full"
+                dangerouslySetInnerHTML={{
+                  __html: modifiedVideo
+                    ? DOMPurify.sanitize(modifiedVideo, {
+                      ADD_TAGS: ["iframe"],
+                      ADD_ATTR: [
+                        "allow",
+                        "allowfullscreen",
+                        "frameborder",
+                        "scrolling",
+                      ],
+                    })
+                    : "",
+                }}
+              />
+            </div>
+          )
         ) : active === "Additional Resources" ? (
           <div className="w-full h-full">
             {output?.map((resource) =>
@@ -401,9 +618,44 @@ export default function CourseMainPage({
         ) : active === "Course Discussion" ? (
           <CourseDiscussion courseName={courseDetails.courseName} />
         ) : active === "Question" ? (
-          <PracticeQuestion />
+          <>
+            <Modal
+              opened={confirmationModalOpened && !isModalClosing}
+              onClose={handleModalClose}
+              title="Start Quiz Session"
+              centered
+              withCloseButton={!isModalClosing}
+              closeOnClickOutside={!isModalClosing}
+            >
+              <Text mb="md">
+                Starting a quiz will lock attempt history and lecture material for 5 minutes.
+                You can continue anytime but previous attempts won't be visible until unlocked.
+              </Text>
+              <Group position="right">
+                <Button
+                  variant="default"
+                  onClick={handleModalClose}
+                  disabled={isModalClosing}
+                >
+                  Practice for now
+                </Button>
+                <Button
+                  color="blue"
+                  onClick={confirmQuizStart}
+                  loading={isModalClosing}
+                >
+                  Start Now
+                </Button>
+              </Group>
+            </Modal>
+            <PracticeQuestion />
+          </>
         ) : active === "Attempts" ? (
-          <QuestionHistory courseSlug={courseDetails.courseSlug} />
+          attemptHistoryLocked ? (
+            <LockedAttemptsMessage timeLeft={timeLeft} message="Attempt History Locked" />
+          ) : (
+            <QuestionHistory courseSlug={courseDetails.courseSlug} />
+          )
         ) : active === "Mastery" ? (
           <ResultsPage />
         ) : (
@@ -447,6 +699,37 @@ export const getStaticProps: GetStaticProps = async (context) => {
       courseDetails,
     },
   };
+};
+
+// Helper component for locked message
+const LockedAttemptsMessage = ({ timeLeft, message }: { timeLeft: number, message: string }) => (
+  <Center className="h-[calc(100vh-180px)]">
+    <Stack spacing="sm" align="center">
+      <IconLock size={40} color="red" />
+      <Text size="xl" weight={500}>
+        {message}
+      </Text>
+      <Text color="dimmed">
+        Available in {Math.floor(timeLeft / 60)}:
+        {(timeLeft % 60).toString().padStart(2, '0')}
+      </Text>
+    </Stack>
+  </Center>
+);
+
+// Helper function to format tab name
+const formatTab = (tab: string) => {
+  const tabMap: Record<string, string> = {
+    "overview": "Overview",
+    "lecture-slides": "Lecture Slides",
+    "lecture-videos": "Lecture Videos",
+    "resources": "Additional Resources",
+    "discussion": "Course Discussion",
+    "question": "Question",
+    "attempts": "Attempts",
+    "mastery": "Mastery"
+  };
+  return tabMap[tab] || "Overview";
 };
 
 const useStyles = createStyles((theme, _params, getRef) => {
