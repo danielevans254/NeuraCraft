@@ -23,6 +23,7 @@ import {
   Loader,
   Modal,
   Paper,
+  Progress,
   Radio,
   Stack,
   Text,
@@ -30,8 +31,9 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { Question, QuestionDifficulty, QuestionWithAddedTime, User } from "@prisma/client";
-import { IconBulb } from "@tabler/icons";
+import { IconBook, IconBulb } from "@tabler/icons";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useDisclosure } from "@mantine/hooks";
 
 // TODO: Add different question types
 interface UserData extends User {
@@ -53,11 +55,12 @@ export default function PracticeQuestion() {
   const router = useRouter();
   const currentCourseSlug = router.query.courseSlug as string;
 
-  const [confirmationModalOpened, setConfirmationModalOpened] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const [streak, setStreak] = useState({ correct: 0, incorrect: 0 });
   const [lastDifficulty, setLastDifficulty] = useState<QuestionDifficulty | null>(null);
-  const [attemptHistoryLocked, setAttemptHistoryLocked] = useState(false);
+
+  // TODO: Fetch the topic for the mastery level so when the mastery level hits 100%, it can be shown as a toast notification that the mastery level was reset and will go back to easy, and the cycle will begin
+  const [topicMasteryLevel, setTopicMasteryLevel] = useState({ studentId: "", topic: "", masteryLevel: 0, period: "" });
 
   // TODO: Add different question types
   // TODO: Sometimes the state isn't updated correctly, causing the streak counter to show wrong numbers
@@ -67,6 +70,14 @@ export default function PracticeQuestion() {
   const [matches, setMatches] = useState([]);
   const [booleanAnswer, setBooleanAnswer] = useState(null);
   const [hintsOpened, setHintsOpened] = useState(false);
+  const [opened, { open, close }] = useDisclosure(false);
+
+  const [recommendationData, setRecommendationData] = useState<{
+    url: string;
+    topic: string;
+    currentMastery: number;
+    previousMastery: number;
+  } | null>(null);
 
   useEffect(() => {
     const fetchStreakAndDifficulty = async () => {
@@ -85,9 +96,21 @@ export default function PracticeQuestion() {
     fetchStreakAndDifficulty();
   }, []);
 
-  const handleQuizStart = () => {
-    setConfirmationModalOpened(true);
-  };
+  useEffect(() => {
+    const fetchTopicMasteryLevel = async () => {
+      try {
+        const response = await axios.get("/api/user/getMasteryGivenTopic");
+        setStreak({
+          correct: response.data.streakCorrect,
+          incorrect: response.data.streakIncorrect,
+        });
+        setLastDifficulty(response.data.lastDifficulty);
+      } catch (error) {
+        console.error("Failed to fetch streak and difficulty data:", error);
+      }
+    };
+    fetchTopicMasteryLevel();
+  }, []);
 
   const getGradient = (streakCount: number, isCorrect: boolean) => {
     const intensity = Math.min(streakCount, 7) / 7;
@@ -98,37 +121,6 @@ export default function PracticeQuestion() {
       to: color[7 - Math.floor(intensity * 5)],
       deg: 45,
     };
-  };
-
-  const fetchAttemptHistory = async () => {
-    try {
-      const response = await axios.get("/api/quiz/getAttemptHistory", {
-        params: {
-          userId: session?.data?.user?.id,
-          topicSlug: UCQAT?.data.question.topicSlug,
-        },
-      });
-
-      if (response.data.success) {
-        // Display attempt history
-        console.log(response.data.attempts);
-      } else {
-        setAttemptHistoryLocked(true);
-      }
-    } catch (error) {
-      console.error("Failed to fetch attempt history:", error);
-    }
-  };
-
-  const confirmQuizStart = async () => {
-    setConfirmationModalOpened(false);
-    // Lock attempt history for the topic
-    await axios.post("/api/quiz/lockAttemptHistory", {
-      userId: session?.data?.user?.id,
-      topicSlug: UCQAT?.data.question.topicSlug,
-    });
-    // Proceed with the quiz
-    refetch();
   };
 
   const { data: UCQAT, refetch } = useQuery({
@@ -148,7 +140,7 @@ export default function PracticeQuestion() {
   const useSubmitAnswer = () => {
     const queryClient = useQueryClient();
     const { mutate: submitAnswer, status: submitAnswerStatus } = useMutation({
-      mutationFn: ({
+      mutationFn: async ({
         query,
         body,
       }: {
@@ -166,14 +158,14 @@ export default function PracticeQuestion() {
           streakIncorrect: number;
         };
       }) => {
-        return axios.post(
+        const response = await axios.post(
           `/api/question/submitAnswer?qatId=${query.qatId}&courseSlug=${query.courseSlug}`,
           body
         );
+        return response.data; // Return only the response data
       },
-      onSuccess: (res) => {
-        const { data } = res;
-        const isCorrect = data.isCorrect;
+      onSuccess: (data) => { // Now receiving direct response data
+        const isCorrect = data?.isCorrect ?? false;
 
         setStreak(prev => ({
           correct: isCorrect ? prev.correct + 1 : 0,
@@ -181,25 +173,59 @@ export default function PracticeQuestion() {
         }));
 
         setSelectedKeys([]);
-        toast(
-          `[${data.topic}] Mastery: ${CustomMath.round(data.masteryLevel * 100, 1)}%`,
-          {
-            icon: isCorrect ? "🎉" : "💪",
-            className: `border border-solid ${isCorrect ? "border-green-500" : "border-red-500"}`,
-            position: "top-right",
-            duration: 10000,
+
+        if (data) {
+          toast(
+            `[${data.topic}] Mastery: ${CustomMath.round(data.masteryLevel * 100, 1)}%`,
+            {
+              icon: isCorrect ? "🎉" : "💪",
+              className: `border border-solid ${isCorrect ? "border-green-500" : "border-red-500"}`,
+              position: "top-right",
+              duration: 10000,
+            }
+          );
+
+          if (!isCorrect) {
+            checkForRecommendation();
+            console.log('Checking for recommendation...');
+
           }
-        );
+        }
+
         queryClient.invalidateQueries(["get-ucqat"]);
-        queryClient.invalidateQueries(["get-attempts", data.courseSlug]);
-        updatePoints(); // Update points for attempting questions
+        queryClient.invalidateQueries(["get-attempts", data?.courseSlug]);
+        updatePoints();
       },
+      onError: (error) => {
+        console.error('Submission error:', error);
+        toast.error('Failed to submit answer');
+      }
     });
 
-    return {
-      submitAnswer,
-      submitAnswerStatus,
-    };
+    return { submitAnswer, submitAnswerStatus };
+  };
+
+  const checkForRecommendation = async () => {
+    try {
+      const response = await axios.get('/api/course/topic-recommendation', {
+        params: {
+          userId: session.data?.user?.id,
+          courseSlug: currentCourseSlug
+        }
+      });
+
+      if (response.data?.recommendationUrl) {
+        setRecommendationData({
+          url: response.data.recommendationUrl,
+          topic: response.data.recommendedTopic,
+          currentMastery: response.data.currentMastery,
+          previousMastery: response.data.previousPeakMastery
+        });
+        open();
+      }
+    } catch (error) {
+      console.error('Recommendation check failed:', error);
+    }
   };
 
   const { submitAnswer, submitAnswerStatus } = useSubmitAnswer();
@@ -228,8 +254,8 @@ export default function PracticeQuestion() {
           id: session?.data?.user?.id,
           points:
             (userInfo.attempts[lastActive.toDateString()] ?? 0) === 0
-              ? userInfo.points + 5 // First question attempted today
-              : userInfo.points + 1, // > 1 question attempted today
+              ? userInfo.points + 5
+              : userInfo.points + 1,
         });
         return {
           ...res,
@@ -254,7 +280,7 @@ export default function PracticeQuestion() {
     },
     {
       onSuccess: () => {
-        queryClient.invalidateQueries(["userInfo", session?.data?.user?.id]); // Get latest number of attempts
+        queryClient.invalidateQueries(["userInfo", session?.data?.user?.id]);
       },
     }
   );
@@ -409,7 +435,8 @@ export default function PracticeQuestion() {
               />
             ))}
           </Radio.Group>
-        ) : (
+        ) : null}
+        {correctKeys.length > 1 ? (
           <Checkbox.Group
             mt="xl"
             value={selectedKeys}
@@ -418,29 +445,35 @@ export default function PracticeQuestion() {
             description="Select all correct options"
             required
           >
-            {UCQAT?.data?.question?.questionData.answers ? (
-              UCQAT.data.question.questionData.answers.map((item) => (
-                <Checkbox
-                  key={item.key}
-                  value={item.key}
-                  label={
-                    item.isLatex ? (
-                      <Latex>{item.answerContent}</Latex>
-                    ) : (
-                      <Text>{item.answerContent}</Text>
-                    )
-                  }
-                  className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
-                    ? "border-zinc-600 bg-zinc-700"
-                    : "border-gray-200 bg-gray-100"
-                    } p-2`}
-                />
-              ))
-            ) : (
-              <Text>No answer options available.</Text>
-            )}
+            {answerOptions?.map((item) => (
+              <Checkbox
+                key={item.key}
+                value={item.key}
+                label={
+                  item.isLatex ? (
+                    <Latex>
+                      {replaceVariables(
+                        item.answerContent,
+                        UCQAT.data.variables as Record<string, any>
+                      )}
+                    </Latex>
+                  ) : (
+                    <Text>
+                      {replaceVariables(
+                        item.answerContent,
+                        UCQAT.data.variables as Record<string, any>
+                      )}
+                    </Text>
+                  )
+                }
+                className={`flex items-center justify-start rounded-md border border-solid ${theme.colorScheme === "dark"
+                  ? "border-zinc-600 bg-zinc-700"
+                  : "border-gray-200 bg-gray-100"
+                  } p-2`}
+              />
+            ))}
           </Checkbox.Group>
-        )}
+        ) : null}
         <Flex mt="xl" align="center" gap="md">
           <Button
             type="submit"
@@ -486,25 +519,63 @@ export default function PracticeQuestion() {
           </Stack>
         </Modal>
 
-        {/* Confirmation Modal */}
+        {/* TODO: Fix this */}
         <Modal
-          opened={confirmationModalOpened}
-          onClose={() => setConfirmationModalOpened(false)}
-          title="Are you sure you want to take this quiz?"
-          centered
+          opened={opened}
+          onClose={close}
+          title={
+            <Group spacing="sm">
+              <IconBook size={24} color={theme.colors.blue[6]} />
+              <Text size="xl" weight={600}>Recommended Review Material</Text>
+            </Group>
+          }
+          size="lg"
         >
-          <Text>
-            If you proceed, your attempt history for this topic will be locked for 5 minutes.
-            You will not be able to view your attempt history for this topic during this time.
-          </Text>
-          <Group position="right" mt="md">
-            <Button variant="outline" onClick={() => setConfirmationModalOpened(false)}>
-              Cancel
-            </Button>
-            <Button color="red" onClick={confirmQuizStart}>
-              Start Quiz
-            </Button>
-          </Group>
+          {recommendationData && (
+            <Stack spacing="md">
+              <Text>
+                Your mastery in <span className="font-semibold">{recommendationData.topic}</span>
+                has dropped from {CustomMath.round(recommendationData.previousMastery * 100, 1)}%
+                to {CustomMath.round(recommendationData.currentMastery * 100, 1)}%.
+              </Text>
+
+              <Progress
+                size="xl"
+                sections={[
+                  {
+                    value: recommendationData.previousMastery * 100,
+                    color: 'blue',
+                    label: 'Previous Mastery',
+                    tooltip: `${CustomMath.round(recommendationData.previousMastery * 100, 1)}%`
+                  },
+                  {
+                    value: (recommendationData.currentMastery - recommendationData.previousMastery) * 100,
+                    color: 'red',
+                    label: 'Drop',
+                    tooltip: `${CustomMath.round((recommendationData.previousMastery - recommendationData.currentMastery) * 100, 1)}% drop`
+                  }
+                ]}
+              />
+
+              <Group position="apart" mt="md">
+                <Button
+                  variant="outline"
+                  onClick={close}
+                >
+                  Continue Practicing
+                </Button>
+                <Button
+                  color="blue"
+                  onClick={() => {
+                    close();
+                    router.push(recommendationData.url);
+                  }}
+                >
+                  Review Material Now
+                </Button>
+              </Group>
+            </Stack>
+          )}
         </Modal>
       </form>
     </Paper>
