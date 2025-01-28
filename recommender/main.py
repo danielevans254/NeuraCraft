@@ -417,34 +417,26 @@ def update_state_of_student(
         ):
             app.state.roster.add_students(topic, [student_id])
 
-        # Get current mastery probability
         current_mastery = app.state.roster.get_mastery_prob(topic, student_id)
 
-        # Update state based on correctness
         if correct == "0":
-            # Aggressive update for incorrect answers
-            # Simulate multiple incorrect responses to reduce mastery more aggressively
-            for _ in range(3):  # Simulate 3 incorrect responses
+            for _ in range(5):
                 app.state.roster.update_state(topic, student_id, np.array([0]))
         else:
-            # Normal update for correct answers
             app.state.roster.update_state(topic, student_id, np.array([int(correct)]))
 
-        # Check for mastery >= 95% and perform soft reset
         updated_mastery = app.state.roster.get_mastery_prob(topic, student_id)
-        if updated_mastery >= 0.90:
-            # Soft reset: Reset the student's history for this topic
+        if updated_mastery >= 0.99:
             app.state.roster.remove_students(topic, [student_id])
             app.state.roster.add_students(topic, [student_id])
-            # Simulate some incorrect responses to set mastery to ~30%
-            for _ in range(30):  # Simulate 5 incorrect responses
+            for _ in range(8): 
                 app.state.roster.update_state(topic, student_id, np.array([0]))
 
         save_roster_model()
 
         return {"Updated": True}
 
-
+# TODO: Properly update this to
 @app.patch(
     "/update-multiple/{student_id}",
     status_code=status.HTTP_200_OK,
@@ -468,29 +460,22 @@ def update_multiple_states_of_student(
                 )
             elif (
                 student_id not in app.state.roster.skill_rosters[topic].students
-            ):  # Add student if doesn't exist in the Roster
+            ): 
                 app.state.roster.add_students(topic, [student_id])
 
-            # Get current mastery probability
             current_mastery = app.state.roster.get_mastery_prob(topic, student_id)
 
-            # Update state based on correctness
             if topics.topics[topic] == "0":
-                # Aggressive update for incorrect answers
-                for _ in range(3):  # Simulate 3 incorrect responses
+                for _ in range(1):
                     app.state.roster.update_state(topic, student_id, np.array([0]))
             else:
-                # Normal update for correct answers
                 app.state.roster.update_state(topic, student_id, np.array([int(topics.topics[topic])]))
 
-            # Check for mastery >= 95% and perform soft reset
             updated_mastery = app.state.roster.get_mastery_prob(topic, student_id)
-            if updated_mastery >= 0.90:
-                # Soft reset: Reset the student's history for this topic
+            if updated_mastery >= 0.99:
                 app.state.roster.remove_students(topic, [student_id])
                 app.state.roster.add_students(topic, [student_id])
-                # Simulate some incorrect responses to set mastery to ~30%
-                for _ in range(30):  # Simulate 5 incorrect responses
+                for _ in range(3): 
                     app.state.roster.update_state(topic, student_id, np.array([0]))
 
         save_roster_model()
@@ -559,3 +544,57 @@ def save_roster_model() -> None:
         logging.debug(f"[{time.strftime('%D %H:%M:%S')}] ROSTER MODEL SAVED")
     except Exception as e:
         logging.error(f"Failed to save roster model: {e}")
+
+
+# Add to your existing FastAPI app
+class RecommendationResponse(BaseModel):
+    recommended_topic: str
+    mastery_level: float
+    all_masteries: dict[str, float]
+    recommendation_reason: str
+
+@app.get(
+    "/recommend-topic/{student_id}",
+    response_model=RecommendationResponse,
+    dependencies=[Depends(get_api_key)],
+)
+def recommend_topic(student_id: str) -> dict:
+    """Recommend topic with lowest mastery level from all available topics"""
+    with lock:
+        # 1. Get all available topics
+        all_topics = ALL_SKILLS  # Use your predefined list of skills
+        
+        # 2. Initialize student in all topics if not exists
+        for topic in all_topics:
+            if student_id not in app.state.roster.skill_rosters[topic].students:
+                app.state.roster.add_students(topic, [student_id])
+        
+        # 3. Get mastery levels for all topics
+        masteries = {
+            topic: app.state.roster.get_mastery_prob(topic, student_id)
+            for topic in all_topics
+        }
+        
+        # 4. Find topic with lowest mastery
+        recommended_topic = min(masteries, key=masteries.get)  # type: ignore
+        min_mastery = masteries[recommended_topic]
+        
+        # 5. Determine recommendation reason
+        if min_mastery == 0:
+            reason = "New fundamental topic to start learning"
+        elif min_mastery < 0.3:
+            reason = "Critical area needing immediate improvement"
+        elif min_mastery < 0.6:
+            reason = "Core topic requiring practice"
+        else:
+            reason = "Advanced topic for mastery reinforcement"
+        
+        # Save updated roster state
+        save_roster_model()
+        
+        return {
+            "recommended_topic": recommended_topic,
+            "mastery_level": min_mastery,
+            "all_masteries": masteries,
+            "recommendation_reason": reason
+        }
