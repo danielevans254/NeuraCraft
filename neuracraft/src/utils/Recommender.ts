@@ -2,6 +2,7 @@ import { prisma } from "@/server/db/client";
 import { Question, QuestionDifficulty, Topic } from "@prisma/client";
 import { CustomMath } from "./CustomMath";
 
+// TODO: Add more logic checks to ensure that the recommended question is suitable
 export const RecommendQuestion = async (
   courseSlug: string,
   masteryLevel: number
@@ -46,14 +47,18 @@ export const RecommendQuestion = async (
     recommendedTopic.topicSlug
   );
 
-  // Determine initial recommended difficulty
   const getDifficultyLevel = (mastery: number, topicPrior: number): QuestionDifficulty => {
     if (mastery <= topicPrior) return QuestionDifficulty.Easy;
-    if (mastery <= 0.86697) return QuestionDifficulty.Medium;
+    if (mastery <= 0.66697) return QuestionDifficulty.Medium;
     return QuestionDifficulty.Hard;
   };
 
+  console.log(masteryLevel);
+
+  console.log(getDifficultyLevel(masteryLevel, recommendedTopic.topicPrior));
+
   const initialDifficulty = getDifficultyLevel(masteryLevel, recommendedTopic.topicPrior);
+  console.log(initialDifficulty);
 
   // Define fallback order based on initial difficulty
   const fallbackOrder: Record<QuestionDifficulty, QuestionDifficulty[]> = {

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "@/server/db/client";
-
+// TODO: Fix this
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -28,8 +28,8 @@ export default async function handler(
         req.body.period === "current"
           ? "masteryLevel"
           : req.body.period === "week"
-          ? "weeklyMasteryLevel"
-          : "fortnightlyMasteryLevel";
+            ? "weeklyMasteryLevel"
+            : "fortnightlyMasteryLevel";
       // Rename the key to masteryLevel for easier access
       const allMastery = getMastery.map((row) => {
         return {

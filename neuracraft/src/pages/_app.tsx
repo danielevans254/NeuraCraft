@@ -1,133 +1,138 @@
-// React, Next and Next-Auth
-import React from "react";
-import type { AppType } from "next/app";
-import type { Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
+// Core
+import React, { useCallback, useEffect } from 'react';
+import type { AppType } from 'next/app';
+import type { Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
 
-// Data Fetching: React-Query and Axios
-import {
-  Hydrate,
-  DehydratedState,
-  QueryClient,
-  QueryClientProvider,
-  MutationCache,
-} from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { AxiosError, AxiosResponse } from "axios";
+import { QueryClient, QueryClientProvider, Hydrate, MutationCache } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { DehydratedState } from '@tanstack/react-query';
 
-// Notification System: React-Hot-Toast
-import toast, { Toaster } from "react-hot-toast";
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
+import { useLocalStorage } from '@mantine/hooks';
+import toast, { Toaster } from 'react-hot-toast';
+import '../styles/globals.css';
 
-// Styles: Mantine and Tailwind
-import "../styles/globals.css";
-import {
-  MantineProvider,
-  ColorSchemeProvider,
-  ColorScheme,
-} from "@mantine/core";
-import { useLocalStorage } from "@mantine/hooks";
+import { pdfjs } from 'react-pdf';
+import { AxiosError } from 'axios';
 
-// Others: React PDF Renderer
-import { pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-// Main App
-const NeuraCraft: AppType<{
+interface AppProps {
   session: Session | null;
   dehydratedState: DehydratedState;
-}> = ({ Component, pageProps: { session, dehydratedState, ...pageProps } }) => {
-  const toastId = React.useRef<string | undefined>(undefined);
-  const [queryClient] = React.useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            // staleTime: 1000 * 60 * 60 * 24, // 24 hours
-            refetchOnWindowFocus: false,
-          },
+}
+
+interface CustomToastOptions {
+  customToast?: boolean;
+  customIcon?: React.ReactNode;
+  message?: string;
+}
+
+const setupPDFWorker = () => {
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+};
+
+const createQueryClient = () => {
+  const handleMutationSuccess = (response: unknown) => {
+    const { data } = response as { data?: CustomToastOptions };
+    if (!data) return;
+
+    if (data.customToast) {
+      toast.dismiss();
+    } else if (data.message) {
+      toast.success(data.message, {
+        icon: data.customIcon as any,
+      });
+    }
+  };
+
+  const handleMutationError = (error: unknown) => {
+    console.error('[GLOBAL ERROR]', error);
+    const errorMessage = getErrorMessage(error);
+
+    toast.error(
+      `Error: ${errorMessage}\n\nPlease contact support for further assistance`
+    );
+  };
+
+  return new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        retry: (failureCount, error) => {
+          if ((error as AxiosError)?.response?.status === 401) return false;
+          return failureCount < 2;
         },
-        mutationCache: new MutationCache({
-          onMutate: () => {
-            toastId.current = toast.loading("Loading...");
-          },
-          onSuccess: (res) => {
-            const { data } = res as AxiosResponse;
+      },
+    },
+    mutationCache: new MutationCache({
+      onSuccess: handleMutationSuccess,
+      onError: handleMutationError,
+    }),
+  });
+};
 
-            if (data && data.customToast) {
-              // For completely custom toasts, return .json{customToast: true} in the response
-              toast.dismiss(toastId.current);
-            } else if (data && data.message && data.customIcon) {
-              // For custom icons, return .json{customIcon: "...", message: "..."} in the response
-              toast(() => data.message, {
-                id: toastId.current,
-                icon: data.customIcon,
-              });
-            } else if (data && data.message) {
-              // For custom messages, return .json{message: "..."} in the response
-              toast.success(data.message, {
-                id: toastId.current,
-              });
-            } else {
-              toast.success("Success!", {
-                id: toastId.current,
-              });
-            }
+const getErrorMessage = (error: unknown): string => {
+  if (error instanceof AxiosError) {
+    return error.response?.data?.message || error.message;
+  }
+  return error instanceof Error ? error.message : 'Unknown Error';
+};
 
-            // Fallback to dismiss all toasts after 5 seconds
-            setTimeout(() => {
-              toast.dismiss();
-            }, 5000);
-          },
-          onError: (error) => {
-            console.error("[GLOBAL ERROR]", error);
+const AppToaster = () => (
+  <Toaster
+    position="top-center"
+    toastOptions={{
+      duration: 5000,
+      error: { duration: 7000 },
+      loading: { duration: Infinity },
+    }}
+  />
+);
 
-            let errorMessage = "Unknown Error";
-
-            if (error instanceof AxiosError) {
-              errorMessage = error.response
-                ? error.response.data.message
-                : error.message;
-            } else if (error instanceof Error) {
-              errorMessage = error.message;
-            }
-
-            toast.error(
-              `Error: ${errorMessage}\n\nPlease contact support for further assistance`,
-              {
-                id: toastId.current,
-              }
-            );
-          },
-        }),
-      })
-  );
-
+const useColorScheme = () => {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
-    key: "mantine-color-scheme",
-    defaultValue: "light",
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
     getInitialValueInEffect: true,
   });
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+
+  const toggle = useCallback(
+    (value?: ColorScheme) => setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark')),
+    [colorScheme, setColorScheme]
+  );
+
+  return { colorScheme, toggleColorScheme: toggle };
+};
+
+const NeuraCraft: AppType<AppProps> = ({ Component, pageProps }) => {
+  const [queryClient] = React.useState(createQueryClient);
+  const { colorScheme, toggleColorScheme } = useColorScheme();
+
+  useEffect(setupPDFWorker, []);
 
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={pageProps.session}>
       <QueryClientProvider client={queryClient}>
-        <Hydrate state={dehydratedState}>
-          <ColorSchemeProvider
-            colorScheme={colorScheme}
-            toggleColorScheme={toggleColorScheme}
-          >
+        <Hydrate state={pageProps.dehydratedState}>
+          <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
             <MantineProvider
-              theme={{ colorScheme, primaryColor: "red", loader: "bars" }}
+              theme={{
+                colorScheme,
+                primaryColor: 'red',
+                loader: 'bars',
+                components: {
+                  Button: { defaultProps: { size: 'md' } },
+                  Input: { defaultProps: { size: 'md' } },
+                },
+              }}
               withGlobalStyles
               withNormalizeCSS
             >
               <Component {...pageProps} />
+              <AppToaster />
+              <ReactQueryDevtools position="bottom-right" />
             </MantineProvider>
           </ColorSchemeProvider>
-          <Toaster />
-          <ReactQueryDevtools position="bottom-right" />
         </Hydrate>
       </QueryClientProvider>
     </SessionProvider>

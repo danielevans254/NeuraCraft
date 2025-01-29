@@ -130,12 +130,12 @@ const AdaptiveProcess = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+        {/* <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-xl mb-4">"Our trials showed 68% better learning outcomes compared to traditional LMS platforms"</div>
             <div className="font-semibold">- University of Cambridge Case Study</div>
           </div>
-        </div>
+        </div> */}
       </Container>
     </section>
   );
@@ -159,7 +159,7 @@ const AcademicFeatures = () => {
 
   return (
     <section className="py-20 bg-white">
-      <Container size="xl">
+      {/* <Container size="xl">
         <div className="text-center mb-16">
           <Text className="text-blue-600 font-semibold mb-4">ACADEMICALLY RIGOROUS</Text>
           <Title order={2} className="text-4xl font-bold mb-6">
@@ -175,7 +175,7 @@ const AcademicFeatures = () => {
             </div>
           ))}
         </div>
-      </Container>
+      </Container> */}
     </section>
   );
 };

@@ -37,6 +37,7 @@ import {
   IconSwitchHorizontal,
   IconUsers,
 } from "@tabler/icons";
+import router from "next/router";
 
 const tabs = {
   account: [
@@ -78,6 +79,22 @@ export default function TestPage() {
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
   }
+
+  const userId = "cm6fs84ly00005qg3gvusq1n0"
+  const courseSlug = "advanced-databases"
+
+  // Example usage in React component
+  const checkMasteryDrop = async () => {
+    const response = await fetch(`/api/course/topic-recommendation?userId=${userId}&courseSlug=${courseSlug}`);
+    const data = await response.json();
+    console.log(data);
+    if (data.recommendationUrl) {
+      // Show modal or redirect
+      router.push(data.recommendationUrl);
+    }
+  };
+
+  console.log(checkMasteryDrop())
 
   const links = tabs[section].map((item) => (
     <a

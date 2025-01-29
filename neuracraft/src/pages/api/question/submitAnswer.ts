@@ -9,6 +9,7 @@ import { QuestionDataType } from "@/types/question-types";
 import { CustomEval } from "@/utils/CustomEval";
 import { CustomMath } from "@/utils/CustomMath";
 import { RecommendQuestion } from "@/utils/Recommender";
+import { QuestionDifficulty } from "@prisma/client";
 
 export default async function handler(
   req: NextApiRequest,
@@ -128,9 +129,6 @@ export default async function handler(
         qatId: qatId,
         attemptedKeys: attemptedKeys,
         isCorrect: isCorrect,
-        difficulty: difficulty,
-        streakCorrect: streakCorrect,
-        streakIncorrect: streakIncorrect,
       },
     });
 
