@@ -31,6 +31,8 @@ const setupPDFWorker = () => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 };
 
+const TOAST_ID = 'global-toast';
+
 const createQueryClient = () => {
   const handleMutationSuccess = (response: unknown) => {
     const { data } = response as { data?: CustomToastOptions };
@@ -41,6 +43,7 @@ const createQueryClient = () => {
     } else if (data.message) {
       toast.success(data.message, {
         icon: data.customIcon as any,
+        id: TOAST_ID,
       });
     }
   };
@@ -50,7 +53,11 @@ const createQueryClient = () => {
     const errorMessage = getErrorMessage(error);
 
     toast.error(
-      `Error: ${errorMessage}\n\nPlease contact support for further assistance`
+      `Error: ${errorMessage}\n\nPlease contact support for further assistance`,
+      {
+        id: TOAST_ID,
+        duration: 7000
+      }
     );
   };
 

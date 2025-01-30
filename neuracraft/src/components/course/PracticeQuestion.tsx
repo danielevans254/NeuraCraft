@@ -543,7 +543,9 @@ export default function PracticeQuestion() {
         onSubmit={(e) => {
           e.preventDefault();
           if (selectedKeys.length === 0) {
-            toast.error("Please select an option");
+            toast.error("Please select an option", {
+              id: "validation-toast",
+            });
             return;
           }
           submitAnswer({
