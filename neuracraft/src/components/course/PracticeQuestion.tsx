@@ -49,8 +49,6 @@ export type UCQATAnswersType = {
 }[];
 
 // todo: IF A given question was given previously it needs to properly reset the selected keys
-
-
 interface UserStats {
   topicMastery: number;          // 0-100
   historicalAccuracy: number;    // 0-100
@@ -111,8 +109,7 @@ function getLastAttemptTime(attempts: any[]): number {
   if (!attempts.length) return Date.now();
   return new Date(attempts[0].submittedAt).getTime();
 }
-
-
+// TODO:
 const fetchUserStats = async (userId: string, topicSlug: string): Promise<UserStats> => {
   const [masteryResponse, attemptsResponse] = await Promise.all([
     axios.get(`/api/mastery/get-mastery`, { params: { userId, topicSlug } }),
@@ -133,8 +130,6 @@ const fetchUserStats = async (userId: string, topicSlug: string): Promise<UserSt
   };
 };
 
-
-
 export default function PracticeQuestion() {
   const session = useSession();
   const theme = useMantineTheme();
@@ -148,7 +143,6 @@ export default function PracticeQuestion() {
   const userId = session.data?.user?.id ?? undefined;
   // const { data: userStats, isLoading } = useUserStats(userId, currentCourseSlug);
 
-
   // TODO: Fetch the topic for the mastery level so when the mastery level hits 100%, it can be shown as a toast notification that the mastery level was reset and will go back to easy, and the cycle will begin
   // TODO: Add different question types
   // TODO: Sometimes the state isn't updated correctly, causing the streak counter to show wrong numbers
@@ -159,6 +153,7 @@ export default function PracticeQuestion() {
   const [booleanAnswer, setBooleanAnswer] = useState(null);
   const [hintsOpened, setHintsOpened] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
+  const [confirmUnlockModalOpened, setConfirmUnlockModalOpened] = useState(false);
 
   const [recommendationData, setRecommendationData] = useState<{
     url: string;
@@ -200,6 +195,32 @@ export default function PracticeQuestion() {
     };
     fetchTopicMasteryLevel();
   }, []);
+
+  const handleUnlockAndReview = async () => {
+    try {
+      const response = await fetch('/api/question/unlockAttemptHistory', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId,
+          topicSlug: currentCourseSlug,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to unlock attempt history');
+      }
+
+      setConfirmUnlockModalOpened(false);
+      close();
+      router.push(recommendationData?.url);
+    } catch (error) {
+      console.error('Error unlocking attempt history:', error);
+      toast.error('Failed to unlock attempt history');
+    }
+  };
 
   const getGradient = (streakCount: number, isCorrect: boolean) => {
     const intensity = Math.min(streakCount, 7) / 7;
@@ -247,7 +268,6 @@ export default function PracticeQuestion() {
       (Date.now() - safeUserStats.lastAttemptTimestamp) / (1000 * 60 * 60)
     );
     const errorDecayFactor = Math.exp(-hoursSinceLastAttempt / ERROR_DECAY_HOURS);
-
     const difficultyFactor = DIFFICULTY_WEIGHTS[currentQuestion.questionDifficulty];
     const masteryFactor = calculateMasteryFactor(safeUserStats.topicMastery);
     const accuracyFactor = calculateAccuracyFactor(safeUserStats.historicalAccuracy);
@@ -266,7 +286,6 @@ export default function PracticeQuestion() {
     if (safeUserStats.recentErrors >= 6) {
       return true;
     }
-
     // Calculate weighted score with validation
     const recommendationScore = Math.max(0, Math.min(1,
       config.masteryWeight * masteryFactor +
@@ -284,7 +303,6 @@ export default function PracticeQuestion() {
 
     const randomFactor = 0.97 + (Math.random() * 0.06);
     const finalThreshold = dynamicThreshold * randomFactor;
-
 
     console.log(recommendationScore);
     console.log(finalThreshold)
@@ -320,7 +338,6 @@ export default function PracticeQuestion() {
     const timeRatio = safeAvgTime / safeExpectedTime;
     return clamp(timeRatio - 0.3, 0, 1);
   };
-
 
   const { data: UCQAT, refetch } = useQuery({
     queryKey: ["get-ucqat"],
@@ -380,7 +397,7 @@ export default function PracticeQuestion() {
               icon: isCorrect ? "🎉" : "💪",
               className: `border border-solid ${isCorrect ? "border-green-500" : "border-red-500"}`,
               position: "top-right",
-              duration: 10000,
+              duration: 7000,
             }
           );
 
@@ -405,9 +422,7 @@ export default function PracticeQuestion() {
               console.log(shouldShowRecommendation(recommendationParams.currentQuestion, recommendationParams.userStats));
             }
           }
-
         }
-
         queryClient.invalidateQueries(["get-ucqat"]);
         queryClient.invalidateQueries(["get-attempts", data?.courseSlug]);
         updatePoints();
@@ -463,7 +478,6 @@ export default function PracticeQuestion() {
     async () => {
       if (!!userInfo) {
         const lastActive = new Date(userInfo.lastActive); // get last active
-
         const res = await axios.post("/api/user/updatePoints", {
           id: session?.data?.user?.id,
           points:
@@ -736,66 +750,98 @@ export default function PracticeQuestion() {
         </Modal>
 
         {/* TODO: Fix this */}
-        <Modal
-          opened={opened}
-          onClose={() => {
-            close();
-            setRecommendationData(null);
-          }}
-          title={
-            <Group spacing="sm">
-              <IconBook size={24} color={theme.colors.blue[6]} />
-              <Text size="xl" weight={600}>Recommended Review Material</Text>
-            </Group>
-          }
-          size="lg"
-        >
-          {recommendationData && (
-            <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg space-y-6">
-              {/* Header */}
-              <div className="flex items-start space-x-3 bg-red-50 p-4 rounded-lg border border-red-100">
-                <AlertCircle className="w-5 h-5 text-red-500 mt-0.5" />
-                <div>
-                  <h3 className="font-semibold text-red-800">Review Recommended</h3>
-                  <p className="text-sm text-red-700 mt-1">
-                    Your recent performance suggests reviewing this material would be beneficial
-                  </p>
+        <>
+          <Modal
+            opened={opened}
+            onClose={() => {
+              close();
+              setRecommendationData(null);
+            }}
+            title={
+              <Group spacing="sm">
+                <IconBook size={24} color={theme.colors.blue[6]} />
+                <Text size="xl" weight={600}>Recommended Review Material</Text>
+              </Group>
+            }
+            size="lg"
+          >
+            {recommendationData && (
+              <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg space-y-6">
+                <div className="flex items-start space-x-3 bg-red-50 p-4 rounded-lg border border-red-100">
+                  <AlertCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-red-800">Review Recommended</h3>
+                    <p className="text-sm text-red-700 mt-1">
+                      Your recent performance suggests reviewing this material would be beneficial
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center justify-center">
+                  {recommendationData.topic
+                    .split('-')
+                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ')}
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <button
+                    onClick={() => {
+                      close();
+                      setStreak({ correct: 0, incorrect: 0 });
+                    }}
+                    className="flex-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+                  >
+                    Continue Practice
+                  </button>
+                  <button
+                    onClick={() => setConfirmUnlockModalOpened(true)}
+                    className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+                  >
+                    Review Material
+                  </button>
                 </div>
               </div>
+            )}
+          </Modal>
 
-              <div className="flex flex-col items-center justify-center">
-                {recommendationData.topic
-                  .split('-')
-                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ')}
+          {/* Confirmation Modal */}
+          <Modal
+            opened={confirmUnlockModalOpened}
+            onClose={() => setConfirmUnlockModalOpened(false)}
+            title={
+              <Group spacing="sm">
+                <AlertCircle className="w-5 h-5 text-yellow-500" />
+                <Text size="xl" weight={600}>Confirm End Session</Text>
+              </Group>
+            }
+            size="md"
+          >
+            <div className="space-y-4">
+              <div className="text-gray-700">
+                <p>Are you sure you want to end your current quiz session and review the material?</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Your progress for this session will be saved, but you'll need to start a new session when you return.
+                </p>
               </div>
 
-
-              {/* Action Buttons */}
               <div className="flex gap-3 pt-4">
                 <button
-                  onClick={() => {
-                    close();
-                    setStreak({ correct: 0, incorrect: 0 });
-                  }}
+                  onClick={() => setConfirmUnlockModalOpened(false)}
                   className="flex-1 px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
                 >
-                  Continue Practice
+                  Cancel
                 </button>
-                {/* TODO: When clicking review material add another modal saying the quiz session will end if the user clicks the given, and if confirmed remove the lock */}
                 <button
-                  onClick={() => {
-                    close();
-                    router.push(recommendationData.url);
-                  }}
-                  className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+                  onClick={handleUnlockAndReview}
+                  className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium"
                 >
-                  Review Material
+                  End Session & Review
                 </button>
               </div>
             </div>
-          )}
-        </Modal>
+          </Modal>
+        </>
       </form>
     </Paper>
   );
