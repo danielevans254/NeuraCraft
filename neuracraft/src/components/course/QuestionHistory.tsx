@@ -56,6 +56,13 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
       >(`/api/attempt?course=${courseSlug}`),
   });
 
+  const masteryLevel = useMemo(() => {
+    if (!attempts?.data) return 0;
+    const totalCorrect = attempts.data.filter(attempt => attempt.isCorrect).length;
+    const totalAttempts = attempts.data.length;
+    return totalAttempts > 0 ? (totalCorrect / totalAttempts) * 100 : 0;
+  }, [attempts?.data]);
+
   // Extract unique topics from attempts
   const uniqueTopics = useMemo(() => {
     if (!attempts?.data) return [];
@@ -153,7 +160,7 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
             label="Correctness"
             value={correctnessFilter ? [correctnessFilter] : []}
             onChange={(values) =>
-              setCorrectnessFilter(values.length > 0 ? values[0] : null)
+              setCorrectnessFilter(values.length > 0 ? values[0] ?? null : null)
             }
           >
             <Group mt="xs">
@@ -164,7 +171,6 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
         </Flex>
       </Paper>
 
-      {/* Existing statistics paper */}
       <Paper withBorder radius="lg" mb="lg">
         <Stack align="center" mt="sm">
           <Title order={1}>Attempt History</Title>
@@ -230,7 +236,6 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
         </Stack>
       </Paper>
 
-      {/* Filtered attempts */}
       {filteredAttempts.length === 0 ? (
         <Center>
           <Text color="dimmed">No attempts match the current filters.</Text>
@@ -245,7 +250,6 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
             mb="xl"
             key={attempt.attemptId}
           >
-            {/* Existing attempt rendering code remains the same */}
             <Group w="70vw">
               <QuestionDifficultyBadge
                 questionDifficulty={
@@ -299,11 +303,13 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
                     : ""
                     }`}
                 >
-                  {ans.isCorrect === true ? (
-                    <IconCheck color="green" size={30} stroke={3} />
-                  ) : (
-                    <IconX color="red" size={30} stroke={3} />
-                  )}
+                  {masteryLevel >= 95 ? (
+                    ans.isCorrect === true ? (
+                      <IconCheck color="green" size={30} stroke={3} />
+                    ) : (
+                      <IconX color="red" size={30} stroke={3} />
+                    )
+                  ) : null}
                   {ans.isLatex ? (
                     <Latex>{`$$ ${ans.answerContent} $$`}</Latex>
                   ) : (
@@ -315,9 +321,8 @@ const QuestionHistory = ({ courseSlug }: { courseSlug: string }) => {
               <Text>No answers available.</Text>
             )}
 
-            {(
-              attempt.questionWithAddedTime.question
-                .questionData as QuestionDataType
+            {masteryLevel >= 95 && (
+              attempt.questionWithAddedTime.question.questionData as QuestionDataType
             ).methods && (
                 <>
                   <Divider my="xl" variant="dashed" />
@@ -385,28 +390,23 @@ const useStyles = createStyles((theme) => ({
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : "white",
   },
-
   correct: {
     borderLeftColor:
       theme.colorScheme === "dark"
         ? theme.colors.teal[7]
         : theme.colors.teal[4],
   },
-
   wrong: {
     borderLeftColor:
       theme.colorScheme === "dark" ? theme.colors.red[7] : theme.colors.red[4],
   },
-
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     lineHeight: 1,
   },
-
   image: {
     filter: theme.colorScheme === "dark" ? "invert(1)" : "none",
   },
-
   options: {
     padding: theme.spacing.xs,
     borderRadius: theme.radius.md,
@@ -415,7 +415,6 @@ const useStyles = createStyles((theme) => ({
         ? theme.colors.gray[9]
         : theme.colors.gray[0],
   },
-
   selected: {
     backgroundColor:
       theme.colorScheme === "dark"
