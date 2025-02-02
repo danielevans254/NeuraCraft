@@ -10,6 +10,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const session = await getServerSession(req, res, authOptions);
+
+  if (session?.user?.role !== Role.SUPERUSER) {
+    return res.status(403).json({ message: "Requires SUPERADMIN privileges" });
+  }
+
   if (session?.user?.email === req.query.email) {
     return res.status(403).json({
       message: `Not allowed to delete yourself`,

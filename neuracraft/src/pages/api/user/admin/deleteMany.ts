@@ -10,6 +10,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const session = await getServerSession(req, res, authOptions);
+
+  if (session?.user?.role !== Role.SUPERUSER) {
+    return res.status(403).json({ message: "Requires SUPERADMIN privileges" });
+  }
+
   const emails: string[] = req.body.emails;
   if (emails.includes(session?.user?.email as string)) {
     return res.status(403).json({
@@ -30,7 +35,7 @@ export default async function handler(
           OR: [
             {
               role: {
-                not: Role.ADMIN,
+                notIn: [Role.ADMIN, Role.SUPERUSER],
               },
             },
           ],
