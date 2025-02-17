@@ -13,6 +13,18 @@ import {
 
 export const users: Prisma.UserCreateInput[] = [
   {
+    email: "superadmin@example.com",
+    username: "superadmin",
+    role: Role.SUPERUSER,
+    emailVerified: new Date("2023-01-01"),
+    isNewUser: false,
+    name: "Super Admin User",
+    ceuId: "2021-04721",
+    consentDate: new Date("2023-01-01"),
+    points: 1000,
+    emailFrequency: Frequency.Weekly,
+  },
+  {
     email: "admin@example.com",
     username: "admin",
     role: Role.ADMIN,
