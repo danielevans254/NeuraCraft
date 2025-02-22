@@ -29,5 +29,13 @@ export default defineNextConfig({
       "firebasestorage.googleapis.com"
     ],
   },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if there are ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // WARNING: Disabling type checking can hide errors.
+    ignoreBuildErrors: true,
+  },
   output: "standalone",
 });

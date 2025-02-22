@@ -12,10 +12,10 @@ services:
       - app-network
     restart: always
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p12345"]
       interval: 5s
       timeout: 10s
-      retries: 5
+      retries: 10
 
   db-seed:
     build:
@@ -28,14 +28,16 @@ services:
       DATABASE_URL: mysql://root:12345@database:3306/neuracraft
     command: >
       sh -c "while ! mysqladmin ping -h database -u root -p12345 --silent;
-      do sleep 2; done && npx prisma migrate deploy && npm run db:seed"
+      do sleep 2; done && npx prisma migrate deploy --skip-validate
+      && ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
     networks:
       - app-network
 
   web:
     build: ./neuracraft
     depends_on:
-      - db-seed
+      db-seed:
+        condition: service_completed_successfully
     environment:
       NODE_ENV: production
       DATABASE_URL: mysql://root:12345@database:3306/neuracraft

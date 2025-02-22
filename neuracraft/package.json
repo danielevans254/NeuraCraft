@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate && prisma db push --accept-data-loss && prisma db seed",
+    "postinstall": "prisma generate",
     "studio": "prisma studio",
     "sitemap": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/generate-sitemap.mjs"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "schema": "prisma/schema.prisma",
+    "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -73,7 +74,6 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-markdown": "^8.0.6",
-    "react-particles": "^2.11.0",
     "react-pdf": "^5.7.2",
     "react-quill": "^2.0.0",
     "recharts": "^2.15.1",

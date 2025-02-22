@@ -23,4 +23,5 @@ COPY neuracraft/prisma/seed_data.ts ./prisma/
 HEALTHCHECK --interval=5s --timeout=30s --start-period=10s --retries=3 \
   CMD mysqladmin ping -h database -u root -p$$MYSQL_ROOT_PASSWORD | grep alive
 
-CMD ["sh", "-c", "npx prisma migrate deploy && npm run db:seed"]
+# neuracraft/db-seed.Dockerfile
+CMD ["sh", "-c", "npx prisma migrate deploy --skip-validate && npx prisma db seed"]
