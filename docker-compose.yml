@@ -28,8 +28,8 @@ services:
       DATABASE_URL: mysql://root:12345@database:3306/neuracraft
     command: >
       sh -c "while ! mysqladmin ping -h database -u root -p12345 --silent;
-      do sleep 2; done && npx prisma migrate deploy --skip-validate
-      && ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
+      do sleep 2; done && npx prisma migrate deploy
+      && ts-node -P prisma/tsconfig.prisma.json prisma/seed.ts"
     networks:
       - app-network
 

@@ -8,16 +8,20 @@ WORKDIR /app
 # Copy necessary files for database operations
 COPY neuracraft/package*.json ./
 COPY neuracraft/prisma ./prisma
-COPY neuracraft/tsconfig.json ./
+COPY neuracraft/prisma/tsconfig.prisma.json ./prisma/
 
 # Install dependencies
 RUN npm install
 RUN npm run postinstall
 
+# Verify files are copied
+RUN ls -la prisma/migrations/
+
 # Copy seed files and scripts
 # COPY scripts ./scripts
-COPY neuracraft/prisma/seed.ts ./prisma/
-COPY neuracraft/prisma/seed_data.ts ./prisma/
+COPY neuracraft/package*.json ./
+COPY neuracraft/prisma ./prisma
+COPY neuracraft/tsconfig.json ./
 
 # Healthcheck to ensure database is ready
 HEALTHCHECK --interval=5s --timeout=30s --start-period=10s --retries=3 \
