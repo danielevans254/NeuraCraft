@@ -1,15 +1,13 @@
-# syntax=docker/dockerfile:1.4
+# recommender/Dockerfile
+FROM python:3.11-slim
 
-FROM python:3.11.4-slim AS base
 WORKDIR /app
 
-COPY --link recommender/requirements.txt ./
-COPY --link recommender/serviceAccountKey.json ./
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
+COPY . .
 
-COPY --link neuracraft/prisma/seed_data.ts ./
-COPY --link recommender/model.pkl ./
-COPY --link recommender/main.py ./
+EXPOSE 8000
 
-CMD ["uvicorn", "main:app", "--port", "8000", "--host", "0.0.0.0", "--root-path", "/recommender"]
+CMD ["python", "main.py"]

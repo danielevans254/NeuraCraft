@@ -1,107 +1,66 @@
-version: "3"
-name: neuracraft
+version: '3.8'
 
 services:
-  # Production: $ docker compose --profile prod up -d --build --force-recreate
-  nextjs:
-    profiles: [ prod ]
-    build: ./neuracraft
-    restart: unless-stopped
-    environment:
-      - NODE_ENV=production
-    depends_on:
-      database:
-        condition: service_healthy
-  recommender:
-    profiles: [ prod ]
-    build:
-      context: .
-      dockerfile: ./recommender/Dockerfile
-    restart: unless-stopped
-    env_file:
-      - ./neuracraft/.env
-  nginx:
-    profiles: [ prod ]
-    image: jonasal/nginx-certbot:4.3.0
-    restart: unless-stopped
-    ports:
-      # Use 80:80 and 443:443 if no conflict,
-      # otherwise need to map 8080 and 8443 back to 80 (http) and 443 (https) on the host
-      - 8080:80
-      - 8443:443
-    environment:
-      - CERTBOT_EMAIL=contact.neuracraft@gmail.com
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/user_conf.d/default.conf
-      - nginx_secrets:/etc/letsencrypt
-
-  # Development: $ docker compose --profile dev up --build --force-recreate
-  nextjs-dev:
-    profiles: [ dev ]
-    build:
-      context: ./neuracraft
-      target: base
-    restart: unless-stopped
-    environment:
-      - NODE_ENV=development
-      - RECOMMENDER_URL=http://recommender-dev:8000
-      - NEXTAUTH_URL=http://localhost
-      # - DATABASE_URL=mysql://neuracraft:neuracraft@database:3306/neuracraft
-    env_file:
-      - ./neuracraft/.env
-    volumes:
-      - ./neuracraft:/app
-      - /app/node_modules
-      - /app/.next
-    command:
-      - /bin/sh
-      - -c
-      - |
-        yarn global add pnpm@8.15.5
-        pnpm install
-        pnpm dev
-    depends_on:
-      database:
-        condition: service_healthy
-  recommender-dev:
-    profiles: [ dev ]
-    build:
-      context: .
-      dockerfile: ./recommender/Dockerfile
-    restart: unless-stopped
-    env_file:
-      - ./neuracraft/.env
-    volumes:
-      - ./recommender:/app
-    command: uvicorn main:app --reload --host 0.0.0.0 --port 8000 --root-path /recommender
-  nginx-dev:
-    profiles: [ dev ]
-    image: nginx:1.25.1-alpine
-    restart: unless-stopped
-    ports:
-      # Use 80:80 if no conflict, otherwise need to map 8080 back to 80 (http) on the host
-      - 8080:80
-    volumes:
-      - ./nginx/default.dev.conf:/etc/nginx/conf.d/default.conf
-    command: sh -c 'nginx -g "daemon off;"'
-
-  # Common
   database:
-    image: mysql:latest
-    restart: always
-    env_file:
-      - ./neuracraft/.env
-    # ports:
-    #   - "3306:3306"
+    image: mysql:8.0-debian
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: neuracraft
     volumes:
-      - ./db:/docker-entrypoint-initdb.d/
       - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+    restart: always
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping" ]
-      start_period: 10s
-      interval: 10s
-      retries: 10
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  db-seed:
+    build:
+      context: .
+      dockerfile: neuracraft/db-seed.Dockerfile
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://root:12345@database:3306/neuracraft
+    command: >
+      sh -c "while ! mysqladmin ping -h database -u root -p12345 --silent;
+      do sleep 2; done && npx prisma migrate deploy && npm run db:seed"
+    networks:
+      - app-network
+
+  web:
+    build: ./neuracraft
+    depends_on:
+      - db-seed
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: mysql://root:12345@database:3306/neuracraft
+      NEXTAUTH_URL: http://localhost:3000
+      RECOMMENDER_URL: http://recommender:8000
+      NEXTAUTH_SECRET: 12345
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    restart: always
+
+  recommender:
+    build: ./recommender
+    environment:
+      RECOMMENDER_API_KEY: 12345
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    restart: always
 
 volumes:
   mysql_data:
-  nginx_secrets:
+
+networks:
+  app-network:
+    driver: bridge
