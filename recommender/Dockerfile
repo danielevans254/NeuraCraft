@@ -1,14 +1,13 @@
 FROM python:3.11-slim
 
-# Install required system dependencies
-RUN apt-get update && apt-get install -y \
-  gcc \
-  && rm -rf /var/lib/apt/lists/*
+# Install system dependencies (gcc is needed for some Python packages)
+RUN apt-get update && apt-get install -y gcc && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-# Keep container alive
+EXPOSE 8000
 CMD ["python", "-u", "main.py"]

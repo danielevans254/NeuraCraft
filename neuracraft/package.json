@@ -13,7 +13,7 @@
   },
   "prisma": {
     "schema": "prisma/schema.prisma",
-    "seed": "ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -87,15 +87,15 @@
     "tsparticles-slim": "^2.11.1",
     "typescript": "4.9.4",
     "uuid": "^11.0.5",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/string-similarity": "^4.0.2",
     "cross-env": "^7.0.3",
     "globby": "^14.0.2",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.5",
-    "ts-node": "^10.9.1"
+    "prettier-plugin-tailwindcss": "^0.2.5"
   },
   "ct3aMetadata": {
     "initVersion": "5.13.1"

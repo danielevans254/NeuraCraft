@@ -17,7 +17,17 @@ async function clearDatabase() {
   await prisma.$executeRaw`SET FOREIGN_KEY_CHECKS = 1;`;
 }
 
+async function ensureTablesExist() {
+  try {
+    await prisma.$queryRaw`SELECT 1 FROM Topic LIMIT 1`;
+  } catch (e) {
+    console.error("Tables don't exist. Please run 'prisma db push' first");
+    process.exit(1);
+  }
+}
+
 async function main() {
+  await ensureTablesExist();
   await clearDatabase();
   console.log("Database cleared");
 
