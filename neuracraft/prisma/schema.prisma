@@ -233,7 +233,6 @@ model Question {
   variationId            Int                     @default(1)
   topicSlug              String
   questionTitle          String                  @unique
-  questionType           QuestionType            @default(MultipleChoice)
   questionDifficulty     QuestionDifficulty
   questionContent        String                  @db.Text
   questionData           Json? // Type-specific question data
